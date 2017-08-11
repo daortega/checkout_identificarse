@@ -1,0 +1,177 @@
+/*
+ *-----------------------------------------------------------------
+ * Licensed Materials - Property of IBM
+ *
+ * WebSphere Commerce
+ *
+ * (C) Copyright IBM Corp. 2011 All Rights Reserved.
+ *
+ * US Government Users Restricted Rights - Use, duplication or
+ * disclosure restricted by GSA ADP Schedule Contract with
+ * IBM Corp.
+ *-----------------------------------------------------------------
+ */
+
+
+/* -----------------------------------------------------------------------------*/
+/* Auto suggest search popup
+/* -----------------------------------------------------------------------------*/
+
+.autoSuggestBox {
+	position: relative;
+	margin: 0;
+}
+
+.autoSuggestBox .autoSuggest_content {
+
+	background-color:#ffffff;
+	float: left;
+	margin 0 4px;
+	width: 295px;
+	padding: 0;
+	line-height: 0;
+}
+
+.autoSuggestBox .autoSuggest_content .heading {
+	color: #404040;
+	font-weight:bold;
+	font-size: 13px;
+	padding: 0px 10px;
+}
+
+.autoSuggestBox .autoSuggest_content .results {
+	width: 295px;
+	font-size: 10pt;
+	line-height: 16px;
+	padding-top: 8px;
+	line-height: 17px;
+	background-repeat: repeat-x;
+	margin-top: -1px;
+}
+
+.autoSuggestBox .autoSuggest_content a {
+	font-size: 11px;
+	color: #09C;
+	display: block;
+	text-decoration: none;
+	padding: 4px 10px;
+	margin: 0;
+}
+
+.autoSuggestBox .autoSuggest_content .view_all_results a{
+	text-decoration:underline;
+}
+
+.autoSuggestBox .autoSuggest_content ul {
+	line-height: normal;
+	padding: 0;
+}
+
+.autoSuggestBox .autoSuggest_content .line {
+	border-top: 1px solid black;
+}
+
+.autoSuggestBox .autoSuggest_content li {
+	list-style: none;
+	line-height: 14px;
+}
+
+.autoSuggestBox .autoSuggestSelected {
+	background-color: #F7F7F7;
+	color: #000000;
+}
+
+/*REQ:1019*/
+.autoSuggestBox .autoSuggestSelected:hover {
+	font-weight: bold !important;
+}
+
+.autoSuggestBox .autoSuggest_content .view_all_results {
+	border-top: 1px solid #CCCCCC;
+	padding: 6px 0 15px;
+	margin-top: -1px;
+}
+
+.autoSuggestBox .autoSuggest_wrapper {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: -1px;
+	top: -8px;
+	width: 302px;
+	border: 1px solid #CCCBCB;
+	background: #FFFFFF;
+	border-top: none;
+}
+
+.autoSuggestBox .search_left_border {
+
+}
+
+.autoSuggestBox .search_right_border {
+
+}
+
+.autoSuggestBox .autoSuggest_bottom {
+	width: 301px;
+	height: 12px;
+	position: absolute;
+	bottom: -12px;
+	left: -3px;
+	margin: 0;
+	padding: 0;
+}
+
+	.autoSuggestBox .autoSuggest_bottom .bottom_left_shadow {
+		float: left;
+		height: 12px;
+		width: 10px;
+	}
+
+	.autoSuggestBox .autoSuggest_bottom .middle_shadow {
+		float: left;
+		height: 12px;
+		width: 281px;
+	}
+
+	.autoSuggestBox .autoSuggest_bottom .bottom_right_shadow {
+		float: left;
+		height: 12px;
+		width: 10px;
+	}
+	
+	@media screen and (width: 320px) {
+	
+		.autoSuggest_wrapper {
+			height: 220px;
+			overflow-y: auto !important;
+		}
+	
+	}
+	@media screen and (width: 360px) {
+	
+		.autoSuggest_wrapper {
+			height: 350px;
+			overflow-y: auto !important;
+		}
+	
+	}
+	
+	@media screen and (width: 480px) {
+	
+		.autoSuggest_wrapper {
+			height: 100px !important;
+			overflow-y: auto !important;
+		}
+	
+	}
+	
+	@media screen and (width: 640px) {
+	
+		.autoSuggest_wrapper {
+			height: 100px;
+			overflow-y: auto !important;
+			width: 391px !important;
+		}
+	
+	}

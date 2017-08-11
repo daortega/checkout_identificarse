@@ -1,0 +1,211 @@
+
+/* MHTN: CLICK AND COLLECT - desktop new style for modal error made by Miguel Penaloza*/
+#modal_error{
+	display: table;
+	height: auto;
+	width: 650px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+	background-color:#FFF;
+	padding:15px 10px 10px;
+    }
+	
+#modal_error h1{
+	color: #666; /*#303F6A;*/
+	display: block;
+	float: left;
+	padding-top: 10px;}
+
+#modal_error .divisor{
+	border-top:solid 3px #e8f4fb;}
+	
+#modal_error .contenedor_pasos{
+	width:650px;
+	height:170px;
+	display:block;
+	margin:10px 0;}
+	
+#modal_error .contenedor_pasos_m{
+	display:none;
+	}
+	
+#modal_error .contenedor_pasos .responsive-image{ width: 100%; background-size: 100% 100%; } 
+
+	
+#modal_error .accion{
+	padding-top:15px;
+	display:block;}
+
+#modal_error .producto{
+	padding-top:5px;
+	display:block;}
+
+
+
+#modal_error .boton_calcular{
+	background: none repeat scroll 0px 0px #09C;
+	border: 0px none;
+	border-radius: 0px;
+	color: #FFF;
+	float: left;
+	margin:0 43%;
+	padding: 8px 20px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+
+.mfp-hide{
+	 display: none !important;
+}
+
+.title_po{
+	width: 100%;	
+}
+
+.title_POPup{
+	text-align: center;
+}
+
+.Text_Black{
+	color: #000000 ;
+	font-size: 15px;
+	margin-left: -99px;
+
+}
+
+.Text_normal{
+	font-size: 18px;
+	margin-right: 100px; 
+	margin-left: 50px;
+}
+
+.button_modal_error{
+	width: 100%;
+}
+
+.note_text {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight:bold;
+}
+
+
+.lightboxContent ul {
+    margin-bottom: 27px;
+}
+
+.item > span {
+    left: 13px;
+    position: relative;
+    top: -6px;
+}
+
+.button_modal_error {
+    left: 130px;
+    position: relative;
+    width: 100%;
+}
+#button_modal_error .dismiss{
+	margin-left: 46px;
+}
+
+
+/* MHTN: CLICK AND COLLECT - mobile new style for modal error made by Miguel Penaloza*/
+@media screen and (max-width: 640px) {
+	#modal_error {
+    	width: 100% !important;
+	}
+
+	.Text_normal {
+      	margin-left: 3px;
+    }
+
+	.button_modal_error {
+    	left: 0;
+    }
+    .eliminar{
+    	left: 0px;
+    	margin-bottom: 10px;
+    	position: relative;
+    }
+
+	#button_modal_error .dismiss {
+    	margin-top: 11px;
+    	width: 100%;
+    	margin-left: 0;
+    	padding-left: 0px;
+    	padding-right: 0px;
+	}
+
+	.button_modal_error {
+    	text-align: center;
+	}
+
+	#error-modal{
+		margin-left: 5%; 
+		margin-right: 5%;
+	}
+	
+	#error-modal .note_text {
+		font-size: 13px;
+	}
+	#error-modal .Text_normal {
+		font-size: 14px;
+	}
+	#error-modal .itemHeader b {
+		width : 105% !important;
+	}
+	#error-modal .error_msg {
+		float : none;
+	}
+}
+
+@media only screen and (min-device-width: 321px) and (max-device-width: 640px) {
+	.Text_normal {
+      	padding-right: 22px !important;
+    }
+    
+    .Text_Black{
+     	margin-left: -120px !important;
+    }
+    .lightboxContent h1 {
+    	width : 84% !important;
+    }
+    .title_po {
+    	margin-left: 15px;
+    	-moz-appearance: none !important;
+		-webkit-appearance: none !important;
+		appearance: none !important;
+	}
+}
+
+/*MHTN CYCLE4 DEFECT : 1753*/
+@media screen and (min-width: 700px) {
+	.button_modal_error {
+		margin-bottom: 25px;
+	}
+}
+/*media screen 320 - Landscape*/
+@media only screen and (min-device-width: 480px) and (max-device-width: 500px) {
+	#error-modal .Text_normal {
+		padding-right: 0px !important;
+	}
+	#error-modal .lightboxContent h1 {
+		width: 90% !important;
+	}
+	#error-modal .Text_Black {
+		margin-left: -97px !important;
+	}
+}
+/*media screen 360 - Landscape*/
+@media only screen and (min-device-width: 640px) and (max-device-width: 700px) {
+	#error-modal .lightboxContent h1 {
+		width: 92% !important;
+	}
+}
+/*MHTN CYCLE4 DEFECT : 1753*/

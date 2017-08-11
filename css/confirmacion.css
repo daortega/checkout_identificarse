@@ -1,0 +1,874 @@
+@charset "utf-8";
+.close, object
+{
+  display: none;
+}
+@media screen and (max-width: 1024px)
+{
+  #header_logo
+  {
+    display: block !important;
+  }
+  .PrecioUno
+  {
+    display: none;
+  }
+  #logoArea
+  {
+    float: left !important;
+    width: 110px !important;
+  }
+  html body #logoArea .ad
+  {
+    margin: 0 !important;
+  }
+  .logoHeader img
+  {
+    margin-left: 0px !important;
+  }
+  html body #logoArea a img
+  {
+    left: 10px;
+    position: relative;
+    top: 14px;
+  }
+  .logoHeader
+  {
+    margin-top: 0px !important;
+  }
+  .boxCall
+  {
+    margin-right: 7%;
+    margin-top: 0 !important;
+    position: relative !important;
+    top: 27px !important;
+  }
+  .textCall
+  {
+    display: none;
+  }
+  .Number
+  {
+    color: #0099cc !important;
+    font-family: Verdana !important;
+    font-size: 16px !important;
+    right: 0 !important;
+    top: -8px;
+  }
+  .TitleCon
+  {
+    margin: 20px 9px 16px !important;
+  }
+  .ThanksText
+  {
+    line-height: 1.5;
+  }
+  .button
+  {
+    padding: 10px 1px !important;
+    width: 100%;
+  }
+  .DetalleOrder
+  {
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+  }
+  .SpaceRowTable
+  {
+    line-height: 22px !important;
+  }
+  .divTableCell
+  {
+    padding: 5px 11px 3px 0 !important;
+  }
+  .DetalleOrder .divTableCell
+  {
+    display: unset !important;
+  }
+  .TableTitleDetalle
+  {
+    text-align: left;
+  }
+  .divTableRow
+  {
+    display: table !important;
+    line-height: 30px !important;
+    line-height: unset !important;
+    margin-left: 5% !important;
+  }
+  .TableDetalle
+  {
+    margin-top: 3% !important;
+  }
+  .divTable
+  {
+    width: 100% !important;
+  }
+  .TdDerecho
+  {
+    padding-left: 5% !important;
+  }
+  .ListProductOrder
+  {
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+  }
+  .TitleDetalle
+  {
+    font-size: 12px !important;
+  }
+  .TitleProduct
+  {
+    margin-left: 51px !important;
+    position: relative !important;
+    top: -14px !important;
+    width: auto !important;
+  }
+  .AddressDelivery
+  {
+    float: unset !important;
+    margin-right: 5% !important;
+  }
+  .IconAddress,.FormAdress
+  {
+    left: 5%;
+  }
+  .IconDate,.TextDate
+  {
+    left: 5%;
+    position: relative;
+  }
+  #OrderItem_group_ShipDate .IconDate
+  {
+    left: 0% !important;
+  }
+  .TitleProduct
+  {
+    left: -8px !important;
+    top: -13px !important;
+  }
+  #order_details
+  {
+    width: 90% !important;
+  }
+  .TitleTableProdMobile
+  {
+    background-color: #efefef;
+    height: 40px;
+    margin-left: 5%;
+    width: 100%;
+    width: 90%;
+  }
+  .TitleMobilePorductText
+  {
+    color: #333333;
+    font-family: Verdana;
+    font-size: 12px;
+    left: 11px;
+    position: relative;
+    text-transform: uppercase;
+    top: 11px;
+    vertical-align: middle !important;
+  }
+  .images_left img
+  {
+    border: solid 1px #e7e7e7 !important;
+    height: 77px !important;
+    margin-left: 11px;
+    margin-right: 9px;
+    width: 66px !important;
+  }
+  .text_left
+  {
+    width: 65%;
+  }
+  .text_left h3
+  {
+    color: #000000 !important;
+    font-family: Verdana !important;
+    font-size: 12px !important;
+  }
+  .item_gray
+  {
+    color: #999999;
+    font-family: Verdana;
+    font-size: 10px;
+  }
+  .sku
+  {
+    margin-bottom: 4px;
+    margin-top: 4px;
+  }
+  .responsive-stock-target
+  {
+    color: #3c3d48;
+    font-family: Verdana;
+    font-size: 12px;
+    line-height: 1.33;
+  }
+  .PrecioProd
+  {
+    margin-bottom: 16px;
+    margin-top: 13px;
+    width: 100%;
+  }
+  .PriceSpan
+  {
+    float: right;
+    margin-right: 7%;
+  }
+  .PriceSpanText
+  {
+    float: left;
+    margin-left: 4%;
+  }
+  .tipo_prod
+  {
+    margin-top: 20px;
+  }
+  .line
+  {
+    border-top: 1px solid;
+    float: left;
+    margin: 10px 13px 12px;
+    padding: 0;
+    width: 90%;
+  }
+  #OrderConfirmPagingDisplay .producto:nth-child(odd)
+  {
+    background-color: #ffffff;
+  }
+  #OrderConfirmPagingDisplay .producto:nth-child(even)
+  {
+    background-color: #f9f9f9;
+  }
+  .ValueOrder
+  {
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+  }
+  .ValueOrderTable1
+  {
+    margin-left: 0% !important;
+    margin-top: 21px;
+    text-align: center;
+    width: 91% !important;
+  }
+  .ValueOrder table
+  {
+    width: 100% !important;
+  }
+  .MediPago .divTableCell
+  {
+    display: unset;
+  }
+  .MediPago .divTableRow
+  {
+    text-align: left;
+  }
+  .MediPago
+  {
+    margin: 40px auto 40px 0 !important;
+  }
+  .MedioPagoText1
+  {
+    margin-left: 0px !important;
+  }
+  #content_wrapper
+  {
+    border-bottom: 56px solid #f1f1f1;
+    border-left: 10px solid #f1f1f1;
+    border-right: 10px solid #f1f1f1;
+  }
+  .TextOfertas
+  {
+    line-height: 1.4 !important;
+  }
+  .BoxButton .button
+  {
+    width: 90%;
+  }
+  .button.registrarse
+  {
+    width: 98% !important;
+  }
+  .content_footer
+  {
+    padding: 0px 0 0px 0px;
+  }
+}
+@media screen and (device-aspect-ratio: 3/4)
+{
+  .button.registrarse
+  {
+    width: 94% !important;
+  }
+}
+#WC_OrderShippingBillingConfirmationPage_div_29
+{
+  display: none;
+}
+.noche
+{
+  color: #192d75 !important;
+  font-weight: bold;
+  margin-left: 15px;
+}
+.luna_icon
+{
+  height: 12px;
+  margin: 3px 5px -2px -12px;
+  width: 12px;
+}
+html body #Contenedor
+{
+  background-color: #f1f1f1 !important;
+}
+#mainHeader
+{
+  width: 100%;
+}
+#header
+{
+  background-color: white !important;
+  height: 92px;
+  width: 100%;
+}
+#logoArea a
+{
+  display: inline-block;
+}
+#logoArea
+{
+  float: left;
+  width: 110px;
+}
+#page
+{
+  margin-top: 24px;
+  width: 1200px;
+}
+#content_wrapper,#main_content_wrapper
+{
+  width: 100%;
+}
+#footerWrapper
+{
+  background-color: #f1f1f1;
+}
+#checkoutFooter
+{
+  position: relative;
+  top: 36px;
+}
+.TitleConfirmation
+{
+  margin-left: 32px;
+  margin-right: 32px;
+}
+.Hazfinalizado
+{
+  background-color: rgba(0, 153, 204, 0.2);
+  border: 1px solid rgba(0, 153, 204, 0.8);
+  height: auto;
+  line-height: 1.44;
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+}
+.TitleCon
+{
+  color: #4a4a4a;
+  font-family: Verdana;
+  font-size: 17px;
+  font-style: normal;
+  font-variant: normal;
+  margin-bottom: 21px;
+  margin-left: 160px;
+  margin-right: 161px;
+  margin-top: 20px;
+}
+.ThanksText
+{
+  color: #4a4a4a;
+  font-family: Verdana;
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  margin-top: 15px;
+  text-align: center;
+}
+.BoxButton
+{
+  margin-bottom: 24px;
+  margin-top: 24px;
+  text-align: center;
+}
+.button
+{
+  background-color: #ffffff;
+  border: solid 1px #0099cc;
+  color: #0099cc;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Verdana;
+  font-size: 12px;
+  padding: 10px 55px;
+  text-align: center;
+  text-decoration: none;
+}
+.contentgrad_header
+{
+  background-color: #f1f1f1 !important;
+  height: 24px;
+}
+.DetalleOrder
+{
+  background-color: #ffffff;
+  border: solid 2px #003f6d;
+  height: 249px;
+  margin-left: 102px;
+  margin-right: 103px;
+  margin-top: 40px;
+}
+.DetalleOrder img
+{
+  height: 35px;
+  width: 35px;
+}
+.titleCon{
+  bottom: 21px;
+  left: 44px;
+  position: relative;
+  width: 79%;
+}
+.TitleDetalle
+{
+  bottom: 11px;
+  color: #083665;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  position: relative;
+  text-transform: uppercase;
+}
+.TableDetalle
+{
+  margin-top: 4px;
+}
+.TableTitleDetalle
+{
+  color: #4a4a4a;
+  font-family: Verdana;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  text-align: right;
+  width: 53%;
+}
+.TableDescDetalle
+{
+  color: #4a4a4a;
+  font-family: Verdana;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  padding-left: 8px;
+  text-align: left;
+}
+.SpaceRowTable
+{
+  line-height: 38px;
+}
+.sub_content1
+{
+  display: none;
+}
+.ListProductOrder
+{
+  background-color: #ffffff;
+  border: solid 2px #003f6d;
+  height: auto;
+  margin-left: 102px;
+  margin-right: 103px;
+  margin-top: 14px;
+}
+.ListProductOrder img
+{
+  height: 35px;
+  width: 35px;
+}
+#order_details
+{
+  float: unset;
+  margin: 0px auto 24px;
+  width: 817px;
+}
+.AddressDelivery
+{
+  left: 35.5%;
+  position: relative;
+  text-align: left;
+  width: 65%;
+}
+.IconDate
+{
+  color: #4a4a4a;
+  font-family: Verdana;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+}
+.FormAdress
+{
+  position: relative;
+  right: 26px;
+}
+.IconAddress
+{
+  color: #4a4a4a;
+  font-family: Verdana;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  position: relative;
+  right: 30px;
+}
+.IconAddress img
+{
+  height: 20px;
+  width: 20px;
+}
+.IconDate img
+{
+  height: 15px;
+  width: 19px;
+}
+.nested
+{
+  background-color: #efefef;
+  height: 40px;
+}
+.nested th
+{
+  border-bottom: unset !important;
+}
+#SingleShipment_tableCell_productName
+{
+  left: 16px;
+  position: relative;
+  width: 34% !important;
+}
+#prodcuct_qty,#orderitem_detail_column4
+{
+  text-align: center !important;
+}
+#SingleShipment_tableCell_unitPrice
+{
+  width: 22%;
+}
+#SingleShipment_tableCell_unitPrice, #orderitem_detail_column3
+{
+  text-align: right !important;
+}
+.shipping_price
+{
+  text-align: right !important;
+}
+#order_details img
+{
+  border: 1px solid #e7e7e7;
+  height: 88px;
+  margin-right: 12px;
+  width: 88px;
+}
+.ValueOrderTable1
+{
+  margin-left: 22%;
+  text-align: center;
+  width: 56%;
+}
+.ValueOrderTable1 .divTableRow
+{
+  width: 100%;
+}
+.ValueOrder
+{
+  background-color: #ffffff;
+  border: 2px solid #003f6d;
+  margin-left: 102px;
+  margin-right: 103px;
+  margin-top: 40px;
+}
+.ValueOrder img
+{
+  height: 35px;
+  width: 35px;
+}
+.ValueOrder table
+{
+  width: 515px;
+}
+#OrderConfirmPagingDisplay .producto:nth-child(odd)
+{
+  background-color: #ffffff;
+}
+#OrderConfirmPagingDisplay .producto:nth-child(even)
+{
+  background-color: #f9f9f9;
+}
+.ValueOrderTable1 .TableDetalle .divTableRow:nth-child(odd)
+{
+  background-color: #ffffff;
+}
+.ValueOrderTable1 .TableDetalle .divTableRow:nth-child(even)
+{
+  background-color: #f9f9f9;
+}
+.MediPago
+{
+  margin: 40px auto 40px 7%;
+}
+.MedioPagoText1
+{
+  color: #4a4a4a;
+  font-family: Verdana;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  margin-left: 10px;
+  text-align: left;
+}
+.MedioPagoText2
+{
+  color: #4a4a4a;
+  font-family: Verdana;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  text-align: left;
+}
+.TextOfertas
+{
+  color: #4a4a4a;
+  font-family: Verdana;
+  font-size: 16px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 0.88;
+  margin-top: 24px;
+  text-align: center;
+}
+.TitleTableTotal
+{
+  background-color: #efefef !important;
+  color: #000000;
+  font-family: Verdana;
+  font-size: 12px;
+}
+.ValueOrder table td
+{
+  border-collapse: collapse;
+}
+.TdDerecho
+{
+  text-align: left;
+}
+.TitleTable
+{
+  color: #000000 !important;
+}
+.TdDerecho span
+{
+  color: #3c3d48;
+  font-family: Verdana;
+  font-size: 12px;
+  line-height: 1.33;
+  margin-left: 16px;
+  text-align: left;
+}
+.TdIzquierdo
+{
+  text-align: right;
+}
+.TdIzquierdo span
+{
+  color: #4a4a4a;
+  font-family: Verdana;
+  font-size: 12px;
+  margin-right: 16px;
+}
+.EndTable
+{
+  background-color: #d6d6d6 !important;
+  color: #3c3d48;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.14;
+}
+.par
+{
+  background-color: #f9f9f9;
+}
+.CardTitle
+{
+  color: #4a4a4a;
+  font-family: Verdana;
+  font-size: 14px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+}
+.CardTitle div
+{
+  text-align: left !important;
+}
+.StatusDelivery
+{
+  color: #0099cc;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Verdana;
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  text-decoration: underline;
+}
+.divTable
+{
+  display: table;
+  width: 100%;
+}
+.divTableRow
+{
+  display: table-row;
+  line-height: 30px;
+}
+.divTableHeading
+{
+  background-color: #EEE;
+  display: table-header-group;
+}
+.divTableCell, .divTableHead
+{
+  display: table-cell;
+  padding: 3px 10px;
+}
+.divTableHeading
+{
+  background-color: #EEE;
+  display: table-header-group;
+  font-weight: bold;
+}
+.divTableFoot
+{
+  background-color: #EEE;
+  display: table-footer-group;
+  font-weight: bold;
+}
+.divTableBody
+{
+  display: table-row-group;
+}
+.TitleProduct
+{
+  left: 46px;
+  position: relative;
+  top: -15px;
+}
+#OrderItem_group_ShipDate
+{
+  clear: both;
+  left: 32.5%;
+  margin-bottom: 2%;
+  position: relative;
+  text-align: left;
+  width: 65%;
+}
+.SpanCalendar, .FormAdress
+{
+  font-size: 14px;
+}
+.bottom_links
+{
+  display: none;
+}
+.mobile
+{
+  display: none;
+}
+#mainHeader 
+{
+  height: 92px !important;
+}
+@media screen and (max-width: 1200px)
+{
+  #order_details
+  {
+    margin: 0 auto 56px;
+  }
+  .PricesDiv
+  {
+    bottom: 17px;
+    position: relative;
+  }
+  .PriceDos,#product_internet_price,#product_normal_price,#product_tc_price
+  {
+    float: right;
+  }
+  .mobile
+  {
+    display: block;
+  }
+  .PricesMobile
+  {
+    position: relative;
+    top: 23px;
+  }
+  #page
+  {
+    width: 100%;
+  }
+  .MediPago
+  {
+    width: 100% !important;
+  }
+  #OrderItem_group_ShipDate
+  {
+    left: 5%;
+    width: 91%;
+  }
+  .AddressDelivery
+  {
+    left: 0px;
+    width: 93%;
+  }
+  .TitleTableProdMobile
+  {
+    margin-top: 22px;
+  }
+  .product_image
+  {
+  }
+  .SpanCalendar, .FormAdress
+  {
+    font-size: 12px;
+  }
+  #orderitem_detail_column2, #orderitem_detail_column3, #orderitem_detail_column4
+  {
+    display: none;
+  }
+  #product_partnumber
+  {
+    color: #999999;
+    font-family: Verdana;
+    font-size: 10px;
+  }
+}

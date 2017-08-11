@@ -1,0 +1,387 @@
+@charset "utf-8";
+@media screen and (max-width: 640px) {
+
+ html body #add_to_cart_popup{
+    width:100% !important;
+    height:auto !important;
+    float:left;
+    left:0;
+    top:0% !important;
+    position:absolute;
+    z-index:951;
+ }
+ 
+ html body #add_to_cart_popup .dijitDialogPaneContent{
+	width:100% !important;
+ }
+ html body .itemadded-cart .header, html body #popupHeader{
+    display:block;
+ }
+
+ html body .add_to_cart_popup .bodyarea{
+    margin:0;
+    height: 100%!important;
+ }
+ html body .add_to_cart_popup .also-recommend{
+    width:100%;
+ }
+
+ html body .add_to_cart_popup .itemadded-cart{
+    width:100% !important;
+ }
+
+ #second_level_category_popup .bodycontent, #modal_popup_pdp .bodycontent, .add_to_cart_popup .bodycontent, #requisition_list_popup .bodycontent, .invitationDialog .bodycontent, .coshopHelp .bodycontent{
+    height:auto !important;
+    width:100%;
+ }
+ html body .checkoutBtn{
+    width:100%;
+ }
+html body .add_to_cart_popup .other-links{
+    padding:0px 0;
+    margin:0 0px;
+}
+html body .add_to_cart_popup #ad_579003{
+  margin-top:10px;
+}
+
+html body .add_to_cart_popup .also-recommend #four-grid-espot .item .promo_text {
+  height: auto !important;
+}
+
+html body .add_to_cart_popup .other-links span{
+     width:50%;
+     float:left;
+ }
+
+  html body .add_to_cart_popup .other-links span a{
+     width:95%;
+     float:left;
+     text-align:center;
+ }
+
+/*html body #four-grid-espot .item .description_fixedwidth{
+  width:100%;
+  position:absolute;
+  margin:0;
+  top:-38px;
+  font-weight:bold;
+  color:#000;
+  font-size:12px;
+}*/
+
+/*html body #four-grid-espot .item .description_fixedwidth{
+  width:100%;
+  position:absolute;
+  margin:0;
+  top:-38px;
+  font-weight:bold;
+  color:#000;
+  font-size:12px;
+}*/
+
+/*.description_fixedwidth{
+  
+}*/
+
+.TituloProducto {
+    font-size: 11px !important;
+    font-weight: bold !important;
+    left: 15px !important;
+    position: absolute !important;   
+    width: 100% !important;
+    margin-top: -20px !important;
+    text-transform: uppercase !important;
+
+
+}
+
+
+html body .add_to_cart_popup #WarrantyCrossSellMarketingZone1, html body .add_to_cart_popup #WarrantyCrossSellMarketingZone2{
+  padding:0 3%;
+  position:relative;
+}
+
+html body .add_to_cart_popup .button-wrapper-radius.smaller{
+  width:60%;
+  float:right;
+  padding:8px 16px;
+  font-weight:bold;
+  
+  /*MHTN: Recomendation Fix , margin AddtoCart button, by Rahul*/
+  margin-top: -10px;
+}
+
+html body .add_to_cart_popup .top_bar{
+  width:100% !important;
+}
+
+html body .add_to_cart_popup .sub-price{
+  position:relative;
+}
+
+
+html body .add_to_cart_popup .product-img{
+  width: 100%;
+}
+
+html body .add_to_cart_popup .product-img img{
+  display: block;
+  margin: 0 auto;
+}
+
+.add_to_cart_popup .mkt-zone{
+  width: 100%;
+   border-bottom:none;
+}
+
+#four-grid-espot .item .price{
+  height: auto !important;
+  margin-bottom: 6px !important;
+}
+
+.precio-exclusivo {
+    color: red;
+    font-weight: normal;
+    margin-bottom: 3px;
+}
+
+.precio-internet {
+    color: #999;
+    font-size: 11px;
+    margin: 7px 0 0;
+}
+
+
+.genericESpot .description_fixedwidth a {
+    color: #000;
+    font-size: 12px !important;
+    font-weight: normal;
+	top: -20px;
+}
+
+html body #add_to_cart_popup table#four-grid-espot td.item {
+ border-bottom: 2px solid lightgrey;
+ padding :10% 0 2% 0;
+}
+html body #add_to_cart_popup #WarrantyCrossSellMarketingZone2 table#four-grid-espot tr:last-child td:last-child {
+ border-bottom:none;
+}
+html body #add_to_cart_popup table#four-grid-espot {
+padding-right: 0px;
+}
+
+html body #add_to_cart_popup table#four-grid-espot td.item .container {
+	position: relative;
+	margin: 21px 0 8px;	
+}
+ html body #add_to_cart_popup #WarrantyCrossSellMarketingZoneTitle {
+ border-bottom: 2px solid #ccc;
+ margin-left: 10px !important;  /*MHTN: 650 as with wireframe*/
+ margin-top: 10px !important;  /*MHTN: 650 fix margin by rahul.ranjan*/
+ }
+ 
+ html body #add_to_cart_popup table#four-grid-espot td.item #Recomendado a{
+  font-size:11px !important;
+ } 
+ 
+ html body #add_to_cart_popup #WarrantyCrossSellMarketingZone1 .body588, 
+ html body #add_to_cart_popup #WarrantyCrossSellMarketingZone2 .body588{
+ height : auto !important;
+}
+
+#global_overlay {
+	z-index:100;
+}
+}
+
+  /*MTHN: CLICK AND COLLECT Style for new icon in "Simula tu entrega" made by Miguel.Penaloza*/
+
+#add_to_cart_popup{
+  height: 700px !important;
+  /*MHTN: Defect 488*/
+  top: 35px !important;
+}
+#productName {
+  /*height: 10px;*/
+}
+/*.add_to_cart_popup .bodyarea {
+    height: 635px !important;
+}*/
+/*MHTN: Problem popup "ya esta en tu carro" in tablet*/
+/*.add_to_cart_popup .bodyarea .horizontal-border {
+    height: 651px !important;
+}*/
+.add_to_cart_popup .dijitDialogPaneContent div.genericESpot div.body588 {
+  /*MHTN Defect 538 - change value of height  272px for auto */
+  height: auto !important;
+}
+#WarrantyCrossSellMarketingZoneTitle {
+    padding: 0 35px 5px 0;
+}
+
+
+.add_to_cart_popup .itemadded-cart .header {
+  /*MHTN Defect 606*/
+   height: 35px !important;
+ }
+
+#detalles-despacho-m_Carro .texto_calc{
+    font-size: 10px;
+    /*MHTN: Defect 488 Comment stlye*/
+    /*margin-right: 98px;*/
+}
+
+#detalles-despacho-m_Carro .texto_calc_sv{
+    font-size: 10px;
+    margin-top:10px;
+}
+
+#detalles-despacho-m_Carro .camion_ya_esta{
+    /*MHTN: Defect 488 Comment stlye*/
+    /*top: -33px; 
+    left: 77px;*/
+    position: relative;
+    margin-right: 2px;
+}
+
+#detalles-despacho-m_Carro .bolsa_ya_esta{
+  /*MHTN: Defect 488 Comment stlye*/
+  /*  left: 77px;
+    top: -33px;*/
+    position: relative;
+    
+}
+
+/*MHTN: Defect 488*/
+.icons_separador {
+  width: 2px;
+  border-left: 1px solid #CCC;
+  height: 15px;
+  display: block;
+  float: left;
+  margin: 6px 6px 0px 10px;
+}
+
+.add_to_cart_popup .also-recommend {
+    padding: 0 0px;
+}
+
+#Recomendado .button-container{
+    position: relative;
+    /*top: -27px;*/ /*PDP RECOMMENDO SECTION UI FIX*/
+}
+/*MHTN Defect 538 - change value of padding 23px for 3px*/
+#WarrantyCrossSellMarketingZone1, #WarrantyCrossSellMarketingZone2 {
+     padding: 0 0 3px 35px;
+}
+
+.oculta_icon{
+  /*visibility: hidden;*/
+  display : none  !important;
+}
+
+#detalles-despacho-m_Carro .miniarrow{
+    margin-left: 14px !important;
+}
+#detalles-despacho-m_Carro .minitooltip{
+    left: -20px !important;
+  }
+
+/*Start MHTN: Defect 474*/
+  /*MHTN Defect 606 new style problem tooltips*/
+@media screen and (max-width: 640px) {
+  #detalles-despacho-m_Carro .texto_calc {
+    margin-left: 37%;
+    width: 31%;
+  }
+
+  #detalles-despacho-m_Carro .icons_calc{
+    left: 63%;
+    position: relative;
+    top: -30px;
+  }
+  #detalles-despacho-m_Carro .miniarrow{
+    margin-left: 1px !important;
+  }
+
+  #detalles-despacho-m_Carro .minitooltip{
+    left: -20px !important;
+  }
+
+
+}
+/* For PDP Page Desktop and Mobile - Promociones section*/
+@media screen and (min-width: 320px)  and (max-width: 640px) {
+  #detalles-despacho-m_Carro .texto_calc_sv {
+    margin-top:10px;
+    margin-right:30px;
+    margin-left:-10px;
+  }
+
+   #detalles-despacho-m_Carro .icons_calc_sv{
+    left: 63%;
+    position: relative;
+    top: -30px;
+    margin-left:-24px;
+  }
+
+}
+
+@media screen and (min-width: 360px)  and (max-width: 640px) {
+  #detalles-despacho-m_Carro .texto_calc_sv {
+    margin-top:10px;
+    margin-right:30px;
+    margin-left:2px;
+  }
+
+   #detalles-despacho-m_Carro .icons_calc_sv{
+    left: 63%;
+    position: relative;
+    top: -30px;
+    margin-left:-14px;
+  }
+
+}
+/*MHTN: Margin in Yaesta modal mobile recommendar section- by rahul.*/
+@media screen and (max-width: 640px) {
+.div-recomendado-item {
+  margin-left: 11px;
+ }
+ 
+ #four-grid-espot .item .description_fixedwidth {
+  height: 0px !important;
+ }
+}
+
+
+/*MHTN Defect 606 new style problem tooltips*/
+@media screen and (min-width: 438px)  and (max-width: 640px) {
+  #detalles-despacho-m_Carro .icons_calc{
+    left: 37%;
+  }
+}
+/*MHTN Defect 606 Comment problem tooltips*/
+
+/*@media screen and (max-width: 457px) {
+
+  #detalles-despacho-m_Carro .camion_ya_esta {
+    left: 68%;
+  }
+
+  #detalles-despacho-m_Carro .bolsa_ya_esta {
+    left: 72%;
+  }
+}
+
+@media screen and (min-width: 458px) and (max-width: 660px) {
+
+  #detalles-despacho-m_Carro .camion_ya_esta {
+    left: 35%;
+  }
+
+  #detalles-despacho-m_Carro .bolsa_ya_esta {
+    left: 39%;
+  }
+}*/
+/*End MHTN: Defect 474*/ 

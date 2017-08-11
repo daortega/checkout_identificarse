@@ -1,0 +1,1162 @@
+/* RADAR Temporal Preview */
+.preview {
+    display: inline-block;
+    padding: 2%;
+    text-align: center;
+    width: 100%;
+}
+
+.preview > img {
+    border: 1px solid #ccc;
+    padding: 1%;
+}
+
+/*@media screen and (max-width: 376px){
+html body .menu_responsive .contenedor-responsive {
+    padding: 11px 0 !important;
+  }
+  html body .menu_responsive .contenedor-responsive a small {
+    padding: 2px !important;
+    right: 27% !important;
+    top: 29% !important;
+    width: 16% !important;
+  }
+}
+
+
+@media screen and (min-width:377px)  and (max-width: 480px){
+html body .menu_responsive .contenedor-responsive {
+    padding: 6px 0 !important;
+  }
+	html body .menu_responsive .contenedor-responsive a small {
+		padding: 4px !important;
+		right: 27% !important;
+                top: 29% !important;
+	}
+}
+
+@media only screen and (min-width: 481px) and  (max-width: 590px) {
+html body .menu_responsive .contenedor-responsive {
+		padding: 3px 0 !important;
+	}
+	html body .menu_responsive .contenedor-responsive a small {
+		padding: 4px !important;
+    		right: 29% !important;
+    		top: 13px !important;
+	}
+}
+
+@media only screen and (min-width: 591px) and  (max-width: 640px) {
+html body .menu_responsive .contenedor-responsive {
+		padding: 1px 0 !important;
+	}
+	html body .menu_responsive .contenedor-responsive a small {
+	  padding: 4px !important;
+    	  right: 29% !important;
+    	  top: 33% !important;
+    	  width: 23px !important;
+	}
+}*/
+/* barra de progreso PLP */
+@media screen and (width: 320px) {
+	#progress_bar {
+	     display: none;
+	    left: 251px !important;
+	    top: 353.6px;
+	}
+}
+
+@media screen and (width: 480px) {
+	#progress_bar {
+	     display: none;
+	    left: 411px !important;
+	    top: 353.6px;
+	}
+}
+
+@media screen and (width: 360px) {
+	#progress_bar {
+	     display: none;
+	    left: 285px !important;
+	    top: 353.6px;
+	}
+}
+
+@media screen and (width: 640px) {
+	#progress_bar {
+	     display: none;
+	    left: 570px !important;
+	    top: 353.6px;
+	}
+}
+/* fin barra de progreso */
+/*@media screen and (width: 640px){
+	html body .menu_responsive .contenedor-responsive {
+		padding: 1px 0 !important;
+	}
+	html body .menu_responsive .contenedor-responsive a small {
+		right: 50px !important;
+		top: 24px !important;
+		padding: 4px !important;
+	}
+}*/
+
+/* FIN RADAR Temporal Preview */
+/* SMALL */
+@media only screen and (min-width: 0px) and  (max-width: 640px) {
+
+
+	.dijitPopup{
+		display: none;
+	}
+
+	#second_level_category_popup{
+		display: none;
+	}
+
+	second_level_category_popup
+
+     /* Ancho Pagina 100% */
+    #page{
+        width: 100%;
+    }
+
+    #main_content_wrapper{
+        width: 100%;
+    }
+
+	/* saca icono de marca en categorias */
+.left_sidebar_header {
+   background:none;
+}
+/* fin */
+
+
+     /* Header */
+    .header{
+        display: none;
+    }
+
+    #header {
+        width: 100%;
+        margin: 0 auto;
+        background: #FFF;
+    }
+
+    /*TCS se agrega estilo para main header al aparecer un usuario logueado*/
+    #mainHeader{
+    	width: 100%;
+    	height: 100%;
+    }
+    /*TCS fin*/
+
+    #header_logo{
+        padding: 0;
+        background: #fff;
+    }
+
+    #headerZone1{
+        display: none;
+    }
+
+    #headerZone2{
+        display: none;
+    }
+
+    #header_links{
+        display: none;
+    }
+
+    #header_nav{
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 10;
+    }
+    .dijitDropDownButton{
+        /*width: 90%;
+        padding: 5%;
+        background: #ccc;*/
+    }
+    #header-search{
+        display: none;
+    }
+
+    #header_menu_overlay_responsive{
+				width: 100%;
+			}
+			/*#header_menu_overlay_responsive .dijitDropDownButton{
+				margin:0 0px;
+			}
+			#header_menu_overlay_responsive .dijitDropDownButton:first-child{margin-left:0;}
+			#header_menu_overlay_responsive .dijitDropDownButton:last-child{margin-right:0;}*/
+			#header_nav .dijitInline.dijitDropDownButton {
+				 padding: 0px;
+				 margin-left: -1px;
+			}
+.dropdown{
+				z-index:6666 !important;
+				margin:0 0 0 -1px !important;
+				width:auto;
+				position:absolute;
+				top:-31px;
+				left:0;
+			}
+
+			.dropdown:hover{
+				margin:2px 0 0 -1px !important;
+			}
+
+			.dropdown a {
+				overflow:hidden !important;
+			}
+
+    #logoArea {
+        margin: 0 auto;
+        float: none;
+    }
+
+    .headerZone2_cont{
+        display: none;
+    }
+
+    .hide{
+        display: none;
+    }
+
+    .show{
+        display: block !important;
+    }
+
+
+    /* Menu Principal Responsive */
+
+    .menu_responsive{
+        width: 100%;
+        height: 45px;
+        background-color: #f27925;
+    }
+
+    .menu_responsive img{
+        width: 24%;
+    }
+
+    .menu{
+      left: -100%;
+      position: relative;
+    }
+
+    .menu.active{
+      display: block;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      -ms-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+      left: 0;
+    }
+
+    #breadcrumb{
+        display: none;
+    }
+
+
+    .menu li ul{
+        display: none;
+    }
+
+    .menu li.active>ul{
+        display: block;
+    }
+
+    .fixed {
+        position:fixed;
+        top:0;
+    }
+
+	/* DESPLIEGA BUSCADOR RESPONSIVE */
+	#buscador-responsive {
+	display: block;
+	width: 100%;
+	height: 45px;
+	padding: 1px 25px;
+	background-color: #ccc;
+	position: absolute;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	float: right;
+	top: 0px;
+	z-index: 0;
+	border-bottom: 1px solid #efefef;
+	}
+
+	#buscador-responsive {
+			display: block;
+		}
+	#buscador-responsive.desplegado {
+			top: 0px;
+		}
+	#buscador-responsive #header-search .search-txt {
+			width: 68%;
+		}
+	#buscador-responsive.desplegado {
+		position: relative;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+	}
+
+	/*Login*/
+		/* DESPLIEGA LOGIN RESPONSIVE */
+	#login-box, #login-box-logged {
+	display: block;
+	width: 100%;
+	/*height: 55px;
+	padding: 4px 25px;
+	bottom: 0px;*/
+	background-color: #efefef;
+	position: absolute;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	top: 0px;
+	border-bottom: 1px solid #efefef;
+    padding-bottom: 1px;
+    z-index: 0;
+    float: left;
+	}
+
+	#login-box, #login-box-logged {
+			display: block;
+		}
+	#login-box.desplegado, #login-box-logged {
+/*REQ:1019*/
+			top: 60px !important;
+		}
+	#login-box.desplegado, #login-box-logged.desplegado {
+/*REQ:1019*/
+		position: fixed;
+		-webkit-transition: all 0.3s ease;
+		-moz-transition: all 0.3s ease;
+		-ms-transition: all 0.3s ease;
+		transition: all 0.3s ease;
+/*REQ:1019*/
+		top: 60px !important;
+	}
+	#login-box span, #login-box-logged div {
+      text-align: center;
+      padding: 2% 0;
+      background-color: #666;
+      color: #fff;
+      margin: 1px 0;
+     }
+
+    #login-box a, #login-box-logged a {
+      background-color: #ccc;
+      color: #666;
+      width: 49.5%;
+      display: inline-block;
+      text-align: center;
+      font-weight: bold;
+      padding: 2% 0;
+      /* Agrega Radar*/
+      float: left;
+      margin-left: 1px;
+	}
+	/*REQ:1019*/
+	.registrate{
+		font-weight: normal !important;
+	}
+
+  /*TEXT GLOBE RADAR*/
+  html body .text-globe {
+    background-color: #666;
+    margin-top:7px;
+    padding: 6px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    border-radius: 8px;
+    float: left;
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  html body .text-globe.showglobe {
+      display: block;
+  }
+  html body .text-globe:after {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(102, 102, 102, 0);
+    border-bottom-color: #666;
+    border-width: 10px;
+    margin-left: -10px;
+  }
+
+
+    /** PRODUCTOS **/
+    #product{
+        width: 100%;
+        padding-left: 2%;
+    }
+
+    #product .product_options{
+        width: 100%;
+
+    }
+
+    .detalles-titulo{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .item-price-details{
+        width: 100%;
+    }
+
+    #product .price.bold{
+        font-size: 30px !important;
+    }
+
+    .sub-price2{
+        font-size: 15px;
+        width: 100%;
+    }
+
+    .item-price-details .points-accumulated2{
+        font-size: 12px !important;
+    }
+
+    .tarjeta_mas_img {
+        background: url("https://www.paris.cl/wcsstore/CencosudStorefrontAssetStore/images/product/tarjeta_cencosud.jpg") no-repeat scroll 0 0 transparent;
+        margin-right: 10%;
+    }
+
+    .fb_iframe_widget{
+        float: right !important;
+        /*margin-right: 15%;*/
+    }
+
+    /* Rating */
+    .BVRRRatingsHistogramButton, .BVRRRatingSummaryLinks, .BVRRSocialBookmarkingLinks, .BVRRLabel.BVRRRatingNormalLabel, .BVRRRatingNormalOutOf {
+        display: none;
+    }
+
+    /* Agregar a Carro */
+    .item-more-features{
+        width: 100% !important;
+    }
+
+    #addToCartArea{
+        width: 100%;
+    }
+
+    #giftRegistryDiv{
+        width: 60%;
+    }
+
+    #productQty {
+        width: 40%;
+    }
+
+    .item-more-features .button-wrapper-radius.bigger {
+        margin: 0;
+        width: 60%;
+    }
+
+    .button-wrapper-radius.bigger{
+        padding: 5% 19%;
+    }
+
+    .item-more-features label{
+        top: 0;
+        margin-left: 17%;
+        font-size: 13px;
+    }
+
+
+    .product_options input{
+        width: 60%;
+        height: 20px;
+        text-align: center;
+    }
+
+    /* Titulo Acordeon */
+    .titulo_acordeon {
+        background: #999;
+        float: left;
+        width: 90%;
+        padding: 5%;
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    #titulo_acordeon span.no-active {
+        font-size: 20px;
+        font-weight: bold;
+        float: right;
+        margin-right: 10%;
+    }
+
+    #titulo_acordeon span.active {
+        font-size: 20px;
+        font-weight: bold;
+        float: right;
+        margin-right: 10%;
+    }
+
+
+    #detalles-despacho{
+        display: none;
+    }
+
+    #DespachoWidgetHidden_sup {
+       display: block !important;
+       margin: 0;
+       position: relative;
+       z-index: 0;
+   }
+
+   #DespachoWidgetHidden_CE {
+       display: block !important;
+       margin: 0;
+       position: relative;
+       z-index: 0;
+   }
+
+   .description {
+       display:none;
+   }
+
+   /** Manuel **/
+   /** Descripcion del producto **/
+   .description h2 {
+       display: none;
+   }
+
+   .description iframe {
+       width: 100%;
+       height: auto;
+   }
+
+   .product_specs {
+       width: 100%;
+   }
+
+   /** Ficha tecnica **/
+   .datasheet {
+       display: none;
+   }
+
+   .datasheet h2 {
+       display: none;
+   }
+
+   /** Comentarios **/
+
+   #wrapper-comentarios {
+       display: none;
+   }
+
+   /*#wrapper-comentarios h2 {
+       display: none;
+   }*/
+
+   /** Disponibilidad y cambio **/
+   #wrapper-disponibilidad-cambios {
+       display: none;
+   }
+   /* SE AGREGA COLOR DE FONDO DIV PARA QUE NO SE VEA EL MENU DE FONDO*/
+   #cm-pageview {
+    background-color: #fff;
+	}
+
+   #footer{
+	background-color: #fff;
+  }
+
+   /* Footer */
+
+   /*
+  #footer{
+
+  }
+
+  .footer_resp{
+    width: 100%;
+     display: block;
+     background: none repeat scroll 0 0 #fff;
+  }
+
+  .footer_resp_sup {
+      border: 1px solid #c8c8c8;
+      margin: 0 auto;
+      padding: 5%;
+      width: 90%;
+      overflow: hidden;
+      background: none repeat scroll 0 0 #fff;
+  }
+
+
+  .footer_sc {
+      float: left;
+      font-weight: bold;
+      text-align: center;
+      width: 50%;
+      color: #000;
+      font-size: 14px;
+  }
+
+  .footer_sc a {
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+  }
+
+
+  .footer_resp_contacto{
+      background: none repeat scroll 0 0 #eee;
+      border-top: 1px solid #656565;
+      margin-top: 5%;
+      width: 100%;
+      padding-bottom: 5%;
+  }
+
+  .footer_resp_contacto > ul{
+    margin-top: 4%;
+    overflow: hidden;
+  }
+
+.footer_resp_contacto li {
+    border-left: 1px solid #ccc;
+    float: left;
+    text-align: center;
+    width: 30%;
+  }
+
+
+  .footer_resp_contacto li.contact{
+    color: #000;
+    font-weight: bold;
+    margin: 2% 0;
+    font-size: 18px;
+  }
+
+
+  .footer_resp_contacto li a {
+      color: #636363;
+      font-size: 14px;
+      padding: 0 5%;
+      text-decoration: none;
+  }
+
+  .footer_resp_redes{
+      background: none repeat scroll 0 0 #eee;
+      border-top: 1px solid #656565;
+      width: 100%;
+      padding: 5% 0;
+      text-align: center;
+  }
+
+  .footer_resp_redes > ul{
+    display: inline-block;
+    width: 100%;
+  }
+
+
+  .footer_resp_redes li {
+      float: left;
+      width: 25%;
+  } */
+
+  /*Manuel agrega clases */
+  .submenu {
+	display: none;
+  font-family: "Proxima Nova", Tahoma, Geneva, sans-serif;
+  background: #3d3d3d; clear: both;
+  }
+
+  /*Comento para mostrar logo */
+ /* #ad_565875{
+    display: none;
+  }*/
+
+
+  .submenu li span {
+	z-index: 10;
+  }
+  /*REQ:1019*/
+  .submenu li span: hover {
+	background-color: #cccccc !important;
+  }
+
+  .logo_responsive{
+   	display: block;
+   	text-align: center;
+  }
+
+  .logo_responsive > img{
+   	width: 65%;
+   }
+
+
+
+ .desplegable>li>ul {
+	display: none;
+  }
+
+  html body #segunda_venta, html body .pdp_espot {
+    margin: 2% 0 !important;
+  }
+
+  html body #segunda_venta h3, html body .pdp_espot h3 {
+      /*border-bottom: 1px solid;*/
+      color: #000;
+      padding: 0 9% 3% !important;
+      text-transform: none;
+  }
+
+  .pdp_espot_zone.right{
+    width: 100%;
+  }
+
+ .cat-general {
+	width: 100%;
+	padding: 5% 0; /*Cambios mejoras - PAR947 - CATMENU Improvements*/
+/*REQ:1019*/
+	min-height:50px; /*Cambios mejoras - PAR947 - CATMENU Improvements*/
+	border-bottom: 0px solid #fff; /*Se elimina borde inferior - PAR947 - CATMENU Improvements*/
+    background-color: #f27925; /*Se cambia color de fondo de gradiente a color solido - PAR 1019 Felipe Vidal*/
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+
+  .recomendado-nuevo{
+    display: none;
+  }
+
+  .recomendado-responsive{
+    color: #000;
+    font-size: 18px;
+    padding: 5% 0;
+  }
+  #left_nav_title {
+      color: #fff !important;
+      font-size: 22px !important;
+      padding: 1% 0 0 !important;
+  }
+
+  #product .item-price-details{
+    padding: 0 20px !important;
+  }
+
+  #box .contentgrad_header .paging{
+    float: unset;
+    margin-top: 10px !important;
+    right: -8px !important;
+  }
+
+ html body .vermas.promociones{
+    background-color: #999999 !important;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #999999), color-stop(1, #cccccc)) !important;
+    background-image: -o-linear-gradient(bottom, #999999 0%, #cccccc 100%) !important;
+    background-image: -moz-linear-gradient(bottom, #999999 0%, #cccccc 100%) !important;
+    background-image: -webkit-linear-gradient(bottom, #999999 0%, #cccccc 100%) !important;
+    background-image: -ms-linear-gradient(bottom, #999999 0%, #cccccc 100%) !important;
+    background-image: linear, to bottom, #999999 0%, #cccccc 100% !important;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=0 ) !important;
+    border-bottom: 1px solid #efefef;
+  }
+
+
+
+.product_specs .datasheet{
+    border-bottom: none;
+    margin-bottom: none;
+}
+
+
+  #left_nav_title {
+      color: #fff !important;
+      font-size: 22px !important;
+      padding: 1% 0 0 !important;
+  }
+
+
+  /*
+
+  #box .search_footer .paging { float: left !important; margin-left: -278px !important; margin-top: 52px !important; }
+  #box .search_footer{padding-top: 5% !important;}
+  */
+/*END: CenReqNum#143  */
+  #product .description{
+    border-bottom: 0 none !important;
+  }
+
+ /* Menu categoria Responsive */
+  .desplegable > li {
+  width: 100%;
+  border-bottom: 0px solid #ccc;  /* se elimina borde - PAR947 - CATMENU Improvements */
+  
+  /*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #cdcdcd), color-stop(1, #f1f1f1)) !important;
+  background-image: -o-linear-gradient(bottom, #cdcdcd 0%, #f1f1f1 100%) !important;
+  background-image: -moz-linear-gradient(bottom, #cdcdcd 0%, #f1f1f1 100%) !important;
+  background-image: -webkit-linear-gradient(bottom, #cdcdcd 0%, #f1f1f1 100%) !important;
+  background-image: -ms-linear-gradient(bottom, #cdcdcd 0%, #f1f1f1 100%) !important;
+  background-image: linear, to bottom, #cdcdcd 0%, #f1f1f1 100% !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cdcdcd', endColorstr='#f1f1f1',GradientType=0 ) !important;
+/*REQ:1019*/
+  font-size: 16px;
+  color: #666;
+}
+
+
+	.desplegable > li > div{
+
+	  color: #fff;
+	  border-bottom: 1px solid #aeaeae; /* se activa borde - PAR 1019 Felipe Vidal */
+/*REQ:1019*/
+  	background-color:  #666666; /* se elimina gradiente - PAR 1019 Felipe Vidal */
+		padding: 5% 0;  /*Cambios mejoras - PAR947 - CATMENU Improvements*/
+/*REQ:1019*/
+		min-height:55px;
+		font-family:'Open Sans', sans-serif !important;
+	}
+
+.submenu-subcat {
+    margin-top: 0%;  /* se elimina margen- PAR947 - CATMENU Improvements */
+}
+
+.submenu-subcat > li {
+/*REQ:1019*/
+    border-bottom: 1px solid #666666;
+    padding: 5% 0; /* mejoras mobile- PAR947 - CATMENU Improvements */
+ min-height: 55px;
+}
+/*REQ:1019*/
+.submenu-subcat > li: hover {
+    background-color: #cccccc !important;
+}
+
+.submenu-subcat a {
+    color: #666;
+    text-decoration: none;
+/*REQ:1019*/
+    font-family: 'Open Sans', sans-serif;
+    font-size:15px;
+}
+
+/* PAR947 - CATMENU Improvements */
+li.menu-item:hover {
+	background-color: rgb(198, 198, 198);
+	color: #000;
+}
+
+#responsive-titulo-filtrar{
+  display: block !important;
+  float: left !important;
+    position: relative !important;
+    right: 0 !important;
+    width: 100% !important;
+}
+
+
+
+}
+
+
+
+/* MEDIUM */
+@media only screen and (min-width: 641px) and  (max-width: 1024px) {
+/*DESMAQUETEAR
+  TCS
+  FUNCIONALIDAD PLP
+  COMENTARIO: centraliza la ventana emergente para el registro en el sitio.
+ */
+#login_modal_tooltip .dijitTooltipConnector {
+	background:url("../images/colors/color1/loginTooltipConnectorUp.png") no-repeat top left;
+	width:70px; /*PARA CUADRAR EL LOGIN */
+	height:19px;
+}
+/*DESMAQUETEAR
+  TCS
+  FUNCIONALIDAD PLP
+  COMENTARIO:ajusta el ancho y alto del logo de Paris.
+  */
+html body #logoArea a img {
+	width: 100%;
+	max-width: 107px;
+	float: left;
+	height: 100%;
+	max-height: 104px;
+}
+/*DESMAQUETEAR
+  TCS
+  FUNCIONALIDAD PLP
+  COMENTARIO: ajusta la linea de separacion en la lista de productos.
+  */
+#three-grid .divider_line {
+   	border-bottom: 1px dotted #cccbcb !important; padding: 10px;
+}
+/*DESMAQUETEAR
+  TCS
+  FUNCIONALIDAD PLP
+  COMENTARIO: que no aparezca el menu responsive.
+  */
+ html body .menu_responsive .contenedor-responsive {
+    display: none;
+ }
+
+.recomendado-nuevo{
+   width:230px;
+   height:20px;
+   font-family:Tahoma, Geneva, sans-serif ;
+   font-size:11px; color:#333;
+   border-bottom: 3px solid #EBF4FB;
+   text-transform:uppercase;
+   padding-top:5px;
+   padding-bottom:2px;
+  font-weight:bold;"
+}
+
+ .menu{
+    display: none;
+ }
+
+ /*Manuel agrega clases */
+  .submenu {
+	display:none;
+	position: absolute;
+	background: #FFFFFF;
+	border: solid 1px #ccc;
+	padding: 22px 0 5px 10px;
+	border-collapse: collapse;
+	z-index: 5;
+	width: 680px;
+	zoom: 1;
+ }
+
+ .logo_responsive{
+    display: none;
+ }
+
+ .submenu a:first-child {
+	padding: 0 0 2px 0;
+}
+
+.submenu a {
+	text-decoration: none;
+	width: 150px;
+	height: 17px !important;
+	padding: 2px 0;
+	margin-right: 10px;
+	display: block;
+	color: #000000;
+	zoom: 1;
+}
+
+
+
+  .submenu span.bold {
+	cursor: default;
+ }
+
+ .desplegable {
+	overflow: hidden;
+	padding: 3px 4px 10px 20px;
+ }
+
+ .desplegable>li {
+	float: left;
+ }
+
+.tarjeta_mas_img {
+        background: url("https://www.paris.cl/wcsstore/CencosudStorefrontAssetStore/images/product/tarjeta_cencosud.jpg") no-repeat scroll 0 0 transparent;
+}
+
+.btn-up{
+  display: none !important;
+}
+
+#legal-responsive{
+  display: none;
+}
+
+#product .description{
+  border-bottom: none;
+}
+/*TCS: no muestre el footer en ests resolucion xq esta en duro*/
+ /* .footer_resp{
+    display: none;
+  } */
+}
+
+/* LARGE */
+@media only screen and (min-width: 1025px) and  (max-width: 1440px) {
+/*DESMAQUETEAR
+  TCS
+  FUNCIONALIDAD PLP
+  COMENTARIO: que no aparezca el menu responsive.
+  */
+ html body .menu_responsive .contenedor-responsive {
+    display: none;
+ }
+ /*.menu_responsive{
+    display: none;
+ }*/
+ .menu{
+    display: none;
+ }
+  .logo_responsive{
+    display: none;
+  }
+/*TCS Codigo agregado por RADAR*/
+.recomendado-nuevo{
+   width:230px;
+   height:20px;
+   font-family:Tahoma, Geneva, sans-serif ;
+   font-size:11px; color:#333;
+   border-bottom: 3px solid #EBF4FB;
+   text-transform:uppercase;
+   padding-top:5px;
+   padding-bottom:2px;
+  font-weight:bold;"
+}
+/*fin TCS*/
+ /*Manuel agrega clases */
+ .submenu {
+	display:none;
+	position: absolute;
+	background: #FFFFFF;
+	text-transform: none;
+	width: 655px;
+	border: solid 1px #ccc;
+	padding: 22px 0 5px 10px;
+	border-collapse: collapse;
+	z-index: 5;
+	zoom: 1;
+ }
+
+.submenu a:first-child {
+	padding: 0 0 2px 0;
+}
+
+.submenu a {
+	text-decoration: none;
+	width: 150px;
+	height: 17px !important;
+	padding: 2px 0;
+	margin-right: 10px;
+	display: block;
+	color: #000000;
+	zoom: 1;
+}
+
+ .desplegable {
+	overflow: hidden;
+	padding: 3px 4px 10px 20px;
+ }
+
+ .submenu ul li {
+	width: 25%;
+ }
+
+ .submenu ul li ul {
+	width: 100%;
+ }
+
+ .submenu span.bold {
+	cursor: default;
+ }
+
+ .desplegable>li {
+	float: left;
+ }
+
+ .submenu-subcat a:hover{
+  text-decoration: underline;
+ }
+
+.recomendado-nuevo{
+   width:230px;
+   height:20px;
+   font-family:Tahoma, Geneva, sans-serif ;
+   font-size:11px; color:#333;
+   border-bottom: 3px solid #EBF4FB;
+   text-transform:uppercase;
+   padding-top:5px;
+   padding-bottom:2px;
+  font-weight:bold;"
+}
+
+.tarjeta_mas_img {
+ url("https://www.paris.cl/wcsstore/CencosudStorefrontAssetStore/images/product/tarjeta_cencosud.jpg") no-repeat scroll 0 0 transparent;
+}
+
+.btn-up{
+  display: none !important;
+}
+
+#legal-responsive{
+  display: none;
+}
+
+#product .description{
+  border-bottom: none;
+}
+
+.product_specs .datasheet{
+    border-bottom: none !important;
+}
+
+.no-desktop{
+  display: none;
+}
+
+
+}
+
+@media screen and (max-width: 480px) {
+/*START: CenReqNum#143: style class modified
+  #box .contentgrad_header .paging{  float: left !important; margin-left: 5px !important; margin-top: 2.5% !important;}
+  #box .contentgrad_header .paging ul li{padding-top: 0px !important; }
+  #box .contentgrad_header .paging ul li.selected {	padding-top: 6px !important;margin-top: -6px;  height: 28px !important;}
+  #box .paging img {width: 30px !important;height: 30px !important;margin-top: -8px !important;}
+  #box .contentgrad_header .paging ul li.ellipsis{width: 11px;}
+  #box .contentgrad_header .sorting_controls, .search_footer .text .sorting_controls{ margin: 4px 0 10px 20px;}
+  #box .contentgrad_header .text {height: 49px !important;}
+  #box .search_footer .text .sorting_controls{min-width: 150px !important; margin-top: -4% !important;padding-left: 0px !important; text-align: left;display: inline-block;margin-left: 17px !important;float: left !important;margin-bottom: 20px !important;}
+  #box .search_footer .text .paging {margin-top: -1% !important;float: left !important;}*/
+  #box .sorting_controls{margin: 0px !important;}
+  #box .sorting_controls span {padding-top: 5px;padding-right:5px;font-size:10px;}
+  /*#box .sorting_controls .selector_paginador { height: 25px;    margin-bottom: 0px;    padding-bottom: 5px;    overflow: hidden;    background-attachment: scroll;    background-image: url("../images/drop-down-arrow.png");    background-repeat: no-repeat;    background-position: 73px 1px;    border: 0px none;    text-decoration: none;    width: 137px;	font-size:11px;}
+  #box .sorting_controls #num_productos{width: 104px; margin-bottom: 2%;}*/
+  #box .sorting_controls .styled_select{width: 104px;	margin-bottom: 2%; background-position: 73px 1px; font-size:11px; height: 25px; padding-bottom: 5px;}
+  #box .sorting_controls .styled_select .drop_down_country{width: 104px; font-size: 11px;margin-top: -8px;}
+  .sin_link {width: 11px !important;}
+  #box .contentgrad_header .paging ul li {display: block;    padding-top: 5px;    text-align: center;    width: 24px;    height: 23px;	font-size:11px; }
+  #box .contentgrad_header .paging ul li img {width: 24px; height: 23px;}
+  /*#box .contentgrad_header .paging { min-width: 155px; margin-top: 0px !important; float: left !important; margin-bottom: 5px;}*/
+  .flecha_anterior, .flecha_siguiente{padding-top: 0px !important;}
+
+}
+.not_stock{
+display: none;
+}

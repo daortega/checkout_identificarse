@@ -1,0 +1,1299 @@
+/**
+ * This file to generate diffenrent modal when EOM exception happens
+ * Possible modals - No Stock | Insufficient Stock | Change of ShipDate | Shipping Calendar
+ */
+var CheckoutModalJS = {
+		// flag to indicate the EOM Exception modal opened for not available date
+		isOpen : false,
+	    _template : [],
+	    clickHandler:null,
+	    /* To Reload the ordershippingbilling page */
+	    orderHasValidItems: false,
+	    
+	    calendarContainer : "",
+		noShowCalendarModal : false,
+		deleteSelectedMarker : true,
+		//Jornada Noche
+		nochePrice : "",
+		shipTotalPrice : "",
+		timeSelectedShipModeId : "",
+		RequestShippingDateAction: false,
+		// Mobile - calendar
+		selectedDayIndex:"",
+		/**
+		* EOM: Date MMM in Spanish.
+		*/
+		_MMM: ["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"],
+		_MONTH: ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio ","Agosto","Septiembre","Octubre","Noviembre","Diciembre"],
+		
+		setNochePrice:function(nochePrice){
+			this.nochePrice = nochePrice;
+		},
+		
+		setShipTotalPrice:function(shipTotalPrice){
+			this.shipTotalPrice = shipTotalPrice;
+		},
+	    
+	    getTemplate : function(serviceResponse, i){
+			
+			var sufix = "";
+			if(serviceResponse["productDeleted" + i] === 'true'){
+				sufix = "delete";
+			}else if(serviceResponse["productHasMaxQuantity" + i] === 'true' && serviceResponse["productHasDate" + i] !== 'true') {
+				sufix = "qty";
+			}else if(serviceResponse["productHasMaxQuantity" + i] !== 'true' && serviceResponse["productHasDate" + i] === 'true') {
+				sufix = "date";
+			}else if(serviceResponse["productHasMaxQuantity" + i] === 'true' && serviceResponse["productHasDate" + i] === 'true') {
+				sufix = "qty_date";
+			}
+			
+			if(this._template[sufix] == null){
+	    		this._template[sufix] =  dojo.byId("template_mhtn_producto_" + sufix).value;	
+	    	}	
+			return this._template[sufix]
+	    	
+	    },
+	    
+	    handleHideQuestion : null,
+	    
+	    inputQtyValues : {},
+	    checkDelete : function(element, numberElement){
+	    	var check = element.checked;
+	    	var inputQty = dojo.byId("qty_item_" + numberElement);
+	    	if(inputQty != null){
+	    		
+	    		if(check){
+	    			this.inputQtyValues[numberElement] = inputQty.value; 
+	    			inputQty.value = "0";
+	    		}else{
+	    			if(this.inputQtyValues[numberElement]){
+	    				inputQty.value = this.inputQtyValues[numberElement];		
+	    			}
+	    		}
+	    	}
+	    },
+	    
+	    showQuestion : function(element){	    	
+	    	if(dojo.hasClass(element, "active")){
+	    		dojo.removeClass(element, "active");
+	    		if(this.handleHideQuestion != null){
+	    			dojo.disconnect(this.handleHideQuestion);
+	    			CheckoutModalJS.handleHideQuestion = null;
+	    		}
+	    	}else{
+	    		dojo.query(".question.active").forEach(function(node){
+	    			dojo.removeClass(node, "active");
+		    	});
+	    		dojo.addClass(element, "active");
+	    		
+	    		if(this.handleHideQuestion == null){
+	    			setTimeout(function(){
+	    				CheckoutModalJS.handleHideQuestion = dojo.connect(document.body, "onclick", CheckoutModalJS.hideQuestion);
+	    			} , 300);
+	    			
+	    		}
+	    	}	    	
+	    	return false;	    		    	
+	    },
+	    
+	    hideQuestion: function(){
+	    	dojo.query(".question.active").forEach(function(node){
+    			dojo.removeClass(node, "active");
+	    	});
+	    	if(CheckoutModalJS.handleHideQuestion != null){
+    			dojo.disconnect(CheckoutModalJS.handleHideQuestion);
+    			CheckoutModalJS.handleHideQuestion = null;
+    		}
+	    	return false;
+	    },
+		
+	    wareHouses: [],
+		showModal: function(serviceResponse,despachoURL){
+	    	
+	    	// Hide the progressbar If it is opened already
+	        removeProgressBar();
+	    	
+	    	window.scrollTo(0,0);
+	    	this.wareHouses = {};
+	    	this.isOpen = true;
+			var _list = dojo.byId("mhtn_lista_productos");
+			
+			var wareHouseShow = {};
+			
+			for(var i =0; i < serviceResponse.size;i++){
+				var prod = this.getTemplate(serviceResponse, i);
+				
+				if(serviceResponse.size == 1){
+					prod = prod.replace("${number}", i+1);
+				}else if(serviceResponse["mixedFailedItems"] == false){					 
+					prod = prod.replace("${number}", i+1);					
+				} else{
+					prod = prod.replace("${number}", (i+1) + " de " +  serviceResponse.size);
+				}				
+				
+				prod = prod.replace(new RegExp("\\${numberItem}", 'g'), i);
+				prod = prod.replace("${name}", serviceResponse["productName" + i]);
+				var sku = serviceResponse["productSKU" + i];
+				prod = prod.replace("${sku}", sku);
+				prod = prod.replace("${skuImage}", sku.substring(0, sku.length-1));
+				
+				
+				if(serviceResponse["productHasMaxQuantity" + i] === 'true'){
+					prod = prod.replace(new RegExp("\\${maxQty}", 'g'), serviceResponse["productQuantity" + i]);
+				}
+				
+				if(serviceResponse["productHasDate" + i] === 'true'){
+					
+					//var wrhouse = serviceResponse["productWareHouse" + i] + "" + serviceResponse["productShippingMode" + i];
+					var wrhouse = serviceResponse["productWareHouse" + i];
+					if(wareHouseShow[wrhouse] && wareHouseShow[wrhouse] > 0){
+						prod = prod.replace(new RegExp("\\${productMinDate}", 'g'), serviceResponse["productMinDate" + i]);
+						//Req 1048 Jornada Noche
+						if(serviceResponse["productJornada" + i] == 'JN'){
+							prod = prod.replace(new RegExp("\\${productJornada}", 'g'), '<img class="luna_icon" src="/wcsstore/CencosudStorefrontAssetStore/images/luna_azul_icon.png" style="float: none;margin-right: 0px;"> Despacho Nocturno');
+						}else{
+							prod = prod.replace(new RegExp("\\${productJornada}", 'g'), '');
+						}
+						/*MHTN Defect 495*/
+						if(serviceResponse["ccOrder"] == false ){
+							prod = prod.replace(new RegExp("\\${noteDate}", 'g'), "Nota: Puedes modificar esta fecha en el Producto " + wareHouseShow[wrhouse]);
+						}else{
+							prod = prod.replace(new RegExp("\\${noteDate}", 'g'), "");
+						}
+						prod = prod.replace(new RegExp("\\${showCalendar}", 'g'), "none");
+						prod = prod.replace(new RegExp("\\${productWareHouse}", 'g'), serviceResponse["productWareHouse" + i]);
+						
+					}else{
+						wareHouseShow[wrhouse] = i+1;
+						this.wareHouses[i] = wrhouse;
+						prod = prod.replace(new RegExp("\\${noteDate}", 'g'), "");
+						if(serviceResponse["ccOrder"] == true ){
+							prod = prod.replace(new RegExp("\\${showCalendar}", 'g'), "none");
+						}else{
+							prod = prod.replace(new RegExp("\\${showCalendar}", 'g'), "block");
+						}
+						
+						prod = prod.replace(new RegExp("\\${productMinDate}", 'g'), serviceResponse["productMinDate" + i]);
+						//Req 1048 Jornada Noche
+						if(serviceResponse["productJornada" + i] == 'JN'){
+							prod = prod.replace(new RegExp("\\${productJornada}", 'g'), '<img class="luna_icon" src="/wcsstore/CencosudStorefrontAssetStore/images/luna_azul_icon.png" style="float: none;margin-right: 0px;"> Despacho Nocturno');
+						}else{
+							prod = prod.replace(new RegExp("\\${productJornada}", 'g'), '');
+						}
+						prod = prod.replace(new RegExp("\\${productWareHouse}", 'g'), serviceResponse["productWareHouse" + i] );
+						prod = prod.replace(new RegExp("\\${currentDate}", 'g'), "\"" + serviceResponse["currentDate"] + "\"");
+						prod = prod.replace(new RegExp("\\${productShippingMode}", 'g'), serviceResponse["productShippingMode" + i]);	
+					}
+				}
+				
+				prod = prod.replace(new RegExp("\\${orderItemId}", 'g'), serviceResponse["productOrderItemId" + i]);
+				
+				_list.innerHTML += prod;
+			}
+			
+			var button = dojo.byId("mhtn_modal_button");
+			
+			//CheckoutHelperJS.pendingOrderDetailsPage = true;
+			if(this.clickHandler){
+				dojo.disconnect(button, this.clickHandler);
+			}
+			this.clickHandler =  dojo.connect(button, "onclick", function(evt){
+				
+				for(var i =0; i < serviceResponse.size;i++){
+					var _error = dojo.byId("error" + i);
+					if(_error != null && _error.style.display!="none"){
+						return false;
+					}
+				}
+				
+				var params = [];
+				params.orderId 		= serviceResponse.orderId;
+				var invokeUpdate = false; 
+				
+				// To save the shipdate,deliverydate and jornada to corresponding warehouse
+				var warehouseShipdates = {};
+				var warehouseDeliverydates = {};
+				var warehousejornada = {};
+				
+				
+				for(var i =0; i < serviceResponse.size;i++){
+					var orderitem = serviceResponse["productOrderItemId" + i];
+					if(orderitem){
+												
+						var checkedDel = dojo.byId("del_item_" + i) || {};
+						
+						params["orderItemId_" + (i+1)] = orderitem;
+						
+						if((!(serviceResponse["productHasMaxQuantity" + i]=== 'true') && !(serviceResponse["productHasDate" + i] === 'true')) 
+								|| checkedDel.checked ){
+							params["quantity_" + (i+1)] = 0;
+						}else if(serviceResponse["productHasMaxQuantity" + i]=== 'true'){
+							params["quantity_" + (i+1)] = dojo.byId("qty_item_" + i).value ;
+							params["orderItemId_" + (i+1)] = orderitem;
+						}
+						
+						// Despacho Page Modal - Calendar Change
+						if(serviceResponse["ccOrder"] == false && serviceResponse["productHasDate" + i] === 'true' 
+							&& dojo.byId('calendar_'+i) != null && !checkedDel.checked){
+							var wrhouse = serviceResponse["productWareHouse" + i];
+							var calendarIndex = 'calendar_'+i;
+							var dateString = "";
+							if(warehouseDeliverydates[wrhouse] && warehouseDeliverydates[wrhouse] != null){	
+								
+								params["requestedShipDate_" + (i+1)] = warehouseDeliverydates[wrhouse];
+								params["mhtnJornada_" + (i+1)] = warehousejornada[wrhouse];
+								params["mhtnShipDate_" + (i+1)] = warehouseShipdates[wrhouse];
+							}else{
+								if(dojo.query('.selectedJornada .jornada_datebackendIndex', calendarIndex).length > 0){
+									var datebackendIndex = dojo.query('.selectedJornada .jornada_datebackendIndex', calendarIndex)[0].value;
+									var deliveryDate = dojo.query('.dateForBackend_' + datebackendIndex, calendarIndex)[0].innerHTML; 
+																
+									var date = deliveryDate;
+									var jornada_type = dojo.query('.selectedJornada .jornada_type', calendarIndex)[0].value;
+									
+									var time = dojo.query('.jornada_'+ jornada_type +'_startHour', calendarIndex)[0].value;
+									var shipDateTagValue = dojo.query('.selectedJornada .jornada_shipDateTagValue', calendarIndex)[0].value;
+									
+									/*var isTHAvailable = dojo.query('.selectedJornada .jornada_isTHAvailable', calendarIndex)[0].value;		
+									if(isTHAvailable == 'true'){
+										time = dojo.query('.jornada_TH_startHour', calendarIndex)[0].value; //TH
+									}*/
+									dateString = date + " " + time;
+									var mhtnOrderJornada;//Req 1048 Jornada Noche									
+																		
+									if (jornada_type == '0'){
+										mhtnOrderJornada = 'AM';
+									}else if (jornada_type == '1'){
+										mhtnOrderJornada = 'PM';
+									}else if (jornada_type == '2'){
+										mhtnOrderJornada = 'TH';
+									}else if (jornada_type == '3'){
+										mhtnOrderJornada = 'JN';
+									}
+																							
+									warehouseShipdates[wrhouse] = shipDateTagValue;
+									warehouseDeliverydates[wrhouse] = dateString;
+									warehousejornada[wrhouse] = mhtnOrderJornada;
+									
+									params["requestedShipDate_" + (i+1)] = warehouseDeliverydates[wrhouse];
+									params["mhtnJornada_" + (i+1)] = warehousejornada[wrhouse];
+									params["mhtnShipDate_" + (i+1)] = warehouseShipdates[wrhouse];
+								}
+							}
+						}
+						
+					}
+				}
+								
+				CheckoutModalJS.orderHasValidItems = false;
+				
+				// Invoke the orderitemupdate service call to update the order item.
+				wc.service.invoke("MhtnOrderItemUpdate", params);
+				
+				CheckoutModalJS.hide(serviceResponse["modalType"]);												
+				
+				dojo.subscribe("ajaxOrderCalculateComplete", function(){
+					if(serviceResponse["modalType"].indexOf("monoproduct_stock") >=0 || !CheckoutModalJS.orderHasValidItems){						
+						// Single item in order, so redirect to category page where the items belongs to. 
+						// If no items in the order
+						var newUrl = serviceResponse["continueURL"].replace(new RegExp("&amp;", 'g'), "&");
+						window.location.href = newUrl;
+					} 
+				});							
+								
+				return false;
+				
+			});
+			
+			
+	    	
+			var typeModal = dojo.byId(serviceResponse["modalType"]);
+			typeModal.style.display="block";
+			
+
+			var finalText = null;
+			if(serviceResponse["modalType"] == "monoproduct_stock"){
+				finalText = dojo.byId("finalText_stock");
+			}else if(serviceResponse["modalType"].indexOf("allproduct_stock")>=0){
+				finalText = dojo.byId("finalText_many_stock");
+			}else{
+				finalText = dojo.byId("finalText");
+				
+			}
+			finalText.style.display="block";
+			
+			var _widget = dojo.byId("mhtn_widget");
+			_widget.style.display="block";
+			var _background = dojo.byId("mhtn_background");
+			_background.style.display="block";
+			
+		},
+		
+		hide : function(modalType){
+			
+			dojo.query("#mhtn_lista_productos li").forEach(dojo.destroy);
+			this.isOpen = false;
+			this.wareHouses = [];
+			var typeModal = dojo.byId(modalType);
+			typeModal.style.display="none";
+			var _widget = dojo.byId("mhtn_widget");
+			_widget.style.display="none";
+			var _background = dojo.byId("mhtn_background");
+			_background.style.display="none";
+			
+			dojo.byId("finalText_stock").style.display="none";
+			dojo.byId("finalText").style.display="none";
+			
+			if(this.clickHandler != null){
+				dojo.disconnect(this.clickHandler);
+			}
+			
+			if(CheckoutModalJS.handleHideQuestion != null){
+    			dojo.disconnect(CheckoutModalJS.handleHideQuestion);
+    			CheckoutModalJS.handleHideQuestion = null;
+    		}
+			
+			if(this.showAlertFunc != null){
+				AddressHelper.showAlertModal = this.showAlertFunc;
+			}
+		},
+		
+		theCalendar : null,
+		lastCalendarNum : -1,
+		showAlertFunc : null,		
+		
+		prepareCalendar : function(num){
+			var calendar = dojo.byId("calendar_" + num);
+			calendar.style.display="inline-table";
+			dojo.addClass(calendar, "active");
+			if(this.lastCalendarNum != -1 && this.lastCalendarNum != num){
+				var calendarOld = dojo.byId("calendar_" + this.lastCalendarNum);
+				if(calendarOld != null){
+					calendarOld.style.display =  "none";
+					dojo.removeClass(calendarOld, "active");
+				}
+			}
+			this.lastCalendarNum = num;
+			
+			/*if(this.showAlertFunc == null){
+				this.showAlertFunc = AddressHelper.showAlertModal;
+			}
+			
+			AddressHelper.showAlertModal = function(_postFix){	
+				var modal = dojo.byId("caja-no-encontrado-texto"+_postFix);
+				if(modal){
+					//modal.style.display = 'block';
+					var error_cal = dojo.byId("error_calendar_" + num);
+					error_cal.innerHTML = modal.innerHTML;					
+				}												
+			};*/
+		},
+		
+		//jornadas : {"AM":"09:00 - 15:00", "PM":"15:00 - 22:00", "TH": "09:00 - 22:00"},
+		jornadas : {"AM":"09:00 - 13:00", "PM":"13:00 - 19:00","JN":"19:00 - 22:00", "TH": "09:00 - 22:00"},//Req 1048 Jornada Noche
+		updateDates : function(){
+			
+			//deliveryDate Tag in format dd/MM/yyyy HH:mm
+			var deliveryDateTagValue = dojo.query('.selectedJornada .jornada_deliveryDateTagValue', CheckoutModalJS.calendarContainer)[0].value;
+			
+			var isTHAvailable = dojo.query('.selectedJornada .jornada_isTHAvailable', CheckoutModalJS.calendarContainer)[0].value;		
+			var jornada_type = dojo.query('.selectedJornada .jornada_type', CheckoutModalJS.calendarContainer)[0].value;
+			//var jornada_type_string = isTHAvailable == 'true' ? "TH" : (jornada_type == "0" ? "AM" : "PM");
+			var jornada_type_string;//Req 1048 Jornada Noche
+			if(isTHAvailable == 'true'){
+				jornada_type_string = "TH";
+			}else if(jornada_type == "0" ){
+				jornada_type_string = "AM";
+			}else if(jornada_type == "1" ){
+				jornada_type_string = "PM";
+			}else if(jornada_type == "3" ){
+				jornada_type_string = "JN";
+			}
+
+			deliveryDateTagValue = deliveryDateTagValue.substring(0, deliveryDateTagValue.length - 6 );
+			var newDateSeleccted = dojo.date.locale.parse(deliveryDateTagValue, { datePattern: "dd/MM/yy", selector: "date"});
+			
+			var newDatetoShow = dojo.date.locale.format(newDateSeleccted, {datePattern: "EEEE dd 'de' MMMM 'de' yyyy", locale: "es-ES"});
+			newDatetoShow = newDatetoShow.substring(0, newDatetoShow.length - 5);
+			newDatetoShow = newDatetoShow + this.jornadas[jornada_type_string];   
+			
+			
+			dojo.query(".dateSelectedText" +  this.wareHouses[this.lastCalendarNum]).forEach(function(node){
+				node.innerHTML = newDatetoShow;
+			});
+				
+			var calendar = dojo.byId("calendar_" + this.lastCalendarNum);
+			calendar.style.display =  "none";
+			dojo.removeClass(calendar, "active");
+			
+			
+			
+			dojo.byId("modalPopupDateErrorMessage_" + this.lastCalendarNum).innerHTML = "";
+			
+			
+		},
+		//Fix for text box non editable issue in reservation modal popup	
+		justNumbers : function(number){
+	        var keynum = window.event ? window.event.keyCode : e.which;
+	        if ((keynum == 8) || (keynum == 46))
+	        return true;
+	         
+	        return /\d/.test(String.fromCharCode(keynum));
+		},
+		validateQty : function(inputDate, maxQuantity, numberItem){
+			try{
+				var newValue = parseInt(inputDate.value);
+				dojo.byId("del_item_" + numberItem).checked = false; //MHTN: Defect 794
+				
+				if(!isNonNegativeInteger(newValue) || newValue == 0){
+					//throw MessageHelper.messages["QUANTITY_INPUT_ERROR"]; //MHTN: Defect 794
+					dojo.byId("del_item_" + numberItem).checked = true; //MHTN: Defect 794
+				}
+				
+				if(newValue > maxQuantity){
+					throw MessageHelper.messages["QUANTITY_INPUT_GREAT_ERROR"];
+				}else{
+					this.hideErrorQty(numberItem);
+				}
+			}catch(e){
+				//inputDate.value = maxQuantity;
+				inputDate.focus();
+				this.displayErrorQty(numberItem, e);
+			}
+		},		
+		displayErrorQty: function(numberItem, err){
+			var errorElement = dojo.byId("error" + numberItem); 
+			errorElement.style.display = "block";
+			errorElement.innerHTML = err;
+		},
+		hideErrorQty: function(numberItem){
+			var errorElement = dojo.byId("error" + numberItem);
+			errorElement.style.display = "none";
+			errorElement.innerHTML = "";
+		},
+		
+		/**
+		 * This method to display the shipping calendar when user click on change date option from shipping
+		 */
+		showDateSelectionPopup :function(isFirstWeek, orderItemId, shipmodeId, warehouse, date, noShowCalendar, calendarCont, notDeleteCalendar) {
+			
+			this.calendarContainer = calendarCont;
+			this.noShowCalendarModal = noShowCalendar;	
+			
+			
+			// EOM Exception : Shipping calendar change
+			if(undefined != notDeleteCalendar && null != notDeleteCalendar && notDeleteCalendar){
+				this.deleteSelectedMarker = false;
+			}else{
+				this.deleteSelectedMarker = true;
+			}
+			
+			
+			if(undefined != notDeleteCalendar && undefined != dojo.query('.jornadaRow', this.calendarContainer)[0] && 
+					null != dojo.query('.jornadaRow', this.calendarContainer)[0]){				
+				return;
+			}
+			// EOM Exception : Shipping calendar change
+			
+			var parameters = {};
+			parameters.firstWeek = isFirstWeek;
+			parameters.shipmodeId = shipmodeId;	
+			parameters.date = date;
+			parameters.orderItemId = orderItemId;
+			parameters.tienda = warehouse;
+			parameters.storeId = SinglePageCheckoutJS.storeId;
+
+			// To avoid Multiple click
+			if(!submitRequest()){
+				return;
+			}
+			
+			dojo.publish("ajaxRequestInitiated");
+			dojo.xhrPost({
+				url: getAbsoluteURL() + "GetJornadasByShipmodeIdAndStartDate",				
+				handleAs: "json-comment-filtered",
+				content: parameters,
+				service: this,
+				load: this.populateDateSelectionPopup,
+				error: function(errObj,ioArgs) {
+					// Reset the flag
+					requestSubmitted = false;
+					
+					CheckoutModalJS.hideCalendar();
+					CheckoutModalJS.showCalendarAlertModal();				
+					console.debug("CheckoutModalJS.showDateSelectionPopup: Unexpected error occurred during an xhrPost request.");
+					dojo.publish("ajaxRequestCompleted");
+				}
+			});
+									
+			CheckoutModalJS.showCalendar();	
+			
+			
+		},
+		
+		// To display the calendar modal with results
+		showCalendar:function(){
+			// EOM Exception - Date Change Modal
+			if(CheckoutModalJS.noShowCalendarModal){
+				return;
+			}
+			// Change Date modal - normal
+			dojo.byId('GenericModal').className = "Genericmodal calendarModal";
+			
+		},
+		//To Hide the calendar modal
+		hideCalendar:function(){
+			// EOM Exception - Date Change Modal
+			if(CheckoutModalJS.noShowCalendarModal){
+				return;
+			}
+			// Change Date Modal - normal
+			dojo.byId('GenericModal').className = "hide";
+			
+		},
+		
+		showCalendarAlertModal: function(){
+			// EOM Exception - Date Change Modal
+			if(CheckoutModalJS.noShowCalendarModal){
+				return;
+			}
+			dojo.byId('AlertWidgetHidden').className = "ModalDesktop";
+		},
+		
+		hideCalendarAlertModal: function(){
+			// EOM Exception - Date Change Modal
+			if(CheckoutModalJS.noShowCalendarModal){
+				return;
+			}
+			dojo.byId('AlertWidgetHidden').className = "hide";
+		},
+		
+		populateDateSelectionPopup:function(serviceResponse, ioArgs) {
+			// Reset the flag
+			requestSubmitted = false;
+			
+			CheckoutModalJS.selectedDayIndex = "";
+			
+			console.debug("serviceResponse: ",serviceResponse);
+			console.debug("ioArgs: ",ioArgs);
+			
+			var destroyExistingCal = true;			
+			
+			// Delete the existing data
+			if(destroyExistingCal){
+				// Desktop
+				dojo.query(".jornadaRow").forEach(dojo.destroy);
+				// Mobile
+				dojo.query(".jornadaRowMobile").forEach(dojo.destroy);
+			}
+			
+			// By default the next and previous day link should not be clickable
+			dojo.addClass(dojo.query('.DiaSiguiente',CheckoutModalJS.calendarContainer)[0],'inactive');
+			dojo.addClass(dojo.query('.DiaAnteriror',CheckoutModalJS.calendarContainer)[0],'inactive');
+
+			if(!serviceResponse.comesWithServiceError){
+				//For successful service response
+				var shipmodeId = serviceResponse.shipmodeId;
+				var dateString = serviceResponse.availableStartDate + " 12:00:00";
+				var orderItemId = serviceResponse.orderItemId;
+				var maxNumberOfDays = +serviceResponse.maxDaysToCheckJornada;
+				var numDaysAvailable = +serviceResponse.numDaysAvailable;
+
+				var warehouse = serviceResponse.tienda;
+				var pattern = new RegExp( "(\\d{4})" + "-" + "(\\d{2})" + "-" + "(\\d{2}) (\\d{2}):(\\d{2}):(\\d{2})" );
+				var parts = dateString.match(pattern);
+				var date = new Date(Date.UTC(parseInt(parts[1]), parseInt(parts[2], 10) - 1, parseInt(parts[3], 10), parseInt(parts[4], 10), parseInt(parts[5], 10), parseInt(parts[6], 10), 0));
+				
+				var startDateForThisCalendar = new Date(date);
+				var requestedShipDate = null;
+				
+				var reqDateId='requestedShipDate_' + orderItemId;
+				if (dojo.byId(reqDateId)!=null && dojo.byId(reqDateId).value != '') {
+					var tempDateString = dojo.byId(reqDateId).value;
+					parts = tempDateString.match(pattern);
+					requestedShipDate = new Date(parseInt(parts[1]), parseInt(parts[2], 10) - 1, parseInt(parts[3], 10), parseInt(parts[4], 10), parseInt(parts[5], 10), parseInt(parts[6], 10), 0);
+				}
+				
+				var avlStartDateId='availableStartDate_' + orderItemId;
+				if(serviceResponse.isFirstWeek == 'true' || serviceResponse.isFirstWeek == true){
+					dojo.byId(avlStartDateId).value = date;
+				}
+				var availableStartDate = new Date(dojo.byId(avlStartDateId).value);
+				
+				//maxNumberOfDays
+				var dateForwardOffset = new Date(availableStartDate);
+				dateForwardOffset = dojo.date.add(dateForwardOffset, "day", maxNumberOfDays);
+				
+				
+				//DATE IS PLACE IN THE FURUTE
+				if(date > availableStartDate) {
+
+					var previousWeek = dojo.date.add(date, "week", -1);
+					var backDate = previousWeek;
+
+					var today = new Date();			
+					var ffff = today.getFullYear();
+					var mm = (today.getMonth() + 1) > 9 ? (today.getMonth() + 1) : ("0" + (today.getMonth() + 1));
+					var dd = today.getDate() > 9 ? today.getDate() : ("0" + today.getDate());			
+					var formattedTodayDate = ffff + "-" + mm + "-" + dd ;			
+					var todayDateToCompare = new Date(today.getFullYear(),today.getMonth(),today.getDate());
+					
+					ffff = backDate.getFullYear();
+					mm = (backDate.getMonth() + 1) > 9 ? (backDate.getMonth() + 1) : ("0" + (backDate.getMonth() + 1));
+					dd = backDate.getDate() > 9 ? backDate.getDate() : ("0" + backDate.getDate());			
+					var formattedBackDate = ffff + "-" + mm + "-" + dd ;
+					var backDateToCompare = new Date(backDate.getFullYear(),backDate.getMonth(),backDate.getDate());
+					
+					if(todayDateToCompare > backDateToCompare)
+					{
+						var formattedBackDate = formattedTodayDate;
+					}			
+					
+					/*dojo.query('.dateSelectionBackBtn', CheckoutModalJS.calendarContainer)[0].setAttribute("onclick","javascript:setCurrentId('dateSelectionBackBtnWrapper');CheckoutModalJS.showDateSelectionPopup(false, " + 
+							orderItemId + ", " + shipmodeId + ", '"+warehouse+"', '" + formattedBackDate+ "'" +");");
+
+					dojo.query('.pastDate', CheckoutModalJS.calendarContainer)[0].style.display='inherit';
+					dojo.query('.pastDate', CheckoutModalJS.calendarContainer)[0].style.visibility='visible';*/
+					// Desktop
+					dojo.removeClass(dojo.query('.pastDate',CheckoutModalJS.calendarContainer)[0],'inactive');
+					dojo.addClass(dojo.query('.pastDate',CheckoutModalJS.calendarContainer)[0],'active');
+					dojo.query('.pastDate',CheckoutModalJS.calendarContainer)[0].onclick = function(){
+						CheckoutModalJS.showDateSelectionPopup(false, orderItemId, shipmodeId, warehouse,  formattedBackDate, CheckoutModalJS.noShowCalendarModal, CheckoutModalJS.calendarContainer);
+					};
+					
+					// Mobile
+					dojo.removeClass(dojo.query('.SemanaAnteriror',CheckoutModalJS.calendarContainer)[0],'inactive');
+					dojo.addClass(dojo.query('.SemanaAnteriror',CheckoutModalJS.calendarContainer)[0],'active');
+					dojo.query('.SemanaAnteriror',CheckoutModalJS.calendarContainer)[0].onclick = function(){
+						CheckoutModalJS.showDateSelectionPopup(false, orderItemId, shipmodeId, warehouse,  formattedBackDate, CheckoutModalJS.noShowCalendarModal, CheckoutModalJS.calendarContainer);
+					};
+				} else {
+					/*dojo.query('.pastDate', CheckoutModalJS.calendarContainer)[0].style.visibility='hidden';
+					if(dojo.query('.MidleLine')[0]){
+						dojo.query('.MidleLine', CheckoutModalJS.calendarContainer)[0].style.visibility='hidden';
+					}*/
+					//Desktop
+					dojo.removeClass(dojo.query('.pastDate',CheckoutModalJS.calendarContainer)[0],'active');
+					dojo.addClass(dojo.query('.pastDate',CheckoutModalJS.calendarContainer)[0],'inactive');
+					dojo.query('.pastDate',CheckoutModalJS.calendarContainer)[0].onclick = function(){
+						void(0);
+					};
+					// Mobile
+					dojo.removeClass(dojo.query('.SemanaAnteriror',CheckoutModalJS.calendarContainer)[0],'active');
+					dojo.addClass(dojo.query('.SemanaAnteriror',CheckoutModalJS.calendarContainer)[0],'inactive');
+					dojo.query('.SemanaAnteriror',CheckoutModalJS.calendarContainer)[0].onclick = function(){
+						void(0);
+					};
+					
+				}
+								
+				
+				//NOW, DATE IS PLACE IN THE PRESENT OR PASS
+				var nextWeek = dojo.date.add(date, "week", 1);		
+				if(nextWeek < dateForwardOffset) {
+					var fwdDate = nextWeek;
+					//fwdDate.setDate(date.getDate()+7);
+					ffff = fwdDate.getFullYear();
+					mm = (fwdDate.getMonth() + 1) > 9 ? (fwdDate.getMonth() + 1) : ("0" + (fwdDate.getMonth() + 1));
+					dd = fwdDate.getDate() > 9 ? fwdDate.getDate() : ("0" + fwdDate.getDate());	
+					var formattedFwdDate = ffff + "-" + mm + "-" + dd ;
+					
+					/*dojo.query('.dateSelectionFwdBtn', CheckoutModalJS.calendarContainer)[0].setAttribute("onclick","javascript:setCurrentId('dateSelectionBackBtnWrapper');CheckoutModalJS.showDateSelectionPopup(false, " + 
+							orderItemId + ", " + shipmodeId + ", '"+warehouse+"', '" + formattedFwdDate+ "'" +");");
+					
+					dojo.query('.futureDate', this.calendarContainer)[0].style.display='inherit';
+					dojo.query('.futureDate', CheckoutModalJS.calendarContainer)[0].style.visibility='visible';
+					if(dojo.query('.MidleLine')[0] && dojo.query('.pastDate', CheckoutModalJS.calendarContainer)[0].style.visibility == 'visible'){
+						dojo.query('.MidleLine', CheckoutModalJS.calendarContainer)[0].style.visibility='visible';
+					}*/
+					// Desktop
+					dojo.removeClass(dojo.query('.futureDate',CheckoutModalJS.calendarContainer)[0],'inactive');
+					dojo.addClass(dojo.query('.futureDate',CheckoutModalJS.calendarContainer)[0],'active');
+					dojo.query('.futureDate',CheckoutModalJS.calendarContainer)[0].onclick = function(){
+						CheckoutModalJS.showDateSelectionPopup(false, orderItemId, shipmodeId, warehouse,  formattedFwdDate, CheckoutModalJS.noShowCalendarModal, CheckoutModalJS.calendarContainer);
+					};
+					// Mobile
+					dojo.removeClass(dojo.query('.SemanaSiguiente',CheckoutModalJS.calendarContainer)[0],'inactive');
+					dojo.addClass(dojo.query('.SemanaSiguiente',CheckoutModalJS.calendarContainer)[0],'active');
+					dojo.query('.SemanaSiguiente',CheckoutModalJS.calendarContainer)[0].onclick = function(){
+						CheckoutModalJS.showDateSelectionPopup(false, orderItemId, shipmodeId, warehouse,  formattedFwdDate, CheckoutModalJS.noShowCalendarModal, CheckoutModalJS.calendarContainer);
+					};
+					
+				} else {
+					/*dojo.query('.futureDate', CheckoutModalJS.calendarContainer)[0].style.visibility='hidden';
+					if(dojo.query('.MidleLine')[0]){
+						dojo.query('.MidleLine', CheckoutModalJS.calendarContainer)[0].style.visibility='hidden';
+					}*/
+					// Desktop
+					dojo.removeClass(dojo.query('.futureDate',CheckoutModalJS.calendarContainer)[0],'active');
+					dojo.addClass(dojo.query('.futureDate',CheckoutModalJS.calendarContainer)[0],'inactive');
+					dojo.query('.futureDate',CheckoutModalJS.calendarContainer)[0].onclick = function(){
+						void(0);
+					};
+					// Mobile					
+					dojo.removeClass(dojo.query('.SemanaSiguiente',CheckoutModalJS.calendarContainer)[0],'active');
+					dojo.addClass(dojo.query('.SemanaSiguiente',CheckoutModalJS.calendarContainer)[0],'inactive');
+					dojo.query('.SemanaSiguiente',CheckoutModalJS.calendarContainer)[0].onclick = function(){
+						void(0);
+					};
+				}
+				
+				// Mobile : make the first day visible if it was previously hidden by the next and preivous day link
+				dojo.query('.DiaBoxMobile',CheckoutModalJS.calendarContainer).forEach(function(elem){
+					dojo.addClass(elem,'hide');
+				});
+				dojo.removeClass(dojo.query('.DiaBoxMobile',CheckoutModalJS.calendarContainer)[0],'hide');
+				
+				var mmm = '';
+				for(i=1;i<=7;i++) {
+					
+					dojo.query('.day_' + i, CheckoutModalJS.calendarContainer).forEach(function(node){
+					    node.innerHTML = MessageHelper.messages["DATE_SELECTION_DAY_" + (date.getDay() + 1)];
+					});
+					
+					ffff = date.getFullYear();
+					mm = (date.getMonth() + 1) > 9 ? (date.getMonth() + 1) : ("0" + (date.getMonth() + 1));
+					mmm = CheckoutModalJS._MONTH[+date.getMonth()];					
+					dd = date.getDate() > 9 ? date.getDate() : ("0" + date.getDate());
+															
+					dojo.query('.date_' + i, CheckoutModalJS.calendarContainer).forEach(function(node){
+					    node.innerHTML = dd + " / " + mm;// Format: 21 / 09 ;
+					});
+					// Mobile
+					dojo.query('.date_mobile_' + i, CheckoutModalJS.calendarContainer).forEach(function(node){
+					    node.innerHTML = dd + " de " + mmm;// Format: 23 de September ;
+					});
+															
+					dojo.query('.dateForBackend_' + i, CheckoutModalJS.calendarContainer).forEach(function(node){
+					    node.innerHTML = ffff + "-" + mm + "-" + dd;;
+					});
+					
+					
+					date.setDate(date.getDate()+1);
+				}
+				var isMhtnForSaveDeliveryDateLikeSecondDate = false;				
+					
+				//dojo.query('AcceptDateButton', CheckoutHelperJS.calendarContainer)[0].href = "javascript: setCurrentId('AcceptDateButton');CheckoutHelperJS.submitJornadaSelectionModal("+ shipmodeId +","+ warehouse +","+orderItemId+","+isMhtnForSaveDeliveryDateLikeSecondDate+")";
+				dojo.query('.AcceptDateButton', CheckoutModalJS.calendarContainer)[0].onclick = function(){
+					setCurrentId('AcceptDateButton');
+					CheckoutModalJS.submitJornadaSelectionModal(shipmodeId, warehouse, orderItemId, isMhtnForSaveDeliveryDateLikeSecondDate);
+				};
+				
+				if(serviceResponse.shipmodeId == '24'){
+					CheckoutModalJS.drawCellsWithAvailabilityForCE(serviceResponse.jornadas, requestedShipDate, startDateForThisCalendar, serviceResponse);
+				}else{
+					CheckoutModalJS.drawCellsWithAvailability(serviceResponse.jornadas, requestedShipDate, startDateForThisCalendar, serviceResponse);
+				}
+				
+				//se agrega para cargar tabla responsive
+				//dojo.publish("tablaJornadaCompleted");
+				
+				// Mobile - By default make the next day link visible
+				dojo.removeClass(dojo.query('.DiaSiguiente',CheckoutModalJS.calendarContainer)[0],'inactive');
+				dojo.addClass(dojo.query('.DiaSiguiente',CheckoutModalJS.calendarContainer)[0],'active');
+				dojo.query('.DiaSiguiente',CheckoutModalJS.calendarContainer)[0].onclick = function(){
+					CheckoutModalJS.showDayCalendar('nextDay');
+				};
+					
+			}else if(serviceResponse.comesWithServiceError){
+				CheckoutModalJS.hideCalendar();
+				CheckoutModalJS.showCalendarAlertModal();				
+				console.log("serviceResponse.comesWithServiceError: ",serviceResponse);
+			}else if (serviceResponse.isFirstWeek == 'true') {
+				var errorMsg = MessageHelper.messages["NO_JORNADA_AVAILABLE"].replace(/__/g, serviceResponse.maxDaysToCheckJornada);
+				MessageHelper.displayErrorMessage(errorMsg);
+				CheckoutModalJS.hideCalendar();
+			}else {
+				MessageHelper.displayErrorMessage(MessageHelper.messages["NO_JORNADA_AVAILABLE_FOR_THE_WEEK"]);
+				// MHTN DEFECT: DOUBLE ALLOCATION
+				dojo.byId('AcceptDateButton').href = "javascript:void(0)";
+			}
+		},
+		
+		drawCellsWithAvailability: function (_jornadas, _requestedShipDate, _startDateForThisCalendar,serviceResponse){
+			
+			CheckoutModalJS.setNochePrice(serviceResponse.nochePriceList[0]);
+			CheckoutModalJS.setShipTotalPrice(serviceResponse.priceDescription[0].price);			
+			
+			// Desktop
+			var nodeHeader = dojo.query('.jornadaRowHeader', this.calendarContainer)[0];	
+			// Mobile
+			var nodeHeaderMobile = dojo.query('.jornadaRowHeaderMobile', this.calendarContainer)[0];
+			
+			var defaultMarked = false;
+			
+			for(var row=0; row<_jornadas.length; row++){
+				var jornadaText = _jornadas[row].jornada;
+				
+				if((_jornadas[row].jornada == 'AM' && serviceResponse.hasAM == 'true') || (_jornadas[row].jornada == 'PM' && serviceResponse.hasPM == 'true') 
+						|| (_jornadas[row].jornada == 'TH' && serviceResponse.hasTH == 'true') || (_jornadas[row].jornada == 'JN' && serviceResponse.hasJN == 'true')){
+				
+					// Desktop
+					var jornadaRow = dojo.create("div", {className: 'divTableRow jornadaRow jornadaRow_'+row }, nodeHeader.parentNode, 'last');
+					// Mobile
+					var jornadaRowMobile = dojo.create("div", {className: 'HorarioBoxMobile jornadaRowMobile jornadaRowMobile_'+row }, nodeHeaderMobile.parentNode, 'last');
+					
+					// Desktop
+					var firstColInnerHTML = CheckoutModalJS.formatJornadaDescription(_jornadas[row].description)
+							+ "<input type=\"hidden\" class=\"jornada_"+row+"_startHour\" value=\"" + _jornadas[row].startHour + "\"/>"
+							+ "<input type=\"hidden\" class=\"jornada_"+row+"_endHour\" value=\"" + _jornadas[row].endHour + "\"/>";																
+					
+					dojo.create("div", {innerHTML: firstColInnerHTML, className: 'divTableCell LineTime FirstBorder jornadaRow'}, jornadaRow, 'last');					
+					
+					
+					for(var col=0; col < 7; col++) { 
+						//the col variable value represent to a date
+						var isDateAvailable = (_jornadas[row].availability[col].exists && _jornadas[row].availability[col].exists=='true') ? true : false;
+						if(isDateAvailable){							
+							defaultMarked = CheckoutModalJS.drawCellPrice(_jornadas[row], row, col, isDateAvailable, _requestedShipDate, defaultMarked, _startDateForThisCalendar, isDateAvailable,true);
+						}else{									
+							defaultMarked = CheckoutModalJS.drawCellPrice(_jornadas[row], row, col, false, _requestedShipDate, defaultMarked, _startDateForThisCalendar, false,true);				
+						}
+					}
+				}			
+			}						
+			
+		},
+		
+		drawCellsWithAvailabilityForCE: function (_jornadas, _requestedShipDate, _startDateForThisCalendar,serviceResponse){
+			
+			CheckoutModalJS.setNochePrice(serviceResponse.nochePriceList[0]);
+			var chileExpIndex = 0;
+			if(serviceResponse.priceDescription.length > 0){
+				for(var i=0; i < serviceResponse.priceDescription.length; i++ ){
+					if(serviceResponse.priceDescription[i].shipMode == 'CourierDelivery'){	
+						chileExpIndex = i;
+					} 
+				}												 
+			}
+			CheckoutModalJS.setShipTotalPrice(serviceResponse.priceDescription[chileExpIndex].price);			
+			
+			// Desktop
+			var nodeHeader = dojo.query('.jornadaRowHeader', this.calendarContainer)[0];	
+			// Mobile
+			var nodeHeaderMobile = dojo.query('.jornadaRowHeaderMobile', this.calendarContainer)[0];
+			
+			var defaultMarked = false;
+			
+			for(var row=0; row<_jornadas.length; row++){
+				var jornadaText = _jornadas[row].jornada;
+				
+				if((_jornadas[row].jornada == 'AM' && serviceResponse.hasAM == 'true') || (_jornadas[row].jornada == 'PM' && serviceResponse.hasPM == 'true') 
+						|| (_jornadas[row].jornada == 'TH' && serviceResponse.hasTH == 'true')){
+				
+					// Desktop
+					var jornadaRow = dojo.create("div", {className: 'divTableRow jornadaRow jornadaRow_'+row }, nodeHeader.parentNode, 'last');
+					// Mobile
+					var jornadaRowMobile = dojo.create("div", {className: 'HorarioBoxMobile jornadaRowMobile jornadaRowMobile_'+row }, nodeHeaderMobile.parentNode, 'last');
+					
+					// Desktop
+					var firstColInnerHTML = CheckoutModalJS.formatJornadaDescription(_jornadas[row].description)
+							+ "<input type=\"hidden\" class=\"jornada_"+row+"_startHour\" value=\"" + _jornadas[row].startHour + "\"/>"
+							+ "<input type=\"hidden\" class=\"jornada_"+row+"_endHour\" value=\"" + _jornadas[row].endHour + "\"/>";																
+					
+					dojo.create("div", {innerHTML: firstColInnerHTML, className: 'divTableCell LineTime FirstBorder jornadaRow'}, jornadaRow, 'last');					
+					
+					
+					for(var col=0; col < 7; col++) { 
+						//the col variable value represent to a date
+						var isDateAvailable = (_jornadas[row].availability[col].exists && _jornadas[row].availability[col].exists=='true') ? true : false;
+						if(isDateAvailable){							
+							defaultMarked = CheckoutModalJS.drawCellPrice(_jornadas[row], row, col, isDateAvailable, _requestedShipDate, defaultMarked, _startDateForThisCalendar, isDateAvailable,true);
+						}else{									
+							defaultMarked = CheckoutModalJS.drawCellPrice(_jornadas[row], row, col, false, _requestedShipDate, defaultMarked, _startDateForThisCalendar, false,true);				
+						}
+					}
+				}			
+			}						
+			
+		},
+		
+		formatJornadaDescription:function(rawDesc) {
+			var retDesc = "";
+			try {
+				var jorDescArray = [];
+				jorDescArray = rawDesc.split(",");
+				if (jorDescArray.length >= 2) {
+					if(jorDescArray[0] == 'Noche'){
+						retDesc = "<div><span class=\"jornadaDesc\"><b><img class='luna_icon' src='/wcsstore/CencosudStorefrontAssetStore/images/luna_azul_icon.png' width='17' height='18'> " + jorDescArray[0] + "  </b>" + jorDescArray[1] + "</span></div>";
+					}else if(jorDescArray[0] == 'Manana'){
+						var joram =  document.getElementById('jornadaText').value;
+						retDesc = "<div><span class=\"jornadaDesc\"><b>" + joram + "  </b>" + jorDescArray[1] + "</span></div>";
+					}else{
+						retDesc = "<div><span class=\"jornadaDesc\"><b>" + jorDescArray[0] + "  </b>" + jorDescArray[1] + "</span></div>";
+					}
+					
+				}
+			} catch (err) {
+				return rawDesc;
+			}
+			return retDesc;
+		},
+		
+		formatJornadaDescriptionMobile:function(rawDesc) {
+			var retDesc = "";
+			try {
+				var jorDescArray = [];
+				jorDescArray = rawDesc.split(",");
+				if (jorDescArray.length >= 2) {
+					if(jorDescArray[0] == 'Noche'){						
+						retDesc = "<span class=\"TextHorario\"><img class='luna_icon' src='/wcsstore/CencosudStorefrontAssetStore/images/luna_azul_icon.png' width='17' height='18'/>" + jorDescArray[0] + "</span><span class=\"TextTime\"> " + jorDescArray[1].replace("-","a") + " Hrs.</span>";
+					}else if(jorDescArray[0] == 'Manana'){
+						var joram =  document.getElementById('jornadaText').value;						
+						retDesc = "<span class=\"TextHorario\">" + joram + "</span><span class=\"TextTime\"> " + jorDescArray[1].replace("-","a") + " Hrs.</span>";
+					}else{						
+						retDesc = "<span class=\"TextHorario\">" + jorDescArray[0] + "</span><span class=\"TextTime\"> " + jorDescArray[1].replace("-","a") + " Hrs.</span>";
+					}					
+				}
+			} catch (err) {
+				return rawDesc;
+			}
+			return retDesc;
+		},
+		
+		
+		drawCellPrice: function(_jornada, index, _col, isAvailable, _requestedShipDate, defaultMarked, _startDateForThisCalendar, isTHAvailable,onlyTH,isJNAvailable){
+
+			var displayShipPrice = this.shipTotalPrice;
+			if(_jornada.jornada == 'JN'){
+				displayShipPrice = this.nochePrice;
+			}
+			
+			var markSelectedJornada = false;
+			
+			var classes = "divTableCell LineTime LineContent";
+			var classesMobile = "jornadaRowMobile";
+			if (null != _requestedShipDate && !defaultMarked && isAvailable) {
+				var timePattern = new RegExp("(\\d{2}):(\\d{2}):(\\d{2})");
+				var timeParts = _jornada.startHour.match(timePattern);
+				var compareDate = new Date(_startDateForThisCalendar);
+				
+				compareDate.setDate(compareDate.getDate()+_col);
+				compareDate.setHours(parseInt(timeParts[1], 10), parseInt(timeParts[2], 10), parseInt(timeParts[3], 10));
+				
+				if (compareDate.getTime() == _requestedShipDate.getTime()) {
+					defaultMarked = true;
+					markSelectedJornada = true;
+					classes = "divTableCell LineTime LineContent selectedJornada";
+					classesMobile = "jornadaRowMobile selectedJornada";
+				}
+			} else if (!defaultMarked && isAvailable) {
+				defaultMarked = true;
+				markSelectedJornada = true;
+				classes = "divTableCell LineTime LineContent selectedJornada";
+				classesMobile = "jornadaRowMobile selectedJornada";
+			}
+			
+			if(_jornada.availability[_col].modeId != "" && _jornada.availability[_col].warehouse != ""){
+				var elem = dojo.byId('shipCostForMode_' + _jornada.availability[_col].modeId + "_"+ _jornada.availability[_col].warehouse);
+				var shipCost = (elem?elem.value:"$0");
+			}		
+			
+			var okImagePath = imageDirectoryPath + "images/checkout/checkok2.png";
+			var avlImagePath = imageDirectoryPath + "images/checkout/checkpending2.png";
+			var htmlselectedDate = "<span class='jornadaDesc'><img class='RadioBottonCalendar' src='"+ okImagePath + "'/>" + displayShipPrice + "</span>";
+			var htmlPendingDate = "<span class='jornadaDesc'><img class='RadioBottonCalendar' src='"+ avlImagePath + "'/>" + displayShipPrice + "</span>"
+			
+			// Mobile
+			var okImagePathMobile = imageDirectoryPath + "images/checkout/checkokMobile2.png";
+			var avlImagePathMobile = imageDirectoryPath + "images/checkout/checkpending2.png";
+				
+			var htmlAvailable  = "";			
+			
+			if(markSelectedJornada){
+				htmlAvailable = htmlselectedDate;				
+			}else{
+				htmlAvailable = htmlPendingDate;				
+			}
+									
+			var htmlNotAvailableMobile = "<span class=''> - </span>";
+			var htmlNotAvailable = "<span class='jornadaDesc'> - </span>";
+			var dataHidden =  "<input type=\"hidden\" class=\"jornada_shipDateTagValue\" value=\"" + _jornada.availability[_col].shipDate + "\"/>"
+							+ "<input type=\"hidden\" class=\"jornada_deliveryDateTagValue\" value=\"" + _jornada.availability[_col].deliveryDate + "\"/>"
+							+ "<input type=\"hidden\" class=\"jornada_shipCost\" value=\"" + shipCost + "\"/>"
+							+ "<input type=\"hidden\" class=\"jornada_type\" value=\"" + index + "\"/>"
+							+ "<input type=\"hidden\" class=\"jornada_datebackendIndex\" value=\"" + (_col + 1) + "\"/>"
+							+ "<input type=\"hidden\" class=\"jornada_isTHAvailable\" value=\"" + isTHAvailable + "\"/>";
+			
+			// Desktop
+			dojo.query('.jornadaRow_'+index, this.calendarContainer).forEach(function(node){
+				
+				dojo.create("div", {					
+					className: classes + ' jornadaRow',
+					innerHTML: (isAvailable ? htmlAvailable: htmlNotAvailable ) + dataHidden,
+					onclick: isAvailable?'javascript: CheckoutModalJS.markJornadaSelected(this,'+_jornada.availability[_col].modeId +' );':''
+				}, node,'last');
+				
+			});
+			
+			// Mobile
+			var firstColInnerHTMLMobile = CheckoutModalJS.formatJornadaDescriptionMobile(_jornada.description)
+					+ "<input type=\"hidden\" class=\"jornada_"+index+"_startHour\" value=\"" + _jornada.startHour + "\"/>"
+					+ "<input type=\"hidden\" class=\"jornada_"+index+"_endHour\" value=\"" + _jornada.endHour + "\"/>";
+			
+			var jornadaRowMobile = dojo.query('.jornadaRowMobile_'+index)[0];
+			
+			if((_col+1) > 1){
+				classesMobile = classesMobile + " hide";
+			}
+			dojo.create("div", {className: 'HorarioContentBox '+ classesMobile + ' HorarioContentBox_'+(_col+1)}, jornadaRowMobile, 'last');
+			
+			dojo.query('.HorarioContentBox_'+(_col+1), this.calendarContainer).forEach(function(node){			
+				if(!isAvailable){
+					node.innerHTML = htmlNotAvailableMobile;
+				}
+				else {
+					node.innerHTML = firstColInnerHTMLMobile + dataHidden;	
+					node.onclick = function(){CheckoutModalJS.markJornadaSelected(this,_jornada.availability[_col].modeId)};
+					dojo.create("img",{
+						className: 'RadioBottonCalendar',
+						id: 'jornadaCheckMobile',
+						src: (markSelectedJornada ? okImagePath: avlImagePath ),					
+						//onclick: isAvailable?'javascript: CheckoutModalJS.markJornadaSelected(this,'+_jornada.availability[_col].modeId +' );':''
+					},node,'first');
+					
+					dojo.create("span", {					
+						className: 'TextPrice',
+						innerHTML: displayShipPrice,						
+					}, node,'last');
+				}			
+			});
+			// Mobile
+												
+			return defaultMarked;
+		},
+		markJornadaSelected:function(elem, shipModeId) {
+			
+			this.timeSelectedShipModeId = shipModeId;
+						
+			dojo.query('.divTableCell',CheckoutModalJS.calendarContainer).forEach(function(each){
+				dojo.removeClass(each, "selectedJornada");
+				if(dojo.query('.RadioBottonCalendar',each)[0])
+					dojo.query('.RadioBottonCalendar',each)[0].src = imageDirectoryPath + "images/checkout/checkpending2.png";
+			});
+			
+			// Mobile
+			dojo.query('.HorarioContentBox',CheckoutModalJS.calendarContainer).forEach(function(each){
+				dojo.removeClass(each, "selectedJornada");
+				if(dojo.query('.RadioBottonCalendar',each)[0])
+					dojo.query('.RadioBottonCalendar',each)[0].src = imageDirectoryPath + "images/checkout/checkpending2.png";
+			});
+					
+			dojo.toggleClass(elem, "selectedJornada");
+			
+			if(dojo.query('.RadioBottonCalendar',elem)[0]){
+				var imgElement = dojo.query('.RadioBottonCalendar',elem)[0];
+				if(null != imgElement.id && undefined != imgElement.id && imgElement.id == 'jornadaCheckMobile'){
+					imgElement.src = imageDirectoryPath + "images/checkout/checkokMobile2.png";
+				}else{
+					imgElement.src = imageDirectoryPath + "images/checkout/checkok2.png";
+				}				
+			}
+				
+		},
+		
+		submitJornadaSelectionModal:function(shipmodeId, warehouse, p_orderItemId, isShipDateTagLikeRequestedShipDate) {
+			
+			if(null == dojo.query('.selectedJornada', this.calendarContainer)[0]) {
+				// If no date selected return the control
+				return;
+			}
+						
+			var elem = dojo.query('.selectedJornada', this.calendarContainer)[0];
+						
+			//deliveryDate Tag in format dd/MM/yyyy HH:mm
+			var deliveryDateTagValue = dojo.query('.selectedJornada .jornada_deliveryDateTagValue', this.calendarContainer)[0].value;
+			//deliveryDate Tag in format yyyy-MM-dd
+			var datebackendIndex = dojo.query('.selectedJornada .jornada_datebackendIndex', this.calendarContainer)[0].value;
+			var deliveryDate = dojo.query('.dateForBackend_' + datebackendIndex, this.calendarContainer)[0].innerHTML; 
+			var dateString = "";
+			//Set requestedShipDate attribute like deliveryDate value
+			var date = deliveryDate;
+			
+			var jornada_type = dojo.query('.selectedJornada .jornada_type', this.calendarContainer)[0].value;
+			
+			var time = dojo.query('.jornada_'+ jornada_type +'_startHour', this.calendarContainer)[0].value;
+			//shipDate Tag in format dd/MM/yyyy HH:mm
+			
+			var shipDateTagValue = dojo.query('.selectedJornada .jornada_shipDateTagValue', this.calendarContainer)[0].value;
+			if(isShipDateTagLikeRequestedShipDate && shipDateTagValue != null && typeof shipDateTagValue != 'undefined'){
+				var pattern = new RegExp( "(\\d{2})" + "/" + "(\\d{2})" + "/" + "(\\d{4}) (\\d{2}):(\\d{2})" );
+				var parts = shipDateTagValue.match(pattern);
+				var shipDate = new Date(Date.UTC(parseInt(parts[3]), parseInt(parts[2], 10) - 1, parseInt(parts[1], 10), parseInt(parts[4], 10), parseInt(parts[5], 10), 0, 0));
+				//Now, according to requirement the shipDate value be save in requestedShipDate attribute.
+				var ffff = shipDate.getFullYear();
+				var mm = (shipDate.getMonth() + 1) > 9 ? (shipDate.getMonth() + 1) : ("0" + (shipDate.getMonth() + 1));
+				var dd = shipDate.getDate() > 9 ? shipDate.getDate() : ("0" + shipDate.getDate());
+				date = ffff + "-" + mm + "-" + dd;
+				//time = parseInt(parts[4], 10)+":"+parseInt(parts[5], 10);
+			}
+			var shipCost = dojo.query('.selectedJornada .jornada_shipCost', this.calendarContainer)[0].value;
+			/*var isTHAvailable = dojo.query('.selectedJornada .jornada_isTHAvailable', this.calendarContainer)[0].value;		
+			if(isTHAvailable == 'true'){
+				time = dojo.query('.jornada_TH_startHour', this.calendarContainer)[0].value; //TH
+			}*/
+			dateString = date + " " + time;
+			
+			var params = [];
+			params["storeId"] = SinglePageCheckoutJS.storeId;
+			params["catalogId"] = SinglePageCheckoutJS.catalogId;
+			params["langId"] = SinglePageCheckoutJS.langId;
+			params.orderId = ".";
+			params["updatePrices"] = "1";
+			params.calculationUsage = "-1,-2,-3,-4,-5,-6,-7";
+			params.allocate="***";
+			params.backorder="***";
+			params.remerge="***";
+			params.check="*n";
+			params.URL="";
+			params.mhtnSecondDateTagValue = (!isShipDateTagLikeRequestedShipDate?shipDateTagValue:deliveryDateTagValue);
+			//params["mhtnOrderJornada"] = isTHAvailable == 'true' ? "TH" : (jornada_type == "0" ? "AM" : "PM");
+			var jornadoType;//Req 1048 Jornada Noche
+			if (jornada_type == '0'){
+				jornadoType = 'AM';
+			}else if (jornada_type == '1'){
+				jornadoType = 'PM';
+			}else if (jornada_type == '2'){
+				jornadoType = 'TH';
+			}else if (jornada_type == '3'){
+				jornadoType = 'JN';
+			}
+			params["mhtnOrderJornada"] = jornadoType;
+			
+			var orderItemId = null;
+			var orderItemIdFieldName = null;
+			var numberOfOrderItems = dojo.query("#orderItemIdFor_" + shipmodeId+"_"+warehouse).length;
+			var processedItems = 0;
+			
+			dojo.query("#orderItemIdFor_" + shipmodeId+"_"+warehouse).forEach(function(node){
+				if(null != node.value){
+					processedItems = processedItems + 1;
+					orderItemId = node.value;
+					if(shipmodeId===5 && orderItemId != p_orderItemId ){
+						//continue; // PDM in order to avoid shipmode change to all group
+					}
+					if(this.timeSelectedShipModeId == null || this.timeSelectedShipModeId == ""){
+						this.timeSelectedShipModeId = shipmodeId;
+					}
+					CheckoutModalJS.updateParamObject(params,"orderItemId",orderItemId,false,-1);
+					CheckoutModalJS.updateParamObject(params,"requestedShipDate",dateString,false,-1);
+					CheckoutModalJS.updateParamObject(params,"shipModeId",this.timeSelectedShipModeId,false,-1);
+				}				
+			});
+		
+			//For handling multiple clicks
+			
+			//cursor_wait();
+	        //wc.service.invoke("OrderItemAddressShipMethodUpdate", params);
+			CheckoutModalJS.RequestShippingDateAction = true;
+			
+			wc.service.invoke("OrderItemRequestShipDateUpdate", params);
+		},
+
+		/**
+		 * This function updates the input associative array params with the input key-value pair. 
+		 * If the toArray value is true, this function creates an associative array for duplicate entries; otherwise it overwrites the existing array.
+		 * The function is used for updating input parameters before passing them to a service call.
+		 *
+		 * @param {Array} params The associative array to update.
+		 * @param {String} key The key to search for in the array.
+		 * @param {String} value The new value to update with when the key has been found in the array.
+		 * @param {Boolean} toArray If the value is true, then the function creates a new array for duplicate entries. If the value is false, no new array will be created, the existing array will be overwritten.
+		 * @param {Integer} index The index in the array in which the value should be updated.
+		 *
+		 * @returns {Array} params The updated associative array.
+		 */
+		updateParamObject:function(params, key, value, toArray, index){
+			if(params == null){
+				params = [];
+			}
+			
+			if(params[key] != null && toArray){
+				if(dojo.lang.isArrayLike(params[key])){
+					//3rd time onwards
+					if(index != null && index != ""){
+						//overwrite the old value at specified index
+						params[key][index] = value;
+					}else{
+						params[key].push(value);
+					}
+				}else{
+					//2nd time
+					var tmpValue = params[key];
+					params[key] = [];
+					params[key].push(tmpValue);
+					params[key].push(value);
+				}
+			}else{
+				//1st time
+				if(index != null && index != "" && index != -1){
+					//overwrite the old value at specified index
+					params[key+"_"+index] = value;
+				}else if(index == -1){
+					var i = 1;
+					while(params[key + "_" + i] != null){
+						i++;
+					}
+					params[key + "_" + i] = value;
+				}else{
+					params[key] = value;
+				}
+			}
+			return params;
+		},
+		
+		// Function to display the previous and next day calendar
+		showDayCalendar: function(action){
+			var visibleDayIndex = "";
+			CheckoutModalJS.selectedDayIndex = "";
+			
+			dojo.query('.DiaBoxMobile',CheckoutModalJS.calendarContainer).forEach(function(node){    							    			    		
+    			if(node.className.indexOf('hide') == -1){    				
+    				var visibleNodeId = node.id;
+    				var index = visibleNodeId.split('_')[1]; 
+    				CheckoutModalJS.selectedDayIndex = index;    				    				    				       		
+    			}
+    			dojo.addClass(node, "hide");
+	    	});
+			
+			dojo.query('.HorarioContentBox',CheckoutModalJS.calendarContainer).forEach(function(elem){
+				dojo.addClass(elem,"hide");
+			});
+			
+			if(action == 'nextDay'){
+				visibleDayIndex = parseInt(CheckoutModalJS.selectedDayIndex) + 1
+			}else{
+				visibleDayIndex = parseInt(CheckoutModalJS.selectedDayIndex) - 1
+			} 
+			
+			var nextVisibleHeader = dojo.query('.DiaBoxMobile_'+visibleDayIndex,CheckoutModalJS.calendarContainer)[0];
+			var nextVisibleElemContent = dojo.query('.HorarioContentBox_'+visibleDayIndex,CheckoutModalJS.calendarContainer)[0];    				
+			dojo.removeClass(nextVisibleHeader, "hide");
+			dojo.removeClass(nextVisibleElemContent, "hide"); 
+			
+			if(visibleDayIndex == parseInt(7)){
+				dojo.removeClass(dojo.query('.DiaSiguiente',CheckoutModalJS.calendarContainer)[0],'active');
+				dojo.addClass(dojo.query('.DiaSiguiente',CheckoutModalJS.calendarContainer)[0],'inactive');
+				dojo.query('.DiaSiguiente',CheckoutModalJS.calendarContainer)[0].onclick = function(){
+					void(0);
+				};
+			}else if(visibleDayIndex == parseInt(1)){
+				dojo.removeClass(dojo.query('.DiaAnteriror',CheckoutModalJS.calendarContainer)[0],'active');
+				dojo.addClass(dojo.query('.DiaAnteriror',CheckoutModalJS.calendarContainer)[0],'inactive');
+				dojo.query('.DiaAnteriror',CheckoutModalJS.calendarContainer)[0].onclick = function(){
+					void(0);
+				};
+			}else{
+				dojo.removeClass(dojo.query('.DiaAnteriror',CheckoutModalJS.calendarContainer)[0],'inactive');
+				dojo.addClass(dojo.query('.DiaAnteriror',CheckoutModalJS.calendarContainer)[0],'active');
+				dojo.removeClass(dojo.query('.DiaSiguiente',CheckoutModalJS.calendarContainer)[0],'inactive');
+				dojo.addClass(dojo.query('.DiaSiguiente',CheckoutModalJS.calendarContainer)[0],'active');
+				dojo.query('.DiaAnteriror',CheckoutModalJS.calendarContainer)[0].onclick = function(){
+					CheckoutModalJS.showDayCalendar('prevDay');
+				};
+				dojo.query('.DiaSiguiente',CheckoutModalJS.calendarContainer)[0].onclick = function(){
+					CheckoutModalJS.showDayCalendar('nextDay');
+				};
+			}			
+		}
+}

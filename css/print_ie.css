@@ -1,0 +1,45 @@
+/*
+ *-----------------------------------------------------------------
+ * Licensed Materials - Property of IBM
+ *
+ * WebSphere Commerce
+ *
+ * (C) Copyright IBM Corp. 2008 All Rights Reserved.
+ *
+ * US Government Users Restricted Rights - Use, duplication or
+ * disclosure restricted by GSA ADP Schedule Contract with
+ * IBM Corp.
+ *-----------------------------------------------------------------
+ */
+ 
+/* Adds a line under the Shipping Information title*/
+div#box div.body {
+	border-top: 1px solid #C9D3DE;
+	width: 90%;
+	display: block;
+}
+
+
+#shipping .shipping_address {
+	border-top: 0;
+	clear: none;
+}
+
+
+#total_breakdown {
+	float: left;
+	width: 100%;
+}
+
+#total_breakdown table{
+	margin-right:10px;
+}
+
+table#order_details {
+
+	width: 100%;
+}
+
+#OrderConfirmPagingDisplay {
+		border-top: 1px solid #C9D3DE;
+}

@@ -1,0 +1,2377 @@
+﻿@charset "utf-8";
+.tarjeta_mas_price
+{
+  color: #f27925 !important;
+}
+#Contenedor
+{
+  background-color: #f1f1f1 !important;
+  padding-top: 20px;
+  z-index: initial !important;
+}
+#footer
+{
+  background-color: #f1f1f1 !important;
+}
+#page
+{
+  top: -4px !important;
+}
+#shopCart_continue_button_one .checkoutBtn, #shopCart_continue_button .checkoutBtn
+{
+  font-family: Tahoma, Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  width: 202px;
+}
+#shopCart_continue_button_one .button-container, #shopCart_continue_button .button-container
+{
+  line-height: 19px;
+}
+.TituloCarro
+{
+  color: #000000;
+  font-family: Tahoma, Verdana;
+  font-size: 24px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  height: 29px;
+  letter-spacing: normal;
+  line-height: normal;
+  position: relative;
+  right: 19px;
+  text-transform: uppercase;
+  top: 53px;
+  width: 45%;
+}
+#order_details tr.nested th
+{
+  background-color: #efefef;
+  border-bottom: 3px solid #efefef;
+  font-size: 12px;
+  height: 40px;
+}
+#order_details .th_align_left_normal, #order_details .th_align_right_normal
+{
+  border-bottom: 2px solid #efefef !important;
+}
+#order_details .th_align_right_dashed_bottom
+{
+  border-top: 0 dashed #EEF2F5 !important;
+}
+.WarrantyHeight{
+  height: 40px;
+}
+#order_details .mainHeader, #order_details .warranty_label, #appliedPromotionCodes, #promoTarget, .itemspecs
+{
+  padding-left: 14px !important;
+  padding-right: 14px !important;
+}
+#order_details .img
+{
+  padding-right: 0;
+}
+#order_details .th_align_left_normal_top
+{
+  border-bottom: 2px solid #efefef;
+  border-top: 0 !important;
+}
+#order_details .img img
+{
+  position: relative;
+  top: 10px;
+}
+#order_details .img
+{
+  width: 80px;
+}
+#order_details .description
+{
+  margin-bottom: 17px;
+  margin-left: 12px;
+  overflow-wrap: break-word;
+  width: 113px !important;
+}
+#shopCart_continue_button_one
+{
+  margin-top: 27px;
+}
+#order_details .TitleTable
+{
+  font-weight: normal !important;
+}
+#order_details .warranty_label
+{
+  color: #000000;
+  font-family: Tahoma, Verdana;
+  font-size: 12px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  height: 14px;
+  letter-spacing: normal;
+  line-height: normal;
+  margin-left: 26px;
+  width: 225px;
+}
+.item_gray
+{
+  font-size: 10px;
+  margin-bottom: 9px;
+}
+.icono_borrar
+{
+  border: solid 0 !important;
+  position: relative;
+}
+.Text_Delivery
+{
+  color: #999999;
+  font-family: Verdana;
+  font-size: 10px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  height: 14px;
+  letter-spacing: normal;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  top: -13px;
+  width: 52px;
+}
+.item-quantity
+{
+  background-color: #ffffff;
+  border: #d6d6d6 solid 1px;
+  border-radius: 10px;
+  height: 30px;
+  width: 54px;
+}
+.item-quantity input
+{
+  border: #ffffff solid 0 !important;
+  color: #000000;
+  font-family: Tahoma, Verdana;
+  font-size: 12px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  height: 14px;
+  letter-spacing: normal;
+  line-height: normal;
+  width: 7px;
+}
+.Plusleft
+{
+  cursor: pointer;
+  float: left;
+  height: 16px;
+  left: 4px;
+  position: relative;
+  top: 7px;
+  width: 10px;
+}
+.Plusleft img
+{
+  height: 3px;
+  position: relative;
+  top: 7px;
+  width: 8px;
+}
+.Plusright
+{
+  cursor: pointer;
+  float: right;
+  left: -8px;
+  position: relative;
+  top: -19px;
+}
+.Plusright img
+{
+  height: 7px;
+  width: 7px;
+}
+.promodescr_tooltip
+{
+  display: none;
+}
+p.item-quantity > input
+{
+  margin-top: -13px !important;
+  width: 45px !important;
+}
+#total_breakdown
+{
+  background-color: #ffffff;
+  border-top: 2px solid #efefef;
+  height: auto;
+  margin-bottom: 5px;
+  padding: 21px 1px 20px 0 !important;
+  position: relative;
+  right: 0;
+  width: 100%;
+}
+#total_breakdown .order_total
+{
+  padding-top: 3px;
+}
+#total_breakdown .total-summary-line
+{
+  padding-right: 14px;
+}
+.dijitButtonNode
+{
+  font-size: 12px;
+}
+.gris
+{
+  background-color: #efefef;
+}
+#dcto
+{
+  color: #666;
+  margin-left: 0;
+  position: relative;
+  right: 76%;
+}
+#dcto .tuCarro
+{
+  width: 60px;
+}
+.mas_mobile{
+  text-decoration: underline;
+  font-family: Tahoma,Verdana;
+  font-size: 12px;
+}
+.total-summary-line .total_details, .total-summary-line .total_figures
+{
+  color: #000000;
+  font-family: Tahoma, Verdana;
+  font-size: 14px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  height: 17px;
+  letter-spacing: normal;
+  line-height: normal;
+  width: 70px;
+}
+#continue_shopping_button
+{
+  background: none;
+  left: 405px;
+  position: relative;
+  width: 25%;
+}
+.warranty_modal_dropdown
+{
+  position: relative;
+  /* right: 28px;*/
+  top:4px;
+}
+#continue_shopping_button a
+{
+  color: #f27925 !important;
+  font-family: Tahoma, Verdana;
+  font-size: 12px;
+  text-decoration: underline;
+  text-transform: none;
+}
+#OrderTotalsDisplay .tarjeta_mas_total
+{
+  color: #f27925;
+  font-family: Tahoma, Verdana;
+  font-size: 16px;
+}
+#WC_SingleShipmentOrderTotalsSummary_td_9, #WC_SingleShipmentOrderTotalsSummary_td_13
+{
+  color: #666 !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+.warrantyText, .warrantyLink
+{
+  display: inline-block;
+}
+/*.warranty_input
+{
+  position: relative;
+  right: 272px;
+  top: -7px;
+}
+.warranty_link span
+{
+  text-decoration: underline;
+  text-transform: none !important;
+}
+.warranty_link
+{
+  position: relative;
+  right: 181px;
+}*/
+#promoTarget
+{
+  display: block !important;
+  margin-top: 0 !important;
+}
+.CodigoProm
+{
+  color: #000000;
+  font-family: Tahoma, Verdana;
+  font-size: 12px;
+  height: 14px;
+  position: relative;
+  top: -13px;
+}
+.promotion_input input
+{
+  border: #d6d6d6 solid 1px !important;
+  height: 32px !important;
+  width: 198px;
+}
+.promotion_button_active
+{
+  background-color: #ffffff !important;
+  border: #f27925 solid 1px;
+  height: 16px;
+  text-align: center;
+  width: 154px;
+}
+.promotion_button_active a
+{
+  color: #f27925 !important;
+  font-family: Tahoma, Verdana;
+  font-size: 12px;
+  font-weight: bold;
+  height: 14px;
+  width: 89.8px;
+}
+.total-summary-line, .dcto_total, .tarjeta_cenco
+{
+  margin-bottom: 14px;
+}
+#OrderTotalsDisplay .tarjeta_cenco
+{
+  margin-top: 0;
+}
+.total-summary-line
+{
+  overflow: hidden;
+}
+#error_code.promo_error
+{
+  clear: both;
+  float: none;
+  margin: 0;
+  padding: 10px 5px;
+  width: 100%;
+}
+#error_msg_promo.promo_error_msg
+{
+  margin: 0;
+  width: auto;
+}
+#promoTarget
+{
+  padding-bottom: 0;
+  padding-left: 0 !important;
+}
+#promotions
+{
+  padding-left: 14px;
+}
+#promodescr_tooltip
+{
+  display: none;
+}
+#total_breakdown .total_figures
+{
+  min-width: 100px;
+}
+.tarjeta_cenco
+{
+  margin-top: 46px;
+  position: relative;
+}
+.UltimasUnidades
+{
+  color: red;
+  font-size: 10px;
+  margin-top: 5px;
+  text-align: center;
+}
+.line
+{
+  border-top: 2px solid #d6d6d6;
+  float: right;
+  height: 2px;
+  position: relative;
+  top: -36px;
+  width: 399px;
+}
+.Code_Pro1
+{
+  color: #000000;
+  font-family: Tahoma, Verdana;
+  font-size: 12px;
+  font-stretch: normal;
+  font-style: normal;
+  font-weight: normal;
+  height: 14px;
+  letter-spacing: normal;
+  line-height: normal;
+  width: 100% !important;
+}
+.Code_Pro2
+{
+  background-color: #f3f9fb;
+  height: 37px !important;
+  width: 179px !important;
+}
+.Code_Pro2 strong
+{
+  color: #000000;
+  font-family: Tahoma, Verdana;
+  font-size: 12px;
+  left: 39px;
+  position: relative;
+  top: 10px;
+}
+.Code_Pro3
+{
+  background-color: #efefef;
+  height: 37px !important;
+  width: 37px !important;
+}
+.Code_Pro3 img
+{
+  left: 10px;
+  position: relative;
+  top: 10px;
+}
+.Code_Pro4
+{
+  color: #999999;
+  font-family: Tahoma, Verdana;
+  margin-top: 14px;
+  width: 100% !important;
+}
+#dcto_total span
+{
+  color: #000000 !important;
+  font-family: tahoma !important;
+  font-size: 14px !important;
+  font-weight: normal;
+}
+#dcto_total span.total_descuento
+{
+  display: inline-block;
+  margin-bottom: 0;
+}
+.CodigoProm
+{
+  top: -4px;
+}
+.mobile
+{
+  display: none;
+}
+.BoxEmpty
+{
+  background-color: #f9f9f9;
+  height: 159px;
+  margin-top: 41px;
+  text-align: center;
+  width: 100%;
+}
+.boxContentEmpty
+{
+  position: relative;
+  top: 46px;
+}
+.iconoEmpty
+{
+  height: 38px;
+  object-fit: contain;
+  opacity: 0.300000011920928955078125;
+  width: 35px;
+}
+.textEmpty
+{
+  color: #4a4a4a;
+  font-family: Tahoma, Verdana;
+  font-size: 24px;
+  margin-left: 5px;
+}
+.linkEmpty
+{
+  color: #f27925;
+  cursor: pointer;
+  font-family: Tahoma, Verdana;
+  font-size: 14px;
+  text-decoration: underline;
+}
+.checkoutPage #main_content_wrapper
+{
+  width: 816px !important;
+}
+.WarrantyNewModal
+{
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  width: 60%;
+  margin: 0 auto !important;
+}
+.mobilePlusHeading
+{
+  display: none !important;
+}
+.fondo
+{
+  background-color: #000;
+  height: 100%;
+  left: 0;
+  margin-left: 1px !important;
+  opacity: 0.60000002384185791015625;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.WarrantyNewModalHeader
+{
+  color: #000000;
+  font-family: Tahoma, Verdana;
+  font-size: 21px;
+  height: 29px;
+  letter-spacing: 0.9px;
+  padding-bottom: 20px;
+  text-align: center;
+  width: 282px;
+}
+.WarrantyNewModalMessage
+{
+  color: #999999;
+  font-family: Tahoma, Verdana;
+  font-size: 12px;
+  height: 44px;
+  line-height: 1.57;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  text-align: justify;
+  width: 70%;
+}
+.warranty_type_header
+{
+  color: #4a4a4a;
+  font-family: Tahoma, Verdana;
+  font-size: 14px;
+  height: 17px;
+  width: 72px;
+}
+.warranty_type_background
+{
+  background-color: #efefef;
+  height: 35px;
+  width: 744px;
+}
+.divTable
+{
+  border-collapse: collapse;
+  display: table;
+  width: 100%;
+}
+.divTableBody
+{
+  display: table-row-group;
+}
+.divTableRow
+{
+  border: #d6d6d6 solid 1px;
+  line-height: 30px;
+}
+.divTableCell, .divTableHead
+{
+  color: #333333;
+  padding: 5px 10px 5px 10px;
+  text-align: justify;
+}
+.divTableHeading
+{
+  background-color: #EEE;
+  font-weight: bold;
+  text-align: center;
+}
+.divTableCellHeading
+{
+  background-color: #EEE;
+  border: #EEE solid 1px;
+  color: #4a4a4a;
+  font-family: Tahoma, Verdana;
+  font-size: 14px;
+  text-align: center;
+}
+.warrantyTypeDescription
+{
+  color: #999999;
+  font-family: Tahoma, Verdana;
+  font-size: 12px;
+  line-height: 1.5;
+  padding-bottom: 14px;
+}
+.warrantyTypeDescription .text-style-1
+{
+  font-weight: bold;
+}
+.typeNormal
+{
+  padding-right: 30px;
+}
+.typePlus
+{
+  padding-left: 20px;
+  padding-right: 30px;
+}
+#hiddenNoclass
+{
+  margin: 0;
+  width: 0;
+}
+.dijitPopup
+{
+ /* left: 0px !important;*/
+}
+.boton_Warranty
+{
+  background: none 0 0 repeat scroll #f27925;
+  border: none 0;
+  border-radius: 0;
+  color: #fff;
+  cursor: pointer;
+  float: left;
+  font-family: Tahoma, Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  height: 45px;
+  margin: 18px 29% 12px;
+  text-align: center;
+  width: 39%;
+}
+.boton_Warranty span
+{
+  position: relative;
+  top: 10px;
+}
+.divTableCell input[type="radio"]
+{
+  background-color: #ffffff !important;
+  border: #d6d6d6 solid 1px;
+  height: 16px;
+  top: 1px;
+  width: 10%;
+}
+.mas_protection
+{
+  color: #f27925;
+  font-family: Tahoma, Verdana;
+  font-size: 12px;
+  margin: 10px 150px 10px 140px;
+  text-align: center;
+  text-decoration: underline;
+}
+/*input[type="radio"]:checked:before
+{
+  background: #00b0eb;
+  border-radius: 100%;
+  content: "";
+  display: block;
+  height: 9px;
+  left: 13px;
+  position: relative;
+  top: 3px;
+  width: 9px;
+}*/
+.btn-close-warranty
+{
+  color: black !important;
+  cursor: pointer;
+  font-size: 23px;
+  font-weight: bold;
+  margin-left: 96%;
+}
+@media screen and (min-width:1025px)
+{
+  .divTableCellHeading
+  {
+    display: table-cell;
+  }
+  .divTableRow
+  {
+    display: table-row;
+  }
+  .divTableCell, .divTableHead
+  {
+    display: table-cell;
+  }
+}
+input[type="checkbox"]:checked:before
+{
+  background-color: #ffffff;
+  border: #666666 solid 1px;
+  border-radius: 2px;
+  color: #666666;
+  content: "\2713";
+  display: inline-block;
+  font-weight: bold;
+  height: 15px;
+  left: 0;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  top: -2px;
+  width: 15px;
+}
+input[type="checkbox"]:before
+{
+  background-color: #ffffff;
+  border: #666666 solid 1px;
+  border-radius: 2px;
+  color: #666666;
+  content: "";
+  display: inline-block;
+  font-weight: bold;
+  height: 15px;
+  left: 0;
+  line-height: 16px;
+  position: absolute;
+  text-align: center;
+  top: -2px;
+  width: 15px;
+}
+#order_details input, #order_details select
+{
+  height: 14px;
+}
+.warrantyText{
+  height: 12px;
+}
+.warranty_modal_tooltip.dijitTooltipDialog
+{
+  visibility: hidden;
+}
+#OrderTotalsDisplay
+{
+  clear: both;
+}
+.limtd_stock, .TextoStockResponsivo
+{
+  color: #d00000;
+}
+#order_details .avail {
+    width: 164px;
+}
+textarea,
+input.text,
+input[type="text"]{
+-webkit-appearance: none;
+border-radius: 0;
+}
+
+.promo_discount_desc{
+  width: 108%;
+}
+.free_gift_container {
+    padding: 0px;
+}
+@media screen and (max-width:1024px)
+{
+
+  .promo_discount_desc,.Code_Pro4{
+    font-family: Verdana !important;
+  }
+  .promo_discount_desc{
+    width: 105% !important;
+  }
+  .carroWarrantyModal #warrantyPriceCheckButton {
+    margin: 18px 0 13px !important;
+    width: 100% !important;
+  }
+  .modal-contenido
+  {
+    width: 90% !important;
+  }
+  html body #mainHeader
+  {
+    height: auto;
+    width: 100%;
+  }
+  html body .vermas.promociones
+  {
+    color: #444444;
+    font-weight: bold;
+    margin: 0 auto !important;
+  }
+  html body #mainHeader
+  {
+    width: 100%;
+  }
+  html body .dijitPopup
+  {
+    width: 100% !important;
+  }
+  html body #Contenedor
+  {
+    overflow: hidden;
+  }
+  html body .checkoutPage #main_content_wrapper
+  {
+    width: 100% !important;
+  }
+  html body #content_wrapper_box
+  {
+    width: 100%;
+  }
+  html body .center_content820
+  {
+    position: relative !important;
+    top: 21px !important;
+    width: 100%;
+  }
+  html body .center_content820 #box.shopping_cart_box
+  {
+    width: 100%;
+  }
+  html body .center_content820 #box.shopping_cart_box #shopping_cart_product_table_tall, html body .center_content820 #box.shopping_cart_box .contentgrad_header
+  {
+    height: 40px !important;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820
+  {
+    width: 100%;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane
+  {
+    width: 100%;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details
+  {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr
+  {
+    border-bottom: 1px solid #cccccc;
+    float: left;
+    position: relative;
+    width: 100%;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr.nested
+  {
+    display: none;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr th
+  {
+    display: none;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td
+  {
+    border-bottom: 0 !important;
+    margin: 0;
+    min-height: 0 !important;
+    padding: 0 0;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td input[type="hidden"]
+  {
+    display: none;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.picktitle
+  {
+    float: left;
+    margin: 10px 0 0 0;
+    padding: 0;
+    width: 100%;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.picktitle p
+  {
+    font-size: 14px;
+    font-weight: lighter;
+    margin-left: 29px;
+    margin-right: 10px;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.picktitle p a
+  {
+    font-size: 15px;
+    font-weight: bold;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.sku, html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.object
+  {
+    float: right;
+    height: auto;
+    width: 60%;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.object
+  {
+    margin: 0;
+    padding: 0 0 3px 0;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.QTY
+  {
+    float: right;
+    height: 0;
+    padding: 0;
+    position: relative;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.QTY input
+  {
+    border: #ccc solid 2px;
+    font-size: 12px;
+    left: -5px;
+    position: relative;
+    top: 6px;
+    width: 42px !important;
+  }
+  .EliminarCantidad
+  {
+    bottom: 7px;
+    font-size: 10px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    bottom: 61px;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.each
+  {
+    float: right !important;
+    height: auto;
+    margin: 0;
+    margin-bottom: 66px;
+    padding: 0;
+    position: relative;
+    text-align: left;
+    top: 20px;
+    width: 68%;
+    left: 29px;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.promocionBtn
+  {
+    float: left;
+    width: 100%;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.promocionBtn a
+  {
+    color: #00a1db;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.total
+  {
+    display: none;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.th_align_right_dashed_bottom
+  {
+    border: 0;
+    display: block;
+    float: left !important;
+    margin: 10px;
+    padding: 3% 0 0 3% !important;
+    width: 92% !important;
+  }
+  .WarrantyHeight{
+     height: 58px;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td .sub-price
+  {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td .item_gray, html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.object, html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.avail p, html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.QTY, html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.each, html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td .sub-price, html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td .total
+  {
+    color: #333;
+    /*float: left;*/
+    font-size: 12px;
+  }
+  /*html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td div.warranty_label
+  {
+    float: left;
+    margin: 0 0 2px;
+    width: 91% !important;
+  }*/
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td div.img
+  {
+    float: left;
+    height: 70px;
+    position: relative;
+    width: 95px;
+  }
+  /*html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td .warranty_link
+  {
+    border: 0 !important;
+    float: right;
+    height: 36px;
+    width: 87%;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td .warranty_link .dijitDropDownButton
+  {
+    background-color: transparent !important;
+    float: none !important;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td .warranty_link .Open_ver_mas_mobile
+  {
+    color: #1ca1e1;
+    float: left;
+    line-height: 100%;
+    margin-top: 20px;
+    text-align: center;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td .warranty_link #warranty_modal_dropdown_290110760_label
+  {
+    border: 0 !important;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td .warranty_link .warranty_input
+  {
+    float: left;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td .warranty_link .warranty_modal_dropdown span
+  {
+    float: left;
+    font-size: 14px;
+    margin-left: -11px;
+    margin-top: 1px;
+    text-align: center;
+    width: 100%;
+  }*/
+  html body #shopCart_continue_button, html body #shopCart_continue_button_one
+  {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+  html body #continue_shopping_button
+  {
+    display: none;
+  }
+  html body #total_breakdown
+  {
+    left: 0;
+    padding: 0 0 0 0 !important;
+    width: 100%;
+    padding-right: 14px !important;
+  }
+  html body #total_breakdown .order_total,
+  html body #total_breakdown .tarjeta_mas_total,
+  html body #total_breakdown .total_details,
+  html body #total_breakdown .total_figures
+  {
+    text-align: right;
+    font-family: tahoma;
+  }
+  .total-summary-line
+  {
+    font-size: 14px !important;
+  }
+  #OrderTotalsDisplay .total-summary-line
+  {
+    font-size: 16px !important;
+  }
+  html body #total_breakdown .order_total .total_figures, html body #total_breakdown .tarjeta_mas_total .total_figures
+  {
+    float: right;
+    /*font-size: 12px !important;*/
+    padding: 0;
+    text-align: right;
+    width: 14%;
+    min-width: 68px !important;
+  }
+  html body .element
+  {
+    float: left;
+    padding: 5% 3%;
+    width: 100%;
+  }
+  html body .element .leftSide
+  {
+    float: left;
+    width: 30%;
+  }
+  html body .element .leftSide img
+  {
+    height: auto;
+    margin: 17px auto 0;
+    position: relative;
+  }
+  #order_details .mainHeader
+  {
+    width: 97% !important;
+  }
+  html body .element .rightSide
+  {
+    float: left;
+    left: 7%;
+    position: relative;
+    width: 50%;
+  }
+  html body .element .rightSide .scrollPaneDescription, html body .element .rightSide .promo_text, html body .element .rightSide .scrollPanePrice, html body .element .rightSide .sub-price, html body .element .rightSide .product_rating
+  {
+    height: auto;
+    margin: 4px 0 0 0;
+    padding: 0;
+    width: 100%;
+  }
+  html body .element .rightSide .scrollPaneDescription a
+  {
+    font-size: 13px;
+    font-weight: normal;
+  }
+  html body .element .rightSide .agregar
+  {
+    margin: 0;
+    padding: 0;
+  }
+  html body .element .rightSide .agregar1
+  {
+    float: right;
+  }
+  html body .element .rightSide .agregar2
+  {
+    float: left;
+    width: 75%;
+  }
+  html body .element .rightSide .agregar2.agregar-completo
+  {
+    width: 100%;
+  }
+  html body .element .rightSide .agregar2 .btn-agregar-al-carro
+  {
+    float: left;
+    text-align: center;
+    width: 100%;
+  }
+  html body .espot_slider
+  {
+    padding: 0;
+    width: 100%;
+  }
+  html body .espot_slider h3
+  {
+    border-bottom: 3px solid #d6d6d6;
+    color: #000;
+    font-size: 17px;
+    font-weight: lighter;
+    margin: 0;
+    margin-left: 25px !important;
+    margin-right: 25px !important;
+  }
+  html body .thumbScroller .imgContainer
+  {
+    width: 100%;
+  }
+  html body .btn-agregar-al-carro.agregado
+  {
+    background-color: #ccc;
+    color: #000;
+  }
+  html body .WarrantyContainer, html body .Warranty_Wrapper
+  {
+    width: 100%;
+  }
+  html body .WarrantyContainer, html body .Warranty_Header
+  {
+    background-color: #fff;
+    float: left;
+    width: 100%;
+  }
+  html body .Warranty_Header span
+  {
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 33.3%;
+  }
+  html body .dijitTooltipContainer
+  {
+    left: 0;
+    padding: 0;
+    position: relative !important;
+  }
+  html body .WarrantyContainer .section
+  {
+    height: auto;
+    margin: 0;
+    padding: 5px;
+    position: relative;
+  }
+  html body .WarrantyContainer .section .radioButton
+  {
+    left: 5%;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: -7%;
+  }
+  html body .WarrantyContainer .section label
+  {
+    float: left;
+    margin: 0;
+    padding: 0;
+    width: 33.3%;
+  }
+  html body .WarrantyContainer .section span
+  {
+    float: left;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    position: static;
+    right: 0;
+    text-align: center;
+    width: 33.3%;
+  }
+  html body .WarrantyContainer a
+  {
+    left: 8%;
+    top: 10px;
+  }
+  html body .dijitTooltipDialog
+  {
+    background-color: #fff;
+    margin: -3px;
+    padding-top: 40px;
+  }
+  html body .white-popup.detalles-pedido
+  {
+    border: #d5eaf3 solid 3px;
+    height: auto;
+    min-height: 138px;
+    padding: 12px 15px;
+  }
+  html body .white-popup.detalles-pedido h4
+  {
+    color: #0083c2;
+    font-size: 15px;
+  }
+  html body .white-popup.detalles-pedido p
+  {
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  html body .white-popup.detalles-pedido dl
+  {
+    float: left;
+    padding-bottom: 10px;
+    width: 100%;
+  }
+  html body .white-popup.detalles-pedido dt
+  {
+    float: left;
+    margin: 0;
+    padding: 1px;
+    width: 50%;
+  }
+  html body .white-popup.detalles-pedido dd
+  {
+    color: #63b0cc;
+    float: left;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 50%;
+  }
+  html body .white-popup.detalles-pedido dl.total-decuentos
+  {
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+  }
+  html body .white-popup.detalles-pedido dl.total-decuentos dt, html body .white-popup.detalles-pedido dl.total-decuentos dd
+  {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+  .shopping_cart_box h2
+  {
+    color: #000;
+  }
+  .tarjeta_mas_price
+  {
+    color: #D90000;
+  }
+  #order_details .warranty_modal_dropdown span
+  {
+    text-transform: none;
+  }
+  .discuont
+  {
+    color: #2d9ee4;
+    left: 30px;
+    padding-right: 1% !important;
+    position: absolute;
+  }
+  .ico-pregunta
+  {
+    position: absolute;
+    right: -13%;
+  }
+  .del-promo
+  {
+    font-weight: bold !important;
+    right: 30% !important;
+    top: 38% !important;
+  }
+  .del-promo2
+  {
+    font-weight: bold !important;
+    right: 30% !important;
+    top: 49% !important;
+  }
+  .tit-promo
+  {
+    float: right !important;
+    width: 67% !important;
+  }
+  .sin-border-b
+  {
+    border-bottom: none !important;
+  }
+  .oculta_subtotal .oculta_urlpopupcarro
+  {
+    display: none !important;
+  }
+  .muestra_subtotal
+  {
+    display: block !important;
+    min-width: 0 !important;
+    padding-right: 12px !important;
+  }
+  .oculta_urlpopupcarro
+  {
+    display: none !important;
+  }
+  .muestra_urlpopupcarro
+  {
+    display: block !important;
+  }
+  .footerZone-min
+  {
+    display: block !important;
+    margin-bottom: 0 !important;
+    margin-top: 8% !important;
+  }
+  .muestra_urlpopupcarro
+  {
+    display: none !important;
+  }
+  #ShoppingCartRightSideBarAds .leftSide img
+  {
+    top: 15px !important;
+  }
+  .tarjeta_mas_img
+  {
+    margin-right: -12px !important;
+  }
+  .navPrev
+  {
+    display: none !important;
+  }
+  .navNext
+  {
+    display: none !important;
+  }
+  .thumbScroller
+  {
+    float: none !important;
+    overflow: visible !important;
+  }
+  #ShoppingCartRightSideBarAds
+  {
+    width: 100% !important;
+  }
+  #ShoppingCartFeaturedProducts
+  {
+    margin-bottom: -44px !important;
+    width: 100% !important;
+  }
+  .espot_slider .thumbScroller
+  {
+    width: 100% !important;
+  }
+  .thumbsNode
+  {
+    width: 100% !important;
+  }
+  .cerrado
+  {
+    display: none;
+    height: 0;
+    min-height: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+  .cerrado.abierto
+  {
+    display: block;
+    height: auto;
+    padding: 15px 10px 15px 0;
+    transition: all 0.3s ease;
+  }
+  .cerradoVisto
+  {
+    display: none;
+    height: 0;
+    min-height: 0;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+  .cerradoVisto.abierto
+  {
+    display: block;
+    height: auto;
+    min-height: 180px;
+    padding: 15px 10px 15px 0;
+    transition: all 0.3s ease;
+  }
+  .scrollPanePrice
+  {
+    height: auto !important;
+  }
+  .th_align_right_normal
+  {
+    width: 100% !important;
+  }
+  .mas_mobile
+  {
+    color: #f27925 !important;
+    word-spacing: 2px !important;
+  }
+  #order_details .warranty_price
+  {
+    float: none;
+    left: 71%;
+    margin-right: 50px;
+    position: absolute;
+    top: 70%;
+  }
+  #MessageArea
+  {
+    height: 50px !important;
+    left: 0 !important;
+    width: 100% !important;
+  }
+  #order_details
+  {
+    padding-bottom: 0 !important;
+  }
+  #dijit__MasterTooltip_0
+  {
+    left: 0 !important;
+  }
+  #dijit__MasterTooltip_0 .dijitTooltipConnector
+  {
+    display: none !important;
+  }
+  .product_rating
+  {
+    display: none !important;
+  }
+  .descuento-total
+  {
+    left: -6%;
+    margin-right: 0;
+  }
+  #EliminarResponsivo
+  {
+    color: #666;
+    font-size: 13px;
+  }
+  .warranty_link input[type="checkbox"]
+  {
+    left: 7% !important;
+  }
+  .warranty_link img
+  {
+    position: absolute;
+  }
+  .warranty_link > div
+  {
+    padding: 10% 47% 20% 0;
+  }
+  .warranty_link div .no-hover
+  {
+    display: none;
+  }
+  .warranty_link .btn-hover .no-hover
+  {
+    display: block !important;
+    padding: 0 0 0 13%;
+  }
+  .dijitPopup
+  {
+    display: block;
+    position: absolute !important;
+  }
+  #dcto .tuCarro
+  {
+    width: 100%;
+  }
+  html body .dijitTooltipDialog
+  {
+    padding-top: 0 !important;
+  }
+  .dijitTooltipBelow .dijitTooltipConnector
+  {
+    height: 0 !important;
+  }
+  .btn-close
+  {
+    border: #666 solid 1px;
+    height: 30px;
+    line-height: 32px;
+    margin: 3px;
+    margin-left: 90%;
+    margin-top: 10px;
+    padding: 0;
+    right: 0;
+    top: 0;
+    width: 30px;
+  }
+  .fondo
+  {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    opacity: 0.800000011920928955078125;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1042;
+  }
+  .WarrantyContainer
+  {
+    background-color: #fff !important;
+    z-index: 9999 !important;
+  }
+  .OcultaPopupGarantia
+  {
+    visibility: hidden !important;
+  }
+  .CentroDescuento
+  {
+    margin-right: 8px !important;
+  }
+  .on
+  {
+    margin-left: 5% !important;
+  }
+  #footer .footerWrapper
+  {
+    padding: 0;
+  }
+  #promotions
+  {
+    margin-left: 32px;
+  }
+  .Code_Pro4
+  {
+    margin-left: -23px !important;
+    color: #09c !important;
+    padding: 0px !important;
+    width: 121% !important;
+    text-align: left !important;
+  }
+  #shopCart_continue_button
+  {
+    margin-top: 23px !important;
+  }
+  input, select
+  {
+    margin-top: 2px !important;
+  }
+  .total_details
+  {
+    padding-top: 0 !important;
+    padding-right: 0 !important;
+  }
+  #add_to_cart_popup .dijitDialogPaneContent
+  {
+    top: 0% !important;
+  }
+  .ToolTips
+  {
+    top: 0% !important;
+  }
+  .warranty_price
+  {
+    display: none !important;
+  }
+  .remove_item img
+  {
+    display: none;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.remove_item
+  {
+    float: left;
+    font-weight: bold;
+    position: absolute;
+    right: 30%;
+    text-align: center;
+    top: 52%;
+    width: 22% !important;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.remove_item span
+  {
+    color: #666;
+    font-size: 13px;
+  }
+  html body .center_content820 #box.shopping_cart_box .body820 .dijitContentPane table#order_details tr td.remove_item img
+  {
+    display: none;
+  }
+  .CentroDescuento
+  {
+    margin-right: 18% !important;
+  }
+  #order_details tr td a span.popup_close.mobile_close
+  {
+    display: inline;
+  }
+  .agregar .agregar1 form input
+  {
+    height: 27px !important;
+    margin-top: 5px !important;
+    padding: 1px 1px 2px 0 !important;
+    width: 28px !important;
+  }
+  .promotion_input input
+  {
+    height: 30px !important;
+  }
+  .promotion_button
+  {
+    padding-top: 10px !important;
+  }
+  div.msgpopup2 .msgpopup_content_wrapper .content .message_text
+  {
+    height: auto;
+  }
+  .TituloCarro
+  {
+    width: 96% !important;
+    left: 8px !important;
+    top: 0 !important;
+  }
+  #shopCart_continue_button_one .checkoutBtn, #shopCart_continue_button .checkoutBtn
+  {
+    height: 40px;
+    width: 90% !important;
+  }
+  #shopCart_continue_button_one .button-container span, #shopCart_continue_button .button-container span
+  {
+    position: relative;
+    top: 8px;
+  }
+  .TextoStockResponsivo
+  {
+    width: 100% !important;
+    text-align: right !important;
+    float: right;
+    bottom: 44px;
+    position: relative;
+  }
+  .UltimasUnidades
+  {
+
+    bottom: 16px;
+    left: 32px;
+    position: relative;
+    width: 41%;
+  }
+  #tipos_de_entrega_carro .icons
+  {
+    float: right !important;
+    width: 100% !important;
+  }
+  #tipos_de_entrega_carro {
+    float: right !important;
+    width: 100% !important;
+  }
+  #tipos_de_entrega_carro .icons .TipoEntregaBox
+  {
+    display: list-item;
+    width: 100%;
+    text-align: center;
+    list-style-type: none;
+  }
+  .icono_tooltip .minitooltip
+  {
+    left: -19px !important;
+  }
+  #page
+  {
+    position: relative;
+  }
+  html body #headerZone1, html body #main_content_wrapper, html body #page
+  {
+    width: 92% !important;
+  }
+  .mobile
+  {
+    display: block !important;
+  }
+  .no-mobile
+  {
+    display: none !important;
+  }
+  html body .espot_slider
+  {
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  html body .espot_slider h3
+  {
+    border-bottom: 3px solid #d6d6d6 !important;
+    color: #000 !important;
+    font-size: 17px !important;
+    font-weight: lighter !important;
+    margin: 0 !important;
+    margin-left: 25px !important;
+    margin-right: 25px !important;
+  }
+  .espot_slider .thumbScroller
+  {
+    width: 100% !important;
+  }
+  html body .element .leftSide
+  {
+    float: left !important;
+    width: 30% !important;
+  }
+  html body .element .leftSide img
+  {
+    height: auto !important;
+    margin: 17px auto 0 !important;
+    position: relative !important;
+  }
+  #ShoppingCartRightSideBarAds .leftSide img
+  {
+    top: 15px !important;
+  }
+  .navPrev
+  {
+    display: none !important;
+  }
+  .navNext
+  {
+    display: none !important;
+  }
+  .thumbScroller
+  {
+    float: none !important;
+    overflow: visible !important;
+  }
+  #ShoppingCartRightSideBarAds
+  {
+    width: 100% !important;
+  }
+  #ShoppingCartFeaturedProducts
+  {
+    margin-bottom: -44px !important;
+    width: 100% !important;
+  }
+  .thumbsNode
+  {
+    width: 100% !important;
+  }
+  html body .thumbScroller .imgContainer
+  {
+    width: 100% !important;
+  }
+  html body .element
+  {
+    float: left !important;
+    padding: 5% 3% !important;
+    width: 100% !important;
+  }
+  html body .element .rightSide
+  {
+    float: left !important;
+    left: 7% !important;
+    position: relative !important;
+    width: 50% !important;
+  }
+  html body .element .rightSide .scrollPaneDescription, html body .element .rightSide .promo_text, html body .element .rightSide .scrollPanePrice, html body .element .rightSide .sub-price, html body .element .rightSide .product_rating
+  {
+    height: auto !important;
+    margin: 4px 0 0 0 !important;
+    padding: 0 !important;
+    width: 100% !important;
+  }
+  html body .element .rightSide .scrollPaneDescription a
+  {
+    font-size: 13px !important;
+    font-weight: normal !important;
+  }
+  html body .element .rightSide .agregar
+  {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  html body .element .rightSide .agregar1
+  {
+    float: right !important;
+  }
+  html body .element .rightSide .agregar2
+  {
+    float: left !important;
+    width: 75% !important;
+  }
+  html body .element .rightSide .agregar2.agregar-completo
+  {
+    width: 100% !important;
+  }
+  html body .element .rightSide .agregar2 .btn-agregar-al-carro
+  {
+    float: left !important;
+    text-align: center !important;
+    width: 100% !important;
+  }
+  .scrollPanePrice
+  {
+    height: auto !important;
+  }
+  .product_rating
+  {
+    display: none !important;
+  }
+  .agregar .agregar1 form input
+  {
+    height: 27px !important;
+    margin-top: 5px !important;
+    padding: 1px 1px 2px 0 !important;
+    width: 28px !important;
+  }
+  .checkoutPage #content_wrapper_box
+  {
+    margin-bottom: 34%;
+  }
+  #shopCart_continue_button_one
+  {
+    margin-top: 24px !important;
+  }
+  #shopCart_continue_button_one .no-desktop
+  {
+    position: relative !important;
+    top: -8px !important;
+  }
+  .description
+  {
+    display: none !important;
+  }
+  .sku
+  {
+    display: block !important;
+    margin-left: 16px !important;
+   /* margin-top: 20px !important;*/
+    bottom: 64px !important;
+    /*margin-top: 0;*/
+    position: relative;
+  }
+  .name_prod
+  {
+    color: #000000 !important;
+    font-family: Tahoma,Verdana !important;
+    font-size: 12px !important;
+    height: auto !important;
+  }
+  .item_gray
+  {
+    color: #999999 !important;
+    font-family: Tahoma,Verdana !important;
+    font-size: 10px !important;
+    position: relative;
+    top: 3px;
+  }
+  .mainHeader
+  {
+    margin-top: 10px !important;
+  }
+  .icono_borrar
+  {
+    margin-top: 43px !important;
+    right: 78px !important;
+  }
+  .icono_borrar2
+  {
+    position: relative;
+    top: 7px;
+  }
+  /*.ancho_icono
+  {
+    max-width: 116px;
+    right: 18px !important;
+    width: 45% !important;
+  }*/
+  .QTYResponsivo
+  {
+    margin-bottom: 14px !important;
+    float: right !important;
+  }
+  .item-quantity
+  {
+    height: 40px !important;
+    position: relative;
+    right: 97px;
+    top: 32px;
+    width: 111px !important;
+  }
+  .Plusleft img
+  {
+    height: 2px;
+    width: 10px;
+  }
+  .Plusright img
+  {
+    height: 10px;
+    width: 10px;
+  }
+  .Plusright
+  {
+    float: none;
+    left: -5px;
+    position: relative;
+    top: 7px;
+  }
+  .IOShopCartDisplay
+  {
+    display: none;
+  }
+  #tipos_de_entrega_carro
+  {
+    margin-top: 12px !important;
+  }
+  #order_details .warranty_label
+  {
+    right: 10px;
+    position: relative;
+  }
+  .warranty_link
+  {
+    position: relative;
+    right: 39px;
+    top: -14px;
+  }
+  #order_details .warranty_link a
+  {
+    margin-left: 29px;
+    position: relative;
+    top: -7px;
+    width: 72%;
+  }
+
+  #order_details .itemspecs
+  {
+    margin-top: 0;
+    max-width: 100% !important;
+  }
+  .warranty_link
+  {
+    /*right: 55% !important;*/
+  }
+  .promotion_input
+  {
+    width: 97% !important;
+  }
+  .promotion_input input
+  {
+    width: 100% !important;
+  }
+  .promotion_button_active
+  {
+    height: 34px !important;
+    left: 9px !important;
+    margin-bottom: 4% !important;
+    margin-top: 3.5% !important;
+    position: relative !important;
+    top: 17px !important;
+    width: 93% !important;
+  }
+  #shopCart_continue_button .checkoutBtn
+  {
+    background-color: #f27925;
+    height: 40px !important;
+  }
+  #shopCart_continue_button .button-container
+  {
+    line-height: 8px !important;
+  }
+  .Code_Pro3 img
+  {
+    left: 24px !important;
+  }
+  #dcto_total .total_descuento
+  {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+  /*#dcto_total span
+  {
+    margin-left: 142px;
+  }*/
+  .line
+  {
+    top: -2% !important;
+    width: 100% !important;
+  }
+  .Plusleft
+  {
+    top: 12px;
+    left: 8px
+  }
+  #shopCart_continue_button_one .button-container, #shopCart_continue_button .button-container
+  {
+    line-height: 3px !important;
+  }
+  .total-summary-line
+  {
+    margin-top: 14px;
+    color: #000;
+    /*padding-right: 10px !important;*/
+  }
+  /*.total-summary-line, #total_breakdown .tarjeta_mas_total
+  {
+    padding-right: 13% !important;
+  }*/
+  .discuont
+  {
+    padding-right: 0% !important;
+    position: relative !important;
+    right: 0 !important;
+  }
+  #total_breakdown .total_figures
+  {
+    padding-right: 0 !important;
+    min-width: auto !important;
+  }
+  .total-summary-line .total_figures
+  {
+    float: none !important;
+    width: auto !important;
+  }
+  #total_breakdown .total-summary-line .total_details, #total_breakdown .total-summary-line .muestra_subtotal{
+    display: inline-block !important;
+  }
+  #total_breakdown .total-summary-line
+  {
+    padding-right: 0px !important;
+  }
+  /*  #total_breakdown .total_figures
+  {
+    min-width: 68px !important;
+  }*/
+
+  .total-summary-line, .tarjeta_cenco
+  {
+    margin-bottom: 0 !important;
+  }
+  .tarjeta_cenco
+  {
+    margin-top: 12px !important;
+  }
+  #ShoppCartPageIntelligentOffer
+  {
+    margin-bottom: -44px !important;
+    width: 100% !important;
+  }
+  .iohiddenTable
+  {
+    height: 0;
+    min-height: 0;
+    overflow: hidden;
+    padding: 0;
+    transition: all 0.3s ease;
+  }
+  .iohiddenTable.abierto
+  {
+    height: auto;
+    min-height: 180px;
+    overflow: visible;
+    padding: 15px 10px 15px 0;
+    transition: all 0.3s ease;
+  }
+  .tuCarroLeftSide
+  {
+    float: left;
+    width: 30%;
+  }
+  .tuCarroRightSide
+  {
+    float: left;
+    left: 7%;
+    position: relative;
+    width: 50%;
+  }
+  .tuCarroRightSide .scrollPaneDescription, .tuCarroRightSide .promo_text, .tuCarroRightSide .scrollPanePrice, .tuCarroRightSide .sub-price, .tuCarroRightSide .product_rating
+  {
+    height: auto;
+    margin: 4px 0 0 0;
+    padding: 0;
+    width: 100%;
+  }
+  .tuCarroRightSide .scrollPaneDescription a
+  {
+    font-size: 13px;
+    font-weight: normal;
+  }
+  .tuCarroRightSide .agregar
+  {
+    margin: 0;
+    padding: 0;
+  }
+  .tuCarroRightSide .agregar1
+  {
+    float: right;
+  }
+  .tuCarroRightSide .agregar2
+  {
+    float: left;
+    width: 75%;
+  }
+  .tuCarroRightSide .agregar2.agregar-completo
+  {
+    width: 100%;
+  }
+  .tuCarroRightSide .agregar2 .btn-agregar-al-carro
+  {
+    float: left;
+    text-align: center;
+    width: 100%;
+  }
+  .WarrantyNewModal
+  {
+    height: 80%  !important;
+   /* overflow: auto  !important;*/
+    top: 0  !important;
+    width: 90%  !important;
+    z-index: 6000  !important;
+  }
+  .boton_Warranty
+  {
+    float: none !important;
+    height: 35px !important;
+    margin-left: 1px !important;
+    /*padding-left: 45% !important;*/
+    width: 100% !important;
+  }
+  .btn-close-warranty
+  {
+    font-size: 20px !important;
+    margin-left: 92% !important;
+  }
+  .divTableCell input[type="radio"]
+  {
+    margin-left: 3px;
+    width: 8% !important;
+  }
+  .typePlus
+  {
+    padding-left: 10px !important;
+    padding-right: 8px !important;
+  }
+  .mas_protection
+  {
+    margin: 0 30px 50px 30px !important;
+  }
+  .desktopPlusHeading
+  {
+    display: none;
+  }
+  .mobilePlusHeading
+  {
+    display: block !important;
+  }
+  /*input[type="radio"]:checked:before
+  {
+    height: 10px !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 10px !important;
+  }*/
+  input[type="checkbox"]:before
+  {
+    top: -3px !important;
+  }
+  input[type="checkbox"]:checked:before
+  {
+    top: -3px !important;
+  }
+  p.item-quantity > input
+  {
+    margin-top: 2px !important;
+  }
+  #promotions
+  {
+    width: 100%;
+  }
+  #dcto {
+    position: absolute;
+    left: 15px;
+    margin-right: auto;
+    top: 0px;
+  }
+  #dcto .tuCarro {
+
+    width: 100%;
+  }
+  #dcto {
+    height: 18px;
+  }
+  #WC_SingleShipmentOrderTotalsSummary_td_3{
+    height: 20px;
+  }
+  .gris{
+    background-color: #ffffff;
+  }
+
+  .free_gift_container a, .free_gift_container > span {
+    top: 10px;
+  }
+  div[id^="warranty_modal_tooltip_"] .dijitTooltipContainer {
+    height: 450px;
+    overflow: auto;
+  }
+}
+/*warranty Modal*/
+div[id^="warranty_modal_tooltip_"] .dijitTooltipContainer {
+    position: fixed !important;
+    top: 47px !important;
+    width: 100% !important;
+}
+/*.warranty_label,*/
+/*.warrantyText,.warrantyLink{
+  display: none;
+}*/
+.warrantyLink{
+  margin-right: 14px;
+  color: #f27925 !important;
+  cursor: pointer;
+  font-family: Tahoma,Verdana;
+  font-size: 12px;
+  text-decoration: underline;
+  margin-left: 10px;
+  padding-top: 2px;
+}
+
+/*Modal*/
+.modal-contenido
+{
+  background-color:#ffffff;
+  padding: 10px 20px;
+  margin: 4% auto;
+  position: relative;
+  width: 54%;
+}
+.TitleModal
+{
+  color: #000000;
+  font-family: Tahoma,Verdana;
+  font-size: 24px;
+  letter-spacing: 0.9px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+#closeIcon
+{
+  float: right;
+}
+.solid_line {
+  border-top: 1px solid #c9d3de;
+  margin-top: 10px;
+}
+.WarrantyNewModalMessage {
+    color: #999999;
+    font-family: Tahoma,Verdana;
+    font-size: 14px;
+    height: 44px;
+    line-height: 1.57;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    text-align: justify;
+}
+#BodyModal {
+    margin-top: 10px;
+}
+.warrantyTypeDescription {
+    margin-left: 2%;
+}
+.modal
+{
+  background-color: rgba(0,0,0,.8);
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity:0;
+  pointer-events:none;
+}
+
+.carroWarrantyModal #warrantyPriceCheckButton {
+    background: #f27925 none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    font-family: Tahoma,Verdana;
+    font-size: 14px;
+    font-weight: bold;
+    height: 40px;
+    margin: 18px 20% 13px;
+    text-align: center;
+    width: 61%;
+}
+.mas_protection a{
+    color: #f27925 !important;
+    cursor: pointer;
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    text-decoration: underline;
+}
+.carroWarrantyModal #warrantyPriceCheckButton span{
+    position: relative;
+    top: 9px;
+}
+#miModal:target
+{
+  opacity:1;
+  pointer-events:auto;
+  z-index: 110;
+}
+#miModal:target
+{
+  display: block !important;
+  overflow: auto;
+}
+.hide{
+	display: none !important;
+}
+.carroWarrantyModal{
+	display: block !important;
+  	overflow: auto;
+  	opacity:1;
+ 	pointer-events:auto;
+  	z-index: 110;
+  	background-color: rgba(0,0,0,.8);
+  	position:fixed;
+  	top:0;
+  	right:0;
+  	bottom:0;
+  	left:0;
+}
+.carroWarrantyModal .divTableCellHeading{
+	text-transform: uppercase;
+}

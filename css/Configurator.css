@@ -1,0 +1,60 @@
+/*
+ *-----------------------------------------------------------------
+ * Licensed Materials - Property of IBM
+ *
+ * WebSphere Commerce
+ *
+ * (C) Copyright IBM Corp. 2011 All Rights Reserved.
+ *
+ * US Government Users Restricted Rights - Use, duplication or
+ * disclosure restricted by GSA ADP Schedule Contract with
+ * IBM Corp.
+ *-----------------------------------------------------------------
+ */
+
+/* Configurator */
+#configuratorFrame {
+	display:block!important;
+	min-height:500px;
+	width: 100%;
+	margin: 0px;
+	border:0px;
+}
+
+.dkPricingAdjustmentMessage {
+	text-align: right;
+	padding-right: 5px;
+}
+
+.configuratorFrameContainer {
+	margin:10px auto !important;
+	width:785px;
+}	
+
+.configuratorFrameContainer div.content {
+	border-left:solid 1px #c9d3de;
+	border-right:solid 1px #c9d3de;
+	display:block;
+}
+
+div.configuratorFrameContainer h1.topleft {
+	position:relative;
+	top:20px;
+	left: 8px;
+}
+
+div.configuratorFrameContainer h2.right {
+	float:right;
+	position:relative;
+	top:-4px;
+	padding-right:10px;
+}
+
+div.configuratorFrameContainer div.right {	
+	float:right;
+	padding-right:19px;
+}
+
+div #configErrorDiv {
+	padding:5px;
+}

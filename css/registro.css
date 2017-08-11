@@ -1,0 +1,320 @@
+@charset "utf-8";
+
+@media screen and (max-width: 640px) {
+  html body #Contenedor {
+    overflow-x: hidden; }
+  html body .no-mobile {
+    display: none; }
+  html body .formulario, html body #customers_new_or_returning, html body .titulo-input, html body #content_wrapper_border, html body .sign_in_registration, html body .sign_in_registration .forgot_password_container {
+    width: 100%;
+    min-height: 0;
+    height: auto; }
+  html body .sign_in_registration .forgot_password_container {
+    padding: 3%; }
+  html body #content_wrapper_border, html body #customers_new_or_returning {
+    margin-top: 40px; }
+  html body .formulario {
+    padding: 3%; }
+  html body #customers_new_or_returning {
+    padding: 0; }
+  html body form input {
+    width: 100%;
+    padding: 4.5% 3%;
+    border: 1px solid #666; }
+  html body .button-wrapper-radius.medium_smaller, html body .button-wrapper-radius {
+    padding: 9px 20px;
+    font-size: 15px;
+    display: block; }
+  html body .button-wrapper-radius, html body span.primary_button {
+    width: 100%; }
+  html body .btn-ingresa-account, html body .standard_button {
+    padding: 0;
+    margin: 0 auto;
+    width: 60%;
+    display: block; }
+  html body .btn-ingresa-account {
+    float: none; }
+  html body .input_label {
+    width: 100%;
+    float: left; }
+  html body .forgot_password_container {
+    text-align: center;
+    color: #000; }
+  html body .sign_in_registration .password_sent_content {
+    padding: 0 5% 5%;
+    width: 100%;
+    text-align: center; }
+    html body .sign_in_registration .password_sent_content .strong {
+      font-weight: normal;
+      color: #000; }
+  html body .cliente-nuevo-btn {
+    width: 100%;
+    margin-top: 0; }
+    html body .cliente-nuevo-btn .primary_button {
+      width: 70%;
+      display: block;
+      margin: 0 auto; }
+    html body .cliente-nuevo-btn .button-wrapper-radius {
+      background-color: transparent;
+      color: #f16113;
+      font-size: 12px;
+      display: inline;
+      padding: 0; }
+  html body .myaccount_login_link {
+    margin-bottom: 0; }
+  html body .text-boton {
+    color: #333;
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-style: normal; }
+  html body .olvido a {
+    width: 100%;
+    text-align: center; }
+  html body .sir h1 {
+    padding: 0 5%; }
+  html body .olvide-contrasena {
+    width: 100%;
+    float: left;
+    text-align: right; }
+    html body .olvide-contrasena span {
+      color: #f16113; }
+  html body .strongtext {
+    text-align: left;
+    width: 100%;
+    float: left; }
+  html body .button_align {
+    width: 100%; }
+    html body .button_align .button-wrapper-radius {
+      margin: 0 auto;
+      width: 70%; }
+  html body .titulo-Rut {
+    color: #f16113;
+    font-size: 13px;
+    width: 100%;
+    padding: 5% 0;
+    text-align: left; }
+  html body #box .footer {
+    height: auto;
+    font-size: 12px; }
+  html body .sign_in_registration .forgot_password_header_return {
+    width: 100%;
+    height: auto; }
+  html body .sign_in_registration .registration_header {
+    text-align: left;
+    font-size: 13px;
+    margin-bottom: 15px;
+    display: none }
+  html body .forgot_password_content .update_password_align form label {
+    text-align: left;
+    float: left; }
+  html body .button_bottom a {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    font-size: 13px;
+    padding: 3% 0; }
+  html body span.button_container {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    width: 70%;
+    background-color: #f16113; }
+.sign_in_registration .form .content .align,
+.sign_in_registration .header_registration {
+  width:100%;
+  margin:0;
+  padding:0 3%;
+}
+.sign_in_registration .header_registration {
+	display:none;
+}
+.sign_in_registration .form .content,.form_2column{
+   padding: 0 4px;
+  width:100%;
+  float:left;
+  margin-top: 21px
+}
+h2.titleMobile, p.olvida-clave{
+   color: #f16113;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 0 3%;
+    width: 100%;
+}
+
+
+p.error {
+    color: red;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: -10px;
+}
+
+
+
+
+
+p.olvida-clave{
+  margin:25px 0 10px 0;
+  color:red;
+}
+p.olvida-clave a{
+  color:#f16113;
+}
+
+#WC_UserRegistrationAddForm_div_40 .button-wrapper-radius.bigger{
+   padding:3% 5%;
+   width:90%;
+   height:auto;
+   margin:0 4%;
+   -webkit-border-radius: 16px;
+   -moz-border-radius: 16px;
+   border-radius: 16px;
+}
+.user_registration input{
+  width:100% !important;
+  padding:4% !important;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  border-radius: 16px;
+  border:1px solid #666;
+  height:35px;
+}
+
+.user_registration .form_2column .column, .form_2column .column_x2{
+  padding:5px 0;
+  width:100%;
+}
+.user_registration .checkmark {
+  position:relative;
+}
+.user_registration .checkmark input{
+  height:auto;
+  position:relative;
+  z-index:0;
+  margin-right:10px;
+}
+
+.user_registration .checkmark img{
+  position:absolute;
+  z-index:3;
+  left:-1px;
+  top:-1px;
+  cursor:pointer;
+}
+.user_registration .checkmark .hover{
+  display:block;
+}
+
+.user_registration .checkmark.btn-hover .hover{
+  display:none;
+}
+
+.user_registration .checkmark .no-hover{
+  display:none;
+}
+.user_registration .checkmark.btn-hover .no-hover{
+  display:block;
+}
+
+.footer-phone{
+  color: #f16113;
+}
+
+/* Implementacion registro */
+
+	.error-responsive{
+	    color: red;
+    	font-weight: bold;
+    	margin-bottom: 5px;
+    	margin-top: -10px;
+	 }
+
+	 #RegistrationZone1{
+	 	display:none;
+	 }
+
+/* implementaci�n Espot registro */
+
+	.user_registration .form {
+    	padding-top: 0;
+	}
+
+
+  .register_notes {
+    font-size: 10px;
+  }
+
+  #WC_UserRegistrationAddForm_div_27{
+
+    margin-bottom: 4px;
+  }
+
+}
+
+/* Tablet */
+
+@media screen and (width: 768px){
+
+
+	html body{
+		overflow-x: auto !important;
+	}
+
+	html body #headerZone1,
+	html body #header,
+	html body #header_nav,
+	html body #main_content_wrapper,
+	html body #page,
+	html body #footerZone1,
+	html body #nuevalinea,
+	html body .footerContent,
+	html body .footerContent div,
+	html body #footerZone2,
+	html body #footerZone1,
+	html body #footerZones {
+    	width: 967px !important;
+	}
+
+	html body #footer {
+    	width: 967px !important;
+	}
+
+}
+
+/* Ipad */
+
+@media screen and (width: 800px){
+	html body{
+		overflow-x: auto !important;
+	}
+
+	html body #headerZone1,
+	html body #header,
+	html body #header_nav,
+	html body #main_content_wrapper,
+	html body #page,
+	html body #footerZone1,
+	html body #nuevalinea,
+	html body .footerContent,
+	html body .footerContent div,
+	html body #footerZone2,
+	html body #footerZone1,
+	html body #footerZones {
+    	width: 967px !important;
+	}
+
+	html body #footer {
+    	width: 967px !important;
+	}
+
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+  .column{
+    margin-right: 20px;
+  }
+}

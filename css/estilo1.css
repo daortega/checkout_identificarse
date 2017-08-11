@@ -1,0 +1,1092 @@
+.necesitas_ayuda {
+    width: 500px;
+    height: 15px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #333;
+    font-size: 12px;
+    float: right;
+    text-align: right;
+}
+.registrate {
+	width: 700px;
+	float: left;
+	padding: 30px;
+	margin: 0px;
+	height: 122px;
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #ccc;
+	border-left-color: #ccc;
+}
+.recuperar_mobile {
+	display:none
+}
+.cliente-nuevo-btn {
+    float: left;
+    margin-top: 51px;
+    width: 217px;
+}
+.registro_boton {
+    float: right;
+    margin-top: -37px;
+    margin-right: 107px;
+}
+
+.cliente-nuevo2 {
+    float: left;
+    width: 430px;
+}
+.cliente-nuevo {
+    margin-top: 0px;
+}
+.olvido2 {
+    margin-top: 0px;
+}
+.accordion_checkout_trigger {
+    display: none;
+}
+  
+.titulo {
+    text-transform: uppercase;
+    color: #09C;
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+}
+
+#WC_CheckoutLogonf_div_5 #beneficios {
+	list-style-type: disc;
+	list-style-position: inside;
+	margin:0px !important;	
+}
+.btn-ingresa {
+    float: left;
+    margin-top: 50px;
+    padding-left: 33px;
+}
+
+/* ----------- iPhone 5 and 5S ----------- */
+
+
+/* Vertical */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+
+.recuperar_mobile {
+	display:block
+}
+#registrate {
+    width: 700px;
+    border: #CCC solid 0px;
+    float: left;
+    padding: 0px 0px 11px 10px;
+    margin: 0px 0px 4px 0px !important;
+	height: 200px !important;
+}	  
+
+.formulario .cliente-nuevo ul {
+    display: block;
+    list-style-type: disc;
+    margin: 0px !important;
+    float: left;
+    _margin-left: 30px;
+}
+#linea_punteada {
+	border-bottom:0px;	
+}
+
+#content_wrapper_chkOut .centro.mobile {
+	float: initial;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#WC_CheckoutLogonf_div_9 p {
+	margin-left: 0px;
+}
+.accordion_checkout_content.is-hidden.js-contentToggle__content #WC_CheckoutLogonf_div_8 {
+	padding: 2px 14px 0px 14px;
+	border: none;
+}
+
+html body .olvido a {
+    padding-top: 25px !important;
+}
+.cliente-nuevo {
+    margin-top: 10px;
+}
+  html body .cliente-nuevo2 {
+    margin-left: 0px !important;
+  }
+
+.titulo {
+    display: none;
+}
+
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="password"] {
+     -webkit-appearance: none;
+	 -moz-appearance: none;
+	 border-radius: 0 !important;
+	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.accordion_checkout {
+	list-style:none;
+	display:block
+	}
+
+.accordion_checkout_item {
+  width: 100%;
+  border-top: 1px solid #fff;
+}
+
+.accordion_checkout_item:first-child {
+  border: none;
+}
+
+.accordion_checkout_trigger {
+    background-color: #F3F4F6;
+    background-image: url('../images/toggle_close.gif');
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 35px auto;
+    border: medium none;
+    display: block;
+    margin-bottom: 6px;
+    width: 100%;
+	height: 50px;
+    color: #193867;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    text-indent: 1.5em;
+    text-transform: uppercase;
+    outline: medium none !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.accordion_checkout_item.is-open .accordion_checkout_trigger {
+  background-image: url('../images/toggle_open.gif');
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-color: #f3f4f6;
+}
+
+.accordion_checkout_content {
+  background-color: #fff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display:none;
+}
+
+.accordion_checkout_content p {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.centro mobile {
+  	margin-top: 10px !important;
+  	padding: 0 !important;
+  }
+.registro_boton {
+	float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.olvido2 {
+    font-size: 11px;
+    text-align: left;
+    /* text-decoration: none; */
+    /* color: #666; */
+    margin-top: 24px;
+}
+.boton {
+    padding: 14px 78px;
+}
+html body .cliente-nuevo-btn, html body .btn-ingresa {
+    margin-bottom: 35px !important;
+	margin-top:30px !important;
+}
+.formulario {
+    width: 700px;
+    border: #CCC solid 0px;
+    float: left;
+    padding: 0px 0px 11px 10px;
+    margin: 0px 0px 4px 0px !important;
+	height: 308px !important;
+}
+.registrate {
+    width: 100%;
+    float: left;
+    padding: 0px 0px 0px 10px !important;
+    margin: 0px;
+    border: none;
+    height: 219px;
+}
+html body .cliente-nuevo2 {
+    margin-left: 0px;
+    width: auto;
+	margin-bottom:10px;
+}
+.accordion_checkout_content.is-hidden.js-contentToggle__content #WC_CheckoutLogonf_div_8 {
+	margin-top: 0px;
+	height: 202px;
+}
+}
+
+/* horizontal */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 568px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+html body #responsive-form {
+  	margin-top: -20px !important;
+    height: 295px !important;
+    padding-left: 22% !important;
+    padding-right: 22% !important;
+    width: 100%;
+}
+.registrate {
+    width: 100%;
+    float: left;
+    padding: 0px 0px 0px 10px !important;
+    margin: 0px;
+    border: none;
+    height: 184px;
+}
+  
+.titulo-input {
+    color: #666;
+    float: left;
+    width: 200px;
+    margin-top: 13px;
+    font-size: 14px;
+}
+html body .myaccount_login_link {
+    margin-bottom: 0;
+}
+html body .olvido a {
+    padding: 20px 0 !important
+}
+.button-wrapper-radius, html body .btn-ingresa {
+    padding-top: 20px !important;
+}
+.formulario {
+    width: 700px;
+    border: #CCC solid 0px;
+    float: left;
+    padding: 0px 0px 11px 10px;
+    margin-bottom: 4px;
+	height:285px !important
+}
+.formulario .cliente-nuevo ul {
+    display: block;
+    list-style-type: disc;
+    margin: 0px !important;
+    float: left;
+    _margin-left: 30px;
+}
+#linea_punteada {
+	border-bottom:0px;	
+}
+
+#content_wrapper_chkOut .centro.mobile {
+	float: initial;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#WC_CheckoutLogonf_div_9 p {
+	margin-left: 0px;
+}
+.accordion_checkout_content.is-hidden.js-contentToggle__content #WC_CheckoutLogonf_div_8 {
+	padding: 2px 14px 0px 14px;
+	border: none;
+}
+html body .cliente-nuevo-btn, html body .btn-ingresa {
+    margin-bottom: 35px !important;
+}
+
+.cliente-nuevo {
+    margin-top: 10px;
+}
+  html body .cliente-nuevo2 {
+    margin-left: 0px !important;
+  }
+.accordion_checkout_content.is-hidden.js-contentToggle__content #WC_CheckoutLogonf_div_8 {
+	margin-top: 0px;
+	height: 175px !important;
+}
+.titulo {
+    display: none;
+}
+html body .cliente-nuevo2 {
+    margin-left: 0px;
+    width: auto;
+	margin-bottom: 20px;
+}
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="password"] {
+     -webkit-appearance: none;
+	 -moz-appearance: none;
+	 border-radius: 0 !important;
+	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.accordion_checkout {
+	list-style:none;
+	display:block
+	}
+
+.accordion_checkout_item {
+  width: 100%;
+  border-top: 1px solid #fff;
+}
+
+.accordion_checkout_item:first-child {
+  border: none;
+}
+
+.accordion_checkout_trigger {
+    background-color: #F3F4F6;
+    background-image: url('../images/toggle_close.gif');
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 35px auto;
+    border: medium none;
+    display: block;
+    margin-bottom: 6px;
+    width: 100%;	
+	height: 50px;
+    color: #193867;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    text-indent: 1.5em;
+    text-transform: uppercase;
+    outline: medium none !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.accordion_checkout_item.is-open .accordion_checkout_trigger {
+  background-image: url('../images/toggle_open.gif');
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-color: #f3f4f6;
+}
+
+.accordion_checkout_content {
+  background-color: #fff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display:none;
+}
+
+.accordion_checkout_content p {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.centro mobile {
+  	margin-top: 10px !important;
+  	padding: 0 !important;
+  }
+.registro_boton {
+	float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.olvido2 {
+    font-size: 11px;
+    text-align: left;
+    /* text-decoration: none; */
+    /* color: #666; */
+    margin-top: 24px;
+}
+.boton {
+    padding: 14px 78px;
+}
+.recuperar_mobile {
+	display:block;
+	margin-top: 12px;
+}	  	
+}	
+
+
+/* ----------- Galaxy S3 ----------- */
+
+
+ 
+/* Vertical */
+
+@media screen and (max-width: 640px) {
+
+#footer_nuevo {
+    display: block;
+}
+.boton {
+    background-color: rgb(0, 153, 204);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    padding: 14px 75px;
+    border: medium none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.registrate {
+    width: 100%;
+    float: left;
+    padding: 0px 0px 18px 10px !important;
+    margin: 0px;
+    border: none;
+    height: auto;
+}
+.recuperar_mobile {
+	display:block;
+	margin-top: 10px;
+}
+.recuperar{
+	display:block !important
+}
+ 
+.titulo-input {
+    color: #666;
+    float: left;
+    width: 200px;
+    margin-top: 13px;
+    font-size: 14px;
+}
+html body .myaccount_login_link {
+    margin-bottom: 0;
+}
+html body .olvido a {
+    padding: 20px 0 !important
+}
+.button-wrapper-radius, html body .btn-ingresa {
+    padding-top: 20px !important;
+}
+.formulario {
+    width: 700px;
+    border: #CCC solid 0px;
+    float: left;
+    padding: 0px 0px 11px 10px;
+    margin-bottom: 4px;
+}
+.formulario .cliente-nuevo ul {
+    display: block;
+    list-style-type: disc;
+    margin: 0px !important;
+    float: left;
+    _margin-left: 30px;
+}
+#linea_punteada {
+	border-bottom:0px;	
+}
+
+#content_wrapper_chkOut .centro.mobile {
+	float: initial;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#WC_CheckoutLogonf_div_9 p {
+	margin-left: 0px;
+}
+.accordion_checkout_content.is-hidden.js-contentToggle__content #WC_CheckoutLogonf_div_8 {
+	padding: 2px 14px 0px 14px;
+	border: none;
+}
+html body .cliente-nuevo-btn, html body .btn-ingresa {
+    margin-bottom: 35px !important;
+}
+html body #responsive-form {
+    margin: 0px !important;
+}
+html body #responsive-form {
+    margin-bottom: 4px !important;
+    padding-top: 0px !important;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    height: 290px;
+    width: 100%;
+}
+
+.cliente-nuevo {
+    margin-top: 10px;
+}
+  html body .cliente-nuevo2 {
+    margin-left: 0px !important;
+  }
+.accordion_checkout_content.is-hidden.js-contentToggle__content #WC_CheckoutLogonf_div_8 {
+	margin-top: 0px;
+	height: auto !important;
+}
+.titulo {
+    display: none;
+}
+html body .cliente-nuevo2 {
+    margin-left: 0px;
+    width: auto;
+	margin-bottom: 20px;
+}
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="password"] {
+     -webkit-appearance: none;
+	 -moz-appearance: none;
+	 border-radius: 0 !important;
+	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.accordion_checkout {
+	list-style:none;
+	display:block
+	}
+
+.accordion_checkout_item {
+  width: 100%;
+  border-top: 1px solid #fff;
+}
+
+.accordion_checkout_item:first-child {
+  border: none;
+}
+
+.accordion_checkout_trigger {
+    background-color: #F3F4F6;
+    background-image: url('../images/toggle_close.gif');
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 35px auto;
+    border: medium none;
+    display: block;
+    margin-bottom: 6px;
+    width: 100%;	
+	height: 50px;
+    color: #193867;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    text-indent: 1.5em;
+    text-transform: uppercase;
+    outline: medium none !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.accordion_checkout_item.is-open .accordion_checkout_trigger {
+  background-image: url('../images/toggle_open.gif');
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-color: #f3f4f6;
+}
+
+.accordion_checkout_content {
+  background-color: #fff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display:none;
+}
+
+.accordion_checkout_content p {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.centro mobile {
+  	margin-top: 10px !important;
+  	padding: 0 !important;
+  }
+.registro_boton {
+	float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.olvido2 {
+    font-size: 11px;
+    text-align: left;
+    /* text-decoration: none; */
+    /* color: #666; */
+    margin-top: 24px;
+}
+html body .no-mobile {
+    display: block;
+}	
+
+.checkout_without_signin{
+	display: inline-block !important;
+    padding-right: 30px !important;
+    text-align: left !important;
+    text-indent: 0em !important;
+    line-height: 19px !important;
+}
+
+}
+
+@media screen 
+  and (min-device-width: 320px) 
+  and (min-device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: portrait) {
+.registrate {
+    width: 100%;
+    float: left;
+    padding: 0px 10px 0px 10px !important;
+    margin: 0px;
+    border: none;
+    height: 215px;
+}
+.recuperar_mobile {
+	display:block
+}
+.formulario {
+    width: 700px;
+    border: #CCC solid 0px;
+    float: left;
+    padding: 0px 0px 11px 10px;
+    margin-bottom: 4px;
+	height: 319px !important;
+}
+.formulario .cliente-nuevo ul {
+    display: block;
+    list-style-type: disc;
+    margin: 0px !important;
+    float: left;
+    _margin-left: 30px;
+}
+#linea_punteada {
+	border-bottom:0px;	
+}
+
+#content_wrapper_chkOut .centro.mobile {
+	float: initial;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#WC_CheckoutLogonf_div_9 p {
+	margin-left: 0px;
+}
+.accordion_checkout_content.is-hidden.js-contentToggle__content #WC_CheckoutLogonf_div_8 {
+	padding: 2px 14px 0px 14px;
+	border: none;
+}
+
+html body #responsive-form {
+    margin: 0px !important;
+}
+html body #responsive-form {
+    margin-bottom: 4px !important;
+    height: 295px;
+}
+html body .olvido a {
+    padding-top: 25px !important;
+}
+.cliente-nuevo {
+    margin-top: 10px;
+}
+  html body .cliente-nuevo2 {
+    margin-left: 0px !important;
+  }
+.accordion_checkout_content.is-hidden.js-contentToggle__content #WC_CheckoutLogonf_div_8 {
+	margin-top: 0px;
+	height: 195px;
+}
+.titulo {
+    display: none;
+}
+html body .cliente-nuevo2 {
+    margin-left: 0px;
+    width: auto;
+}
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="password"] {
+     -webkit-appearance: none;
+	 -moz-appearance: none;
+	 border-radius: 0 !important;
+	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.accordion_checkout {
+	list-style:none;
+	display:block
+	}
+
+.accordion_checkout_item {
+  width: 100%;
+  border-top: 1px solid #fff;
+}
+
+.accordion_checkout_item:first-child {
+  border: none;
+}
+
+.accordion_checkout_trigger {
+    background-color: #F3F4F6;
+    background-image: url('../images/toggle_close.gif');
+    background-position: 100% 50%;
+    background-repeat: no-repeat;
+    background-size: 35px auto;
+    border: medium none;
+    display: block;
+    margin-bottom: 6px;
+    width: 100%;
+	height: 50px;
+    color: #193867;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: left;
+    text-indent: 1.5em;
+    text-transform: uppercase;
+    outline: medium none !important;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.accordion_checkout_item.is-open .accordion_checkout_trigger {
+  background-image: url('../images/toggle_open.gif');
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+  background-color: #f3f4f6;
+}
+
+.accordion_checkout_content {
+  background-color: #fff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display:none;
+}
+
+.accordion_checkout_content p {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.centro mobile {
+  	margin-top: 10px !important;
+  	padding: 0 !important;
+  }
+.registro_boton {
+	float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+.olvido2 {
+    font-size: 11px;
+    text-align: left;
+    /* text-decoration: none; */
+    /* color: #666; */
+    margin-top: 24px;
+}
+.boton {
+    background-color: rgb(0, 153, 204);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    padding: 14px 75px;
+    border: medium none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+html body .cliente-nuevo-btn, html body .btn-ingresa {
+    margin-top: 40px !important;
+}	
+
+}
+
+
+/* Ipad Vertical */
+@media screen 
+		and (min-device-width: 768px) 
+		and (max-device-width: 1024px) 
+		and (-webkit-min-device-pixel-ratio: 1) 
+		and (orientation: portrait) {
+.header_links {
+    padding-right:25px !important
+}
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="password"] {
+     -webkit-appearance: none;
+	 -moz-appearance: none;
+	 border-radius: 0 !important;
+	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.necesitas_ayuda {
+    width: 500px;
+    height: 15px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #333;
+    font-size: 12px;
+    float: right;
+    text-align: right;
+    padding-right: 25px;
+}
+
+#goto_cart_button {
+    margin-right: 82px !important;
+}
+
+.centro {
+    padding: 0px 4% !important;
+}
+.formulario2{
+	width: 700px;
+    border: #CCC solid 1px !important;
+    float: left;
+    padding: 30px !important;
+    margin-bottom: 0px;
+    background-color: #F4FBF3;
+}
+html body #responsive-form {
+    margin-bottom: 0px !important;
+}
+.registrate {
+    width: 700px;
+    float: left;
+    padding: 30px !important;
+    margin-bottom: 0px;
+    height: 190px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: #ccc;
+    border-left-color: #ccc;
+}
+.formulario {
+    width: 700px;
+	height:190px !important;
+    border: #CCC solid 1px;
+    float: left;
+    padding: 30px 30px 20px 30px;
+    margin-bottom: -1px;
+}
+.recuperar_mobile {
+	display:none
+}
+.cliente-nuevo-btn {
+    float: left !important;
+    margin-top: 55px !important;
+    width: auto;
+}
+.registro_boton {
+    float: right;
+    margin-top: -86px !important;
+    margin-right: -40px;
+}
+
+.cliente-nuevo2 {
+    float: left;
+    width: 430px;
+}
+.cliente-nuevo {
+    margin-top: 0px;
+}
+.olvido2 {
+    margin-top: -24px;
+}
+.accordion_checkout_trigger {
+    display: none;
+}
+  
+.titulo {
+    text-transform: uppercase;
+    color: #09C;
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+}
+
+#WC_CheckoutLogonf_div_5 #beneficios {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+.accordion_checkout_content {
+  background-color: #fff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display:block;
+}	
+#linea_punteada {
+	/*clear:both; display:block; width:100%; border-bottom:1px dotted #666666;*/ 
+}
+.boton {
+    background-color: rgb(0, 153, 204);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    padding: 6px 20px;
+    border: medium none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+}
+
+/* Horizontal */
+@media screen 
+		and (min-device-width: 768px) 
+		and (max-device-width: 1024px) 
+		and (-webkit-min-device-pixel-ratio: 1) 
+		and (orientation: landscape) {	
+
+.btn-ingresa {
+    float: left;
+    margin-top: 21px;
+    padding-left: 30px;
+}
+
+.header_links {
+    padding-right:25px !important
+}
+
+.necesitas_ayuda {
+    width: 500px;
+    height: 15px;
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #333;
+    font-size: 12px;
+    float: right;
+    text-align: right;
+    padding-right: 25px;
+}
+
+#goto_cart_button {
+    margin-right: 82px !important;
+}
+
+.centro {
+    /*padding: 0px 4% !important;*/
+}
+.formulario2{
+	width: 700px;
+    border: #CCC solid 1px !important;
+    float: left;
+    padding: 30px !important;
+    margin-bottom: 0px;
+    background-color: #F4FBF3;
+}
+
+html body #responsive-form {
+    margin-bottom: 0px !important;
+    padding: 30px 30px 20px 30px !important;
+    height: 133px !important;
+	width: 696px;
+}
+.registrate {
+    width: 696px;
+    height: 124px !important;
+    float: left;
+    padding: 30px !important;
+    margin-bottom: 0px;
+    height: 190px;
+    border-right-width: 1px;
+    border-left-width: 1px;
+    border-right-style: solid;
+    border-left-style: solid;
+    border-right-color: #ccc;
+    border-left-color: #ccc;
+}
+.accordion_checkout_content.is-hidden.js-contentToggle__content #WC_CheckoutLogonf_div_8 {
+    /* margin-top: 0px; */
+    height: 124px !important;
+    width: 696px;
+}
+#goto_cart_button {
+    margin-right: 0px !important;
+}
+.formulario {
+    width: 700px;
+	height:190px !important;
+    border: #CCC solid 1px;
+    float: left;
+    padding: 30px 30px 20px 30px;
+    margin-bottom: -1px;
+}
+.recuperar_mobile {
+	display:none
+}
+.cliente-nuevo-btn {
+    float: left !important;
+    margin-top: 55px !important;
+    width: auto;
+}
+.registro_boton {
+    float: right;
+    margin-top: -86px !important;
+    margin-right: -40px;
+}
+
+.cliente-nuevo2 {
+    float: left;
+    width: 430px;
+}
+.cliente-nuevo {
+    margin-top: 0px;
+}
+.olvido2 {
+    margin-top: -24px;
+}
+.accordion_checkout_trigger {
+    display: none;
+}
+  
+.titulo {
+    text-transform: uppercase;
+    color: #09C;
+    font-weight: bold;
+    font-size: 15px;
+    display: block;
+}
+
+#WC_CheckoutLogonf_div_5 #beneficios {
+	list-style-type: disc;
+	list-style-position: inside;
+}
+.accordion_checkout_content {
+  background-color: #fff;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  display:block;
+}	
+#linea_punteada {
+	/*clear:both; display:block; width:100%; border-bottom:1px dotted #666666;*/ 
+}
+.boton {
+    background-color: rgb(0, 153, 204);
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    padding: 6px 20px;
+    border: medium none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+}
+textarea,
+input[type="text"],
+input[type="button"],
+input[type="submit"],
+input[type="password"] {
+     -webkit-appearance: none;
+	 -moz-appearance: none;
+	 border-radius: 0 !important;;
+	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+}
+@media screen and (max-width: 640px) {	
+.centro.mobile #mobile_checkout_heading {
+    color: #193867;
+    font-weight: 600;
+}
+}
+

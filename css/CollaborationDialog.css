@@ -1,0 +1,369 @@
+/*
+ *-----------------------------------------------------------------
+ * Licensed Materials - Property of IBM
+ *
+ * WebSphere Commerce
+ *
+ * (C) Copyright IBM Corp. 2010 All Rights Reserved.
+ *
+ * US Government Users Restricted Rights - Use, duplication or
+ * disclosure restricted by GSA ADP Schedule Contract with
+ * IBM Corp.
+ *-----------------------------------------------------------------
+ */
+
+/** overwriting the default co-browse CSS from the CEA feature pack **/
+
+.HTMLInCollaborationDialog { overflow:auto !important; /*always want the scroll inside the collaboration dialog*/ }
+.collaborationDialogWidget  {
+	top:0px !important;
+	bottom:0px !important;	
+	padding:0;
+	margin-left:auto;
+	margin-right:auto;
+	background:#FFFFFF none repeat scroll 0 0 ;
+	height: 100%; 
+	width: 100%;
+	z-index:3;
+	overflow:hidden;
+}
+
+.collaborationDialogWidget .borderContainer {
+	width:100%;
+	height:100%;
+}
+
+.collaborationDialogButtons {
+	text-align:center; 
+	height:37px; 
+	padding-top:5px;
+	_padding-top:3px !important;
+}
+
+.collaborationDialogWidgetTitleBar {
+	background-image:url(../images/coshopping/background_tile.png);
+	background-repeat: repeat-x;	
+	height:37px;
+}
+
+
+.collaborationDialogWidgetFooterBar .icons { 
+	background-repeat:no-repeat;	
+	font-size:14px;
+	line-height:30px;
+}
+.collaborationDialogWidgetFooterBar .connected {background-image:url(../images/coshopping/status_connected.png);}
+.collaborationDialogWidgetFooterBar .disconnected {background-image:url(../images/coshopping/status_disconnected.png);}
+.collaborationDialogWidgetFooterBar .following {background-image:url(../images/coshopping/status_follow.png);}
+.collaborationDialogWidgetFooterBar .leading {background-image:url(../images/coshopping/status_lead.png);}
+.collaborationDialogWidgetFooterBar .shopping_independently {background-image:url(../images/coshopping/status_shopping_independently.png);}
+.collaborationDialogWidgetFooterBar .window_open {background-image:url(../images/coshopping/status_window_open.png);}
+.collaborationDialogWidgetFooterBar .window_closed {background-image:url(../images/coshopping/status_window_closed.png);}
+.collaborationDialogWidgetFooterBar .statusContainer {
+	background-image:url(../images/coshopping/bottom_bar_background.png);
+	background-repeat: repeat-x;	
+	height:30px;
+	top:0;
+	left:0;
+	right:0;
+	margin-right:auto;
+	margin-left:auto;
+	text-align:center;
+}
+.collaborationDialogWidgetFooterBar .statusPadding {
+	padding-left:25px;
+}
+.collaborationDialogWidgetFooterBar .collaborationDialogWidgetStatus {
+	display:inline;
+	padding-right:6em;
+	
+}
+.dijitBorderContainerPane, .dijitBorderContainerNoGutterPane {
+	position:absolute !important;
+	z-index:2;
+}
+ .dijitTextArea {	padding: 3px;}
+
+.collaborationDialogWidgetTextBox {
+	width:300px;
+	font-size: 10px;
+	border:1px solid #b3b3b3;
+	line-height: normal;
+	height:16px;
+	padding:0px;
+}
+
+.collaborationDialogWidgetButton button{
+	background-image:url(../images/coshopping/background_tile.png);
+	background-repeat:repeat-x;
+	height:33px;
+	border:0 solid transparent;
+	padding:0px;
+}
+
+
+.collaborationDialogWidgetButton .collaborationDialogWidgetIcon, .coshopHelpIcons {
+	background-image: url('../images/coshopping/coshopping_buttons_enabled.png'); 
+	background-repeat: no-repeat;
+	text-align: center;
+	margin-left:2px !important;
+	margin-right:2px !important;
+
+}
+
+.collaborationDialogWidgetButtonHover .collaborationDialogWidgetIcon {
+	background-image: url('../images/coshopping/coshopping_buttons_hover.png'); 
+	background-repeat: no-repeat;
+	text-align: center;
+
+}
+.collaborationDialogWidgetButtonDisabled .collaborationDialogWidgetIcon {
+	background-image: url('../images/coshopping/coshopping_buttons_disabled.png'); 
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+.collaborationDialogWidgetButtonChecked .collaborationDialogWidgetIcon, .coshopHelpIconsChecked {
+	background-image: url('../images/coshopping/coshopping_buttons_toggle.png'); 
+	background-repeat: no-repeat;
+	text-align: center;
+
+}
+
+.dijitToggleButtonIconChar,
+.dijitArrowButtonChar,
+.dijitDisplayNone,
+.collaborationDialogButtons input.dijitOffScreen{
+	display:none !important; 
+} 
+
+
+.collaborationDialogWidgetIconDivider {
+	background-image:url('../images/coshopping/coshopping_divider.png');
+	background-repeat:no-repeat;
+	font-size:16px;
+	margin-left:7px;
+	margin-right:3px;
+	vertical-align:middle;	
+	white-space:nowrap;
+}
+.collaborationDialogWidgetEndCollabIcon {
+	background-position:-387px 50%;
+	height:25px;
+	width:28px;
+}
+.collaborationDialogWidgetHelpIcon {
+	background-position:-356px 50%;
+	height:25px;
+	width:28px;
+	
+}
+
+.collaborationDialogWidgetChatIcon {
+	background-position:-276px 50%;
+	height:25px;
+	width:28px;	
+}
+.collaborationDialogWidgetStopFollowingIcon {
+	background-position:-204px;
+	width:51px;
+	height:25px;
+}
+
+.collaborationDialogWidgetHighlightIcon { 	
+	background-position:-307px 50%;
+	height:25px;
+	width:28px;
+}
+.collaborationDialogWidgetFollowMeIcon {
+	background-position:-151px 50%;
+	height:25px;
+	width:51px;
+}
+
+.collaborationDialogWidgetBackIcon { 
+	background-position:-38px;
+	width:28px;
+	height:25px; 
+}
+
+.collaborationDialogWidgetForwardIcon {
+	background-position:-70px;
+	width:28px;
+	height:25px; 
+}
+
+.collaborationDialogWidgetRefreshIcon {
+	background-position:-101px;
+	width:29px;
+	height:25px; 
+}
+
+.collaborationDialogWidgetReceivedHighlight {
+	background-color: #10EAEF;
+	border: 1px dotted black;
+	padding: 2px;
+	margin: 2px;
+}
+.collaborationDialogWidgetSentHighlight {
+	background-color: #43F128;
+	border: 1px dotted black;
+	padding: 2px;
+	margin: 2px;
+}
+
+.collaborationDialogWidgetMessages {
+	background: #FFFFE0;
+	font-size:1.0em;
+}
+
+
+.collaborationDialogPaneContent {
+	padding: 0px;
+	margin:0px;
+	overflow:hidden;
+}
+.collaborationDialogWidgetIFrame{
+	display: block;
+	border: 1px;
+	width: 100% !important;
+}
+
+.collaborationDialogWidgetButton .dijitButtonNode{
+	/*button style*/
+	margin: 0px !important ;
+	padding: 0px !important;
+}
+
+.dijitTextBoxDisabled{	color: gray;}
+ 	
+
+.chatDialog{
+	position:absolute;
+	z-index:3;
+}
+
+.chatDialog .chatHeader {
+	height:1em;
+	margin:13px 12px;
+}
+.chatDialog .chatDialogClose {
+	background-image:url(../images/coshopping/popup_close.png);
+	background-repeat:no-repeat;
+	background-position:right center;
+	*margin-right:3px; /*IE onyl*/
+	height: 15px;
+	width: 15px;
+}
+
+.chatDialog .chatDialogClose .closeLink {padding-right:20px;}
+.chatDialog .chatRight, .permissionDialog .rightCorner {
+	background:transparent url(../images/coshopping/chat_right.png) no-repeat scroll left top;
+	height:189px;
+	width:10px;
+	float:left;
+}
+
+.chatDialog .chatLeft, .permissionDialog .leftCorner {
+	background:transparent url(../images/coshopping/chat_left.png) no-repeat scroll left top;
+	height:189px;
+	width:5px;
+	float:left;
+}
+.chatDialog .chatBackground, .permissionDialog .background {
+	background:transparent url(../images/coshopping/chat_middle_tile.png) repeat-x scroll 0 0;
+	height:189px;
+	float:left;	
+	*width:305px;/*IE only*/
+}
+
+.chatDialog .chatDialogConnector {
+	position:relative;
+	height:14px;
+}
+
+.chatDialog .collaborationDialogWidgetChatTextField{
+	margin-left: 5px;	
+	margin-bottom:5px;
+	margin-right:8px;	
+	float:left;
+	width:16em;
+}
+
+.chatDialog input {	margin-bottom:0px!important; width:100%;}
+.chatDialogContainer {	display:block;}
+.chatDialogContainer .chatDialogTitle {	display:block; font-weight:bold;}	
+.chatDialogContainer .chatInputArea {margin:10px 5px;}
+.collaborationDialogWidgetChatTextBox {
+	margin: 0px 10px;
+	height:100px;
+	width:260px;
+	*width:280px;
+	_width:280px;
+	border:1px solid #aab2bc;
+	background-color:white;
+}
+.collaborationDialogWidgetChatTextBox .hostMsg{	background:#f3f3f3;	padding: 5px 0px 5px 0px;}
+.collaborationDialogWidgetChatTextBox .followerMsg {padding: 5px 0px 5px 0px;}
+.collaborationDialogWidgetChatTextBox .chatError {color:red;}
+.permissionDialog {display:block;}
+.permissionDialog .container {padding:35px 10px;; width:265px;}
+#permissionDialogDesc{padding-top: 5px;}
+#permissionDialogDesc2 {padding-bottom:10px;}
+
+.dijitButtonNode:hover {background: transparent!important;}
+
+.disableDnd .dojoDndAvatarHeader {
+	background-image: url(../images/dndNoCopy.png) !important; 
+	background-repeat: no-repeat;
+}
+
+
+/** dojo's dijit.layout.BorderContainer **/
+.dijitSplitterV, .dijitGutterV {
+	background:#FCFCFC none repeat scroll 0 0;
+	border:0 none;
+	width:5px;
+}
+.dijitSplitter {
+	border-color:#BFBFBF;
+}
+.dijitSplitterV {
+	border-left:1px none;
+	border-right:1px none;
+	cursor:ew-resize;
+	width:7px;
+}
+.dijitSplitter {
+	background-color:#FFFFFF;
+	border:0 solid gray;
+	overflow:hidden;
+	position:absolute;
+	z-index:10;
+}
+.dijitSplitterV .dijitSplitterThumb {
+	background:transparent url(../images/coshopping/splitContainerSizerV-thumb.png) no-repeat scroll 0 0;
+	height:19px;
+	left:1px;
+	width:5px;
+}
+.dijitSplitContainerSizerH .thumb, .dijitSplitterV .dijitSplitterThumb {
+	overflow:hidden;
+	position:absolute;
+	top:49%;
+}
+
+/*iPad*/
+.mobileIFrameContainer {
+	background:none repeat scroll 0 0 white;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+.mobileIFrame {
+	display:block!important;
+	border:0 none;
+	height:100%;
+	overflow:hidden;
+	width:100%;
+}

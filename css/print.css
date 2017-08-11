@@ -1,0 +1,207 @@
+/*
+ *-----------------------------------------------------------------
+ * Licensed Materials - Property of IBM
+ *
+ * WebSphere Commerce
+ *
+ * (C) Copyright IBM Corp. 2008 All Rights Reserved.
+ *
+ * US Government Users Restricted Rights - Use, duplication or
+ * disclosure restricted by GSA ADP Schedule Contract with
+ * IBM Corp.
+ *-----------------------------------------------------------------
+ */
+ 
+
+
+/* Perform mass width resets */
+
+
+
+
+
+/* Perform mass element hiding */
+div#footer,
+div#page_shadow,
+div#checkout_crumb div.crumb span a, 
+div#box div.content_footer,
+div#checkout_crumb,
+div#header_nav,
+div#header_links,
+div#header-search,
+div#box div.main_header div.left img,
+div#box div.main_header div.right img,
+div#box div.contentline div.left img,
+div#box div.contentline div.right img,
+div.title,
+div.left_nav_options,
+div.left_nav,
+div.left_nav_container,
+#breadcrumb,
+div.contentline,
+div.my_account div.body div.order_details_my_account,
+div.my_account div#WC_OrderShipmentDetails_div_2,
+div.my_account div#WC_OrderShipmentDetails_div_6 {
+	display: none;
+	position: relative;
+	margin: 0; padding: 0;
+	width: 0; height: 0;
+}
+
+
+/* Remove background images from some elements */
+body, 
+#breadcrumb, 
+#header,div#box div.main_header,
+div#page,
+div#page_shadow {
+	background: #fff url('');
+}
+
+
+/*Header realignment and addition of Order Confirmation text*/
+#header, WC_CachedHeaderDisplay_div_1, CatalogSearchForm, header_links{
+	margin-left: 50px;
+	z-index: -1;
+	overflow: hidden;
+	border: 2px;
+}
+
+
+/* Display the printer header*/
+#orderConfirmationHeader {
+	display: block;
+	float:left;
+	font-size: 16pt;
+}
+
+/* Layout the printer header store logo to the left of the header text*/
+#orderConfirmationHeader #orderConfirmImage {
+	width: 200px;
+	float: left;
+}
+
+/* Layout the printer header text to the right of the header store logo*/
+#orderConfirmationHeader #orderConfirmText {
+	width: 350px;
+	padding-left: 200px;
+	padding-top: 10px;
+	float: left;
+}
+
+/* Remove border from bottom of billing information section */
+#billing th,
+#billing td {
+	border-bottom: none;	
+}
+
+
+
+/* Removes a line from above the Shipping Information title */
+div#box div#WC_OrderShipmentDetails_div_6 {
+	border: none;
+}
+
+
+/* Sets the width of Shipping Information and Billing Information sections 
+of the page and removes the right and left borders. */
+#box .my_account .body{
+	border-right: none;
+	border-left: none;
+}
+
+/* Adds a line under the Shipping Information title*/
+div#box div.body {
+	border-top: 0;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+	display: inline;
+}
+
+div.body {
+	clear: both;
+}
+
+.main_header {
+	clear: both;
+}
+
+/* must following */
+#shipping .shipping_address {
+	clear: both;
+	width: 90%;
+	border-top: 1px solid #C9D3DE;
+
+}
+
+#billing {
+	border-top: 1px solid #C9D3DE;
+}
+
+.shipping_method {
+	width: 90%;
+	
+}
+
+#total_breakdown {
+	clear: both;
+	float: left;
+	
+	min-width:400px;
+	width: 60%;
+	
+}
+
+
+table#order_details {
+	clear: left;
+	padding-top: 5px;
+	width: 90%;
+	
+}
+
+#page {
+	width: 90%;
+}
+
+#content_wrapper {
+
+    overflow: visible;
+
+}
+
+#main_content_wrapper {
+
+    overflow: visible;
+}
+
+#page {
+		overflow: visible;
+}
+
+#WC_OrderShippingBillingConfirmationPage_div_5{
+	
+}
+
+#header_logo img {float: left; clear: both; z-index: 9999; display: block; position: relative;}
+#header_logo {left: 50px;}
+
+
+/************ Product Page Print View **************/
+
+.product_page #header_logo img {width:52px; height:53px;}
+#headerZone1, #headerZone2, #footerZone2, #header_links1, #CatalogSearchForm, #header_contact_us,
+#header_nav, #breadcrumb, .product_page .controls, .product_page .pdp_espot_zone.right, .product_page .datasheet, #bazaarvoice-comments,
+.product_page .delivery, .product_page .availability ,.product_page .changes-returns,.product_page .item-more-features, .product_page .pdp_espot_bottom,
+.product_page .ratings, .product_page .sku, .product_page .share-button,.product_page .installments_cost, .product_page .points-accumulated,
+.product_page .description > h2, .product_page .more_info, #footer { display:none !important; }
+.product_page .pdp_espot_pricing, .product_options .current_date_time,.product_page .product_attributes  {display: block !important;}
+
+.pdp_espot_pricing h3 { font-size:14px;}
+
+.product_page .other-views { margin:0 auto; float:none !important;}
+
+.bottom_links {display: none;}
+
+

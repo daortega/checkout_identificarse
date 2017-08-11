@@ -1,0 +1,1748 @@
+@charset "utf-8";
+/*SMALL HEREDADOS*/
+
+#window-resizer-tooltip{
+  display:none !important;
+}
+
+.error {
+  color: red;
+}
+
+  @media screen and (max-width: 640px) {
+
+  /*Start Defect 535 New style for titulo "Estado de entrega" */
+    .Title_Cuenta{
+        font-size: 14px !important;
+        font-weight: bold;
+        position: relative;
+        top: -152px;
+        
+        /*MHTN: modifid for Mis datos text-margin left, by rahul*/
+        margin-left: 5px;
+  
+    }  
+  /*End Defect 535 */
+    
+    /*MHTN: checkbox margin for mobile, mis datos, by Rahul*/
+    .checkbox {
+    margin-left: 8px;
+    }
+    
+    html body .mainHeader {
+      display: none; }
+    html body #mainHeader {
+      height: auto; }
+    /* RADAR 
+    html body #WC_ShipmentDisplay_div_4 > img 
+    {
+      display: none; 
+    }*/
+    /*html body .genericESpot {
+      display: none; }
+	*/
+    html body .logo_responsive, html body #logoArea .genericESpot{
+      display: block;
+      width: 100%; }
+    html body #header, html body #mainHeader, html body #logoArea, html body #checkout_crumb, html body #checkout_crumb .crumb, html body #page, html body #main_content_wrapper , html body .address_wrap{
+      width: 100%; }
+
+      
+    /* Radar 
+    html body .footer_sc {
+      width: 100% !important; }
+      */
+    html body .footer_resp_sup {
+      width: 80% !important; 
+      margin-top: -116px !important;  /*MHTN:647 in mobile footer space fixed, by rahul.ranjan*/
+      }
+    html body .footer_security {
+      padding: 2% 38%;
+      width: 100%; }
+    html body .footer_texto {
+      line-height: 20px;
+      padding: 1% 10%;
+      text-align: center;
+      width: 100%; }
+    html body #logoArea {
+      float: none;
+      display: block;
+      margin: 0 auto;
+      width: 176px; }
+    html body #Contenedor {
+      overflow: hidden; }
+      html body #Contenedor #page .dijitContentPane {
+        width: 100%; }
+      html body #Contenedor #page .dijitContentPane.pad-10 {
+        position:relative;
+        height:350px; 
+      }
+
+      html body #Contenedor #page .dijitContentPane.pad-10 {
+        position:relative;
+        height:350px; 
+      }
+      html body #Contenedor #page .dijitContentPane.pad-10 .credito{
+        position: absolute;
+        top: 228px;
+      }
+      html body #Contenedor #page .dijitContentPane.pad-10 .cencosud{
+        position: absolute;
+        top: 0px;
+      }
+      html body #Contenedor #page .dijitContentPane.pad-10 .visa{
+         position: absolute;
+         top: 120px;
+      }
+
+        html body #Contenedor #page .dijitContentPane #content_wrapper {
+          width: 100%; }
+      html body #Contenedor #promodescr_tooltip {
+        width: 100%; }
+      html body #Contenedor .body #total_breakdown {
+        width: 100%;
+        float:left;
+        margin: 0;
+        background-color:#eaf3f9;
+         }
+      html body #Contenedor #box .main_header_text,html body #Contenedor .content_header .main_header_text {
+        white-space: normal; 
+      }
+      html body #Contenedor #box .main_header_text{
+        margin:15px 0 !important;
+        background-color: #eaf3f9;/* Agrega Radar */  
+        float:left;
+        width:100%;
+        padding:3%;
+      }
+      html body .left{
+        width:100%;
+        padding:0%;
+        position:relative;
+        left:-2%;
+      }
+      html body #Contenedor .payment-method {
+        margin: 0;
+        padding: 0; }
+    html body #factura {         
+      width: 100%;
+      display: block;
+      margin: 0 auto; }
+    html body #EmpresaContainer {
+      left: 0 !important;
+      width: auto;
+      float: left;
+      z-index: 9999; }
+      html body #EmpresaContainer #facturaForm {
+        width: 100%;
+        float: left; }
+    html body #invoice_modal {
+      width: auto;
+      float: left;
+      background-color: #fff;
+      padding: 9px; }
+      html body #invoice_modal h1 {
+        padding: 10px 15px;
+        margin: 0; }    
+    html body .dijitContentPane {
+      width: 100%;
+      float: left;
+    }
+    html body #invoice_modal .styled_select_long {
+      width: 98%;
+      margin: 15px 0; }
+    html body .footer_resp {
+      z-index: 4; }
+    html body #GiftCardWidgetHidden, html body #EmpresaWidgetHidden, html body #NoviosWidgetHidden, html body #NuevaDireccionWidgetHidden, html body #ClientLoginWidgetHidden {
+      width: 100%; }
+    html body #invoice_modal .field {
+      width: 46%;
+      padding: 2% 0%;
+      float: left; }
+    html body #factura .field.direccion {
+      width: 100%; }
+    html body #factura .field.direccion > input, html body #invoice_modal .field input {
+      width: 100%; }
+    html body #invoice_modal #stateDiv > select, html body #invoice_modal #communesDiv > select {
+      width: 100% !important; }
+    html body #invoice_modal .styled_select {
+      width: 100%; }
+    html body #invoice_modal .styled_select_long > select {
+      width: 100%; }
+    /* Radar cambio de font-size y agrega font-weight*/
+    html body .button-wrapper-radius {
+      width: 80%;
+      margin-left: 10%;
+      margin-top: 0 !important;
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      float: left;
+      padding: 11px 12px !important;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1da0e0), color-stop(1, #1ca1e1)) !important;
+      background-image: -o-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -moz-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -webkit-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -ms-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: linear-gradient(to bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=0 ) !important; }
+    html body #GC_Balance_Apply .button-wrapper-radius, html body .button_container {
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1da0e0), color-stop(1, #1ca1e1)) !important;
+      background-image: -o-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -moz-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -webkit-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -ms-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: linear-gradient(to bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=0 ) !important; }
+    html body #novios_Target span.button_container {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      border-radius: 0;
+      float: left;
+      height: 35px;
+      padding-top: 7px;
+      width: 100%;
+      margin: 0; }
+    html body span.primary_button {
+      margin: 0 !important;
+      position: relative;
+      width: 48%; }
+    html body #WC_ShipmentDisplay_div_30 span.primary_button {
+      margin: 0 !important;
+      position: relative;
+      width: 100%; }
+    html body #giftCard_Target, html body #novios_Target {
+      display: block !important;
+      height: 0 !important;
+      overflow: hidden;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    html body #giftCard_Target.openAcordion, html body #novios_Target.openAcordion {
+      display: block !important;
+      height: auto !important;
+      overflow: hidden;
+      min-height: 135px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    html body #giftCard_Target .inputleft, html body #novios_Target .inputleft {
+      width: 100%; }
+    html body #giftCard_Target #GC_Balance_Apply {
+      float: left;
+      width: 48%; }
+    html body #giftCard_Target input, html body #novios_Target input {
+      width: 100%;
+      padding: 5px;
+      height: 35px; }
+    html body #novios_Target input {
+      width: 95%; }
+    html body #novios_inOut.activoboton, html body #giftCard_inOut.activoboton {
+      background-color: #EBF4FB; }
+    html body #NoviosContainer {
+      width: 100%;
+      height: auto;
+      padding-bottom: 20px; }
+      html body #NoviosContainer #novios_modal {
+        width: 100%;
+        height: auto; }
+        html body #NoviosContainer #novios_modal .registry_input {
+          width: 100%;
+          margin: 10px 0; }
+          html body #NoviosContainer #novios_modal .registry_input input {
+            width: 100%;
+            margin: 0; }
+        html body #NoviosContainer #novios_modal .section {
+          width: 100%; }
+          html body #NoviosContainer #novios_modal .section #novios_results_area {
+            width: 100%; } 
+
+
+         /* Radar Agrega */
+          html body #Contenedor #box .checkout_subheading .main_header_text{
+            font-weight: normal;
+            color: #000;
+            font-size: 14px;
+          }
+          html body #Contenedor #box .checkout_subheading .main_header_text .w-botton{
+            float: left;
+            width: 90%;
+          }
+
+          #discounts_link{
+            font-weight: bold;
+          }
+
+          .payment-method .column > div {                      
+            width: 120%;
+          }
+
+          .btn-pagar{
+              padding-left: 5%;
+              width: 95%;
+          }
+
+          .footer_sc .celeste {
+             color: #2d9ee4;
+          }
+
+          .icono-pregunta {
+              float: right;
+              margin-left: 3%;
+          }
+          .pad-10 {
+            padding-left: 10%;
+          }
+
+          /*#GiftcardAccordion*/
+          #GiftcardAccordion{
+              overflow:hidden;
+              width:100%;
+              float:left;
+              height:0;
+              -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease; 
+          }
+
+          #GiftcardAccordion.displayMenu{
+              height:80px;
+              -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease; 
+          }
+          #errorGiftCard{
+            height:80px;
+            min-height:0;
+            border-bottom: 5px solid #EBF4FB;
+          }
+          #errorGiftCard h4{
+            font-size:15px;
+            font-style:normal;
+            float:left;
+            font-weight: normal;
+          }
+          #errorGiftCard img{
+            float:left;
+            margin-right:10px;
+          }
+          html body #infoDescuentos.white-popup{
+            border-bottom:4px solid #D5EAF3;
+            border-right:4px solid #D5EAF3;
+            height:auto;
+            min-height:0;
+          }
+         
+          html body #infoDescuentos.white-popup #tooltip_popup{
+            width:100%;
+            height:auto;
+            position:static;
+            float:left;
+          }
+          html body #infoDescuentos.white-popup #tooltip_popup .bodyarea{
+            font-size:15px;
+            border:0;
+            box-shadow:           0 0 0 transparent; 
+            -moz-box-shadow:      0 0 0 transparent;
+            -webkit-box-shadow:   0 0 0 transparent; 
+          }
+
+          /*texto-codigo-novios*/
+          .texto-codigo-novios{
+            display:none;
+          }
+
+          /*giftCard_inOut*/
+          #giftCard_inOut .minus, #giftCard_inOut .pluss, #novios_inOut .minus, #novios_inOut .pluss{
+            float:right;
+          }
+          #giftCard_inOut .minus, #novios_inOut .minus{
+            display:none;
+          }
+
+          #novios_inOut.activoboton .minus, #giftCard_inOut.activoboton .minus{
+            display:block;
+          }
+
+           #novios_inOut.activoboton .pluss, #giftCard_inOut.activoboton .pluss{
+            display:none;
+          }
+
+          .radioDiv{
+            position:relative;
+          }
+          .RadioPayRemplazo{
+            width:20px;
+            height:20px;
+            top:4px;
+            left:-7px;
+            z-index:8;
+            float:left;
+            position:absolute;
+            background-image: url('../images/c1.png');
+            background-position:0 0;
+            background-repeat:no-repeat;
+          }
+          .RadioPayRemplazo.marcado{
+            background-image: url('../images/c1hover.png');
+            background-position:0 0;
+            background-repeat:no-repeat;
+          }
+
+          html body #checkout_crumb .crumb, html body #checkout_crumb .crumb a, html body #checkout_crumb .crumb span {
+              font-size:12px;
+          }
+          .btnErrorGiftCard {
+            display:inline-block;
+          }
+          /*ESTRUCTURA DESPACHO*/
+          html body .button_footer_line .right{
+            float:none;
+          }
+          html body #gift_wrapper{
+            height:auto;
+            height:0;
+            float:left;
+            height:auto;
+            position:relative;
+            overflow:hidden;
+            -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease; 
+          }
+
+          html body #gift_wrapper.open{
+            height:290px; /* Madifica Radar */
+            overflow:visible;
+            -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease; 
+          }
+          /*MODUL0 superior*/
+          html body #contactCardArea, html body #contactToolsArea, html body #contactReferenceArea{
+              width:100% !important;
+              padding:3% 3% !important;
+              float;left;
+          }
+          html body #btnCambiaEdita{
+            float:right;
+          }
+          html body #contactToolsArea{
+            padding:0% 3% !important;
+          }
+
+          html body #contactToolsArea a{
+            font-weight:lighter;
+          }
+
+          html body #contactCardArea .bold_name{
+            padding:0 0 5px 0;
+          }
+
+          html body #contactCardArea .ellipsis{
+            padding:0 0 0px 0;
+          }
+          html body #contactReferenceArea span{
+            font-size:13px !important;
+            color:#999 !important;
+          }
+          html body #contactReferenceArea .txtLongInput{
+              width:100% !important;
+              height:110px;
+              padding:3%;
+          }
+          /*PROGRAMA DESPACHO*/
+          html body table#shipping_order_details tbody tr.nested{
+              display:none;
+          }
+          html body .remove_item img{
+            display:none;
+          }
+
+          html body #shipping_order_details .product{
+            width:auto !important;
+          }
+
+          html body .dijitDropDownButton{
+            width: auto; 
+            padding: 0%; 
+            background: transparent; 
+          }
+          /*accordion_head*/
+          .accordion_head{
+              float:left;
+              position:relative;
+              padding:20px 0;
+              width:100%;
+              cursor:pointer;
+              background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c8c8c8), color-stop(1, #9b9b9b)) !important;
+              background-image: -o-linear-gradient(bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              background-image: -moz-linear-gradient(bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              background-image: -webkit-linear-gradient(bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              background-image: -ms-linear-gradient(bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              background-image: linear-gradient(to bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c8c8c8', endColorstr='#9b9b9b',GradientType=0 ) !important;
+          }
+
+          .accordion_head h4{
+              font-weight:bold;
+              text-align: center;
+              font-size:14px;
+          }
+
+          .accordion_head h4 span{
+              color:#fff;
+          }
+          .accordion_head .no-active,.accordion_head .active{
+            position:absolute;
+            right:5%;
+            top:20px;
+            font-size:16px;
+          }
+          .accordion_head .no-active{
+            display:block;
+          }
+          .accordion_head .active{
+            display:none;
+          }
+
+          .accordion_head.openHead .no-active{
+            display:none;
+          }
+          .accordion_head.openHead  .active{
+            display:block;
+          }
+
+
+          /*product_structure*/
+          .productDetail,.details{
+            width:100%;
+            float:left;
+            padding:3% 5%;
+          }
+
+          .productDetail a ,.details a{
+            color:#09C !important;
+            text-decoration:none;
+            font-weight:bold;
+          }
+          .productDetail a.delete{
+            color:#666 !important;
+            font-size:13px;
+          }
+          .productDetail .cant input{
+              width:30px;
+              height:25px;
+              border:2px solid #ccc;
+              text-align:center;
+              margin:0;
+              padding:0;
+          }
+          .text_left{
+            margin-bottom:10px;
+          }
+          .text_left p{
+            width:100%;
+            float:left;
+            font-size:11px;
+            margin-top:3px; /* Agrega Radar */
+          }
+           p.priceProduct span{
+            width:100%;
+            float:left;
+            margin-top:5px;
+          }
+          .tarjeta{
+            color:#d90000;
+          }
+          .productDetail a:hover ,.details a:hover{
+            text-decoration:underline;
+            
+          }
+          .productDetail h3{
+            font-size:14px;
+            color:#000;
+            padding:0 0 10px;
+            float:left;
+          }
+          
+          .details{
+            background-color:#eaf3f9;
+          }
+
+          .details dl{
+            float:left;
+            width:100%;
+            margin:0 0 5px 0;
+            padding:0;
+          }
+
+          .details dt{
+            float:left;
+            width:50%;
+            margin:0;
+            padding:0;
+            text-transform:uppercase;
+            font-size:12px;
+            font-weight:bold;
+            color:#000; /* Agrega Radar */
+          }
+          .details dd{
+            float:left;
+            width:50%;
+            margin:0;
+            padding:0;
+            color: #000;
+          }
+
+          /* Agrega Radar */
+          .details dd h5 {
+            color: #000;
+            font-weight: normal;
+          }
+
+          .images_left{
+            width:30%;
+          }
+
+          .images_left img{
+            width:100%;
+          }
+
+          .text_left{
+            width:60%;
+          }
+          #promodescr_tooltip{
+            display:none;
+          }
+
+          html body .content_footer{
+            padding:0;
+            /*display:none;*/
+          }
+
+          html body .content_footer.seen{
+            padding:0;
+            display:block;
+          }
+
+          #total_breakdown, .total_breakdown{
+            padding-right:10px;
+            margin-bottom:5px;
+            float:left;
+          }
+          .total_breakdown{
+            width:100%;
+            padding:3%;
+            float:left;
+            background-color:#eaf3f9;
+            margin-top:5px;
+          }
+          .total_breakdown h3{
+            color:#000;
+            font-weight:bold;
+            font-size:15px;
+          }
+
+          #total_breakdown .order_total{
+            padding-top:0px;
+          }
+
+          html body #gift_purchase_inOut{
+              margin-top:5px !important;
+
+          }
+          #gift_wrap, #send_greeting, #sender{
+            width:100%;
+            float:left;
+          }
+          #send_greeting textarea{
+            height:150px;
+            padding: 3%;
+          }
+          #gift_greeting_text{
+            width:100%;
+          }
+
+        
+          #gift_sender_text{
+            width:100%;
+          }
+
+          .product_structure{
+            height:0 !important;
+            overflow:hidden;
+          }
+
+          #gift_wrap{
+            position:absolute;
+            bottom:0;
+            padding-bottom:15px;
+          }
+          #send_greeting{
+            position:absolute;
+            top:0;
+            padding-bottom:0;
+          }
+          #sender{
+            display: none;/* Agrega Radar*/            
+            position:absolute;
+            top:175px;
+            z-index:9;
+            padding-bottom:0;
+          }
+          .product_structure{
+            height:0;
+            overflow:hidden;
+            -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease; 
+          }
+
+            .product_structure.open{
+            height:auto !important;
+            overflow:visible ;
+            -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease; 
+          }
+          .garantia{
+            width:90%;
+            padding:3%;
+            height:100px; /* Modifica Radar */
+            margin:15px auto;
+            border:2px solid #bcbcbc;
+          }
+          #cuadroGarantia{
+            width:100%;
+            float:left;
+          }
+          html body .btn-opciones, html body #cuadroGarantia input{
+            float:right;
+            color:#09C !important;
+            height:auto;
+            margin:0;
+            z-index:1;
+          }
+          html body .btn-opciones{
+            margin-top:20px;
+            position:relative;
+            right:-16px;
+          }
+
+          html body #cuadroGarantia .checkCont-opcion{
+              width:16px;
+              height:16px;
+              float:right;
+              position:relative;
+          }
+
+           html body #cuadroGarantia .checkCont-opcion img{
+              top:-2px;
+              left:3px;
+              position:absolute;
+              z-index:3;
+              cursor:pointer;
+          }
+
+          html body #gift_wrap .checkCont-opcion{
+              width:16px;
+              height:16px;
+              float:left;
+              position:relative;
+              margin:0 5px;
+          }
+          html body #gift_wrap .checkCont-opcion img{
+              top:-2px;
+              left:0px;
+              position:absolute;
+              z-index:3;
+              cursor:pointer;
+          }
+          .checkeado{
+              display:none;
+          }
+          .no-checkeado{
+              display:block;
+          }
+
+          .marcado .checkeado{
+              display:block;
+          }
+          .marcado .no-checkeado{
+              display:none;
+          }
+
+
+
+          html body #tooltip_popup .header{
+              display: block;
+              border:0;
+              box-shadow:0 0 0 transparent;
+          }
+
+          html body #tooltip_popup .header h4, html body #tooltip_popup .header h3{
+              display: block;
+              border:0;
+              font-size:14px;
+              color:#09C !important;
+              box-shadow:0 0 0 transparent;
+          }
+
+          html body #tooltip_popup{
+            width:100% !important;
+            padding:10px 0;
+            border:0;
+          }
+
+          html body #tooltip_popup.white-popup{
+              height:auto !important;
+              min-height:0 !important;
+              border:6px solid #eaf3f9;
+          }
+
+          html body #tooltip_popup .bodyarea{
+            border:0 !important;
+            box-shadow:0 0 0 transparent;
+          }
+          /**warranty*/
+            /*VENTANAS MODALES*/
+              html body .WarrantyContainer, html body .Warranty_Wrapper{
+                width:100%;
+              }
+              html body .WarrantyContainer, html body .Warranty_Header{
+                background-color:#fff;
+                float:left;
+                width:100%;
+                padding: 10px 0 10px 0;
+                border-top: 1px solid #ccc;
+                margin-top: 27px;
+              }
+             html body .Warranty_Header span{
+                padding:0;
+                width:33.3%;
+                text-align: center;
+                float:left;
+                margin:0;
+              }
+              html body .dijitTooltipContainer{
+                padding:0;
+                left:0;
+              }
+              html body  .WarrantyContainer .section{
+                margin:0;
+                padding:5px;
+                height:auto;
+                position:relative;
+              }
+              html body  .WarrantyContainer .section .radioButton{
+                margin:0;
+                padding:0;
+                position:absolute;
+                left:5%;
+                top:15%;
+              }
+             html body  .WarrantyContainer .section label{
+                margin:0;
+                padding:0;
+                width:33.3%;
+                float:left;
+              }
+             html body  .WarrantyContainer .section span{
+                margin:0;
+                padding:0;
+                width:33.3%;
+                float:left;
+                position:static;
+                text-align: center;
+                left:0;
+                right:0;
+              }
+              html body  .WarrantyContainer a{
+                top:10px;
+                left:8%;
+              }
+
+              /*.closeModal*/
+              html body .closeModal{
+                display:none;
+              }
+
+              #calendario th,#calendario td{
+                width:auto;
+                font-size:10px;
+              }
+              html body table#calendario{
+                min-width:100% !important;
+                width:100%;
+              }
+              html body #calendarContainer, html body #calendarContainer2{
+                padding:0 !important;
+                margin:0 !important;
+              }
+              /*  TABLA Fechas entregas*/
+              #table-calendario, #table-calendario-dos-col{
+                width:100%!important;
+                float:left;
+                border:3px solid #eaf3f9;
+              }
+              #table-calendario-dos-col{
+                  margin-top:10px;
+              }
+
+              #table-calendario .header-table dd,#table-calendario .header-table dt, #table-calendario-dos-col ul.header-table li,
+              #table-calendario-dos-col ul li.side{
+                font-size:12px;
+                color:#333;
+                min-height:50px;
+              }
+
+              #table-calendario dl, #table-calendario-dos-col ul{
+                width:100%!important;
+                float:left;
+                border-bottom:3px solid #eaf3f9;
+                margin:0;
+                text-align: center; /* Agrega Radar */
+              }
+              #table-calendario-dos-col ul{
+                 padding:0;
+              }
+
+              #table-calendario dd, #table-calendario dt{
+                width:50%!important;
+                min-height:46px;
+                float:left;
+                padding:2%;
+                margin:0;
+                /*border:2px solid #eaf3f9;*/
+              }
+
+              #table-calendario-dos-col li{
+                width:33.3%!important;
+                min-height:50px;
+                float:left;
+                padding:2%;
+                margin:0;
+              }
+
+              #table-calendario dt, #table-calendario-dos-col li{
+                border-right:3px solid #eaf3f9;
+              }
+              #table-calendario-dos-col li:last-child{
+                  border:0;
+              }
+
+              #table-calendario dd, #table-calendario-dos-col li{
+                text-align:center;
+                color:#1ca1e1;
+              }
+
+              /* Agrega Radar */
+              #table-calendario dd.select,#table-calendario-dos-col li.select{
+                 background: none repeat scroll 0 0 #eaf3f9;
+              }
+
+              #AcceptDateButton .button-wrapper-radius{
+                background-image:none !important;
+                color:#1ca1e1;
+                background-color:transparent;
+              }
+              #AcceptDateButton .button-wrapper-radius span.button-container{
+                color:#1ca1e1 !important;
+              }
+              .fwdBtn, .backBtn{
+                /* Modifica Radar*/
+                color:#000;
+                font-size: 13px;
+                font-weight: bold;
+              }
+              /*Modal error*/
+              #errorsolicitud{
+                  border:4px solid #D5EAF3;
+                  height:auto;
+                  min-height:0;
+              }
+
+              #errorsolicitud h3, #errorsolicitud h4{
+                  color:#09C !important;
+                  font-size:16px;
+
+              }
+              #errorsolicitud h4, #errorsolicitud .llama{
+                text-align: center;
+                font-size:14px;
+              }
+              #errorsolicitud strong, #errorsolicitud p{
+                margin-top:5px;
+              }
+
+              #errorsolicitud strong{
+                font-weight:bold;
+                color:#333;
+              }
+
+              /* Agrega RADAR */
+              .main_header_text.shipping_header {
+                display: none;
+              }
+
+              .caja-direccion-boton, .caja-direccion-editar a{
+                display:inline-block;
+              }
+
+              /* RADAR */
+              html body .caja-direccion-editar{
+                padding-top:0;
+                text-align: left;
+              }
+              
+              /* Agrega RADAR */
+              #editLink {
+               margin-left: 10%;
+              }              
+              .caja-direccion-boton {
+                  margin-left: 20%;
+              }
+              .caja-alternativa-abajo{
+                margin-top: 65px;
+              }
+              /* Fin Agrega RADAR */
+              
+
+              html body .caja-direccion{
+                  height:auto;
+              }
+
+              .caja-direccion-boton a:link, .caja-direccion-boton a:visited, .caja-direccion-boton a{
+                background-color:#0096D3 !important;
+              }
+              /*#NuevaDireccionContainer modal*/
+              #NuevaDireccionContainer #AddressForm{
+                width:100%;
+                height:auto;
+              }
+
+              #new_address_modal{
+                width:100%;
+                height:auto;
+                padding:0;
+                margin:0;
+              }
+
+              #NuevaDireccionContainer, #NuevaDireccion{
+                width:100%;
+                height:auto;
+                padding:0;
+              }
+
+              .headerModal{
+                width:100%;
+                float:left;
+                padding:10px 3%;
+                border-bottom:1px solid #0096D3;
+                margin-bottom:0px;
+              }
+
+              .headerModal.agregar .edita{
+                  display:none;
+              }
+
+              .headerModal.editar .agrega{
+                  display:none;
+              }
+
+              .form_2column{
+                width:100%;
+                padding:0 3% 0;
+              }
+
+              .form_2column .column{
+                width:100%;
+                padding:0;
+              }
+              .form_2column .column.medio-campo{
+                width:50%;
+                padding:0;
+              }
+              .form_2column .column.medio-campo .styled_select, .form_2column .column.medio-campo  .short_field{
+                width:90%;
+                height:35px;
+                padding:2%;
+                border:1px solid #999;
+              }
+              .form_2column .column.medio-campo.last-field .styled_select, .form_2column .column.medio-campo.last-field .short_field{
+                float:right;
+              }
+              #communesDiv > select{
+                width:100%;
+              }
+              .txtLongInput{
+                width:100%;
+                height:35px;
+                padding:2%;
+                border:1px solid #999;
+              }
+              .txtInput{
+                width:100%;
+                height:35px;
+                padding:2%;
+                border:1px solid #999;
+              }
+
+              .primary_button span.button_container{
+                  width:100%;
+                  -webkit-border-radius: 0px;
+                  -moz-border-radius: 0px;
+                  border-radius: 0px;
+                  padding:5px ;
+                  font-size:14px;
+              }
+
+              html body .primary_button.button_fit{
+                width:100%;
+              }
+
+              .button_items .left{
+                  margin:0 0 10px;
+                  padding:0;
+              }
+
+              #NuevaDireccionContainer .content_footer{
+                padding:0 3% !important;
+              }
+
+      /******DIRECCION*****/
+      #content_wrapper{
+          width:100%;
+      }
+      #contenedor-alternativas{
+        width:100%;
+      }
+
+      #contenedor-alternativas .caja-alternativa{
+        padding:0;
+        margin:0 1% 0 1%;
+        float:left;
+        width:48%;
+      }
+      #contenedor-alternativas  .caja-alternativa-arriba, #contenedor-alternativas .caja-alternativa-abajo{
+        width:100%;
+        font-size:14px;
+      }
+      #ddespachoContainer{
+        width:100% !important;
+      }
+
+      #shipping_address_select, #shipping_address_select tr, #shipping_address_select td{
+        width:100%;
+        float:left;
+      }
+
+      /* Radar */
+      #shipping_address_select .caja-direccion {
+          float: left;
+          margin: 0 0 10px 5px;
+          width: 97%;
+      }
+      #mainContents{
+        width:100% !important;
+      }
+      .caja-alternativa-arriba .novios{
+        margin:0 auto !important;
+        float:none !important;
+        width:60% !important; /* Radar */
+        text-align: center !important;
+
+      }
+      #contenedor-alternativas .caja-alternativa-abajo a{
+        width:70% !important;
+        display:block;
+        margin:0 auto;
+        font-size:11px;
+      }
+
+      .caja-direccion-titulo .ellipsis, .caja-direccion-bajada .ellipsis{
+          text-align: center;
+      }
+     html body #unregistered_form .field{
+        width:100%;
+        margin:0;
+        padding:3% 3% 0;
+        height:auto;
+      }
+
+      html body #unregistered_form .field .label_spacer, html body #unregistered_form .field input{
+        width:100%;
+        float:left;
+        margin:0;
+      }
+      html body #unregistered_form .field .label_spacer{
+        font-size:13px;
+        color:#666;
+        margin:0px 0 10px;
+      }
+      html body #unregistered_form .field input{
+        height:35px;
+        padding:3%;
+      }
+      html body #unregistered_form .field .checkbox{
+        height:auto;
+        padding:0%;
+        visibility: hidden;
+      }
+
+      html body #unregistered_form .field  .checkbox_label_registration label{
+        top: -5px;
+        left: 11px;
+        position:relative;
+      }
+
+      html body #unregistered_form form{
+        width:100%;
+        float:left;
+        
+      }
+      #box .content_footer .unregistered{
+        margin:10px 0 0!important;
+      }
+
+      #WC_UnregisteredCheckout_div_23 .button-wrapper-radius.medium_smaller{
+          width:100% !important;
+          padding-top:15px;
+          padding-bottom:15px;
+          font-size:14px;
+          margin-left:0;
+      }
+
+      #unregistered_form .styled_select{
+        width:100%;
+        margin-bottom:0;
+      }
+      #unregistered_form .field.medio-campo{
+          width: 50%;
+          margin:0;
+          padding:0 3%;
+          float:left;
+      }
+      .unregistered .left{
+        float:none;
+        padding:0 3%;
+      }
+
+      .content_footer .left{
+          float:none;
+      }
+      #unregistered_form textarea{
+        width:100%;
+        padding:2%;
+        height:115px;
+      }
+
+      html body .col2_ship textarea, html body .col2_ship input, html body  #unregistered_form  .styled_select{
+        border:1px solid #999;
+      }
+      #unregistered_form select{
+        width:100% !important;
+      }
+
+      html body .styled_select{
+        border:1px solid #999;
+        position:relative;
+        width:100%;
+        padding:0 3%;
+      }
+
+      html body .styled_select .btn-selected-select{
+        position:absolute;
+        right:0;
+        top:0;
+        z-index:7;
+        cursor:pointer;
+      }
+      html body .styled_select select, #stateDiv > select{
+        width:100%;
+        position:relative;
+        z-index:5;
+      }
+
+      html body .asociar_disable{
+        width:100%;
+      }
+
+      html body #novios_modal span.button-wrapper-radius{
+        width:100%;
+        margin:0;
+      } 
+
+      #btnsAcordion{
+        width:100%;
+        float:left;
+        padding:10% 3% 3%;
+      }
+      #btnsAcordion a{
+        width:48%;
+        float:left;
+        padding:5% 3%;
+        color:#fff;
+            background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1da0e0), color-stop(1, #1ca1e1)) !important;
+            background-image: -o-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+            background-image: -moz-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+            background-image: -webkit-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+            background-image: -ms-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+            background-image: linear-gradient(to bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=0 ) !important;
+            text-align: center;
+
+      }
+      #btnsAcordion a.endless{
+        width:48%;
+        float:right;
+        padding:5% 3%;
+        color:#333;
+        position:relative;
+        background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c8c8c8), color-stop(1, #9b9b9b)) !important;
+              background-image: -o-linear-gradient(bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              background-image: -moz-linear-gradient(bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              background-image: -webkit-linear-gradient(bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              background-image: -ms-linear-gradient(bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              background-image: linear-gradient(to bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c8c8c8', endColorstr='#9b9b9b',GradientType=0 ) !important;
+      }
+
+      #btnsAcordion a.endless small{
+          position:absolute;
+          top:-32px;
+          width:100%;
+          text-align: center;
+          left:0;
+      }
+
+
+      #contAccordion{
+        width:100%;
+        height:0;
+        overflow:hidden;
+      }
+      #contAccordion.openAcordion{
+        height:auto;
+        overflow:hidden;
+      }
+      html body  .checkCont-opcion{
+              width:16px;
+              height:16px;
+              float:right;
+              position:relative;
+          }
+
+        html body  .checkCont-opcion img{
+              top:-2px;
+              left:3px;
+              position:absolute;
+              z-index:3;
+              cursor:pointer;
+          }
+          /*Cuenta*/
+          html body #box .my_account .body, html body .my_account, .billing_method select, input{
+            width:100%;
+            margin-bottom: 0;
+          }
+          .billing_method select, input{
+            height:35px;
+          }
+  /* MHTN: Modal "Mi cuenta" made by Felipe Ojeda */
+          html body #box .my_account{
+            margin-top: 89px;
+          }
+
+          .address_wrap{
+            margin-top:10px;
+            margin-left:0px;
+            margin-right:0px;
+            height:auto;
+          }
+	  /* MHTN: Modal "Mi cuenta" made by Felipe Ojeda */
+          #left_nav{
+            z-index:0;     
+     	 top: 5px;   
+          			}
+          #left_nav .left_nav_container{
+            display:block;
+          }
+
+          #left_nav ul{
+            float:left;
+            width:100%;
+            /*MHTN Defect 437 changed margin-top:44px for 6px */
+              /*Start MHTN Defect 472*/
+                /*Start MHTN Defect 535 26px for 10%*/
+            margin-top:10%;
+                 /*End MHTN Defect 535*/
+               /*End MHTN Defect 472*/
+            /*End MHTN Defect 408 */
+
+            /*MHTN Defect 437 changed padding 0 3% for 0 1% */
+              /*Start MHTN Defect 472*/
+            padding: 0 4%;
+              /*End MHTN Defect 472*/
+            /*MHTN Defect 408*/
+          }
+          #left_nav ul li{
+            float:left;
+            display:inline-block;
+            padding:0 5px;
+            border-right:1px solid #333;
+            margin:0;
+          }
+          
+          #left_nav ul li:first-child{
+              padding-left:0;
+          }     
+
+          #left_nav ul li:first-child + li{
+             border: 0 !important;
+          }         
+
+          
+          #left_nav ul li:last-child{
+              border-right:0;
+          }
+          .form_2column .column .left{
+            width:auto;
+          }
+
+          .new-direction{
+            float:left;
+            width:100%;
+            margin-top:30px;
+            margin-bottom: 10px;
+            font-weight: bold;
+          }
+
+          .header-direccion{
+            font-size:15px;
+            margin-top:25px;
+          }
+
+          .address_wrap .addy p{
+              text-align: center;
+          }
+
+          .addy_utilities{
+              width:100%;
+              float:left;
+              left:0;
+              position:relative;
+              padding:15px 0 0;
+          }
+
+          .addy_utilities ul{
+              width: 110px;
+              display: block;
+              margin: 20px auto 0;
+          }
+          .addy_utilities ul li{
+              display:inline-block;
+          }
+
+          .address_wrap .addy p .name{
+            height:auto;
+          }
+          #WC_UserRegistrationUpdateForm_Password_Update_Section{
+            display:none;
+          }
+          #WC_UserRegistrationUpdateForm_Password_Update_Section.openClass{
+            display:block;
+          }
+
+          .input_label .checkmark {
+            position:relative;
+            left:1%;
+          }
+          .input_label .checkmark input{
+            height:auto;
+            position:relative;
+            z-index:0;
+            margin-right:10px;
+          }
+
+          .input_label .checkmark img{
+            position:absolute;
+            z-index:3;
+            left:-1px;
+            top:-1px;
+            cursor:pointer;
+          }
+          .input_label .checkmark .hover{
+            display:block;
+          }
+
+          .input_label .checkmark.btn-hover .hover{
+            display:none;
+          }
+
+          .input_label .checkmark .no-hover{
+            display:none;
+          }
+          .input_label .checkmark.btn-hover .no-hover{
+            display:block;
+          }
+          #box .required-label{
+            width:100%;
+            text-align:right;
+            /*margin:20px 0 5px;            
+            padding:3%;*/
+
+          }
+
+          #left_nav ul li.active{
+              font-weight: bold;
+          }
+
+          .no-active {
+            /*border: medium none !important;*/
+          }
+            /* MHTN: Modal "Mi cuenta" made by Felipe Ojeda */
+          .active{
+          margin-top:30px;
+          }
+  /* MHTN: Modal "Mi cuenta opciones despacho" made by Felipe Ojeda */
+.titulo_despacho {
+margin-top: 23px;
+}
+/* MHTN: Modal "tag mi cuenta" made by Felipe Ojeda */
+ 		#tab_compra_tienda {
+ 		margin-top: -3px;
+ 				}
+ 			/* MHTN: Modal "estilo btn" made by Felipe Ojeda */	
+ 				.estilobtnenviar{
+ 				margin-top:-22px !important;
+						}
+          .no-active a {
+            color:#0099cc !important;
+           
+          }
+
+          #WC_UserRegistrationUpdateForm_div_24 a {
+            
+            font-weight: bold !important;
+          }
+
+          .NuevaContrasena {
+              font-weight: bold !important;
+              padding-left: 5% !important;
+          }
+
+          .input_label {
+             margin-top: 20px;
+             width: 100%;             
+          }        
+         /*MODAL*/
+         /*html body #Contenedor #page .dijitContentPane{
+          width:100%;
+          height:auto;
+          float:left;
+          position:relative;
+          z-index:11;
+         }*/
+
+         html body #Contenedor #page #MyAccountCenterLinkDisplay_Widget.modalemerge{
+            z-index:99999;
+         }
+        
+         #Contenedor #page #NuevaDireccionWidgetHidden #NuevaDireccionContainer{
+              left: -1px !important;
+              top: -280px !important;
+              z-index: 99999 !important;
+         }
+
+         #NuevaDireccionContainer, #NuevaDireccion {
+           height: 800px  !important;
+          }
+
+         #buttonAceptarMap_MC{
+          display: none !important;
+         } 
+
+         #AddressForm{
+            z-index: 9999 !important;
+         }
+
+         .ConfirmationBackground{
+            z-index:9999;
+         }
+
+         span.button_bg{
+            width:100%;
+         }
+
+         #buttonAceptarMap2_MC{
+            width:100%;
+         }
+
+         html body #confirm_conter_footer_2{
+            width:68%;
+         }
+         .cajaConfirmacionTexto2{
+            margin:10px auto;
+            padding:0%;
+            width: 60%;
+         }
+
+         .cajaConfirmacionTexto{
+            font-size:16px;
+         }
+
+         html body .menu_responsive{
+            z-index:9;
+         }
+
+         html body #Contenedor .footer_resp{
+            z-index:9 !important;
+         }
+
+
+  /*.dijitTooltip  {
+          background-color: none repeat scroll 0 0 rgba(0, 0, 0, 0) !important;
+          box-shadow: none !important;         
+          left: 8% !important;    
+          margin-bottom: -19px !important;       
+
+  }
+
+  #dijit__MasterTooltip_0 .dijitTooltipConnector{
+    display: none !important;    
+  }
+
+  .dijitTooltipContainer {
+     color: red !important;
+     background-color:  transparent  !important;
+     left: -15px !important;
+  }*/
+  #new_address_modal {   
+    top: -37px !important;
+  }
+
+  .error-responsive{
+    color: red !important;
+  }
+
+  .column{
+    margin-bottom: 8px !important;
+  }
+
+  #left_nav {
+    z-index: 8;
+  }
+
+
+  .content_header {   
+    padding: 25px 9px !important;
+  }
+
+  html body .content_footer {
+    display: block !important;
+  }
+  .styled_select {
+    overflow: visible !important;
+  }
+
+  /* html body .dijitTooltipContainer{
+    padding:0 !important;
+    left:0 !important;
+    position: relative !important;
+    
+  }
+    html body .dijitTooltipDialog{
+    padding-top:40px !important;
+    background-color:#fff !important;
+    margin:-3px !important;
+   }*/
+   /*botones popup mensaje */
+   #confOKButton1_2 .button-wrapper-radius{
+      font-size: 10px !important;
+   }
+   #confOKButton2_2 .button-wrapper-radius{
+      font-size: 10px !important;
+   }
+   #WC_Confirm_Cancelar_Button_2 .button-wrapper-radius{
+      font-size: 10px !important;
+   }
+      
+}
+/*TABLET HEREDADOS*/
+  @media screen and (min-width: 641px) and (max-width: 970px) {
+    html body {
+      /* CSS footer Inline*/ }
+      html body .logo_responsive {
+        display: none; }
+      html body .checkoutFooterZone1_cont {
+        width: 967px;
+        height: 50px;
+        float: none;
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        border-top-width: 3px;
+        border-bottom-width: 3px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-top-color: #EBF4FB;
+        border-bottom-color: #EBF4FB; }
+      html body .checkoutFooterZone1_cont .footer_links {
+        width: 800px;
+        height: 20px;
+        float: left;
+        font-family: Tahoma, Geneva, sans-serif;
+        font-size: 12px;
+        color: #666;
+        text-align: left;
+        padding-top: 15px; }
+      html body .checkoutFooterZone1_cont .footer_links a {
+        color: #666;
+        text-decoration: none; }
+      html body .checkoutFooterZone1_cont .footer_links a:hover {
+        color: #666;
+        text-decoration: underline; }
+      html body .checkoutFooterZone1_cont .secure_seal {
+        width: 120px;
+        height: 35px;
+        float: left; } 
+
+
+        /*quita espacio blanco en mis direcciones */
+
+        .my_account{
+
+            width: 620px !important;   /*MHTN - DEFECT 674*/
+
+
+        }
+
+
+        /*#left_nav .left_nav_options {      
+          min-height: 127px !important;      
+        }
+
+        #left_nav .left_nav_container {
+           min-height: 127px !important;    
+        }
+
+
+        #left_nav {   
+            min-height: 127px !important;  
+        }*/
+
+}
+    

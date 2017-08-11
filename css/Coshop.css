@@ -1,0 +1,118 @@
+/*
+ *-----------------------------------------------------------------
+ * Licensed Materials - Property of IBM
+ *
+ * WebSphere Commerce
+ *
+ * (C) Copyright IBM Corp. 2010 All Rights Reserved.
+ *
+ * US Government Users Restricted Rights - Use, duplication or
+ * disclosure restricted by GSA ADP Schedule Contract with
+ * IBM Corp.
+ *-----------------------------------------------------------------
+ */
+ 
+html, body {
+	-webkit-text-size-adjust:none;  
+} 
+ 
+#coshopContainer {	display:none;}
+.invitationDialog {	width:498px;}
+.invitationDialog .marginTop {	margin-top:5px;}
+.invitationDialog .marginBottom {	margin-bottom:5px;}
+.invitationDialog .top_left {	background-position: left bottom !important;}
+.invitationDialog .top_right {	background-position: right bottom !important;}
+.invitationDialog .warningMsgDiv {	margin:10px 0px;}
+.invitationDialog .warning {color:red;}
+ 
+
+
+.invitationDialog h2, .permissionDialog h2, .coshopHelp h2 {
+	font-size:14px;
+	font-weight:bold;
+}
+
+
+#invitationDialogHeader,
+#exitConfirmationDialogHeader,
+#inviteeDialogHeader{
+	font-weight:bold;
+}
+
+.invitationDialog .padding, 
+.inviteeDialog .padding, 
+.exitConfirmationDialogHeader .padding,
+.coshopHelp .padding{
+	padding-left:20px !important;
+	padding-right:20px !important;
+}
+
+.invitationDialog .popupCloseImg, .coshopHelp .popupCloseImg {
+	background-image:url(../images/coshopping/popup_close.png);
+	background-repeat:no-repeat;
+	height:15px;
+	width:15px;
+	background-position:right center;
+}
+.invitationDialog .closeLink,
+.coshopHelp .closeLink {	
+	padding-right:20px;
+}
+
+#confirmExitString {	margin-bottom:10px;}  
+
+.endCollaborationDialog .dijitDialogCloseIcon,.dijitOffScreen{
+/*dialog to confirm ending the collaboration dialog*/
+	display:none;
+}
+
+.cobrowseWidgetTextBox {
+	width:100%;
+	margin-bottom:3px;
+}
+
+.cobrowseWidgetStatus {
+	font-size:11px;
+	color:blue;
+}
+
+.dj_ie .dijitButtonNode {zoom: 1;}
+.dj_ie .dijitButtonNode button { overflow: visible;} 
+.helpDialog,.permissionDialog{	z-index:4;}
+
+.cobrowseWidgetButton {
+	font-size:0.8em;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+
+.IE6SelectWorkaround {
+	position:absolute; 
+	width:100%; 
+	height:100px; 
+	display:block; 
+	filter:alpha(opacity=0);
+}
+
+.coshopHelp .header {width:458px;}
+.coshopHelp .bodycontent {	width:458px;}
+.coshopHelp .icon {	width: 20%;}
+.coshopHelp .desc {	width: 80%;}
+.coshopHelp .section { margin-top: 20px; margin-bottom:20px;}
+
+/*setting the min width of buttons used in coshopping. Have to be very specific here or the style will affect other store buttons*/
+.invitationDialog span.primary_button span.button_container span.button_top span.button_bottom,
+.invitationDialog span.secondary_button span.button_container span.button_top span.button_bottom,
+.chatInputArea span.primary_button span.button_container span.button_top span.button_bottom,
+.coshopHelp  span.primary_button span.button_container span.button_top span.button_bottom,
+.coshopHelp span.secondary_button span.button_container span.button_top span.button_bottom
+{
+	min-width:50px;
+}
+
+.peerNameInputTextBox {width: 350px;}
+
+#ceadijit_dijit_Dialog_1 .bodycontent {
+	padding-top: 30px;
+}

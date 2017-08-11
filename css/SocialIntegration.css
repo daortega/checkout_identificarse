@@ -1,0 +1,237 @@
+/*
+ *-----------------------------------------------------------------
+ * Licensed Materials - Property of IBM
+ *
+ * WebSphere Commerce
+ *
+ * (C) Copyright IBM Corp. 2011 All Rights Reserved.
+ *
+ * US Government Users Restricted Rights - Use, duplication or
+ * disclosure restricted by GSA ADP Schedule Contract with
+ * IBM Corp.
+ *-----------------------------------------------------------------
+ */
+
+/* Facebook */
+
+.clear_float{
+	clear:both;
+}
+
+div #social_facebook_Like_HomeSidebarDisplay {
+    padding-left: 5px;
+    position: absolute;
+}
+
+div #social_facebook_Like_ProductOnlyDisplay {
+	padding-top: 7px;
+}
+
+div #social_facebook_Activity_HomeSidebarDisplay {
+    position: relative;
+    margin-left: 1px;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+
+#social_facebook_Like_HomeSidebarDisplay iframe {
+	display : inline; 
+}
+
+#social_facebook_Activity_HomeSidebarDisplay iframe {
+	display : inline;
+	background : #FFFFFF;
+}
+
+#social_facebook_Details_Like_Button_Display iframe {
+	display : inline; 
+	padding-top: 2px;
+}
+
+.social_facebook_container {
+}
+
+.social_facebook_container .left_border {
+    background: url("../images/socialIntegration/facebook_like_container_left.gif") no-repeat scroll 0 0 transparent;
+    border: medium none !important;
+    color: #FFFFFF;
+    float: left;
+    font-size: 16pt;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 2px;
+    width: 12px;
+}
+
+.social_facebook_container .content {
+    background: url("../images/socialIntegration/facebook_like_container_tile.gif") repeat-x scroll 0 0 transparent;
+    float: left;
+    height: 21px;
+    padding: 8px;
+}
+
+.social_facebook_container .right_border {
+    background: url("../images/socialIntegration/facebook_like_container_right.gif") no-repeat scroll 0 0 transparent;
+    border: medium none !important;
+    float: left;
+    height: 35px;
+    width: 4px;
+}
+
+.social_facebook_container .activity_top_left_border {
+    background: url("../images/socialIntegration/facebook_activity_container_top_left.gif") no-repeat scroll 0% 3% transparent;
+    float: left;
+    height: 4px;
+    width: 4px;
+    
+}
+
+.social_facebook_container .activity_horizontal_top_border {
+    background: url("../images/socialIntegration/facebook_activity_container_horizontal_top.gif") repeat-x scroll 0% 3% transparent;
+    width: 173px;
+    height: 4px;
+    float: left;
+}
+
+.social_facebook_container .activity_top_right_border {
+    background: url("../images/socialIntegration/facebook_activity_container_top_right.gif") no-repeat scroll 100% 3% transparent;
+    float: left;
+    height: 4px;
+    width: 4px;
+}
+
+.social_facebook_container .activity_bottom_left_border {
+    background: url("../images/socialIntegration/facebook_activity_container_bottom_left.gif") no-repeat scroll 0% 100% transparent;
+    float: left;
+    height: 4px;
+    width: 4px;
+}
+
+.social_facebook_container .activity_horizontal_bottom_border {
+    background: url("../images/socialIntegration/facebook_activity_container_horizontal_bottom.gif") repeat-x scroll 0 100% transparent;
+    float: left;
+    height: 4px;
+    width: 173px;
+}
+
+.social_facebook_container .activity_bottom_right_border {
+    background: url("../images/socialIntegration/facebook_activity_container_bottom_right.gif") no-repeat scroll 100% 100% transparent;
+    float: left;
+    height: 4px;
+    width: 4px;
+}
+
+.social_facebook_container .activity_vertical_left_border {
+    background: url("../images/socialIntegration/facebook_activity_container_vertical_left.gif") repeat-y scroll 0 0 transparent;
+    float: left;
+    width: 177px;
+    padding-left:4px;
+}
+
+.social_facebook_container .activity_vertical_right_border {
+    background: url("../images/socialIntegration/facebook_activity_container_vertical_right.gif") repeat-y scroll right center transparent;
+    float: right;
+    width: 174px;
+    padding-right: 4px;
+}
+
+.social_facebook_container .activity_content{
+	background-color:#ffffff;
+}
+
+.social_facebook_container .activity_horizontal_top_border2 {
+    background: url("../images/socialIntegration/facebook_activity_container_horizontal_top.gif") repeat-x scroll 0% 3% transparent;
+}
+
+.social_facebook_container_like_homepage_width {
+    width: 147px;
+}
+
+.social_facebook_container_like_productpage_width {
+    width: 150px;
+}
+
+#social_facebook_Like_HomeSidebarDisplay span.fb_edge_comment_widget {
+    top: 25px !important;
+    left: -20px !important;
+}
+
+#social_facebook_Like_HomeSidebarDisplay span.fb_edge_comment_widget iframe {
+    width: 550px !important;
+    display: block:
+}
+
+.ie_socialFacebookdijitButtonNodeAdjustment {
+	padding-bottom: 2px;
+	height: 39px;
+}
+.ie8_socialFacebookdijitButtonNodeAdjustment {
+	padding-bottom: 3px;
+	height: 39px;
+}
+
+div .headerMenu_DropDown_Facebook {
+	margin-bottom: -6px;
+	vertical-align: bottom;
+	text-decoration:none;
+	display:inline-block;
+	color:#404040;
+	padding: 2px 2px 2px;
+	border: solid 1px transparent;
+	text-align: right;
+}
+
+.socialDropDownArrow {
+	margin-left: 4px;
+}
+.socialFacebookProfilePix {
+	width: 36px;
+	height: 36px;
+}
+.socialFacebookProfileName {
+	padding-top: 10px;
+	padding-left: 4px;
+}
+
+span#header_menu_facebook_loaded .dijitDropDownButtonHoverFocused,
+span#header_menu_facebook_loaded .dijitDropDownButtonOpenedFocused {
+	background-color: #FEFCD3;
+}
+
+/* Facebook connect/disconnect button on mast header */
+span#header_menu_facebook_loaded .dijitDropDownButtonOpenedFocused {
+	border-left: solid 1px #F3915B;
+	border-right: solid 1px #F3915B;
+	border-top: solid 1px #F3915B;
+	border-bottom: solid 1px transparent;
+}
+
+a#headerFBlogout.h_tnav_but {
+	text-decoration: none;
+	height: 16px;
+	padding: 2px 4px 2px 2px;
+	display: block;
+}
+
+.facebook_zindex {
+	z-index: 999 !important;
+}
+
+/* menu popup item - disconnect from Facebook*/
+#WC_CachedHeaderDisplayFacebook_div{ 
+	border-left: solid 1px #F3915B;
+	border-right: solid 1px #F3915B;
+	border-bottom: solid 1px #F3915B;
+	border-top: none;
+	margin-top: -1px;
+}
+/* hide, not needed in Social Commerce menu drop down */
+#WC_CachedHeaderDisplayFacebook_div img.dijitMenuExpand{ 
+	display: none;
+}
+#WC_CachedHeaderDisplayFacebook_div td.dijitMenuArrowCell{
+	display: none;
+}
+

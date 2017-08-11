@@ -1,0 +1,1939 @@
+/* Full */
+
+html body #Contenedor {
+    overflow: visible !important;
+}
+#detailsOrder {
+    overflow: visible;
+    width: 100%;
+}
+.column {
+    float: left;
+    padding: 20px 0;
+    width: 50%;
+}
+/*MHTN CYCLE4 DEFECT 513*/
+.tinydown {
+	display:  none;
+}
+
+#AddressForm .column{
+  width: auto !important;
+}
+
+.imagenBoleta img{
+  width: 100%;
+}
+.imagenBoleta {
+    border: 1px solid #ccc;
+    margin-right: 20px;
+    min-height: 120px;
+}
+/* MHTN: Modal "tracking guest" made by Felipe Ojeda */
+#inputFormGuestTracking{
+    float: left;
+    margin: 0;
+    width: 50%;
+}
+/*MHTN: 408*/
+  .detalles-titulo, .titulo_despacho{
+    position: relative;
+    top: -27px;
+    margin-top: 43px;
+    /*color: #233a66;*/
+    color: #333;
+    font-weight: bold;
+  }
+  .address-title{
+    color: #233a66;
+    position: relative;
+    top: -27px;
+    margin-top: 30px;
+    font: 16px/115% Verdana,Geneva,sans-serif;
+    letter-spacing: -1px;
+    padding-bottom: 0 !important;
+    width: 440px;
+    left: 10px;
+  }
+
+
+/*MHTN: 408*/
+
+/* MHTN: Modal "submit tracking guest" made by Felipe Ojeda */
+#submitFormGuestTracking {
+    background: none repeat scroll 0 0 #f27928 !important;
+    -webkit-appearance: none; /*MHTN: DEFECT 674*/
+    -webkit-border-radius: 0px;
+/*    border: 0 none;
+    color: #fff;
+    float: left;
+    height: auto;
+    margin: 0 0 0 34px;
+    margin-top: 8px;
+    padding: 3px 0;
+    width: 80%;*/
+    border: 0 none;
+    color: #fff;
+    float: left;
+    height: auto;
+    margin: 0 0 0 10px;
+    padding: 3px 0;
+    width: 20%;
+    /*MTHN DEFECT - 80*/
+    cursor: pointer;
+    /*MTHN DEFECT - 80*/
+
+}
+/* MHTN: Modal "titulo despacho guest" made by Felipe Ojeda */
+.titlenumdespacho{
+font-size:14px; /*MHTN-defect fix by rahul.ranjan*/
+margin-top: 12px;
+font-weight: bold;
+
+color: #1b1b1b ; /*MHTN: 506 fix by Rahul*/
+}
+
+@media screen and (max-width: 640px) {
+
+/*Start New Style for "Estado de Entrega" */
+.No-Muestra{
+  display: none !important;
+}
+
+/*MHTN: Service down text mobile: modified by rahul.ranjan*/
+.No-Registro{
+    font-size: 16px;
+    font-weight: bold;
+    /*margin-bottom: 15px;*/
+    margin-bottom: 25px;
+    /*margin-top: 12px;*/
+    text-align: center;
+    text-transform:none;
+    width: 80%;
+    line-height: 18px;
+    color: #000;
+}
+
+/*MHTN: Online text mobile change ,by rahul.ranjan*/
+.text-recuerda{
+    font-size: 11px;
+    margin-right: 10px;
+    text-align: center;
+    text-transform:none;
+
+    margin-bottom: 10px;
+    margin-top: -15px;
+    font-weight: normal;
+}
+
+#tab_online_tienda2{
+  margin-bottom: 11px;
+}
+/*End New Style for "Estado de Entrega" */
+
+#inputFormGuestTracking {
+    float: left;
+    margin: 0;
+    width: 100%;
+    height: 32px;  /*MHTN 427, rahul.ranjan*/
+}
+#submitFormGuestTracking {
+    background: none repeat scroll 0 0 #f27928 !important;
+    -webkit-appearance: none; /*MHTN: DEFECT 674*/
+    -webkit-border-radius: 0px;
+    border: 0 none;
+    color: #fff;
+    cursor: pointer;
+    float: left;
+    /*MHTN: by rahul defect 874 on 30 july*/
+    /*height: auto;*/
+    height: 42px !important;
+    text-align: center;
+
+    margin: 12px 0 0 0;  /*MHTN 427, rahul.ranjan*/
+    padding: 3px 0;
+    width: 100%;
+    /*MHTN 427, rahul.ranjan*/
+    margin-top: 28px !important;
+    padding-bottom: 8px !important;
+    padding-top: 8px !important;  /*MHTN: by rahul defect 874 on 30 july*/
+    font-size: 18px;
+}
+
+/* MHTN 427: by rahul.ranjan */
+.errorMsg2{
+  width: 100%;
+  color: #ff0000;
+  float: left;
+  display: block;
+  margin-bottom: 3px !important; /*MHTN 427, rahul.ranjan*/
+  margin-top: -65px !important; /*MHTN 427, rahul.ranjan*/
+}
+
+/*MHTN 427 fix register user, rahul.ranjan*/
+.consulta .errorMsg2 {
+ margin-top: -20px !important;
+ text-transform : none;
+}
+/* MHTN 427: fix by rahul.ranjan */
+.titlenumdespacho{
+font-size:14px;
+margin-top: 14px;
+font-weight: bold;
+
+color: #464646 !important;  /*MHTN: 506 by Rahul*/
+}
+
+.imagenBoleta {
+    border: 1px solid #ccc;
+    margin-right: auto !important;
+    min-height: 120px;
+    margin-left: auto !important;
+}
+
+
+.column .column{
+    padding: 1px !important;
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+.txtCompraOnline {
+    margin: 0px 34px 0px; /*MHTN 874 by rahul 30 july*/
+
+}
+/*MHTN Ordertracking only 320 mobile wireframe by rahul.ranjan*/
+#tab_online_tienda2 {
+  margin-top: 28px;
+}
+
+}
+
+@media screen and (min-width: 321px) and (max-width: 640px) {
+.txtCompraOnline {
+    margin: 0px 40px 0px; /*MHTN 874 by rahul 30 july*/
+
+}
+
+/*MHTN Ordertracking only 360 mobile wireframe by rahul.ranjan*/
+#tab_online_tienda2 {
+  margin-top: 15px;
+}
+	/*MHTN: Defect 877*/
+	.tableContainer .detailTable th{
+		width: 58%;
+	}
+
+}
+
+.titleordenguest{
+ /*margin-top: -10px !important;*/  /*MHTN: 506 by rahul on 30 July*/
+}
+.column .title {
+    color: #1b1b1b;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.hide {
+    display: none;
+}
+.imagenBoleta{
+  min-height: 120px;
+  margin-right: 20px;
+  /*MHTN: Defect 407*/
+  margin-bottom: 10px;
+  /*MHTN: Defect 407*/
+}
+
+.errorMsg{
+  width: 100%;
+  color: #ff0000;
+  float: left;
+  display: block;
+  margin-top: 5px; /*MHTN: by rahul on 28 july*/
+}
+
+/* MHTN OrderTracking: solve issue 58 */
+.errorMsg2{
+  width: 100%;
+  color: #ff0000;
+  float: left;
+  display: block;
+  /*MHTN: Defect  468*/
+  margin-bottom: 20px;
+  margin-top: 5px; /*MHTN: by rahul on 28 july*/
+}
+/* MHTN OrderTracking: solve issue 58 */
+
+.subtitle{
+  font-size: 16px; /*MHTN: OrderTracking by rahul.ranjan*/
+  font-weight: bold;
+  color: #000;
+  margin: 30px 0 15px 0;
+}
+
+/*START MHTN Defect 93 - Change margin 30px for 14px*/
+#detailsOrder{
+  margin-left: 7px;
+}
+
+#detailsOrder .subtitle{
+  margin: 14px 0 15px 0 !important;
+ }
+#breadcrumb{
+  margin-bottom: 17px;
+}
+.p_NameStauts p{
+	/*MHTN Defect 540 by Rahul -desktop on 3rd Aug */
+    width: 120% !important;
+    font-weight: bold;
+}
+.ImgCenter img{
+    height: 50px;
+    width: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+/*END MHTN Defect 93 - Change margin 30px for 14px*/
+.subsubtitle{
+  text-transform: uppercase;
+
+}
+.subsubtitle a{
+  /*MTHN DEFECT : 89
+  display: block;
+  margin-bottom: 3px;*/
+  cursor:pointer;
+  text-decoration: underline;
+  text-transform: none;
+}
+
+.subsubtitle span {
+    font-weight: normal;
+}
+
+#detailTableFull tbody tr td:nth-child(7),
+#detailTableFull tbody tr td:nth-child(8){ /*MHTN defect 642*/
+	text-transform: uppercase;
+}
+
+.timeline{
+  float: left;
+  width: 100%;
+  display: block;
+}
+
+.timeline .step, .timeline .separator{
+  float: left;
+}
+
+.tooltip.big{
+  display: none;
+  max-height: 83px;
+  overflow: auto;
+}
+
+.detailTable, .detailTable th, .detailTable td {
+    border-bottom: 1px #ccc solid;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.detailTable{
+  width: 100%;
+  float: left;
+  padding: 0;
+  text-align: center;
+  border: 1px #ccc solid;
+}
+
+.detailTable th, .detailTable td {
+  padding: 10px 0;
+}
+
+.detailTable th{
+  border-right: #999 1px solid;
+  position: relative;
+  text-align: center;
+  background: #ccc;
+  /*MHTN DEFECT: 75*/
+  padding-right: 21px;
+}
+
+.detailTable th:last-child{
+  border-right: none;
+}
+
+.timeline{
+  padding: 30px 0;
+  margin: 50px 0 0;
+  margin-left: 100px;
+}
+
+.step{
+  text-align: center;
+  margin: 0 15px 0 25px;
+  position: relative;
+}
+
+.cloud{
+  /* MTHN DEFECT : 80*/
+  position: absolute;
+  top: -35px;
+  background: #f27928;
+  color: #FFF;
+  /*width: 50px;*/
+  text-align: center;
+  border-radius: 5px;
+  padding: 6px 0;
+  min-width: 99%;
+  /*margin: 0 auto;*/
+  /* MTHN DEFECT : 80*/
+}
+
+#compra_realizada .cloud
+{
+	margin-left: 1px;
+}
+
+#en_validacion .cloud
+{
+	margin-left: 0;
+}
+
+#en_preparacion .cloud
+{
+	margin-left: 1px;
+}
+
+#en_ruta .cloud
+{
+	margin-left: 1px;
+}
+
+.cloud a{
+  text-decoration: underline;
+}
+
+/*Start MHTN Defect 436*/
+#compra_realizada .cloud.open{
+  left: -106px !important;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-left: 0 !important;
+  margin-top: -5px;
+}
+
+
+.step.en_validacion .cloud.open{
+  left: -118px !important;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-left: 11px !important;
+  margin-top: -5px;
+}
+
+.step.en_preparacion .cloud.open{
+  left: -112px !important;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-left: 6px !important;
+  margin-top: -5px;
+}
+
+#en_ruta .cloud.open{
+  left: -130px !important;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-left: 24px !important;
+  margin-top: -5px;
+}
+
+#entregado_en_tienda .cloud.open{
+   left: -124px !important;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-left: 18px !important;
+  margin-top: -5px;
+}
+
+#entregado .cloud.open{
+   left: -125px !important;
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-left: 18px !important;
+  margin-top: -5px;
+}
+/*End MHTN Defect 436 */
+
+.cloud.open{
+ /* MTHN DEFECT : 80*/
+  top: -97px;
+  left: -112px;
+  z-index: 9999;
+  /*width: 100%;
+  position: absolute;
+  width: 306px;
+  padding: 0;*/
+  /* MTHN DEFECT : 80*/
+}
+.cloud.open>a{
+  display: none;
+}
+.cloud.open .big{
+  padding: 0;
+  border-radius: 5px;
+  background: #FFF;
+  float: left;
+  border: #f27928 3px solid;
+  padding-bottom: 8px;
+}
+
+.cloud a{
+  color: #FFF;
+  font-weight: bold; /* defect 642 */
+}
+
+.step .circle{
+  width: 30px;
+  margin:  0 auto;
+  border-radius: 15px;
+  background: #ccc;
+  display: block;
+  height: 20px;
+  padding-top: 10px;
+}
+
+.step .circle .inner{
+  width: 10px;
+  margin:  0 auto;
+  border-radius: 5px;
+  display: block;
+  height: 10px;
+}
+
+.step.active .circle{
+  background: #f27928;
+  cursor: pointer;
+}
+
+.step.active .circle .inner{
+  background: #2ce;
+}
+
+.step .circle .inner{
+  background: #666;
+}
+
+.step, .separator{
+  float: left;
+}
+
+.open .bottomArrow {
+  background: #fff;
+  bottom: 3px;
+}
+
+
+.open .bottomArrow:after {
+  border-color: rgba(0, 153, 204, 0);
+  border-top-color: #fff;
+  border-width: 10px;
+  margin-left: -10px;
+}
+.open .bottomArrow:before {
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #f27928;
+  border-width: 16px;
+  margin-left: -16px;
+}
+
+
+
+.bottomArrow {
+  position: relative;
+  background: #f27928;
+  bottom: -6px;
+  clear: both;
+}
+.bottomArrow:after, .bottomArrow:before {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+}
+
+.bottomArrow:after {
+  border-color: rgba(0, 153, 204, 0);
+  border-top-color: #f27928;
+  border-width: 10px;
+  margin-left: -10px;
+}
+.bottomArrow:before {
+  border-color: rgba(255, 255, 255, 0);
+  border-top-color: #fff;
+  border-width: 16px;
+  margin-left: -16px;
+}
+
+.separator{
+  background: #ccc;
+  height: 10px;
+  width: 13%;
+  margin-top: 10px;
+  margin-left: -48px;
+}
+
+
+.arrow{
+  margin-right: -10px;
+  float: right;
+  margin-top: -10px;
+  width: 0;
+  height: 0;
+  border-bottom: 15px solid transparent;  /* left arrow slant */
+  border-top: 15px solid transparent; /* right arrow slant */
+  border-left: 15px solid #ccc; /* bottom, add background color here */
+  font-size: 0;
+  line-height: 0;
+}
+
+.tooltip{
+
+  top: -100%;
+
+  background: #fff;
+  width: 300px;
+  left: -310px;
+}
+
+.tooltip ul, .tooltip li{
+  width: 100%;
+  float: left;
+}
+
+.tooltip li{
+  border-bottom: #ccc 1px solid;
+}
+
+.tooltip li img{
+  width: 25%;
+  float: left;
+  margin: 10px 0 10px 10px;
+
+}
+
+.tooltip .prodDescription{
+  float: left;
+  width: 65%;
+  margin: 10px 0 10px 15px;
+  text-align: left;
+}
+.aReffOrderId{
+    color: #0099cc;
+    font-family: Tahoma,Geneva,sans-serif;
+    text-decoration: none;
+}
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: url('../images/orderTracking/overlay.png');
+  top: 0;
+  left: 0;
+  /*MHTN Defect 473 Problem modal "estado de entrega" */
+  z-index: 100;
+}
+
+.lightbox, .lightBorder{
+  position: relative;
+  width: 100%;
+  margin: auto auto;
+  background: #FFF;
+  padding: 0% 1%;
+}
+
+.lightBorder{
+  background: #ccc;
+  padding-left: 11px;
+  padding-right: 0;
+  width: 45%;
+  margin: 10% auto;
+  /*MHTN Defect 473 Problem modal "estado de entrega" */
+  z-index: 11;
+
+}
+/*MHTN Defect 473 Problem modal "estado de entrega" */
+.fondoNegro{
+    background: rgba(0, 0, 0, 0) url("../images/orderTracking/overlay.png") repeat scroll 0 0;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+
+}
+
+.lightbox{
+  left: -15px;
+  top: -6px;
+  /* MHTN: Defect 432 */
+  padding: 6% 1%;
+  /* MHTN: Defect 432 */
+}
+
+/*MHTN CYCLE4- DEFECT 516*/
+#popUpOrderSearch .lightbox{
+	 padding: 1% 1%;
+}
+
+.lightbox h1{
+  margin-top: 10px;
+}
+
+.lightbox p {
+  margin: 15px 0;
+}
+
+.lightbox h3 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.lightbox .box{
+  text-align: center;
+}
+
+.lightboxContent{
+  color: #000;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.lightboxContent h1{
+  font-size: 18px;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  /*MTHN: Start Req#Order Tracking  INT1890: Defect #56
+  text-transform: capitalize;*/
+}
+
+.cerrarLightbox{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 21px;
+  color: #ccc;
+  border: #ccc 1px solid;
+  background: transparent;
+  line-height: 16px;
+  z-index: 9991;
+  font-weight: lighter;
+}
+
+.cerrarLightbox:hover{
+  text-decoration: none;
+  color: #ccc;
+}
+#page{
+  min-height: 400px;
+}
+
+.sectionHeader{
+  width: 95%;
+  padding-left: 5%;
+  background: #ebf6f8;
+  color: #000;
+  margin: 10px 0;
+  float: left;
+}
+
+.sectionHeader h2{
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  padding: 10px 0;
+}
+
+.columnMenu, .contentContainer{
+  float: left;
+  margin-top: 20px;
+}
+
+.columnMenu{
+  width: 20%;
+}
+
+.columnMenu ul{
+  width: 45%;
+  text-align: right;
+  margin-left: 20%;
+}
+
+.columnMenu ul li{
+  padding: 10px 0;
+}
+
+.columnMenu ul li.active a{
+  color: #000;
+  font-weight: bold;
+}
+
+.contentContainer{
+  width: 100%;
+}
+.tabsTrackingContainer {
+	/*MTHN: Start Req#Order Tracking  INT1890: Defect #53*/
+    margin-top: -35px;
+    /*MTHN: Start Req#Order Tracking  INT1890: Defect #53*/
+}
+
+.contentContainer .tabsTracking{
+  width: 100%;
+  padding: 0;
+}
+
+.contentContainer .tabsTracking li{
+  width: 38%;
+  margin-right: 2%;
+  background: #d5d5d4;
+  float: left;
+  padding: 15px 0 15px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  line-height: 12px;
+  color: #333;
+}
+
+.tabTrackingcontent{
+  float: left;
+  background: #ebf6f8;
+  width: 92%;
+  padding: 4%;
+}
+
+.tabTrackingcontent p{
+  padding: 0 0 15px 0;
+}
+.contentContainer .tabsTracking li.active{
+  background: #ebf6f8;
+}
+
+.tableContainer{
+  float: left;
+  width: 100%;
+  max-height: 249px;
+  /* MTHN DEFECT : 62
+  overflow: scroll;
+  MTHN DEFECT : 62 */
+
+  /*MHTN Defect 257*/
+    overflow: auto !important;
+}
+
+.inactive {
+    display: none;
+}
+.tableContainer .detailTable th{
+  position: relative;
+  font-size: 12px;
+  font-weight: normal;
+  padding: 0px 15px;
+  border-right: #999 1px solid;
+  padding: 5px 0;
+}
+
+/* MTHN DEFECT : 62,80 */
+.tableContainer .detailTable th:not(:last-child), #detailsOrder #detailTableFull th:not(:last-child){
+	background-clip : padding-box;
+}
+/* MTHN DEFECT : 62 */
+
+/*START MHTN Defect 257*/
+#orderTrakingTable tr{
+  color: #000000 !important;
+}
+#orderTrakingTable td{
+  border-right: 1px solid #999;
+}
+#orderTrakingTable a{
+  cursor: pointer;
+}
+/*END MHTN Defect 257*/
+
+.tableContainer .detailTable tr{
+  border: #ccc 1px solid;
+}
+
+.tableContainer .detailTable th.last{
+  border-right: 0;
+}
+
+.tableContainer .detailTable td{
+  background: #FFF;
+  padding: 12px 0;
+  border: 0;
+}
+
+.tableContainer .detailTable td a{
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.tableContainer .detailTable h2 {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  padding: 10px 0;
+}
+
+.tabTrackingcontent .consulta{
+  width: 40%;
+  margin: 0 auto;
+}
+
+/* MHTN OrderTracking: solve issue  64 */
+.consulta h3{
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+}
+
+.consulta input[type="text"]{
+  width: 100%;
+}
+
+.consulta input[type="submit"]{
+  margin: 10px auto;
+  display: block;
+  padding: 3px 15px;
+  height: auto;
+  border: 0;
+  background: #f27928 !important;
+  -webkit-appearance: none; /*MHTN: DEFECT 674*/
+  -webkit-border-radius: 0px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.consulta .errorMsg{
+  margin-bottom: 20px;
+}
+
+.footer_resp.no-desktop{
+  margin-top: 15px;
+}
+.consulta .getorder{
+  margin: 0 auto;
+  width: 40%;
+  float: none;
+  display: block;
+  text-align: center;
+  text-decoration: underline;
+  margin-top: 30px;
+}
+/* MHTN: Modal "estilo tracking order" made by Felipe Ojeda */
+/* MHTN OrderTracking: solve issue 65 */
+.linedtitle{
+  border-bottom: #ebf6f8 2px solid;
+  width: 100%;
+  /* MHTN: Defect 431 */
+  font-size: 14px;
+  /* MHTN: Defect 431 */
+  text-align: center;
+  color: #000;
+  margin-top: 22px;
+}
+
+/*MHTN- Cycle4: Defect 516*/
+#popUpOrderSearch .linedtitle{
+	text-align: left;
+}
+#popUpOrderSearch .column h5, #popUpOrderSearch .imgContainer{
+	margin-bottom: 5px;
+}
+#popUpOrderSearch .txtCompraOnline{
+	float : left;
+}
+
+
+.clear{
+  clear: both;
+}
+
+.column h5{
+  text-align: left;
+  /* MHTN: Defect 431 */
+  /*color: #000;*/
+  /* MHTN: Defect 431 */
+}
+
+.imgContainer{
+  width: 90%;
+  margin: 0 auto;
+  background: #ccc;
+  border: #ccc 1px solid;
+}
+
+.imgContainer img{
+  width: 100%;
+}
+
+.singleTitle, .singletext{
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.singleTitle{
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 40px;
+}
+/*MHTN: ordetracking mobile by rahul.ranjan*/
+@media screen and (max-width: 640px) {
+  .singleTitle{
+    line-height: 18px;
+    margin-top:10px;
+    }
+    .singleTitle, .singletext{
+    text-transform: none;
+    }
+    .singletext{
+    font-weight: normal;
+    margin-top:18px;
+    margin-botom:20px;
+    }
+
+   .lightboxContent h1 {
+     width: 100%;
+    }
+}
+/*End by rahul.ranjan*/
+
+.showMobile{
+    display: none;
+}
+
+.tinydown {
+  position: absolute;
+  background: #999;
+  /*MHTN DEFECT : 75*/
+  top: 46%;
+  top: 42%\9;
+  right: 10px;
+}
+.tinydown:after {
+  top: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(153, 153, 153, 0);
+  border-top-color: #999;
+  border-width: 5px;
+  margin-left: -5px;
+}
+
+.txt_visita {
+    color: #000;
+    float: right;
+    font-size: 11px;
+    margin-top: 16px;
+}
+
+.tit_estado {
+    color: #383731;
+    float: left;
+    font-size: 16px;
+    margin: 10px 0;
+}
+/* MHTN: Modal "ordertracking" made by Felipe Ojeda */
+/* MHTN OrderTracking: solve issue 64 */
+.displayFindOrder{
+  text-decoration: underline !important;
+  margin: 0 auto;
+  width: 96% !important;
+  text-align: center;
+  float: none;
+  display: inherit;
+  text-transform: none;
+}
+/* MHTN: Modal "Titulo orden de compra" made by Felipe Ojeda */
+.ordencompra{
+font-size:10px;
+float:right !important;
+margin-right: -187px;
+
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+
+  /*Start MHTN Defect 408 */
+  .address-title, .detalles-titulo {
+    background-color: #eaf3f9;
+    float: left;
+    margin: 15px 0 !important;
+    padding: 3%;
+    width: 100%;
+    /*MHTN  Defect 535 */
+    height: 8%;
+    /*MHTN  Defect 535 */
+    font-size: 16px !important;
+  }
+
+  /*End MHTN Defect 408 */
+
+/*Start MHTN Defect 472*/
+#ContenedorTabs .detalles-titulo{
+    left: -9px;
+    /*MHTN Defect 535*/
+    top: -163px !important;
+    /*MHTN Defect 535*/
+    width: 104% !important;
+}
+/*End MHTN Defect 472*/
+
+/*Start Defect 535 New style for titulo "Estado de entrega" */
+  .Title_EstadodeEntrga{
+
+    font-size: 14px !important;
+    font-weight: bold;
+    position: relative;
+    top: -34px;
+    margin-left: 2px;  /*by rahul.ranjan to fix in mobile: 647*/
+
+  }
+/*End Defect 535 */
+  /*Start MHTN Defect 437 */
+
+  .address-title, .titulo_despacho, #WC_UserRegistrationUpdateForm_div_4{
+     /*Start MHTN Defect 472*/
+    top: -151px;
+      /*End MHTN Defect 472*/
+  }
+
+
+
+
+
+
+  /*Problem modal Address*/
+  #NuevaDireccionContainer, #NuevaDireccion {
+    height: auto !important;
+  }
+  #Register{
+    position: relative;
+    top: -150px;   /*MHTN: Mis datos section by Rahul */
+
+    /*MHTN: Mis datos section margin, by Rahul */
+    margin-left: 5px;
+    width: 95%;
+  }
+  #new_address_modal .column {
+    width: 100% !important;
+  }
+
+  #new_address_modal .medio-campo{
+     width: 50% !important;
+  }
+
+  #new_address_modal .required-label{
+    top: 0px !important;
+  }
+
+  #box .required-label, .content_header, .tabsTracking{
+    position: relative;
+    /*Problem modal Address*/
+    top: -110px;
+  }
+
+  #addressBook{
+   border-right: 1px solid #333;
+   padding-right: 6px;
+  }
+
+  .consulta input[type="submit"] {
+     width: 90% !important;
+     margin: 9px 2px !important;
+  }
+
+  .displayFindOrder {
+    text-decoration: none !important;
+  }
+
+  /*End MHTN Defect 437 */
+
+  .displayFindOrder{
+    width: 65%;
+    /*Start MHTN Defect 472*/
+    margin-bottom: 30px;
+    /*End MHTN Defect 472*/
+    /*Start MHTN Defect 647 with wireframe, by rahul.ranjan*/
+    text-decoration: underline !important;
+    font-weight: normal;
+    margin-top: 25px;
+
+    /*End MHTN Defect 647*/
+  }
+
+  /*Start MHTN Defect 472*/
+  #tabcontentMobileTienda h3{
+     text-transform: none !important;
+     padding-bottom: 15px;     /*MHTN 647 with wireframe, by rahul.ranjan*/
+  }
+  /*END MHTN Defect 472*/
+
+  .showMobile{
+    display: block;
+    background: transparent !important;
+  }
+  .showFull{
+    display: none;
+  }
+  #page{
+    /*Req.1019*/
+    margin-top: 0px;
+    padding: 0;
+  }
+
+/* MHTN: Modal "Titulo tracking order" made by Felipe Ojeda */
+	.ordendespa{
+
+	margin-top: -22px;
+			}
+
+  .conpadding{
+    padding: 0 3% !important;
+  }
+  .column{
+    width: 97%; /*MHTN: modified by rahul.ranjan for Guest OrderTracking view*/
+    float: left;
+    padding: 0;
+  }
+
+  .column .column{
+    padding: 0;
+  }
+
+  .column .title{
+    font-size: 19px; /*MHTN 427, by rahul.ranjan*/
+    margin-top: 30px; /*MHTN 427, by rahul.ranjan*/
+  }
+
+  .column form{
+    margin-top: 0;
+  }
+
+  .column form input[type="text"]{
+    width: 95%;
+  }
+
+  .column form input[type="submit"]{
+    width: 100%;
+    float: left;
+    padding: 3px 0 3px 0;
+    height: auto;
+    margin: 50px 0 0 0;
+    background: #f27928 !important;
+    color: #FFF;
+    border: 0;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .errorMsg{
+    margin-top: -75px;
+    font-size: 14px;
+  }
+
+  .column .imagenBoleta{
+    width: 75%;  /*MHTN: modified per defect 874, by rahul on 30 July*/
+  }
+/* MHTN: Modal "Estilo columna" made by Felipe Ojeda */
+  .column h3{
+    font-size: 15px;  /*MHTN 427, by rahul.ranjan*/
+    margin-top: 8px;  /*MHTN 427, by rahul.ranjan*/
+    text-align: center; /*MHTN 427, by rahul.ranjan*/
+  }
+
+  .finalText{
+    float: left;
+  width: 100%;
+  padding: 10% 0%;
+  font-weight: bold;
+  margin-left: 8px;
+  }
+
+  .lightBorder{
+    width: 100%;
+    padding: 0;
+    border: #ccc 1px solid;
+  }
+
+  /*MHTN CYCLE4 - DEFECT 516*/
+  #popUpOrderSearch .lightBorder{
+  	 width: 91%;
+  	 margin: 3% auto;
+  }
+  #popUpOrderSearch .linedtitle, #popUpOrderSearch .column h5{
+  	 text-align:  center;
+  }
+  #popUpOrderSearch .linedtitle {
+  	border-bottom: none;
+  }
+  #popUpOrderSearch .txtCompraOnline{
+  	 margin-left: 0px;
+  }
+  #popUpOrderSearch.overlay{
+  	overflow: scroll;
+  }
+
+  #popUpOrderSearch .lightbox {
+  	padding: 5% 1%;
+  }
+  /*MHTN CYCLE4 - DEFECT 516*/
+
+
+  .lightbox{
+    margin: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .finalText a{
+    text-decoration: underline;
+  }
+
+  .subsubtitle{
+    margin-bottom: 20px;
+  }
+
+  /*MTHN DEFECT : 346*/
+  .subsubtitle a{
+    width: 100%;
+    display: block;
+    font-size: 12px;
+    /*left: -187px;*/
+    margin-bottom: 11px;
+    /*margin-top: 8px;
+    position: relative;*/
+  }
+
+  .showmore span{
+    font-family: times new roman;
+    font-size: 32px;
+    height: 12px;
+    left: -12px;
+    position: relative;
+    top: -16px;
+  }
+  /*MTHN DEFECT : 346*/
+
+  .timeline{
+    display: none;
+  }
+
+  .detailTable{
+    margin-bottom: 15px;
+    border: 0;
+    text-align: left;
+    color: #000;
+  }
+  .detailTable tr{
+    border: #ccc 1px solid;
+  }
+  .detailTable th{
+    font-weight: bold;
+    background: transparent;
+    border: 0;
+    text-align: left;
+    /*MHTN Defect 487 - change 10% for 4% padding-left*/
+    padding-left: 4%;
+    /*MTHN DEFECT - 346*/
+      width: 45%;
+    /*MTHN DEFECT - 346*/
+
+    /*MTHN DEFECT - 89*/
+     /*MTHN DEFECT - 346*/
+     /*text-transform: uppercase;*/
+      /*MTHN DEFECT - 346*/
+    /*MTHN DEFECT - 89*/
+  }
+  .detailTable td{
+    text-align: left;
+
+   /*MTHN DEFECT - 346*/
+    /*MHTN Defect 487 comment padding-left */
+    /*padding-left: 16%;*/
+   /*MTHN DEFECT - 346*/
+
+  }
+
+  /*MTHN DEFECT - 89*/
+  .onlyTextTransform {
+  	text-transform: uppercase;
+  }
+  /*MTHN DEFECT - 89*/
+
+  .detailTable .showmore{
+    background: #cccccc;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NjY2NjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5OTk5OTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  #cccccc 0%, #999999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#999999));
+  background: -webkit-linear-gradient(top,  #cccccc 0%,#999999 100%);
+  background: -o-linear-gradient(top,  #cccccc 0%,#999999 100%);
+  background: -ms-linear-gradient(top,  #cccccc 0%,#999999 100%);
+  background: linear-gradient(to bottom,  #cccccc 0%,#999999 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#999999',GradientType=0 );
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  /*MTHN DEFECT - 346*/
+  padding-left: 2%;
+  /*MTHN DEFECT - 346*/
+
+  }
+
+  .showmore span{
+    float: right;
+    margin-right: 10px;
+  }
+
+  .sectionHeader{
+    width: 100%;
+  }
+  .columnMenu, .columnMenu ul{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  .columnMenu li{
+      float: left;
+      width: 33%;
+      border-right: #ccc 1px solid;
+  }
+  .columnMenu li:last-child{
+    border-right: 0;
+    padding: 3px 0;
+  }
+
+  .contentContainer{
+    width: 100%;
+    margin: 30px 0 30px 0;
+    padding: 0;
+  }
+
+  /*MHTN: OrderTracking wireframe width, by rahul.ranjan*/
+   .contentContainer .tabsTracking{
+  	width: 97%;
+  	padding: 0;
+	}
+
+  .contentContainer .tabsTracking li, .contentContainer .tabsTracking li.active{
+    width: 100%;
+    background: #cccccc;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NjY2NjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5OTk5OTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #cccccc 0%, #999999 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#999999));
+    background: -webkit-linear-gradient(top,  #cccccc 0%,#999999 100%);
+    background: -o-linear-gradient(top,  #cccccc 0%,#999999 100%);
+    background: -ms-linear-gradient(top,  #cccccc 0%,#999999 100%);
+    background: linear-gradient(to bottom,  #cccccc 0%,#999999 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#999999',GradientType=0 );
+    color: #383731;
+    text-align:left;
+
+  }
+  /*MHTN 675 fix for mobile by rahul.ranjan*/
+  .tableContainer
+  {
+    margin-left: -18px !important;
+    width: 105% !important;
+  }
+
+  .tabcontent{
+    width: 100%;
+    background: transparent;
+  }
+  .tableContainer{
+    height: auto;
+    overflow: auto;
+    max-height: none;
+  }
+  .tableContainer tr{
+    border: #999 1px solid;
+  }
+  .tableContainer td, .tableContainer th{
+    border: 0 !important;
+    background: transparent !important;
+    padding: 3% 5% !important;
+  }
+
+  .tableContainer table{
+    border-radius: 3px;
+    text-transform: capitalize;
+  }
+  .tableContainer .odd{
+    background: #EEE !important;
+  }
+
+  .tableContainer table:last-child{
+    margin-bottom: 0;
+  }
+
+  .tabTrackingcontent.consulta{
+    width: 100%;
+    margin: 0 auto;
+    text-transform: none;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  .tabTrackingcontent.consulta h3{
+    font-size: 14px;
+  }
+
+  .consulta input[type="text"] {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+
+  @media screen and (max-width: 640px) {
+
+#detailsOrder .subtitle {
+    margin: 30px 0 15px 0 !important;
+}
+
+
+  /*MHTN: 647 with wireframe by rahul.ranjan*/
+  .consulta {
+   margin-left: -16px !important;
+  }
+
+   .consulta input[type="text"] {
+  	  margin-bottom: 23px !important;
+  	  width: 100% !important;
+  	}
+
+  	/*Start MHTN 648, point 4 by rahul.ranjan*/
+  	.detailTable td {
+  	 text-transform: uppercase;
+
+  	}
+  	/*MHTN: Ordertracking mobile-table online fix, by Rahul*/
+  	.showMobile.online .detailTable th
+	{ text-transform: uppercase;
+	}
+	.showMobile.online .detailTable td
+	{ text-transform: initial;
+	}
+
+  	.detailTable .showmore{
+  	text-transform: none;
+  	}
+  	/*End MHTN 648, point 4 by rahul.ranjan*/
+
+  	.conpadding{
+    margin-left: -5px !important; /*MHTN 648, point 5 by rahul.ranjan*/
+  }
+
+  .column{
+    margin-left: 10px; /*MHTN 648, point 5 by rahul.ranjan*/
+  }
+
+
+  .errorMsg{
+      margin-top: -62px !important;
+   }
+   .errorMsg2{
+      margin-top: -60px !important;
+   }
+
+  .consulta .errorMsg {
+     font-size: 13px;
+     margin-top: -20px !important;
+     text-transform: none;
+    }
+
+    .showMobile.tienda {
+     margin-bottom: -25px; /*MHTN: rahul, footer issue ordertracking.*/
+    }
+
+  }
+
+  .consulta input[type="submit"] {
+    width: 100% !important; /*MHTN defect by rahul.ranjan*/
+  }
+
+  .errorMsg{
+    margin-top: -35px;
+  }
+
+  .getorder{
+    text-decoration: underline;
+    text-transform: none;
+    font-size: 14px;
+  }
+
+  .mobileTitle{
+    font-size: 18px;
+    text-transform: none;
+    font-weight: bold;
+    color: #000;
+    width: 50%;
+    text-align: center;
+    line-height: 18px;
+    margin: 20px auto;
+  }
+
+  .mobileMessage{
+    width: 65%;
+    text-align: center;
+    margin: 0 auto;
+    color: #000;
+    text-transform: none;
+    margin-bottom: 10px;
+    font-weight: normal;
+  }
+
+  .imgContainer{
+    margin-bottom: 20px;
+    min-height: 180px;
+  }
+  .lightboxContent h5{
+    margin-top: 10px;
+    font-weight: normal;
+  }
+
+.tit_estado-m {
+    color: #383731;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.more {
+    float: right;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+
+}
+
+/*TABLET HEREDADOS*/
+@media screen and (min-width: 641px) and (max-width: 970px) {
+
+  #page{
+      padding: 0;
+    }
+
+  /*MHTN Defect 93 - add new class for title in Tablet*/
+  .myaccountpage_title {
+     padding: 2px !important;
+  }
+}
+
+/*Media query custom para timeline*/
+@media screen and (max-width: 768px) {
+
+	.cerrarLightbox {
+		font-size: 19px;
+		line-height: 14px;
+	  }
+
+    .circle{
+        height: 5px;
+        width: 10%;
+        margin-top: 5px;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+    .arrow {
+        margin-right: -10px;
+        margin-top: -5px;
+        border-bottom: 7px solid transparent;
+        border-top: 7px solid transparent;
+        border-left: 10px solid #ccc;
+    }
+
+    .step .circle {
+        width: 15px;
+        border-radius: 15px;
+        height: 10px;
+        padding-top: 5px;
+    }
+
+	.step p {
+		font-size: 10px;
+	}
+
+    .step .circle .inner {
+        width: 5px;
+        height: 5px;
+    }
+
+	.separator {
+		height: 5px;
+		width: 12%;
+		margin-top: 5px;
+		margin-left: -48px;
+	}
+
+	/*.separator:nth-child(10) {
+		margin-left: -37px;
+	}*/
+}
+
+@media screen and (min-width: 769px) and (max-width: 970px) {
+
+    .circle{
+        height: 5px;
+        width: 10%;
+        margin-top: 5px;
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+    }
+
+    .arrow {
+        margin-right: -10px;
+		margin-top: -4px;
+		border-bottom: 8px solid transparent;
+		border-top: 7px solid transparent;
+		border-left: 10px solid #ccc;
+    }
+
+    .step .circle {
+		width: 20px;
+		border-radius: 15px;
+		height: 13px;
+		padding-top: 7px;
+	}
+
+	.step p {
+		font-size: 11px;
+	}
+
+    .step .circle .inner {
+        width: 6px;
+        height: 6px;
+    }
+
+	.separator {
+		height: 7px;
+		width: 13%;
+		margin-top: 7px;
+		margin-left: -48px;
+	}
+
+	.separator:nth-child(10) {
+		margin-left: -37px;
+	}
+}
+
+.timeline .step{
+	margin-left: 0;
+	margin-right: 0;
+	height: 64px;
+	width: 93px;
+}
+
+.tooltip.big p
+{
+	text-align: left;
+}
+
+#orderTrakingTable tbody tr td:nth-child(4){
+	text-transform: uppercase;
+}
+
+/* MHTN: Defect 642  */
+@media screen and (max-width: 800px) and (min-width: 768px){
+ .detailTable{
+ 	width: 98%;
+ }
+
+ .timeline{
+ 	margin-left: 55px !important;
+ 	padding-bottom: 0 !important;
+ 	width: 755px;
+ 	padding-left: 7px !important;
+ }
+
+ #compra_realizada .cloud{
+ 	 padding-top: 1px;
+ 	 top: -33px;
+ }
+
+  #en_validacion .cloud{
+ 	 padding-top: 1px;
+ 	 top: -33px;
+  }
+
+  #en_preparacion .cloud{
+ 	 padding-top: 1px;
+ 	 top: -33px;
+  }
+
+  #en_ruta .cloud{
+ 	 padding-top: 1px;
+ 	 top: -33px;
+  }
+
+  #entregado .cloud{
+ 	 padding-top: 1px;
+ 	 top: -33px;
+  }
+
+  #entregado_en_tienda .cloud{
+ 	 padding-top: 1px;
+ 	 top: -33px;
+ }
+
+ .cloud a{
+ 	font-size: 10px;
+ }
+
+ #compra_realizada .cloud.open{
+ 	top: -86px;
+ 	margin-left: 42px !important;
+ }
+
+  #en_validacion .cloud.open{
+ 	top: -86px;
+ 	margin-left: 54px !important;
+ }
+
+  #en_preparacion .cloud.open{
+ 	top: -86px;
+ 	margin-left: 48px !important;
+ }
+
+ #en_ruta .cloud.open{
+ 	top: -86px;
+ 	margin-left: 66px !important;
+ }
+
+ #entregado .cloud.open{
+ 	top: -86px;
+ 	margin-left: 61px !important;
+ }
+
+ #entregado_en_tienda .cloud.open{
+ 	top: -86px;
+ 	margin-left: 61px !important;
+ }
+
+ .cloud.open .big{
+ 	width: 220px;
+ }
+
+ .detailTable th, .detailTable td{
+ 	font-size: 10px;
+ }
+
+ .finalText{
+ 	margin-left: 8px;
+ }
+
+ #orderDetailsGuestForm .column{
+ 	margin-left: 8px;
+ 	width: 47%;
+ }
+
+}
+
+@media screen and (min-width: 768px){
+	#detailsOrder div h4:nth-child(4){
+		margin-left: 220px;
+    	margin-top: -52px;
+	}
+}
+
+/*MHTN: fix Guest ordertracking text-id:507, by rahul*/
+#orderDetailsGuestForm .column > h3 {
+ font-size: 12px !important;
+ padding-bottom: 5px !important;
+}
+
+/*MHTN CYCLE4- DEFECT: 516*/
+@media screen and (max-width: 320px){
+	#popUpOrderSearch .lightboxContent {
+		width: 100%;
+	}
+
+	/*MHTN: Defect 877*/
+	.tableContainer .detailTable th{
+		width: 54%;
+		right: 12px !important;
+	}
+}
+
+@media screen and (min-width: 641px) and (max-width: 970px) {
+	#popUpOrderSearch .lightBorder{
+		width: 85%;
+	}
+	#popUpOrderSearch .lightbox{
+		left : -9px;
+	}
+
+}
+/*MHTN CYCLE4- DEFECT: 516*/
+
+/*MHTN: Defect 523*/
+#errorSingleOrder .lightbox {
+    background: #ebf6f8 none repeat scroll 0 0;
+}
+
+/* MHTN CR - ORDER TRACKING - CC - REG USERS - LINKS*/
+.aRefCCOrderId{
+    color: #0099cc;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+    text-transform: none;
+}
+/* MHTN CR - ORDER TRACKING - CC - REG USERS - LINKS*/
+
+/*Req.1019*/
+@media screen and (max-width: 670px) and (orientation: landscape) {
+  #page {
+    margin-top: 0% !important; }
+}
+
+
+
+/*Req 1048*/
+.noche {
+	color: #192d75 !important;
+	font-weight:bold;
+}
+
+.luna_icon {
+	height:12px;
+	width:12px;
+	margin: 3px 3px -2px 0;
+	}

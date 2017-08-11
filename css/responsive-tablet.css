@@ -1,0 +1,476 @@
+/* Samgung */
+
+@media screen and (width: 800px){
+
+html body{
+	overflow-x: hidden;
+	position: relative;
+}
+
+.credito, .visa, .cencosud{
+	float:left;
+}
+
+.btn-pagar{
+	float:right;
+}
+
+html body #headerZone1, html body #header, html body #header_nav, html body #main_content_wrapper, html body #page, html body #footerZone1, html body #nuevalinea, html body .footerContent, html body .footerContent div, html body #footerZone2, html body #footerZone1, html body #footerZones {
+    width: 800px !important;
+}
+
+ html body #SubCategoryZone1{	
+		width: 100% !important;
+	} 
+	
+ html body #SubCategoryZone1 img{	
+		width: 100% !important;
+ } 
+
+ html body #header{	
+		margin: 0 !important;
+	}	
+
+ html body #header_links{	
+		right: 22px !important;
+ }
+ 
+ html body #header_nav {
+ 	margin: 0 !important;
+ }
+ 
+ html body #footer {
+ 	width: 800px !important;
+ }
+	
+ html body #content769 {
+    float: left;
+    width: 600px;
+	}
+ 
+ html body #three-grid td.item {
+    height: 338px;
+    padding: 0;
+    margin-bottom: 0;
+    text-align: left;
+    vertical-align: top;
+    : left;
+    position: relative;
+    width: 180px;
+}
+
+#box .body769 {
+	margin: 0px;
+	padding: 0px 8px 8px;
+	width: 600px;
+}
+
+html body #left_nav {
+    width: 167px;
+    padding: 0px;
+    margin: 1px 5px 0px 0px;
+    float: left;
+    min-height: 400px;
+}
+
+#three-grid {
+    width: 604px;
+}
+
+#content769 .text #Search_Result_Summary {
+    width: 628px !important;
+}
+
+ .img a img{
+ 	width: 80%;
+ }
+/* SE REALIZA CAMBIO DE CSS PARA AJUSTAR EL CUADRO DE VISTA PREVIA DEL PRODUCTO*/
+#second_level_category_popup .bodyarea, #modal_popup_pdp .bodyarea,.add_to_cart_popup .bodyarea{ 
+	background-color: #fff;
+	margin: 0 14px; 
+	padding:1px 0px; 
+	height:420px; 
+}
+/* SE AJUSTA CUADRO DE BOTONES "Mejor Evaluados", "Menor Precio" y "Mayor Precio" */
+#sort_options {
+    margin: -32px 0 0 234px;
+}
+/*SE AJUSTA BOTON "AGREGA A TU CARRO" EN LA VENTANA MODAL DE LA VISTA PREVIA DEL PRODUCTO"*/
+.quick_info_modal #addToCartAjaxButton .button-wrapper-radius.smaller {
+	top: 0;
+	margin-top: 67px;
+	right: -6px;
+}
+/*SE AJUSTA BOTON "VER MAS INFORMACION DEL PRODUCTO" EN LA VENTANA MODAL DE LA VISTA PREVIA DEL PRODUCTO"*/
+.quick_info_modal #productMoreInfoLink {
+    font-size: 11px !important;
+    font-weight: bold;
+    line-height: 1.4;
+    position: absolute;
+    right: 35px;
+    text-transform: uppercase;
+    top: 390px;
+}
+/*SE AJUSTA EL BUSCADOR DEL SITIO */
+html body #header-search {
+    top: -61px;
+    width: 205px;
+    height: 35px;
+}
+/*SE AJUSTA EL TEXTO DEL BUSCADOR DEL SITIO */
+.search-txt {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #999999;
+    font-size: 12px;
+    height: 21px;
+    margin-left: 6px;
+    margin-top: 3px;
+    padding: 0 4px 4px 1px;
+    width: 290px;
+    
+}
+#header-search {
+    border: 1px solid #cccbcb;
+    height: 33px;
+    left: 130px;
+    padding-right: 0;
+    position: relative;
+    top: -76px;
+    width: 302px;
+    z-index: 1;
+}
+/*SE AJUSTA EL BOTON DEL BUSCADOR DEL SITIO */
+.search-btn {
+    border-left: 1px solid #e3e3e3;
+    color: #ffffff;
+    height: 20px;
+    margin-top: 2px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 28px;
+}
+ /*PDP*/
+ 
+ #flyout.s7mixedmediaviewer {
+    height: 440px !important;
+    width: 385px !important;
+  }
+  
+  html body #product .product_options {
+    float: left;
+    margin: 0px;
+    width: 48% !important;
+  }
+  
+  #product .product_images {
+    float: left;
+    width: 400px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+html body #legal {
+    width: 370px !important;
+    float: right;
+}
+
+html body .product-details .product_specs {
+    float: left;
+    padding: 0px;
+    margin: 0px 15px;
+    width: 60% !important;
+}
+
+#novios_modal .registry_input {
+    float: right;
+    margin-right: 5px;
+}
+
+}
+
+/* Ipad */
+
+@media screen and (width: 768px){
+
+html body #headerZone1, html body #header, html body #header_nav, html body #main_content_wrapper, html body #page, html body #footerZone1, html body #nuevalinea, html body .footerContent, html body .footerContent div, html body #footerZone2, html body #footerZone1, html body #footerZones {
+    width: 768px !important;
+}
+
+html body{
+	overflow-x: hidden;
+	position: relative;
+}
+
+.credito, .visa, .cencosud{
+	float:left;
+}
+
+.btn-pagar{
+	float:right;
+}
+
+
+
+ html body #SubCategoryZone1{	
+		width: 100% !important;
+	} 
+	
+ html body #SubCategoryZone1 img{	
+		width: 100% !important;
+ } 
+
+ html body #header{	
+		margin: 0 !important;
+	}	
+
+ html body #header_links{	
+		right: 22px !important;
+ }
+ 
+ html body #header_nav {
+ 	margin: 0 !important;
+ }
+ 
+ html body #footer {
+ 	width: 768px !important;
+ }
+	
+ html body #content769 {
+    float: left;
+    width: 590px;
+	}
+ 
+ html body #three-grid td.item {
+    height: 338px;
+    padding: 0;
+    margin-bottom: 0;
+    text-align: left;
+    vertical-align: top;
+    : left;
+    position: relative;
+    /*width: 170px;*/
+    width : 165px; /*MHTN: Tablet UI Fixes*/
+}
+
+#box .body769 {
+	margin: 0px;
+	padding: 0px 8px 8px;
+	width: 600px;
+}
+
+html body #left_nav {
+    width: 167px;
+    padding: 0px;
+    margin: 1px 5px 0px 0px;
+    float: left;
+    min-height: 400px;
+}
+
+#three-grid {
+    width: 590px;
+}
+
+#content769 .text #Search_Result_Summary {
+    width: 628px !important;
+}
+
+ .img a img{
+ 	width: 80%;
+ }
+ /* SE REALIZA CAMBIO DE CSS PARA AJUSTAR EL CUADRO DE VISTA PREVIA DEL PRODUCTO*/
+#second_level_category_popup .bodyarea, #modal_popup_pdp .bodyarea,.add_to_cart_popup .bodyarea 
+	{ background-color: #fff;
+	margin: 0 14px; 
+	padding:1px 0px; 
+	height:420px; 
+} 
+/* SE AJUSTA CUADRO DE BOTONES "Mejor Evaluados", "Menor Precio" y "Mayor Precio" */
+#sort_options {
+    margin: -32px 0 0 234px;
+}
+/*SE AJUSTA EL BUSCADOR DEL SITIO */
+html body #header-search {
+    top: -61px;
+    /*width: 205px;*/
+    width: 167px; /*MHTN - Header Change*/
+    height: 35px;
+}
+/*SE AJUSTA EL TEXTO DEL BUSCADOR DEL SITIO */
+.search-txt {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #999999;
+    font-size: 12px;
+    height: 21px;
+    margin-left: 6px;
+    margin-top: 3px;
+    padding: 0 4px 4px 1px;
+    width: 290px;
+    
+}
+#header-search {
+    border: 1px solid #cccbcb;
+    height: 33px;
+    /*left: 130px;*/
+    left: 109px; /*MHTN - Header Change*/
+    padding-right: 0;
+    position: relative;
+    top: -76px;
+    width: 302px;
+    z-index: 1;
+}
+/*SE AJUSTA EL BOTON DEL BUSCADOR DEL SITIO */
+.search-btn {
+    border-left: 1px solid #e3e3e3;
+    color: #ffffff;
+    height: 20px;
+    margin-top: 2px;
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 28px;
+} 
+  /*PDP*/
+ 
+ #flyout.s7mixedmediaviewer {
+    height: 440px !important;
+    width: 385px !important;
+  }
+  
+  #product {
+    padding: 0 !important;
+}
+  
+  html body #product .product_options {
+    float: left;
+    margin: 0px;
+    width: 46% !important;
+  }
+  
+  
+  #product .product_images {
+    float: left;
+    width: 400px !important;
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  html body .pdp_espot_zone.right {
+    width: 285px !important;
+  }
+  
+
+
+html body #legal {
+    width: 370px !important;
+    float: right;
+}
+
+html body .product-details .product_specs {
+    float: left;
+    padding: 0px;
+    margin: 0px 15px;
+    width: 58% !important;
+}
+
+/* Pago */
+
+#novios_modal {
+	width: auto;
+}
+#novios_modal .registry_input {
+    margin-right: 5px;
+}
+
+}
+
+/* MHTN - Header change  */
+@media screen and (min-width: 641px)  and (max-width: 991px) {
+	html body #header-search {
+		width : 167px;
+	}
+	#header-search {
+		left: 109px;
+	}
+	.miniarrow {
+  		position: absolute;
+  		background: #09c;
+  		top: 100%;
+  		left: 24%;
+	}
+	#three-grid td.item{
+		height: 400% !important;
+	}
+	#three-grid #tipos_de_entrega .icons {
+		margin-left : 3px;
+	}
+	
+	.miniarrow:after, .miniarrow:before {
+	 		top: 100%;
+	 		left: 50%;
+	 		border: solid transparent;
+	 		content: " ";
+	 		height: 0;
+	 		width: 0;
+	 		position: absolute;
+	 		pointer-events: none;
+	}
+	
+	.miniarrow:after {
+	   	border-color: #09C rgba(0, 153, 204, 0) rgba(0, 153, 204, 0);
+	   	border-width: 11px;
+	   	margin-left: -8px;
+	}
+	.miniarrow:before {
+	   	border-color: #1AD rgba(17, 170, 221, 0) rgba(17, 170, 221, 0);
+	   	border-width: 11px;
+	   	margin-left: -8px;
+	}
+	
+	.icono_tooltip .minitooltip{	
+		width : 75px;
+	}
+	
+	
+	/*MHTN - DEFECT 674*/
+	/*My Account*/
+	.leftnav_myaccount li {
+	width:100px;
+	}
+	
+	html body #left_nav {
+	width:135px;
+	}
+	
+	#left_nav .left_nav_container{
+	width:135px;
+	}
+	.my_account .contentContainer{
+	  width : 88% !important;
+	}
+	.my_account #WC_AddressEntryForm__div_lastname{
+	  width : 350px;
+	}
+	.tabsTrackingContainer .tinydown{
+		right:8px;
+	}
+	.tabsTrackingContainer .tabTrackingcontent {
+		width : 94%;
+	}
+	.my_account #new_address_modal {
+		width: 488px;
+	}	
+	.consulta input[type="submit"] {
+		margin-left: 65px !important;
+	}
+	/*MHTN - DEFECT 674*/
+}
+/*MHTN : Tablet landscape*/
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+	.consulta input[type="submit"] {
+		margin-left: 92px !important;
+	}
+}

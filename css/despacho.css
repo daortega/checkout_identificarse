@@ -1,0 +1,3167 @@
+@charset "utf-8";
+/*SMALL HEREDADOS*/
+
+/*Proxy pick up - Felipe Vidal*/
+.caja-alternativa-abajo a:link, .caja-alternativa-abajo a:visited {
+	background-color:transparent !important;
+}
+  @media screen and (max-width: 640px) {
+    html body .mainHeader {
+      display: none; }
+    html body #mainHeader {
+      height: auto; }
+    /* RADAR 
+    html body #WC_ShipmentDisplay_div_4 > img 
+    {
+      display: none; 
+    }*/
+ /*   html body .genericESpot {
+      display: none; } */
+    html body .logo_responsive {
+      display: block;
+      width: 100%; }
+    html body #header, html body #mainHeader, html body #logoArea, html body #checkout_crumb, html body #checkout_crumb .crumb, html body #page, html body #main_content_wrapper {
+      width: 100%; }
+    html body .footer_sc {
+      width: 100% !important; }
+    html body .footer_resp_sup {
+      width: 80% !important; }
+    html body .footer_security {
+      padding: 2% 38%;
+      width: 100%; }
+    html body .footer_texto {
+      line-height: 20px;
+      padding: 1% 10%;
+      text-align: center;
+      width: 100%; }
+    html body #logoArea {
+      float: none;
+      display: block;
+      margin: 0 auto;
+      width: 176px; }
+    html body #Contenedor {
+      overflow: hidden; }
+      html body #Contenedor #page .dijitContentPane {
+        width: 100%; }
+      html body #Contenedor #page .dijitContentPane.pad-10 {
+        position:relative;
+        height:350px; 
+      }
+
+      html body #Contenedor #page .dijitContentPane.pad-10 {
+        position:relative;
+        height:350px; 
+      }
+      html body #Contenedor #page .dijitContentPane.pad-10 .credito{
+        position: absolute;
+        top: 228px;
+      }
+      html body #Contenedor #page .dijitContentPane.pad-10 .cencosud{
+        position: absolute;
+        top: 0px;
+      }
+      html body #Contenedor #page .dijitContentPane.pad-10 .visa{
+         position: absolute;
+         top: 120px;
+      }
+
+        html body #Contenedor #page .dijitContentPane #content_wrapper {
+          width: 100%; }
+      html body #Contenedor #promodescr_tooltip {
+        width: 100%; }
+      html body #Contenedor .body #total_breakdown {
+        width: 100%;
+        float:left;
+        margin: 0;
+        background-color:#eaf3f9;
+         }
+      html body #Contenedor #box .main_header_text,html body #Contenedor .content_header .main_header_text {
+        white-space: normal; 
+      }
+      html body #Contenedor #box .main_header_text{
+        margin:15px 0 !important;
+        background-color: #eaf3f9;/* Agrega Radar */  
+      }
+      html body #Contenedor .payment-method {
+        margin: 0;
+        padding: 0; }
+    html body #factura {         
+      width: 100%;
+      display: block;
+      margin: 0 auto; }
+    html body #EmpresaContainer {
+      left: 0 !important;
+      width: auto;
+      float: left;
+      z-index: 9999; }
+      html body #EmpresaContainer #facturaForm {
+        width: 100%;
+        float: left; }
+    html body #invoice_modal {
+      width: auto;
+      float: left;
+      background-color: #fff;
+      padding: 9px; }
+      html body #invoice_modal h1 {
+        padding: 10px 15px;
+        margin: 0; }    
+    html body .dijitContentPane {
+      width: 100%;
+      float: left;
+    }
+    html body #invoice_modal .styled_select_long {
+      width: 98%;
+      margin: 15px 0; }
+    html body .footer_resp {
+      z-index: 4; }
+    html body #GiftCardWidgetHidden, html body #EmpresaWidgetHidden, html body #NoviosWidgetHidden, html body #NuevaDireccionWidgetHidden, html body #ClientLoginWidgetHidden {
+      width: 100%; }
+    html body #invoice_modal .field {
+      width: 46%;
+      padding: 2% 0%;
+      float: left; }
+    html body #factura .field.direccion {
+      width: 100%; }
+    html body #factura .field.direccion > input, html body #invoice_modal .field input {
+      width: 100%; }
+    html body #invoice_modal #stateDiv > select, html body #invoice_modal #communesDiv > select {
+      width: 100% !important; }
+    html body #invoice_modal .styled_select {
+      width: 100%; }
+    html body #invoice_modal .styled_select_long > select {
+      width: 100%; }
+    /* Radar cambio de font-size y agrega font-weight*/
+    html body .button-wrapper-radius {
+      width: 80%;
+      margin-left: 10%;
+      margin-top: 0 !important;
+       margin-bottom: 15px;
+      font-size: 16px;
+      font-weight: bold;
+      float: left;
+      padding: 18px 15px;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1da0e0), color-stop(1, #1ca1e1)) !important;
+      background-image: -o-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -moz-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -webkit-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -ms-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: linear-gradient(to bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=0 ) !important; }
+    html body #GC_Balance_Apply .button-wrapper-radius, html body .button_container {
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1da0e0), color-stop(1, #1ca1e1)) !important;
+      background-image: -o-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -moz-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -webkit-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -ms-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: linear-gradient(to bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=0 ) !important; }
+    html body #novios_Target span.button_container {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      border-radius: 0;
+      float: left;
+      height: 35px;
+      padding-top: 7px;
+      width: 100%;
+      margin: 0; }
+    html body span.primary_button {
+      margin: 0 !important;
+      position: relative;
+      width: 48%; }
+    html body #WC_ShipmentDisplay_div_30 span.primary_button {
+      margin: 0 !important;
+      position: relative;
+      width: 100%; }
+    html body #giftCard_Target, html body #novios_Target {
+      display: block !important;
+      height: 0 !important;
+      overflow: hidden;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    html body #giftCard_Target.openAcordion, html body #novios_Target.openAcordion {
+      display: block !important;
+      height: auto !important;
+      overflow: hidden;
+      min-height: 135px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    html body #giftCard_Target .inputleft, html body #novios_Target .inputleft {
+      width: 100%; }
+    html body #giftCard_Target #GC_Balance_Apply {
+      float: left;
+      width: 48%; }
+    html body #giftCard_Target input, html body #novios_Target input {
+      width: 100%;
+      padding: 5px;
+      height: 35px; }
+    html body #novios_Target input {
+      width: 95%; }
+    html body #novios_inOut.activoboton, html body #giftCard_inOut.activoboton {
+      background-color: #EBF4FB; }
+    html body #NoviosContainer {
+      width: 100%;
+      height: auto;
+      padding-bottom: 20px; }
+      html body #NoviosContainer #novios_modal {
+        width: 100%;
+        height: auto; }
+        html body #NoviosContainer #novios_modal .registry_input {
+          width: 100%;
+          margin: 10px 0; }
+          html body #NoviosContainer #novios_modal .registry_input input {
+            width: 100%;
+            margin: 0; }
+        html body #NoviosContainer #novios_modal .section {
+          width: 100%; }
+          html body #NoviosContainer #novios_modal .section #novios_results_area {
+            width: 100%; } 
+
+
+         /* Radar Agrega */
+          html body #Contenedor #box .checkout_subheading .main_header_text{
+            font-weight: normal;
+            color: #000;
+            font-size: 14px;
+          }
+          html body #Contenedor #box .checkout_subheading .main_header_text .w-botton{
+            float: left;
+            width: 90%;
+          }
+
+          #discounts_link{
+            font-weight: bold;
+          }
+
+          .payment-method .column > div {                      
+            width: 120%;
+          }
+
+          .btn-pagar{
+              padding-left: 5%;
+              width: 95%;
+          }
+
+          .footer_sc .celeste {
+             color: #2d9ee4;
+          }
+
+          .icono-pregunta {
+              float: right;
+              margin-left: 3%;
+          }
+          .pad-10 {
+            padding-left: 10%;
+          }
+
+          /*#GiftcardAccordion*/
+          #GiftcardAccordion{
+              overflow:hidden;
+              width:100%;
+              float:left;
+              height:0;
+              -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease; 
+          }
+
+          #GiftcardAccordion.displayMenu{
+              height:80px;
+              -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease; 
+          }
+          #errorGiftCard{
+            height:80px;
+            min-height:0;
+            border-bottom: 5px solid #EBF4FB;
+          }
+          #errorGiftCard h4{
+            font-size:15px;
+            font-style:normal;
+            float:left;
+            font-weight: normal;
+          }
+          #errorGiftCard img{
+            float:left;
+            margin-right:10px;
+          }
+          html body #infoDescuentos.white-popup{
+            border-bottom:4px solid #D5EAF3;
+            border-right:4px solid #D5EAF3;
+            height:auto;
+            min-height:0;
+          }
+         
+          html body #infoDescuentos.white-popup #tooltip_popup{
+            width:100%;
+            height:auto;
+            position:static;
+            float:left;
+          }
+          html body #infoDescuentos.white-popup #tooltip_popup .bodyarea{
+            font-size:15px;
+            border:0;
+            box-shadow:           0 0 0 transparent; 
+            -moz-box-shadow:      0 0 0 transparent;
+            -webkit-box-shadow:   0 0 0 transparent; 
+          }
+
+          /*texto-codigo-novios*/
+          .texto-codigo-novios{
+            display:none;
+          }
+
+          /*giftCard_inOut*/
+          #giftCard_inOut .minus, #giftCard_inOut .pluss, #novios_inOut .minus, #novios_inOut .pluss{
+            float:right;
+          }
+          #giftCard_inOut .minus, #novios_inOut .minus{
+            display:none;
+          }
+
+          #novios_inOut.activoboton .minus, #giftCard_inOut.activoboton .minus{
+            display:block;
+          }
+
+           #novios_inOut.activoboton .pluss, #giftCard_inOut.activoboton .pluss{
+            display:none;
+          }
+
+          .radioDiv{
+            position:relative;
+          }
+          .RadioPayRemplazo{
+            width:20px;
+            height:20px;
+            top:4px;
+            left:-7px;
+            z-index:8;
+            float:left;
+            position:absolute;
+            background-image: url('../images/c1.png');
+            background-position:0 0;
+            background-repeat:no-repeat;
+          }
+          .RadioPayRemplazo.marcado{
+            background-image: url('../images/c1hover.png');
+            background-position:0 0;
+            background-repeat:no-repeat;
+          }
+
+          html body #checkout_crumb .crumb, html body #checkout_crumb .crumb a, html body #checkout_crumb .crumb span {
+              font-size:12px;
+          }
+          .btnErrorGiftCard {
+            display:inline-block;
+          }
+          /*ESTRUCTURA DESPACHO*/
+          html body .button_footer_line .right{
+            float:none;
+          }
+          html body #gift_wrapper{
+            border-bottom: 0;
+            height:auto;
+            height:0;
+            float:left;
+            height:auto;
+            position:relative;
+            overflow:hidden;
+            -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease; 
+          }
+		  
+		  html body #gift_wrapper p{
+		  	margin-left: 0px;
+		  }	
+			
+          html body #gift_wrapper.open{
+            height:290px; /* Madifica Radar */
+            overflow:visible;
+            -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease; 
+                padding-left: 17px;
+          }
+          /*MODUL0 superior*/
+          html body #contactCardArea, html body #contactToolsArea, html body #contactReferenceArea{
+              width:100% !important;
+              padding:3% 3% !important;
+              float;left;
+          }
+          html body #btnCambiaEdita{
+            float:right;
+          }
+          html body #contactToolsArea{
+            padding:0% 3% !important;
+          }
+
+          html body #contactToolsArea a{
+            font-weight:lighter;
+          }
+
+          html body #contactCardArea .bold_name{
+            padding:0 0 5px 0;
+          }
+
+          html body #contactCardArea .ellipsis{
+            padding:0 0 0px 0;
+          }
+          html body #contactReferenceArea span{
+            font-size:13px !important;
+            color:#999 !important;
+          }
+          html body #contactReferenceArea .txtLongInput{
+              width:100% !important;
+              height:110px;
+              padding:3%;
+          }
+          /*PROGRAMA DESPACHO*/
+          html body table#shipping_order_details tbody tr.nested{
+              display:none;
+          }
+          
+           html body table#shipping_order_details tbody tr.nested{
+              border-bottom: 0px;
+          }
+          
+          html body .remove_item img{
+            display:none;
+          }
+
+          html body #shipping_order_details .product{
+            width:auto !important;
+          }
+
+          html body .dijitDropDownButton{
+            width: auto; 
+            padding: 0%; 
+            background: transparent; 
+            float: right;
+          }
+          /*accordion_head*/
+          .accordion_head{
+              float:left;
+              position:relative;
+              padding:20px 0;
+              width:100%;
+              cursor:pointer;
+              background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #c8c8c8), color-stop(1, #9b9b9b)) !important;
+              background-image: -o-linear-gradient(bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              background-image: -moz-linear-gradient(bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              background-image: -webkit-linear-gradient(bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              background-image: -ms-linear-gradient(bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              background-image: linear-gradient(to bottom, #c8c8c8 0%, #9b9b9b 100%) !important;
+              filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#c8c8c8', endColorstr='#9b9b9b',GradientType=0 ) !important;
+          }
+
+          .accordion_head h4{
+              font-weight:bold;
+              text-align: center;
+              font-size:14px;
+          }
+
+          .accordion_head h4 span{
+              color:#fff;
+          }
+          .accordion_head .no-active,.accordion_head .active{
+            position:absolute;
+            right:5%;
+            top:20px;
+            font-size:16px;
+          }
+          .accordion_head .no-active{
+            display:block;
+          }
+          .accordion_head .active{
+            display:none;
+          }
+
+          .accordion_head.openHead .no-active{
+            display:none;
+          }
+          .accordion_head.openHead  .active{
+            display:block;
+          }
+
+
+          /*product_structure*/
+          .productDetail,.details{
+            width:100%;
+            float:left;
+            padding:3% 5%;
+          }
+
+          .productDetail a ,.details a{
+            color:#09C !important;
+            text-decoration:none;
+            font-weight:bold;
+          }
+          .productDetail a.delete{
+            color:#666 !important;
+            font-size:13px;
+          }
+          .productDetail span.delete{
+            color:#666 !important;
+            font-size:13px;
+          }
+          .productDetail .cant input{
+              width:30px;
+              height:25px;
+              border:2px solid #ccc;
+              text-align:center;
+              margin:0;
+              padding:0;
+          }
+          .text_left{
+            margin-bottom:10px;
+            width: 60%;
+          }
+          .text_left p{
+            width:100%;
+            float:left;
+            font-size:11px;
+            margin-top:3px; /* Agrega Radar */
+          }
+           p.priceProduct span{
+            width:100%;
+            float:left;
+            margin-top:5px;
+          }
+          .tarjeta{
+            color:#d90000;
+          }
+          .productDetail a:hover ,.details a:hover{
+            text-decoration:underline;
+            
+          }
+          .productDetail h3{
+            font-size:14px;
+            color:#000;
+            padding:0 0 10px;
+            
+          }
+          
+          .details{
+            background-color:#eaf3f9;
+          }
+
+          .details dl{
+            float:left;
+            width:100%;
+            margin:0 0 5px 0;
+            padding:0;
+          }
+
+          .details dt{
+            float:left;
+            width:50%;
+            margin:0;
+            padding:0;
+            text-transform:uppercase;
+            font-size:12px;
+            font-weight:bold;
+            color:#000; /* Agrega Radar */
+          }
+          .details dd{
+            float:left;
+            width:50%;
+            margin:0;
+            padding:0;
+            color: #000;
+          }
+
+          /* Agrega Radar */
+          .details dd h5 {
+            color: #000;
+            font-weight: normal;
+          }
+
+          .images_left{
+            width:30%;
+          }
+
+          .images_left img{
+            width:100%;
+          }
+		 
+		 /*
+          .text_left{
+            width:60%;
+          } */
+          
+          /*TCS*/
+          .left_responsive{
+          	float: left;
+          }
+          
+          #shipping_order_details .each.th_align_left_no_bottom span.price {
+			    float: left;
+			    margin-right: 20px;
+			}
+
+			#shipping_order_details .QTY, #shipping_order_details .each{
+			    text-align:left !important;	
+			}
+          	
+          	#order_details .align_right, .each, .total {
+			    padding-top: 0;
+			}
+          	
+          	
+          .text_left span{
+            width:100%;
+            float:left;
+            font-size:11px;
+            margin-top:3px; /* Agrega Radar */
+          }
+          	
+          /*TCS*/
+          
+          
+          #promodescr_tooltip{
+            display:none;
+          }
+
+          html body .content_footer{
+            padding:0;
+          }
+
+          #total_breakdown, .total_breakdown{
+            padding-right:10px;
+            margin-bottom:5px;
+            float:left;
+          }
+          .total_breakdown{
+            width:100%;
+            padding:3%;
+            float:left;
+            background-color:#eaf3f9;
+            margin-top:5px;
+          }
+          .total_breakdown h3{
+            color:#000;
+            font-weight:bold;
+            font-size:15px;
+          }
+
+          #total_breakdown .order_total{
+            padding-top:0px;
+          }
+
+          html body #gift_purchase_inOut{
+              margin-top:5px !important;
+
+          }
+          #gift_wrap, #send_greeting, #sender{
+            width:100%;
+            float:left;
+          }
+          #send_greeting textarea{
+            height:100px;
+            padding: 3%;
+          }
+          #gift_greeting_text{
+            width:100% !important;
+          }
+
+        
+          #gift_sender_text{
+            width:100%;
+          }
+
+          .product_structure{
+            height:0 !important;
+            overflow:hidden;
+          }
+
+          #gift_wrap{
+            position:absolute;
+            bottom:0;
+            padding-bottom:15px;
+          }
+          #send_greeting{
+            position:absolute;
+            top:0;
+            padding-bottom:0;
+          }
+          #sender{
+            display: none;/* Agrega Radar*/            
+            position:absolute;
+            top:175px;
+            z-index:9;
+            padding-bottom:0;
+          }
+          .product_structure{
+            height:0;
+            overflow:hidden;
+            -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease; 
+          }
+
+            .product_structure.open{
+            height:auto !important;
+            overflow:visible ;
+            -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease; 
+          }
+          .garantia{
+              border: 1px solid #bcbcbc !important;
+              /*height: 85px;
+              margin: 15px auto;*/
+              padding: 3% !important;
+              width: 92% !important;
+
+              float: left !important;
+              height: 100% !important;
+              margin: 15px 0 5% 5% !important;
+          }
+          #cuadroGarantia{
+            width:100%;
+            float:left;
+          }
+          html body .btn-opciones, html body #cuadroGarantia input{
+            float:right;
+            color:#09C !important;
+            height:auto;
+            margin:0;
+            z-index:1;
+          }
+          html body .btn-opciones{
+            margin-top:20px !important;
+            position:relative;
+            right:-16px;
+          }
+
+          html body #cuadroGarantia .checkCont-opcion{
+              width:16px;
+              height:16px;
+              float:right;
+              position:relative;
+          }
+
+           html body #cuadroGarantia .checkCont-opcion img{
+              top:-2px;
+              left:3px;
+              position:absolute;
+              z-index:3;
+              cursor:pointer;
+          }
+
+          .checkeado{
+              display:none;
+          }
+          .no-checkeado{
+              display:block;
+          }
+
+          .marcado .checkeado{
+              display:block;
+          }
+          .marcado .no-checkeado{
+              display:none;
+          }
+
+	      .itemspecs{
+	      	display:none;
+	      }
+
+          html body #tooltip_popup .header{
+              display: block;
+              border:0;
+              box-shadow:0 0 0 transparent;
+          }
+
+          html body #tooltip_popup .header h4, html body #tooltip_popup .header h3{
+              display: block;
+              border:0;
+              font-size:14px;
+              color:#09C !important;
+              box-shadow:0 0 0 transparent;
+          }
+
+          html body #tooltip_popup{
+            width:100% !important;
+            padding:10px 0;
+            border:0;
+          }
+
+          html body #tooltip_popup.white-popup{
+              height:auto !important;
+              min-height:0 !important;
+              border:6px solid #eaf3f9;
+          }
+
+          html body #tooltip_popup .bodyarea{
+            border:0 !important;
+            box-shadow:0 0 0 transparent;
+          }
+          /**warranty*/
+            /*VENTANAS MODALES*/
+              html body .WarrantyContainer, html body .Warranty_Wrapper{
+                width:100%;
+              }
+              html body .WarrantyContainer, html body .Warranty_Header{
+                background-color:#fff;
+                float:left;
+                width:100%;
+                padding: 10px 0 10px 0;
+                border-top: 1px solid #ccc;
+                margin-top: 27px;
+              }
+             html body .Warranty_Header span{
+                padding:0;
+                width:33.3%;
+                text-align: center;
+                float:left;
+                margin:0;
+              }
+              html body .dijitTooltipContainer{
+                padding:0;
+                left:0;
+              }
+              html body  .WarrantyContainer .section{
+                margin:0;
+                padding:5px;
+                height:auto;
+                position:relative;
+              }
+              html body  .WarrantyContainer .section .radioButton{
+                margin:0;
+                padding:0;
+                position:absolute;
+                left:5%;
+                top:15%;
+              }
+             html body  .WarrantyContainer .section label{
+                margin:0;
+                padding:0;
+                width:33.3%;
+                float:left;
+              }
+             html body  .WarrantyContainer .section span{
+                margin:0;
+                padding:0;
+                width:33.3%;
+                float:left;
+                position:static;
+                text-align: center;
+                left:0;
+                right:0;
+              }
+              html body  .WarrantyContainer a{
+                top:10px;
+                left:8%;
+              }
+
+              /*.closeModal*/
+              html body .closeModal{
+                display:none;
+              }
+
+              #calendario th,#calendario td{
+                width:auto;
+                font-size:10px;
+                
+              }
+              
+          
+              
+              
+              
+              
+              
+              
+              html body table#calendario{
+                min-width:100% !important;
+                width:100% !important;
+            }
+              html body #calendarContainer{
+                padding:0 !important;
+                margin:0 !important;
+              }
+              /*  TABLA Fechas entregas*/
+              #table-calendario{
+                width:100%!important;
+                float:left;
+                border:3px solid #eaf3f9;
+              }
+
+              #table-calendario .header-table dd,#table-calendario .header-table dt{
+                font-size:12px;
+                color:#333;
+                min-height:50px;
+              }
+
+              #table-calendario dl{
+                width:100%!important;
+                float:left;
+                border-bottom:3px solid #eaf3f9;
+                margin:0;
+                text-align: center; /* Agrega Radar */
+              }
+ 
+
+              #table-calendario dd, #table-calendario dt{
+                width:50%;
+                min-height:46px;
+                float:left;
+                padding:2%;
+                margin:0;
+              }
+              
+                           
+              #table-calendario.table-calendario-3 dd, 
+              #table-calendario.table-calendario-3 dt{
+                min-width:33%;
+                width:33%;
+                max-width:50%;
+              }
+
+              #table-calendario dt{
+                border-right:3px solid #eaf3f9;
+              }
+
+              #table-calendario dd{
+                text-align:center;
+                color:#1ca1e1;
+                
+              }
+              
+              .response-date-cell {
+				    padding-top: 4% !important;
+				}
+              
+              #table-calendario dd:hover {
+              	background: #EBF4FB; color: #000 !important; cursor: pointer;
+              }
+
+              /* Agrega Radar */
+              #table-calendario dd.select{
+                 background: none repeat scroll 0 0 #eaf3f9;
+              }
+
+              #AcceptDateButton .button-wrapper-radius{
+                background-image:none !important;
+                color:#1ca1e1;
+                background-color:transparent;
+              }
+              #AcceptDateButton .button-wrapper-radius span.button-container{
+                color:#1ca1e1 !important;
+              }
+              .fwdBtn, .backBtn{
+                /* Modifica Radar*/
+                color:#000;
+                font-size: 13px;
+                font-weight: bold;
+              }
+              /*Modal error*/
+              #errorsolicitud{
+                  border:4px solid #D5EAF3;
+                  height:auto;
+                  min-height:0;
+              }
+
+              #errorsolicitud h3, #errorsolicitud h4{
+                  color:#09C !important;
+                  font-size:16px;
+
+              }
+              #errorsolicitud h4, #errorsolicitud .llama{
+                text-align: center;
+                font-size:14px;
+              }
+              #errorsolicitud strong, #errorsolicitud p{
+                margin-top:5px;
+              }
+
+              #errorsolicitud strong{
+                font-weight:bold;
+                color:#333;
+              }
+
+              /* Agrega RADAR */
+              .main_header_text.shipping_header {
+                display: none;
+              }
+              
+              #shipping_header_load {
+              	display: none !important;
+              }
+              
+              
+              /* Implemetacion tabla productos */
+ 		#shipping_order_details .product, 
+ 		#shipping_order_details .QTY, 
+ 		#shipping_order_details .each, 
+ 		#shipping_order_details .total, 
+ 		#shipping_order_details .shipping_date_selection, 
+ 		#shipping_order_details .remove_item, 
+ 		#shipping_order_details .shipping_date_selection_group,
+ 		#shipping_order_details .warranty_section,
+		#shipping_order_details .discount_price,
+		#shipping_order_details .discount  { 
+ 			display: none;
+ 		}
+ 		
+ 		.btn-fecha {
+    		display: block;
+		}
+ 		
+ 		.productDetail .text_spacer {
+    		float: none !important;
+    	}
+    	
+    	.productDetail .sub-price {
+    		color: #666;
+		}
+ 		
+ 		#shipping_order_details{
+ 		 table-layout: fixed;
+ 		}
+ 		
+ 		#shipping_order_details .warranty_section label {
+    		width: 100%;
+		}
+		
+		html body .btn-opciones, html body .garantia input{
+            float:right !important;
+            color:#09C !important;
+            height:auto;
+            margin:0;
+            z-index:1;
+          }
+		
+	/* imagen cursorWaitDespachoPage */
+	
+	.cursorWaitDespachoPage {
+    		background-color: #fff;
+    		height: 100% !important;
+	}
+		
+	.cursorWaitDespachoPage, .cursorWaitDespachoPage img {
+		height: auto;
+	}
+		
+		
+		/*Pop up fechas*/
+		#calendarContainer{
+			left: 0 !important;
+			padding: 0 !important;
+		}
+		
+		#date_selection_modal{
+			display: none;
+		}
+		
+		.responsive-warranty-target > label {
+    		display: block;
+		}
+		
+		.dijitReset.dijitInline.dijitButtonNode {
+    		overflow: visible !important;
+		}
+		
+		.dijitReset.dijitInline.dijitButtonText {
+    		left: 10px;
+    		padding-top: 1.5em;
+		}
+		
+		/* popup modal warranty */
+		
+		/******popup garantia *****/
+		
+		.responsive-shipped-data-target .titulo {
+    		color: #666;
+    		font-size: 12px;
+		}
+		
+		.responsive-price-target .tarjeta_mas_price{
+			  float: none !important;
+		}
+		
+		/*Detalle pedido*/
+		
+		   html body .white-popup.detalles-pedido{
+      height:auto;
+      min-height:138px;
+      border:3px solid #d5eaf3;
+      padding:12px 15px;
+   }
+
+   html body .white-popup.detalles-pedido h4{
+      color:#0083c2;
+      font-size:15px;
+   }
+   html body .white-popup.detalles-pedido p{
+      margin-top:10px;
+      font-size:12px;
+   }
+
+html body .white-popup.detalles-pedido dl{
+      float:left;
+      width:100%;
+      padding-bottom:10px;
+   }
+  html body .white-popup.detalles-pedido dt{
+      float:left;
+      width:50%;
+      margin:0;
+      padding:1px;
+   }
+   html body .white-popup.detalles-pedido dd{
+      float:left;
+      width:50%;
+      color:#63b0cc;
+      margin:0;
+      padding:0;
+      text-align:center;
+   }
+   html body .white-popup.detalles-pedido dl.total-decuentos{
+      border-top:1px solid #ccc;
+      padding-top:10px;
+   }
+    html body .white-popup.detalles-pedido dl.total-decuentos dt, html body .white-popup.detalles-pedido dl.total-decuentos dd{
+      font-weight:bold;
+      margin:0;
+      padding:0;
+   }
+   
+     .oculta_urlpopupcarro{
+    display: none !important; 
+  }
+
+  .muestra_urlpopupcarro{  
+   display: block !important;
+  } 
+
+/* Resultado busqueda novios */
+
+	  html body #NoviosContainer #novios_modal .section #novios_results_area .result_novios_responsive{
+		   		overflow:hidden;
+		   }
+		   
+		   html body #NoviosContainer #novios_modal .section #novios_results_area .result {
+		   		padding: 5px 10px 5px 5px;
+		   }
+		   
+		   .nombre-novios-responsive{
+		   		font-weight: bold;
+		    }
+		    
+		   
+		    #novios_results_area .seleccionar {
+		   		padding: 2px 4px;
+		   		font-weight: bold;
+		   		font-size: 12px;
+		   }
+		   
+		   .result_label{
+		   		margin: 10px 0 4px;
+		   		font-size: 12px;
+		   }
+		   
+		    #novios_results_area .result p {
+		   		font-size: 12px;
+		   }
+
+/*Popup de garantia*/
+#order_details .warranty_price {
+    left: 40%;
+    margin-right: 50px;
+    position: absolute;
+    top: 70%;
+    float: none;
+}
+
+/*Cantidad*/
+	.responsive-cantidad{
+		float: left; 
+		padding-right: 6px;
+	}
+	
+	.left.text_left > div {
+    	float: left;
+	}
+	
+	.responsive-itemremove-target {
+   		padding-left: 5px;
+	}
+	
+	.responsive-stock-target > div {
+    	float: left;
+    	padding-top: 4px;
+    	display: inline; 
+    }
+    
+    
+
+  html body .dijitPopup {
+    width: 100% !important; 
+   }
+
+/* Dejo popup arriba */
+.dijitPopup {
+  position: absolute !important;
+  display: block;      
+}
+
+/*Dejo pop en el tope*/
+html body .dijitTooltipDialog {
+  padding-top: 0px !important;
+}
+/*Quito flecha de indicadora */
+.dijitTooltipBelow .dijitTooltipConnector {
+  height: 0px !important;
+}
+
+.btn-close {
+    border: 1px solid #666;
+    height: 30px;
+    line-height: 32px;
+    margin: 3px;
+    padding: 0;
+    width: 30px;
+    right: 0px;
+    top: 0px;
+    margin-left: 90%;
+    margin-top: 10px;
+}
+
+.fondo {
+    /*background: none repeat scroll 0 0 #000000;*/
+    background-color:rgba(0,0,0,0.5);
+    height: 100%;
+    left: 0;
+    opacity: 0.8;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1042;
+}
+.WarrantyContainer{
+  background-color: #fff !important;
+  z-index: 9999 !important;
+}
+.warranty_modal_tooltip{
+  /*visibility: visible !important;*/
+
+}
+
+.OcultaPopupGarantia{
+
+  visibility: hidden  !important;
+}
+		
+/*Estilo para cuadro de garantia  */
+  
+  .responsive-warranty-target  label {
+    float: left;
+    margin: 0;
+    width: 65% !important;
+  }
+
+
+
+ /*Ajusta texto mas opciones en garantia */
+#shipping_order_details .warranty_modal_dropdown span{
+
+    float: left;
+    font-size: 14px;
+    height: 10px;
+    left: -7px;
+    position: relative !important;
+    text-align: center;
+    width: 100%;
+ }   
+
+#shipping_order_details input{
+
+    float: left;
+    height: auto;
+    margin: 2% 18% -7% 5%;
+}
+    
+/*Separa texto mas opciones*/
+.mas_mobile {
+   float: left;
+   word-spacing: 2px !important;
+   text-transform: none !important;
+   color: #1ca1e1 !important;
+   
+}    
+
+/*deja texto en negro para totales*/
+.total-summary-line{
+  color: #000 !important;
+}
+
+
+/* Quito valor para popup de descuento */
+.CentroDescuento{    
+    /*right: 4% !important;*/
+    /*top: 110% !important;*/
+    margin-right: 5px !important;
+}
+
+ .ico-pregunta {
+     position: absolute;
+     /*top: 5px !important;*/
+  } 
+
+   .precio-responsive{  
+    display:none !important;     
+}
+
+	/*START: CenReqNum#819 */
+  	.mapcity{margin-bottom: 0px;margin-top: 0px;}
+  	/*END: CenReqNum#819 */
+  	
+  	/*START: CenReqNum#903*/ 
+ .promotion_input input {
+	height: 30px !important;
+  }
+  .promotion_button {
+	padding-top: 10px !important;
+  }
+/*END: CenReqNum#903*/ 
+
+
+/*Proxy pick up - Felipe Vidal*/
+
+#proxy_pickup{ width:100% !important}
+
+#proxy_pickup #proxy_hide input{
+    margin-top: 8px !important;
+    width: 95% !important;
+	margin-left:0 !important;
+	
+}
+
+#gift_purchase { padding:4%}
+		
+}
+
+/*Proxy pick up - Felipe Vidal*/
+.proxy_error {
+	-webkit-box-shadow: 0px 0px 3px 1px rgba(255,0,0,1);
+-moz-box-shadow: 0px 0px 3px 1px rgba(255,0,0,1);
+box-shadow: 0px 0px 3px 1px rgba(255,0,0,1);
+border-radius:1px;       /*Added on 06 July to fix defect */
+-webkit-appearance:none; /*Added on 06 July to fix defect */
+	}
+	
+#total_breakdown { margin-bottom:10px !important;}
+
+@media screen and (max-width: 357px) {
+    
+    	#total_breakdown .tarjeta_mas_total {    
+    	font-size: 12px;
+		}
+	
+		#total_breakdown .order_total {
+    	font-size: 12px;
+    	padding-top: 0;
+		}
+
+    /*Estilo para cuadro de garantia  */
+  
+  .responsive-warranty-target  label {
+    float: left;
+    margin: 0;
+    width: 65% !important;
+  }
+
+
+
+
+#shipping_order_details input{
+
+    float: left;
+    height: auto;
+    margin: 4% 11% -7% 5%;
+}
+    
+/*Separa texto mas opciones*/
+.mas_mobile {
+  word-spacing: 2px !important;
+   text-transform: none !important;
+   /*START: CenReqNum#903*/
+    position: relative;
+	right: -24px;
+	top: -5px;
+   /*END: CenReqNum#903*/
+   
+}  
+
+		
+}
+/*START: CenReqNum#903*/
+@media screen and (min-width: 543px) and (max-width: 640px) {
+	.responsive-warranty-target {
+		display: inline-block !important;
+	}
+	#shipping_order_details .warranty_modal_dropdown span{
+		padding-top: 6px !important;
+	}
+}
+/*END: CenReqNum#903*/
+
+/*ajusta texto mas opciones garantia*/
+@media screen and (min-width: 360px) and (max-width: 479px) {
+  #shipping_order_details .warranty_modal_dropdown span{
+    left: -7px !important;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 606px) {
+  #shipping_order_details .warranty_modal_dropdown span{
+    left: -13px !important;
+  }
+}
+
+@media screen and (min-width: 607px) and (max-width: 640px) {  
+  #shipping_order_details .warranty_modal_dropdown span{
+     left: -18px !important;
+  }
+}  
+
+
+
+
+
+
+/*TABLET HEREDADOS*/
+  @media screen and (min-width: 641px) and (max-width: 970px) {
+    html body {
+      /* CSS footer Inline*/ }
+      html body .logo_responsive {
+        display: none; }
+      html body .checkoutFooterZone1_cont {
+        width: 967px;
+        height: 50px;
+        float: none;
+        clear: both;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 10px;
+        border-top-width: 3px;
+        border-bottom-width: 3px;
+        border-top-style: solid;
+        border-bottom-style: solid;
+        border-top-color: #EBF4FB;
+        border-bottom-color: #EBF4FB; }
+      html body .checkoutFooterZone1_cont .footer_links {
+        width: 800px;
+        height: 20px;
+        float: left;
+        font-family: Tahoma, Geneva, sans-serif;
+        font-size: 12px;
+        color: #666;
+        text-align: left;
+        padding-top: 15px; }
+      html body .checkoutFooterZone1_cont .footer_links a {
+        color: #666;
+        text-decoration: none; }
+      html body .checkoutFooterZone1_cont .footer_links a:hover {
+        color: #666;
+        text-decoration: underline; }
+      html body .checkoutFooterZone1_cont .secure_seal {
+        width: 120px;
+        height: 35px;
+        float: left; } 
+
+
+
+	   
+ 		
+ 		
+
+}
+
+
+@media screen and (width: 768px){
+
+
+	html body{
+		overflow-x: auto;
+	}
+}
+
+@media screen and (width: 800px){
+	html body{
+		overflow-x: auto;
+	}
+}
+    	
+@media screen and (width: 360px) {
+		.tarjeta_mas_price {
+		    margin-left: -5px !important;
+		    
+		}
+	    .productDetail span.delete{
+           padding-top: 1px !important;
+        }
+        
+        /*MHTN: Defect 912*/
+        .calendar .dates td span:nth-last-child(-n+2) {
+            /* float: left; */
+            /* margin-left: 65px; */
+            width: 100%;
+            /* margin-top: -16px; */
+     }
+    	/*MHTN: Defect 912*/
+    	.calendar td{
+    		width: 150px;
+    	}
+    	/*MHTN: Defect 912*/
+    	.no-desktop.textoCalendarioDesktop{
+    		font-weight: bold;
+    		font-size: 11px !important;
+		    height: 14px;
+		    margin-right: 14px;
+		    margin-top: 4px;
+		    padding-top: 5px;
+		    width: 71px;
+    	}
+    	/*MHTN: Defect 912*/
+    	.blue.jornadaCell.jornadaRow{
+    		height: 35px;
+    		width: 143px !important;
+    	}
+    	/*MHTN: Defect 912*/
+    	.calendar .ok{
+    		margin-left: 10px !important;
+    	}
+    	/*MHTN: Defect 912*/
+	    .delete{
+	    	border-bottom-width: 0 !important;
+		}
+		/*MHTN: Defect 912*/
+		.lightboxContent li .itemHeader b{
+		 top: -7px !important;
+		}
+	}
+	@media screen and (width: 640px) {
+		.tarjeta_mas_price {
+		    margin-left: -5px !important;
+		    
+		}
+		.productDetail span.delete{
+           padding-top: 1px !important;
+        }
+	}
+	
+	
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+	.ico-pregunta {
+    	position: absolute;
+    	margin-top:-15px !important;
+	}
+}	
+/*Corrige problema en popup de garantia*/
+@media screen  and (min-width: 641px) and (max-width: 970px) {
+  .WarrantyContainer .section {
+    float: none !important;
+    height: 30px !important; 
+    width: 250px !important;   
+  }
+
+}  
+
+
+/* MTHN: Start Req# INT1875 :  */
+
+#mhtn_background { position: fixed; z-index: 6; top: 0; left: 0; float: left; background-color:#000; opacity: .7; zoom:1; width: 100%; height:100%; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: alpha(opacity=70);}
+
+
+.overlay{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9990;
+  top: 0;
+  left: 0;
+}
+
+  .finalText{
+    float: left;
+    width: 100%;
+    padding: 3% 0%;
+    margin: 0;
+    color: #000;
+    font-weight: bold;
+  }
+
+.lightbox, .lightBorder {
+    background: none repeat scroll 0 0 #fff;
+    margin: auto;
+    padding: 0 1%;
+    position: relative;
+    width: 100%;
+}
+.lightBorder {
+    background: none repeat scroll 0 0 #ccc;
+    margin: 10% auto;
+    padding-left: 11px;
+    padding-right: 0;
+    width: 55%;
+    z-index: 6;
+}
+.lightbox {
+    left: -15px;
+    padding: 3% 1%;
+    top: -6px;
+}
+.lightbox h1 {
+    margin-top: 10px;
+}
+.lightbox p {
+    margin: 15px 0;
+}
+.lightbox h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+.lightbox .box {
+    text-align: center;
+}
+.lightboxContent {
+    color: #000;
+    margin: 0 auto;
+    /*MHTN DEFECT : 296*/
+    width: 95%;
+}
+.lightboxContent h1 {
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    width: 100%;
+}
+.lightboxContent ul {
+    border-top: 3px solid #f4f9fc;
+    clear: both;
+    float: left;
+    text-align: left;
+    width: 100%;
+}
+.lightboxContent ul li {
+    border-bottom: 3px solid #f4f9fc;
+    float: left;
+    padding-bottom: 10px;
+    width: 100%;
+}
+.itemHeader {
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+.item {
+    float: left;
+    width: 100%;
+}
+.item img {
+    float: left;
+    margin-right: 10px;
+    width: 10%;
+}
+.item > span {
+    float: left;
+    width: 33%;
+}
+.item .status {
+    color: #000;
+    font-weight: bold;
+}
+.finalText {
+    float: left;
+    margin: 30px 0;
+    width: 100%;
+}
+.dismiss {
+    background: none repeat scroll 0 0 #09c;
+    color: #fff;
+    margin-bottom: 13px;
+    padding: 7px 35px;
+    font-size: 14px;
+}
+.dismiss:hover {
+    color: #fff !important;
+}
+.delete {
+    border-left: 1px solid #ccc;
+    float: right;
+    padding-left: 2%;
+    text-align: center;
+    width: 10%;
+}
+.delete label {
+    display: block;
+    /*MHTN DEFECT - 243*/
+    margin-bottom: 5px;
+    width: 100%;
+}
+.dateselect {
+    float: left;
+    width: 25%;
+}
+.dateselect p {
+    margin: 0;
+}
+.dateselect > a {
+    text-decoration: underline;
+}
+.calendar {
+    display: none;
+    float: left;
+    margin: 20px 0;
+    width: 100%;
+}
+.calendar.active {
+    display: block;
+}
+.calendar table, .calendar tr, .calendar td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+/*MTHN DEFECT : 241*/
+.calendar td {
+    font-size: 11px;
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+}
+
+#dateSelectionFwdBtnWrapper .dateSelectionFwdBtn,
+#dateSelectionBackBtnWrapper .dateSelectionBackBtn {
+  color: #0099cc
+}
+/*MTHN DEFECT : 241*/
+
+
+.calendar table {
+    width: 100%;
+}
+.calendar th {
+    background: none repeat scroll 0 0 #edf5f8;
+    font-weight: normal;
+    padding: 0 5px;
+    text-align: center;
+}
+/*MHTN Defect 580 change style for first colum*/
+.calendar td:first-child {    
+    text-align: left !important;    
+}
+
+
+.calendar td {
+    padding: 0 5px;
+    text-align: center;
+    
+}
+.calendar td.selectedJornada {
+    background: none repeat scroll 0 0 #6cc3df;
+}
+.calendar .jornadaCell  span {
+    border-radius: 15px;
+    display: inline-block;    
+    margin: 5px 0;
+    text-align: center;
+    /*MHTN Defect 516*/
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.calendar .ok {
+    /*MHTN Defect 516*/ 
+    background: none repeat scroll 0 0 #C6E2ED;
+}
+.calendar .no {
+    background: none repeat scroll 0 0 #c7c6c2;
+}
+.calendar .no > img, .calendar .ok > img {
+    padding-top: 3px;
+    /*MHTN Defect 516*/
+    width: 25px;
+}
+.calendar .left, .calendar .right {
+    margin-top: 10px;
+}
+.dateSelect {
+    background: none repeat scroll 0 0 #ccc !important;
+    border: medium none;
+    color: #333;
+    display: inherit;
+    float: none;
+    font-weight: bold;
+    margin: 20px auto 0;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+.calendar td.selectedJornada span {
+   /*MHTN Defect 563 change color background #318fb6 for #248AB2 And Add importan for mobile style*/
+    background: none repeat scroll 0 0 #248AB2 !important;
+}
+}
+
+.calendar th b, .calendar td b {
+    display: block;
+    font-weight: bold;
+    width: 100%;
+}
+.qty {
+    float: left;
+    width: 100%;
+    margin-right: 15px;
+}
+.qty .error {
+    color: #ff0000;
+    display: inline-block;
+    width: 290px;
+}
+.qty input {
+    margin-right: 5px;
+    padding: 0 0 0 20px;
+    width: 30%;
+}
+.question {
+    background: none repeat scroll 0 0 #09c;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    text-align: center;
+    width: 20px;
+}
+.question .minitooltip {
+    background: none repeat scroll 0 0 #09c;
+    border-radius: 5px;
+    display: none;
+    font-size: 12px;
+    left: -96px;
+    line-height: 15px;
+    padding: 10px;
+    position: absolute;
+    top: -90px;
+    width: 200px;
+}
+.active .minitooltip {
+    display: block !important;
+}
+.miniarrow {
+    background: none repeat scroll 0 0 #09c;
+    left: 48%;
+    position: absolute;
+    top: 100%;
+}
+.miniarrow:after, .miniarrow:before {
+    border: medium solid transparent;
+    content: " ";
+    height: 0;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    width: 0;
+}
+.miniarrow:after {
+    border-color: #09c rgba(0, 153, 204, 0) rgba(0, 153, 204, 0);
+    border-width: 19px;
+    margin-left: -19px;
+}
+.miniarrow:before {
+    border-color: #1ad rgba(17, 170, 221, 0) rgba(17, 170, 221, 0);
+    border-width: 19px;
+    margin-left: -19px;
+}
+.cerrarLightbox {
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #ccc;
+    color: #ccc;
+    font-size: 21px;
+    font-weight: lighter;
+    line-height: 16px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 9991;
+}	
+
+@media screen and (max-width: 640px) {
+
+/*MHTN Defect 580 - add new style for calendar in despacho*/  
+#dateSelectionBackBtnWrapper{
+  margin-left: 3%;
+}
+#dateSelectionFwdBtnWrapper{
+  margin-right: 4%;
+}
+#acceptDate span{
+   margin-top: 1px !important;
+}
+
+/*MHTN Defect 582*/
+#caja-no-encontradoMHTN {
+    left: auto !important;
+    margin-left: 2% !important;/*MHTN DEFECT CYCLE4 -802*/
+    margin-top: 90px !important;
+    width: 95% !important;
+} 
+#AlertWidgetHiddenMHTN{
+  position: relative !important;
+  width: 100% !important;
+}
+
+
+/*START MHTN Defect 520*/
+.calendar .no > img, .calendar .ok > img {
+   width: 25px;
+}
+.calendar .jornadaCell span {
+    height: 25px;
+    width: 25px;
+	float: left;
+}
+/*END MHTN Defect 520*/
+
+
+.qty input {
+    width: 20%;
+}
+
+.miniarrow:after {
+    margin-left: 44px;
+}
+.miniarrow:before {
+    margin-left: 44px;
+}
+
+.question .minitooltip {
+    left: -150px;
+ 
+}
+
+ .itemHeader {
+    font-weight: bold;
+  }
+  .itemHeader b{
+    margin-bottom: 5px;
+  }
+
+	.item img {
+	    width: 23%;
+	}
+	.item > span {
+	    width: 70%;
+	}
+	.item p.status {
+	    display: none;
+	}
+	.showMobile {
+	    background: none repeat scroll 0 0 transparent !important;
+	    display: block;
+	}
+	.showFull {
+	    display: none;
+	}
+	
+	  .lightBorder{
+	    width: 100%;
+	    padding: 0;
+	    border: #ccc 1px solid;
+	  }
+	
+	  .lightbox{
+	    margin: 0;
+	    top: 0;
+	    left: 0;
+	    padding: 3% 0;
+	  }
+	  .lightboxContent{
+	    /*MHTN DEFECT : 296*/
+	    width: 95%;
+	  }
+	  .lightboxContent ul {
+	    border-bottom: none;
+	    border-top: none;
+	  }
+	  .lightboxContent ul li{
+	    border: none;
+  	  }
+
+    /*MHTN Defect 551 */  
+    #mhtn_lista_productos li {
+      border-bottom: 3px solid #f4f9fc !important;
+    }
+  	  
+  	    .lightboxContent li .itemHeader b{
+    	width: 100%;
+    	background: #eef4f6;
+    	padding: 2% 1%;
+    	font-weight: bold;
+    	display: block;
+  		}
+  		
+  		 .dateselect {
+    float: left;
+    width: 50%;
+    padding: 2% 1%;
+  }
+  .dateselect p, .dateselect a {
+    width: 50%;
+    float: left;
+  }
+  
+  .dateselect p {
+    font-size: 11px;
+    margin: 0;
+   }
+
+  .dateselect p{
+    font-weight: bold;
+  }
+  .dateselect b{
+    font-weight: normal !important;
+  }
+
+  .dateselect a{
+    margin-top: 15px;
+  }
+
+
+
+  .dismiss{
+    width: 80%;
+    display: inline-block;
+  }
+
+  .qty, .delete, .dateselect{
+    width: 100%;    
+    border-bottom: #eef4f6 2px solid;
+    padding: 2% 0; 
+  }
+
+
+  .maxamnt{
+    font-weight: bold;
+    padding-right: 5%;
+    width: 30%;
+  }
+  .qty input[type="number"] {
+    width: 20%;
+  }
+
+  .calendar.active table.showMobile{
+    display: inline-table;
+  }
+  .calendar .left, .calendar .right{
+    width: auto;
+    left: auto;
+    margin-bottom: 10px;
+  }
+  .delete{
+    border-left: none;
+    text-align: left;
+    padding: 10px 0 0 0;
+  }
+
+  .delete label{
+    /*MHTN Defect 507*/
+    font-size: 13px;
+    color: grey;
+    /*font-weight: bold;*/
+    width: 50%;
+    float: left;
+    display: inline-block;
+  }
+  .delete input{
+    font-weight: bold;
+    float: left;
+    width: auto;
+    height: auto;
+    display: inline-block;
+  }
+  
+  .lightboxContent li .itemHeader b{
+    width: 100%;
+    background: #eef4f6;
+    padding: 2% 1%;
+    font-weight: bold;
+    display: block;
+    /*MHTN DEFECT - 904*/
+    top : -7px !important;
+  }
+
+  /*MHTN DEFECT : 296*/
+  .itemHeader b{
+  	margin-left: -6px;
+  	padding-left: 8px !important;
+  	position: relative;
+  	width: 200% !important;
+  	margin-bottom : 9px !important;
+  }
+  /*MHTN DEFECT : 296*/
+  
+  .finalText a{
+    text-decoration: underline;
+  }
+
+  .subsubtitle{
+    margin-bottom: 20px;
+  }
+
+  .subsubtitle a{
+    width: 100%;
+    display: block;
+  }
+
+  .timeline{
+    display: none;
+  }
+
+  .detailTable{
+    margin-bottom: 30px;
+    border: 0;
+    text-align: left;
+    color: #000;
+  }
+  .detailTable tr{
+    border: #ccc 1px solid;
+  }
+  .detailTable th{
+    font-weight: bold;
+    background: transparent;
+    border: 0;
+    text-align: left;
+    padding-left: 10%;
+  }
+  .detailTable td{
+    text-align: left;
+    padding-left: 5%;
+  }
+
+  .detailTable .showmore{
+    background: #cccccc;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NjY2NjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5OTk5OTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top,  #cccccc 0%, #999999 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#999999));
+  background: -webkit-linear-gradient(top,  #cccccc 0%,#999999 100%);
+  background: -o-linear-gradient(top,  #cccccc 0%,#999999 100%);
+  background: -ms-linear-gradient(top,  #cccccc 0%,#999999 100%);
+  background: linear-gradient(to bottom,  #cccccc 0%,#999999 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#999999',GradientType=0 );
+  color: #000;
+    text-align: center;
+  }
+
+  .showmore span{
+    float: right;
+    margin-right: 10px;
+  }
+
+  .sectionHeader{
+    width: 100%;
+  }
+  .columnMenu, .columnMenu ul{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+  .columnMenu li{
+      float: left;
+      width: 33%;
+      border-right: #ccc 1px solid;
+  }
+  .columnMenu li:last-child{
+    border-right: 0;
+  }
+
+  .contentContainer{
+    width: 100%;
+    margin: 30px 0 0 0;
+    padding: 0;
+  }
+  .contentContainer .tabs li, .contentContainer .tabs li.active{
+    width: 100%;
+    background: #cccccc;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2NjY2NjYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiM5OTk5OTkiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(top,  #cccccc 0%, #999999 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#cccccc), color-stop(100%,#999999));
+    background: -webkit-linear-gradient(top,  #cccccc 0%,#999999 100%);
+    background: -o-linear-gradient(top,  #cccccc 0%,#999999 100%);
+    background: -ms-linear-gradient(top,  #cccccc 0%,#999999 100%);
+    background: linear-gradient(to bottom,  #cccccc 0%,#999999 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cccccc', endColorstr='#999999',GradientType=0 );
+    color: #000;
+      text-align: center;
+  }
+  .tabcontent{
+    width: 100%;
+    background: transparent;
+  }
+  .tableContainer{
+    height: auto;
+    overflow: auto;
+    max-height: none;
+  }
+  .tableContainer tr{
+    border: #999 1px solid;
+  }
+  .tableContainer td, .tableContainer th{
+    border: 0 !important;
+    background: transparent !important;
+    padding: 3% 5% !important;
+  }
+
+  .tableContainer table{
+    border-radius: 3px;
+    text-transform: capitalize;
+  }
+  .tableContainer .odd{
+    background: #EEE !important;
+  }
+
+  .tabcontent .consulta{
+    width: 100%;
+    margin: 0 auto;
+    text-transform: none;
+    font-weight: normal;
+    text-align: left;
+  }
+
+  .tabcontent .consulta h3{
+    font-size: 14px;
+  }
+
+  .consulta input[type="text"] {
+    width: 90%;
+    margin-bottom: 40px;
+  }
+  .consulta input[type="submit"] {
+    width: 100%;
+  }
+
+  .errorMsg{
+    margin-top: -35px;
+  }
+
+  .getorder{
+    text-decoration: underline;
+    text-transform: none;
+    font-size: 14px;
+  }
+
+  .mobileTitle{
+    font-size: 18px;
+    text-transform: none;
+    font-weight: bold;
+    color: #000;
+    width: 50%;
+    margin: 20px auto;
+  }
+
+  .mobileMessage{
+    width: 65%;
+    margin: 0 auto;
+    color: #000;
+    text-transform: none;
+    margin-bottom: 10px;
+    font-weight: normal;
+  }
+
+  .imgContainer{
+    margin-bottom: 20px;
+    min-height: 180px;
+  }
+  .lightboxContent h5{
+    margin-top: 10px;
+    font-weight: normal;
+  }
+
+  .item{
+    padding: 0 4%;
+  }
+
+  /*MHTN DEFECT : 296*/
+  #mhtn_lista_productos .item {
+  	margin-left: -14px;
+  }
+  /*MHTN DEFECT : 296*/
+  
+  .calendar table {
+    margin-left: 4%;
+    width: 92%;
+  }
+
+  .calendar .left, .calendar .right {
+    margin: 10px 18px;
+  }
+}
+
+.error-calendar-mhtn p {
+    color: red;
+    display: inline;
+}
+
+
+/* MTHN: End Req# INT1875 : Create Update order OEM */
+
+
+/*MTHN: CLICK AND COLLECT  New style for icon in despacho desktop made by Miguel Penaloza*/
+  #despacho_domicilio{
+    width: 31%;
+    display: block;
+    float: left;
+    margin-right: 8px; /*MHTN DEFECT: 644*/
+    padding-top:25px;
+  }
+  #despacho_domicilio .title span{
+    width:100%;
+    display:block;
+    text-align:center;
+    /*MHTN defect 477*/
+    color :#19335c !important;
+  }
+  #despacho_domicilio .title img{
+    display:block;
+    margin: 0px auto 2px;
+    width: 32px;
+  }
+  #retiro_tienda{
+    /*MHTN Defect 559 - change value width 31% for 28% */
+    width: 28%;
+    /*MHTN Defect 559 - change value padding-left 10px for 20px */
+    padding-left: 20px;
+
+    display: block;
+    float: left;
+    padding-right: 10px;
+    padding-top:25px;
+    /*MHTN Defect 477*/
+    border-left: 2px solid #ebf4fb;
+/*ZONA*/
+    /*height: 192px;*/
+    height: 242px;
+    /*MHTN: 688 margin-right for retiro en tienda box,by rahul.ranjan*/
+    margin-right: 1px;
+    
+  }
+  #retiro_tienda .title span{
+    width:100%;
+    display:block;
+    text-align:center;
+    /*MHTN defect 478*/
+    color :#19335c !important;
+  }
+  #retiro_tienda .title img{
+    display:block;
+    margin: 0 auto;
+    width: 35px;
+  }
+  #regalo_novios{
+    width: 28%;
+    display: block;
+    /*MHTN: CLICK AND COLLECT*/
+    float: left;
+    margin-top:-15px;     /*MHTN: 680 compared with wireframe, by rahul.ranjan*/
+	padding-top:39px;     /*MHTN: 680 compared with wireframe, by rahul.ranjan*/
+    
+    /*Start MHTN Defect 477*/
+    border-left: 2px solid #ebf4fb;
+    margin-left: 5px; /*MHTN: DEFECT - 644*/
+    /* MHTN Defect 559 -  change value padding-left: 6px for 10px */
+    padding-left: 8px; /*MHTN: DEFECT - 644*/
+/*ZONA*/
+    /*height: 192px;*/
+     height: 212px;
+    /*End MHTN Defect 477*/
+  }
+  #unregistered_form #encuentralos {
+    width:100% !important;
+  }
+  #unregistered_form #misma_direccion {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  #retiro_tienda .selector_unidades {
+    height: 30px;
+    margin-bottom: 0px;
+    padding-bottom: 5px;
+    overflow: hidden;
+    width: 100% !important;
+    background-attachment: scroll;
+    background-image: url('../images/drop-down-arrow.png');
+    background-repeat: no-repeat;
+    background-position: 100% 4px;
+    border: 0px none;
+    text-decoration: none;
+    padding-left: 4px !important;
+    padding-right:25px;
+    /*MHTN DEFECT: 644*/
+    padding-right:0px\9;
+    background-position: 83% 4px\9;
+    width: 117%\9 !important;  
+    /*MHTN DEFECT: 644*/ 
+    /*MHTN Defect 559 - add style for font-size */
+    font-size: 12px; /*MHTN: fixed as wireframe, 688, by rahul.ranjan*/
+    padding-top: 4px;    
+  }
+
+  /*MHTN Defect 559*/
+
+  /*MHTN DEFECT: 644*/
+  #retiro_tienda select::-ms-expand,#ddespachoContainer #contenedor-alternativas select::-ms-expand {
+  	visibility: hidden;
+  }
+  
+  /*MHTN DEFECT: 644*/
+  
+  /* Zona and Tienda Label in Address Book Page */
+   #retiro_tienda .title_zona{
+  	float: left; 
+  	padding: 0px 0px; 
+  	margin-bottom: -4px; 
+  	margin-left: -9px; 
+  	margin-top: 5px;
+  }
+  
+  #retiro_tienda .title_tienda{
+  	float: left; 
+  	padding: 0px 1px; 
+  	margin-bottom: -5px; 
+  	margin-left: -10px; 
+  	margin-top: 0px;
+  }
+  /* Zona and Tienda Label in Address Book Page */
+  
+  #retiro_tienda .selector {
+    float: left;
+    padding: 0px;
+    overflow: hidden;
+    border: 1px solid #D6D6D6;
+    background-color: #FFF;
+    margin-top: 10px;
+
+    /*MHTN - Defect 560: change value width: 99%; for width: 142px; add margin-left: -12px;*/
+    /*width: 99%;*/
+    margin-left: -12px;
+    width: 142px;
+
+  }
+  .selector_unidades{
+    background-attachment: scroll;
+    background-image: url("../images/drop-down-arrow.png");
+    background-position: 100% 4px;
+    background-repeat: no-repeat;
+    border: 0 none;
+    height: 30px;
+    margin-bottom: 0;
+    overflow: hidden;
+    padding-bottom: 5px;
+    padding-left: 2px !important;
+    text-decoration: none;
+    width: 100% !important;
+    /*MHTN DEFECT: 644*/    
+    background-position: 88% 4px\9;
+    width: 113%\9 !important;  
+    /*MHTN DEFECT: 644*/
+  }
+  .selector_unidades option{
+  	width: 100%;
+  }
+  .selector {
+    width: 99%;
+    float: left;
+    padding: 0px;
+    overflow: hidden;
+    border: 1px solid #D6D6D6;
+    background-color: #FFF;
+    margin-top: 10px;
+  }
+  /*ZONA*/
+  .zonadropdown{
+      margin-bottom: 12px !important;
+  }
+  /*Req Fix : ZONA Selector in Firefox*/
+  #storedropdown{
+  		clear:both;
+  }
+  
+  
+
+ #enviar_aca{
+    
+    /*MHTN Defect 559 - change value width 133px for 121px */
+      /*MHTN Defect change value width 121px for 142px*/
+    width: 142px;
+    margin-right: -10px;
+
+    float: right;
+    font-size: 12px;
+    display: block;
+    background: none repeat scroll 0% 0% #F2F2F2;
+    color: #696969;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding-top: 10px;
+    border: 1px solid #BBB;
+    border-radius: 0.2em;
+    height: 31px;
+    margin-top:5px;/*MHTN Cycle4: DEFECT 1735*/
+  }
+  #unregistered_form .logo_novios {
+    margin-bottom: 10px !important;
+    margin-top: 14px !important;
+    margin-right: 30px !important;
+  }
+  #WC_UnregisteredCheckout_div_23 {
+    /*MHTN Defect 559 - Change value margin-top -10px for 4px  */ 
+    margin-top: 4px;
+  }
+  #unregistered_form #enviar_aca:hover {
+    background: none repeat scroll 0% 0% #E0E0E0;
+  }
+  .gratis_label {
+    height: 78px;
+    width: 78px;
+    background-image: url('../images/gratis_label.gif');
+    position: absolute;
+    margin: -18px;
+  }
+  
+  /*MHTN: start 680 by rahul.ranjan*/
+  @media screen and (max-width: 970px) 
+  {
+  .gratis_label_guest {
+    height: 68px;
+    width: 68px;
+    background-image: url('../images/gratis_label.gif');
+    position: absolute;
+    margin: -25px 0px 0px -12px !important;
+    background-size: 100%;
+  }
+  }
+  
+  .gratis_label_guest {
+    height: 68px;
+    width: 68px;
+    background-image: url('../images/gratis_label.gif');
+    position: absolute;
+    margin: -40px 0px 0px -21px;   /*MHTN: 680: Modified margin as per wireframe, by rahul*/
+    background-size: 100%;
+  }
+  
+  /*MHTN: End 680 by rahul.ranjan*/
+  
+  #span_shipping_header_SHIPPING_INFO img{
+    margin:-5px 5px -5px 0px;
+  }
+  .importante_despacho {
+    text-transform:uppercase;
+    color:#000;
+    font-weight:bold;
+  }
+  .text_despacho {
+    color:#000;
+  }
+  #importante_msg{
+    margin-bottom:10px;
+  }
+  #shipping_order_details .fecha_despacho {
+    font-size: 12px;
+    padding: 10px 0px 0px 15px !important;
+    border-bottom: 5px solid #EBF4FB !important;
+    vertical-align: top;
+  }
+  #inner.despachoDateUnavailable {
+    width: 100% !important;
+    max-width: 160px !important;
+  }
+  #shipping_order_details .fecha_despacho_group {
+    font-size: 12px;
+    padding: 10px 0px 0px 15px !important;
+    vertical-align: top;
+  }
+  .important_adressbook{
+    margin-top:20px;
+    display:block;
+    margin-bottom:10px;
+    float:left;
+  }
+
+ /*MHTN: CLICK AND COLLECT*/
+ .retiro_tienda_span {
+ 	top: -7px;
+ 	position: relative;
+ 	width: 100% !important;
+
+  /*MHTN defect 480*/
+  color :#19335c !important;
+ }
+ 
+	.selector_unidades {
+ 	 -moz-appearance: none;
+ 	 -webkit-appearance: none;
+ 	  appearance: none;
+  	}
+ /*MHTN: CLICK AND COLLECT*/
+ 
+  /*MHTN Defect 451*/
+  #imagenCajaAlertMHTN{
+     margin: -4px auto;
+     visibility: hidden;
+  }
+  /*MHTN Defect 451*/
+  
+ /*.error_msg {
+    float: left;
+  }*/
+
+/*MTHN: CLICK AND COLLECT New style for icon in despacho Mobile made by Miguel Penaloza*/
+
+@media screen and (max-width: 640px) {
+
+ #contenedor-alternativas .retiro_tienda_span {
+	color: #233a66 !important;
+    display: block;
+    /*MHTN Defect 615 -comment float:left*/
+    /*float: left;*/
+    font-size: 14px;
+    font-weight: bold;
+    margin: 12px 0 0 10px;	
+ }
+
+ #contenedor-alternativas .caja-alternativa-arriba img {
+   /*MHTN Defect 615 -add value for float in mobile*/
+    float: none !important;
+    left: -64px !important;
+ }
+
+
+ .selector {
+	border-right-width: 1px;
+    margin-left: -2px;
+    margin-right: -2px;
+   }
+
+ .selector_unidades{
+	/*margin-left: -14px;
+    margin-right: -14px;*/ /*MHTN DEFECT - 644*/
+ }
+
+  #unregistered_form #misma_direccion, #unregistered_form #encuentralos{
+        width: 100%;
+        margin: 2% 0;
+        min-height: 40px;
+        padding-top: 10px;
+        font-size: 13px;
+  }
+
+  #despacho_domicilio {
+    width: 100%;
+  }
+  #unregistered_form #misma_direccion{
+    width: 48% !important;
+    height: auto;
+    padding: 10px !important;
+    margin:0px 11px  0px 0px !important;
+  }
+  #unregistered_form #cambiar_direccion{
+    width: 48% !important;
+    height: auto;
+    padding: 10px !important;
+    margin:0px 0px  0px 0px !important;
+  }
+  #despacho_domicilio .title {
+    font-weight: bold;
+    padding-bottom: 2px;
+    display: block;
+    margin-bottom: 15px;
+  }
+  #despacho_domicilio .title img {
+    display: block;
+    margin: -2px auto 2px;
+    width: 32px;
+    float: left;
+  }
+  #despacho_domicilio .title span {
+    width: auto;
+    display: block;
+    text-align: left;
+    margin-left: 40px;
+    font-size:15px;
+  }
+  #retiro_tienda {
+    width: 100%;
+    display: block;
+    float: left;
+    border-top: 4px solid rgb(237, 244, 252);
+    /*border-bottom: 4px solid #EDF4FC;*/ /*MHTN : DEFECT 644*/
+    border-left:none;
+    border-right:none;
+    margin: 20px 0px 5px;
+    padding: 25px 0px !important;
+  }
+  #retiro_tienda .title img {
+    display: block;
+    margin: -2px auto 2px 25px;
+    width: 32px;
+    float: left;
+  }
+  #retiro_tienda .title span {
+    width: auto;
+    display: block;
+    text-align: left;
+    margin-left: 40px;
+    font-size:15px; 
+  }
+
+  /*MHTN Defect 559 - add style for mobile*/
+  #retiro_tienda .selector_unidades {
+    /*MHTN - Defect 560: change value font-size: 12px for  font-size: 11px,  padding-left: 121px for padding-left: 11px !important; 
+      and  width: 110%*/
+    font-size: 11px !important;
+    /*padding-left: 14px !important; - MHTN DEFECT - 644*/
+    width: 112% !important;
+  }
+  
+  /*Zona and Tienda Label in Address Book Page*/
+  #retiro_tienda .title_zona{
+  	float: left;
+    padding: 0px 0px;
+    margin-bottom: -5px;
+    margin-left: -54px;
+    margin-top: 20px;
+  }
+  
+  #retiro_tienda .title_tienda{
+  	float: left;
+    padding: 0px 0px;
+    margin-bottom: 0px;
+    margin-left: -109px;
+    margin-top: 17px;
+  }
+  /*Zona and Tienda Label in Address Book Page*/
+    
+  .error_msg {
+    float: left;
+  }
+  #enviar_aca {
+    width: 100%;
+    float: right;
+    font-size: 12px;
+    display: block;
+    background: none repeat scroll 0% 0% #F2F2F2;
+    color: #696969;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    padding: 12px;
+    border: 1px solid #BBB;
+    border-radius: 0.2em;
+    /*Modified for zona and tienda label in address book page*/
+    /*margin-top: 13px;*/
+    margin-top: 5px;
+    /*Modified for zona and tienda label in address book page*/
+    height: auto;
+    margin-right: 0;
+  }
+  //zona
+  .unregistered #singleStore { width: 100%; margin-left: 0px; margin-top: 60px ! important;}
+  
+  /*Defect Fix: 599 for mobile case*/
+  #regalo_novios {
+    display: block;
+    float: right;
+    padding-top: 0px;
+    width: 100%;
+    margin-bottom: 20px;
+    /*MHTN Defect 481*/
+    border-top: 4px solid #edf4fc; /*MHTN: DEFECT - 644*/
+    border-left: 0px !important;
+    margin-top: 20px;
+    height: auto!important;
+  }
+  .novios_2 {
+    margin:0px !important;
+  }
+  
+  /*MHTN : CLICK AND COLLECT*/
+  .retiro_tienda_span {
+ 	  top: -13px; 	
+  }
+  
+  /*MHTN DEFECT : 348*/
+   .delete {
+      padding: 1px 0 0;
+   }
+  /*MHTN DEFECT : 348*/
+   
+   /*MHTN : CLICK AND COLLECT*/
+   
+   /*JORNADA 1048*/
+   .calendar td.selectedJornada label {
+   /*MHTN Defect 563 change color background #318fb6 for #248AB2 And Add importan for mobile style*/
+      text-align: center;
+    display: block; margin-top : 0 !important;  background: none !important;
+}
+
+.calendar td.selectedJornada label.ok  strong{
+    background: #248AB2 !important;     
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    border-radius: 100%;
+}
+.calendar table tr td label.ok  {background: none !important;display: inline-block !important;vertical-align: middle;margin-right: 10px !important;margin-left: 0px !important;margin-top: 0px !important; margin-bottom: 2px !important;}
+.calendar table tr td label.ok  strong{  width: 25px;    margin-top: 10px !important; text-align: left;   display: inline-block !important;  height: 25px;   display: inline-block; background: #c6e2ed !important;  border-radius: 100%; }
+.calendar table tr td.jornadaCell span { float : none !important; height : auto !important; width : auto !important;   vertical-align: middle !important;}
+.calendar  table tr td.blue.jornadaCell.jornadaRow{text-align: left;}
+.calendar table tr td label.ok  strong img{display: inline-block !important;    width: 25px;    height: 25px;}
+ .calendar .jornadaCell span.no{  width: 25px !important;    height: 25px !important;  vertical-align: middle !important;}
+ .calendar .no > img{     width: 24px;    height: 22px; display: inline-block !important}
+ 
+   /*JORNADA 1048*/
+}
+
+/*MHTN: CLICK AND COLLECT style for tablet  made by Miguel.Penaloza*/
+@media screen and (min-width: 641px)  and (max-width: 991px) {
+  #enviar_aca {
+    /*width: 102%;*/ /*MHTN : DEFECT 644*/
+    height: 47px;
+    margin-right: 0px;
+  }
+  #retiro_tienda {
+    width: 32%;
+    height: 184px; /*MHTN : DEFECT 644*/
+  }
+  #unregistered_form #misma_direccion, #unregistered_form #cambiar_direccion, #unregistered_form #encuentralos {
+    height: 47px;
+  }  
+
+  #despacho_domicilio {
+   width: 29|%;
+  } 
+  #retiro_tienda {
+   width: 35%;
+   padding-right: 2px;
+  }
+  #regalo_novios{
+		height: 184px; /*MHTN : DEFECT 644*/
+  }
+  #WC_UnregisteredCheckout_div_13 #retiro_tienda .error_msg{
+		margin-bottom: 3px;
+  }
+} 
+
+/*MHTN : DEFECT 644*/
+@media screen and (max-width: 640px) {
+	#retiro_tienda .selector{
+		width : 100%;
+		margin-left: 0px;
+	}
+	#retiro_tienda .selector_unidades{
+		width : 100% !important;
+		padding-top: 2px; /*MHTN DEFECT 1770*/
+	}
+	#regalo_novios{
+		padding-left : 0px !important;
+	}
+	#WC_UnregisteredCheckout_div_13 #retiro_tienda .error_msg{
+		margin-top: 1px;
+	}
+	#WC_UnregisteredCheckout_div_13 #retiro_tienda select{
+		line-height: 25px;
+	}
+	
+	/*MHTN: Defect 1771*/
+    #WC_UnregisteredCheckout_div_13 #physicalStoreErr{
+    	margin-left: 0 !important;
+    }
+    
+    /*ZONA*/
+    #WC_UnregisteredCheckout_div_13 #physicalZonaErr{
+    	margin-left: 0 !important;
+    }
+
+}
+/*MHTN : DEFECT 644*/
+
+/*MHTN: 687 margin-right by rahul */
+   #physicalStoreErr{
+     text-align: left;
+     float : left;
+    }
+    
+    #WC_UnregisteredCheckout_div_13 #physicalStoreErr{
+    	margin-left: -12px;
+    }
+    
+    /*ZONA*/
+    
+    #physicalZonaErr{
+    	text-align: left;
+     	float : left;
+    }
+    
+    #WC_UnregisteredCheckout_div_13 #physicalZonaErr{
+    	margin-left: -12px;
+    }
+ 
+/*MHTN : DEFECT 1770*/   
+@media only screen and (max-width: 320px) {
+  #unregistered_form .logo_novios {
+  	margin-right : 10px !important;
+  }
+  
+  .dates tbody tr td span:nth-child(2) {
+    float: left;
+    margin-right: 4px;
+  }
+  
+  .calendar td:first-child {
+    width: 85px; /*Noche*/
+  }
+  
+  /*MHTN: Defect 912*/
+  .dateselect a{
+    padding-left: 15px;
+  }
+  /*MHTN: Defect 912*/
+  .note{
+  	float: inherit;
+    margin-left: 16px;
+    width: 120px;
+  }
+  /*MHTN: Defect 912*/
+  .delete input {
+  	margin-left: 16px;
+  }
+  /*MHTN: Defect 912*/
+  .calendar td{
+  	width: 150px;
+  }
+    /*MHTN: Defect 912*/
+   	.no-desktop.textoCalendarioDesktop{
+font-weight: bold;
+    font-size: 11px !important;
+    height: 14px;
+    margin-right: 0px;
+    /* margin-top: 4px; */
+    /* padding-top: 5px; */
+    width: 58px;
+    float: left;
+   	}
+   	
+   	/*MHTN: Defect 912*/
+   	.calendar .ok{
+   		/*margin-left: 15px !important;*/
+   	}
+    /*MHTN: Defect 912*/
+    .delete{
+    	border-bottom-width: 0 !important;
+	}
+	/*MHTN: Defect 912*/
+	.lightboxContent li .itemHeader b{
+	 top: -7px !important;
+	}
+	
+	.blue.jornadaCell.jornadaRow{
+		width: 100px !important;
+	}
+}
+
+/*MHTN: Defect 687*/
+.blue.jornadaCell.jornadaRow {
+	width: 66px;
+}
+
+/*MHTN DEFECT 719*/
+#mhtn_modal .delete input{
+	border: 0 !important;
+}
+#WC_OrderItemDetails_td_5_1 {
+	padding-left: 37px !important;
+
+}
+
+/*Proxy-pickup changes*/
+.pickup_btnCambiaEdita{
+    margin-top: 10px;
+}
+.pickUp_contactReferenceArea{
+	float: right;
+	padding-right: 1%;
+	width: 38%;
+}
+
+.proxypickupClass{
+float: left;
+
+}
+
+@media screen and (min-width: 992px){
+.proxypickupClass{
+width: 35%; 
+margin-left: 41px;
+}
+}
+@media screen and (min-width: 992px){
+#proxy_input input{
+ height: 25px !important;
+ width: 68% !important;
+ margin-left:8px !important;
+ margin-bottom: 10px !important;
+ margin-top: 3px !important;
+}
+}
+
+#proxy_checkbox{
+margin: 5px 5px 10px 0px; 
+float: left;
+}
+
+#maintitleP{
+margin: 10px 0px 20px 20px;
+}
+
+.titleP{
+color: rgb(153, 153, 153);
+
+}
+#titleP{
+margin: 10px 0px 6px; 
+width: 100%; 
+float: left; 
+display: block;
+}
+
+.tagP{
+font-size: 11px; 
+float: left;
+}
+strong, b {
+    font-weight: bold !important;
+}
+@media screen and (max-width: 736px) { 
+#proxy_hide #proxy_input input{
+    margin-top: 8px !important;
+    width: 95% !important;
+	margin-left:0 !important;
+}
+.titleP{
+margin-bottom: 15px;
+}	
+}
+/*Proxy-pickup changes*/
+.btn_despacho_noche {
+    display: block;
+    margin: 5px 0 0 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    color: rgba(255,255,255,1);
+    background-color: #0099ff;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.btn_despacho_noche:hover {
+    background-color: #003366;
+	text-decoration:none !important;
+}
+
+.btn_despacho_noche img {
+    float: left;
+    margin: 3% 8px 49px -7px;
+}
+
+.luna_icon {
+	height:12px;
+	width:12px;}
+	
+.calendar .noche td {
+	color:#192d75 !important;
+	background-color:rgba(239,243,254,0.5);}
+	
+	
+.noche_select {
+	color:#192d75;
+	font-weight:bold;
+	margin-top:5px;
+	margin-bottom:5px;
+	}
+
+.noche_select img {
+    height: 15px;
+    width: 15px;
+    margin: 5px 5px -2px 0;
+}
+.calendar .noche td.selectedJornada {
+	    background-color:  #6cc3df !important;
+	    }
+	
+@media screen and (min-width: 992px) {
+.jornada {
+	color: #192d75 !important;
+    font-weight: bold;
+    margin-right: -121px;
+    float: right;
+    margin-top: 1px;
+    width: 100%;
+}
+}
+
+
+@media screen and (max-width: 640px) {
+	
+.btn_despacho_noche img {
+    margin: 8% 8px 10% -3px;
+}
+
+.btn_despacho_noche {
+    font-size: 10px;
+	padding: 8px 15px;
+}
+
+.calendar th {
+    padding: 7px 5px;
+}
+
+.noche  {
+	color:#192d75 !important;
+}	
+
+.blue.jornadaCell.jornadaRow.noche {background-color:rgba(239,243,254,0.5);}
+.blue.jornadaCell.jornadaRow.noche.selectedJornada{background-color:  #6cc3df !important; }
+.jornada {
+	color: #192d75 !important;
+    font-weight: bold;
+    float: left;
+    width: 100%;
+}
+.jornada .luna_icon{
+    width: 10%;
+}
+
+}

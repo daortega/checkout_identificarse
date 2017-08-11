@@ -1,0 +1,1597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0118)https://ssl.paris.cl/webapp/wcs/stores/servlet/SingleCheckoutDetailsView?catalogId=40000000629&langId=-5&storeId=10801 -->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wairole="http://www.w3.org/2005/01/wai-rdf/GUIRoleTaxonomy#" xmlns:waistate="http://www.w3.org/2005/07/aaa" lang="es" xml:lang="es" class="dj_webkit dj_chrome dj_contentbox ext-strict"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="content-type" content="text/html; charset=es-iso-8859-1">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+	<meta name="CommerceSearch" content="storeId_10801">
+	<meta name="description" content="Shingle Checkout for shipping and billing">
+	<meta name="keywords" content="Despacho,Pago">
+	<meta name="pageIdentifier" content="ShippingBillingPage">
+	<meta name="pageId" content="SingleCheckout">
+	<meta name="pageGroup" content="Checkout">
+	<title>
+		Johnson - Proceso de Compra
+	</title>
+
+	<!-- Begin CENSingleCheckoutCSSToInclude.jspf -->
+<link rel="stylesheet" type="text/css" href="./css_compra/CMC.css">
+<link rel="stylesheet" type="text/css" href="./css/SinglePageCheckout.css">
+<link rel="stylesheet" type="text/css" href="./1identificacion-comprador_files/css">
+<!-- End CENSingleCheckoutCSSToInclude.jspf --><!-- Begin CENSingleCheckoutJSToInclude.jspf -->
+<script type="text/javascript" async="" src="./1identificacion-comprador_files/js"></script><script type="text/javascript" async="" src="./1identificacion-comprador_files/ec.js.descarga"></script><script type="text/javascript" async="" src="./1identificacion-comprador_files/analytics.js.descarga"></script><script type="text/javascript" async="" src="./1identificacion-comprador_files/analytics.js.descarga"></script><script type="text/javascript" async="" src="./1identificacion-comprador_files/conversion_async.js.descarga"></script><script type="text/javascript" async="" src="./1identificacion-comprador_files/detect.js.descarga"></script><script async="" src="./1identificacion-comprador_files/gtm.js.descarga"></script><script type="text/javascript" src="./1identificacion-comprador_files/dojo.js.descarga" djconfig="useXDomain: false, parseOnLoad: false, dojoBlankHtmlUrl: &#39;/wcsstore/dojo15/dojo/resources/blank.html&#39;, dojoIframeHistoryUrl: &#39;/wcsstore/dojo15/dojo/resources/blank.html&#39;, isDebug: false, xdWaitSeconds: 10, useCommentedJson: true, locale: &#39;es-es&#39; "> dojo.require("dojo.fx");</script>
+<script type="text/javascript" src="./1identificacion-comprador_files/jquery.min.js.descarga"></script>
+
+<!-- CENSingleCheckoutAbsoluteURL.jspf -->
+
+<script type="text/javascript">
+var absoluteURL = "https://ssl.paris.cl/webapp/wcs/stores/servlet/";
+var imageDirectoryPath = "/wcsstore/CencosudStorefrontAssetStore/";
+var styleDirectoryPath = "images/colors/color1/";
+var supportPaymentTypePromotions = true;
+var subsFulfillmentFrequencyAttrName = "fulfillmentFrequency";
+var subsPaymentFrequencyAttrName = "paymentFrequency";
+var subsTimePeriodAttrName = "timePeriod";
+//Summary: Returns the absolute URL to use for prefixing any Ajax URL call.
+//Description: Dojo does not handle the case where the parameters in the URL are delimeted by the "/" forward slash. Therefore, in order to
+//             workaround the issue, all AJAX requests must be done using absolute URLs rather than relative.
+//Returns: The absolute URL to use for prefixing any Ajax URL call.
+function getAbsoluteURL()
+{
+	if (absoluteURL != "") {
+		var currentURL = document.URL;
+		var currentProtocol = "";
+		var currentScheme = "";
+		var isSSL = false;
+		if (currentURL.indexOf("://") != -1) {
+			currentProtocol = currentURL.substring(0, currentURL.indexOf("://"));
+			currentScheme = "//"+currentURL.substring(currentURL.indexOf("://")+3, currentURL.indexOf("://")+7).toLowerCase();
+			if(currentProtocol == "https") {
+				if(currentURL.substring(currentURL.indexOf("://")+3, currentURL.indexOf("://")+7).toLowerCase() == "ssl."){
+					isSSL = true;
+				}
+			}
+		}
+		var savedProtocol = "";
+		var savedScheme = "";
+		if (absoluteURL.indexOf("://") != -1) {
+			savedProtocol = absoluteURL.substring(0, absoluteURL.indexOf("://"));
+			savedScheme = "//"+absoluteURL.substring(absoluteURL.indexOf("://")+3, absoluteURL.indexOf("://")+7).toLowerCase();
+			if(savedProtocol == "https") {
+				if(currentURL.substring(currentURL.indexOf("://")+3, currentURL.indexOf("://")+7).toLowerCase() == "ssl."){
+					isSSL = true;
+				}
+			}
+		}
+		if (currentProtocol != savedProtocol) {
+			if(isSSL){
+				absoluteURL = absoluteURL.replace("//www.","//ssl.");
+			}
+			absoluteURL = currentProtocol + absoluteURL.substring(absoluteURL.indexOf("://"));
+		}
+
+		if(currentScheme != savedScheme) {
+			return absoluteURL.replace(savedScheme,currentScheme);
+		}
+	}
+	return absoluteURL;
+}
+//Summary: Returns the path pointing to the shared image directory.
+//Description: In order to get the image directory path in any javascript file, this function can be used.
+//Returns: The path to reference images.
+function getImageDirectoryPath()
+{
+	return imageDirectoryPath;
+}
+//Summary: Returns the path pointing to the directory containing color-dependant image files.
+//Description: In order to get the directory containing color-dependant image files in any javascript file, this function can be used.
+//Returns: The path to reference color-dependant image files.
+function getStyleDirectoryPath()
+{
+	return styleDirectoryPath;
+}
+</script>
+
+<!-- END CENSingleCheckoutAbsoluteURL.jspf -->
+
+
+<script type="text/javascript" src="./1identificacion-comprador_files/jquery.creditCardValidator.js.descarga"></script>
+<script type="text/javascript" src="./1identificacion-comprador_files/StoreCommonUtilities.js.descarga"></script>
+<script type="text/javascript" src="./1identificacion-comprador_files/SinglePageCheckout.js.descarga"></script>
+<script type="text/javascript" src="./1identificacion-comprador_files/SinglePageCheckoutModal.js.descarga"></script>
+<script type="text/javascript" src="./1identificacion-comprador_files/SinglePageCheckoutHelper.js.descarga"></script>
+<script type="text/javascript" src="./1identificacion-comprador_files/simple-scrollbar.min.js.descarga"></script>
+<script type="text/javascript" src="./1identificacion-comprador_files/MessageHelper.js.descarga"></script>
+
+
+
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push(
+		{'gtm.start': new Date().getTime(),event:'gtm.js'}
+		);var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-5ZFHKL');</script>
+
+<!--CENMapCityIncludes.jspf start-->
+<script type="text/javascript">
+			var flagMapCity = null,
+			mapCityNormalizadorWsUrl = null,
+			mapCityGetStreetsListWsUrl = null,
+			mapCityImageUrl = null ;
+</script>
+
+		<script src="./1identificacion-comprador_files/js(1)"></script>
+
+				<script type="text/javascript" src="./1identificacion-comprador_files/SinglePageCheckoutMapCity.js.descarga" defer="defer"></script>
+
+		<script type="text/javascript">
+			mapCityNormalizadorWsUrl = 'https://services.mapcity.com/nyg_chile/v2/normalizar.json?access_token=cd65c8b7506908d0ac493b37a8f53a38';
+			mapCityGetStreetsListWsUrl = 'https://services.mapcity.com/nyg_chile/v2/listaCalles.json?access_token=cd65c8b7506908d0ac493b37a8f53a38';
+			mapCityImageUrl = "//mapcity.cl/img/markers/star.png";
+		</script>
+
+<script type="text/javascript" defer="defer">
+	var mapcityEnabled = false;
+	var layer_vector, dragFeature, features;
+	var map,divMap;
+	var geo_point;
+	var selectedStreet=null;
+	dojo.ready(function(){
+		mapcityEnabled = !(typeof MapCity === 'undefined'
+							|| typeof MapCity.Services === 'undefined'
+							|| MapCity.Services.Geocoding === 'undefined');
+		if((mapcityEnabled === false || mapcityEnabled === 'false') && (flagMapCity == null || typeof flagMapCity === 'undefined'))
+			flagMapCity = "1";
+		else if(mapcityEnabled === true || mapcityEnabled === 'true')
+			flagMapCity = "0";
+
+		console.debug("mapServiceEnabled: "+mapcityEnabled);
+		console.debug("mapCityFlag: "+flagMapCity);
+		console.debug("mapCityNormalizadorWsUrl: "+mapCityNormalizadorWsUrl);
+		console.debug("mapCityGetStreetsListWsUrl: "+mapCityGetStreetsListWsUrl);
+		console.debug("mapCityApiUrl: "+'https://api.mapcity.com/map/2.11/cdc1b333a375006bc652acc4ec8c483d');
+		console.debug("mapCityImageUrl: "+mapCityImageUrl);
+	});
+</script>
+<!--CENMapCityIncludes.jspf end--><!-- BEGIN CENSingleCheckoutErrorMessages.jspf -->
+
+<script type="text/javascript">
+	dojo.addOnLoad(function() {
+
+	// Guest Login Error Messages
+
+	MessageHelper.setMessage("ERROR_LogonIdEmpty", "Debes ingresar tu RUT");
+	MessageHelper.setMessage("ERROR_PasswordEmpty", "Ingresa tu clave");
+	MessageHelper.setMessage("ERROR_INVALID_RUT", "El RUT ingresado no es válido.");
+	MessageHelper.setMessage("ERROR_INVALID_CLAVE", "Has ingresado un carácter no válido");
+
+	// Address Fields Error Messages
+
+    MessageHelper.setMessage("CHECKOUT_ADDRESS_DNI_EMPTY", "Debes Ingresar tu DNI/Pasaporte");
+    MessageHelper.setMessage("ERROR_FirstNameTooLong", "El nombre que ingresaste excede el máximo de caracteres permitido.  Vuelve a intentarlo.");
+	MessageHelper.setMessage("ERROR_LastNameTooLong", "El apellido que ingresaste excede el máximo de caracteres permitido.  Vuelve a intentarlo.");
+	MessageHelper.setMessage("ERROR_MiddleNameTooLong", "El valor entrado en el campo de inicial o segundo nombre es demasiado largo.");
+	MessageHelper.setMessage("ERROR_AddressTooLong", "La dirección que ingresaste excede el máximo de caracteres permitido.  Vuelve a intentarlo.");
+	MessageHelper.setMessage("ERROR_CityTooLong", "El valor entrado en el campo de ciudad es demasiado largo.");
+	MessageHelper.setMessage("ERROR_StateTooLong", "El valor entrado en el campo de estado/provincia es demasiado largo.");
+	MessageHelper.setMessage("ERROR_CountryTooLong", "El valor entrado en el campo de país/región es demasiado largo.");
+	MessageHelper.setMessage("ERROR_ZipCodeTooLong", "El valor entrado en el campo de código postal es demasiado largo.");
+	MessageHelper.setMessage("ERROR_EmailTooLong", "El correo electr&amp;oacute;nico que ingresaste excede el m&amp;aacute;ximo de caracteres permitido.  Vuelve a intentarlo.");
+	MessageHelper.setMessage("ERROR_PhoneTooLong", "El número de teléfono que ingresaste excede el máximo de caracteres permitido.  Vuelve a intentarlo.");
+	MessageHelper.setMessage("ERROR_RecipientEmpty", null);
+	MessageHelper.setMessage("ERROR_LastNameEmpty", "Ingresa tu Apellido");
+	MessageHelper.setMessage("ERROR_MiddleNameEmpty", "Ingresa tu Apellido");
+	MessageHelper.setMessage("ERROR_PhonenumberEmpty", "Debes ingresar un número de teléfono");
+	MessageHelper.setMessage("ERROR_AddressEmpty", "Debes ingresar tu calle.");
+	MessageHelper.setMessage("ERROR_CityEmpty", "El campo de ciudad no puede estar vacío.");
+	MessageHelper.setMessage("ERROR_ComunaEmpty", "Selecciona una comuna");
+	MessageHelper.setMessage("ERROR_StateEmpty", "El campo de estado/provincia no puede estar vacío.");
+	MessageHelper.setMessage("ERROR_CountryEmpty", "El campo de país/región no puede estar vacío.");
+	MessageHelper.setMessage("ERROR_ZipCodeEmpty", "El campo de código postal no puede estar vacío.");
+	MessageHelper.setMessage("ERROR_EmailEmpty", "Ingresa tu correo electrónico.");
+	MessageHelper.setMessage("ERROR_FirstNameEmpty", "Ingresa tu nombre");
+	MessageHelper.setMessage("ERROR_INVALIDEMAILFORMAT", "Ingresa tu correo en un formato válido.");
+	MessageHelper.setMessage("ERROR_MESSAGE_TYPE", "");
+	MessageHelper.setMessage("ERROR_INVALIDPHONE", "Ingresa correctamente tu número de teléfono.");
+	MessageHelper.setMessage("ERROR_INVALID_FIRST_NAME", "Has ingresado un carácter no válido");
+	MessageHelper.setMessage("ERROR_INVALID_LAST_NAME", "Has ingresado un carácter no válido");
+	MessageHelper.setMessage("ERROR_INVALID_MIDDLE_NAME", "Has ingresado un carácter no válido");
+	MessageHelper.setMessage("ERROR_HouseNumEmpty", "Ingresa la numeración");
+	MessageHelper.setMessage("ERROR_HouseNumTooLong", "The value entered in the house number field is too long.");
+
+	// Order Item Remove Message:
+
+	MessageHelper.setMessage("SHOPCART_REMOVEITEM", "Ya eliminaste el producto de tu carro");
+
+	// Physical store section error message
+
+	MessageHelper.setMessage("SELECT_CC_ZONA_MSG", "Selecciona una zona");
+
+	MessageHelper.setMessage("SELECT_CC_STORE_MSG", "Selecciona una tienda");
+
+	MessageHelper.setMessage("ERR_PICKUP_DETAILS", "DEBES COMPLETAR LOS DATOS DE LA PERSONA QUE RETIRA");
+
+	MessageHelper.setMessage("ERROR_FACILITAR_TU_DESPACHO", "Has ingresado un carácter no válido");
+
+	// Novios section error messages
+
+	MessageHelper.setMessage("ERROR_INVALID_NOVIOS_FIELD_LENGTH", "Debes ingresar al menos 3 caracteres para realizar la búsqueda");
+
+	MessageHelper.setMessage("ERROR_INVALID_NOVIOS_CODE", "El código ingresado no es válido, inténtalo nuevamente.");
+
+	MessageHelper.setMessage("ERROR_INACTIVE_NOVIOS_CODE", "Código aún no disponible para comprar regalos");
+
+	MessageHelper.setMessage("ERROR_EXPIRED_NOVIOS_CODE", "El código ingresado ha expirado");
+
+	MessageHelper.setMessage("ERROR_INVALID_NOVIOS_FIRST_NAME", "El nombre ingresado no se encuentra en nuestros registros, inténtalo nuevamente");
+
+	MessageHelper.setMessage("ERROR_INVALID_NOVIOS_LAST_NAME", "El apellido ingresado no se encuentra en nuestros registros, inténtalo nuevamente");
+
+	MessageHelper.setMessage("CHECKOUT_STEP2_NOVIOS_NO_RESULTS", "No se han encontrado resultados");
+
+	MessageHelper.setMessage("ERROR_INVALID_NOVIOS_FIELD", "La información ingresada en uno o más de los campos no es correcta, por favor inténtalo nuevamente.");
+
+	MessageHelper.setMessage("ERROR_NOVIOS_INVALID_RESULTS", "No existen códigos para tu búsqueda.");
+
+	// Checkout Modal error messages
+
+	MessageHelper.setMessage("QUANTITY_INPUT_GREAT_ERROR", "No puedes exceder la cantidad de producto disponible");
+
+	MessageHelper.setMessage("DATE_SELECTION_DAY_1", "Domingo");
+
+	MessageHelper.setMessage("DATE_SELECTION_DAY_2", "Lunes");
+
+	MessageHelper.setMessage("DATE_SELECTION_DAY_3", "Martes");
+
+	MessageHelper.setMessage("DATE_SELECTION_DAY_4", "Miércoles");
+
+	MessageHelper.setMessage("DATE_SELECTION_DAY_5", "Jueves");
+
+	MessageHelper.setMessage("DATE_SELECTION_DAY_6", "Viernes");
+
+	MessageHelper.setMessage("DATE_SELECTION_DAY_7", "Sábado");
+
+	MessageHelper.setMessage("NO_JORNADA_AVAILABLE", "No Jornada available for {0} day(s).");
+
+	MessageHelper.setMessage("NO_JORNADA_AVAILABLE_FOR_THE_WEEK", "No Jornadas available for this week.");
+
+	// Promotion code error messages
+
+	MessageHelper.setMessage("PROMOTION_CODE_APPLIED", "Para aplicar otro código de promoción debe eliminar el código de promoción existente.");
+
+	MessageHelper.setMessage("PROMOTION_CODE_EMPTY", "Recuerda que debes ingresar el código de tu cupón");
+
+	MessageHelper.setMessage("PROMO_LIMIT_EXCEEDED_1900", "Lo sentimos! Se ha alcanzado el máximo de usos para esta promoción");
+
+	// Orde item update error messages
+
+	MessageHelper.setMessage("ERROR_RETRIEVE_PRICE_QTY_UPDATE", "???ERROR_RETRIEVE_PRICE_QTY_UPDATE???");
+
+	// Giftcard validation form
+
+	MessageHelper.setMessage("MISSING_GIFT_CARD_NUM", "Debes ingresar el Nº de Gift Card");
+
+	MessageHelper.setMessage("INVALID_GIFT_CARD_NUM", "El número de la Giftcard debe ser de 16 dígitos.");
+
+	MessageHelper.setMessage("GIFTCARD_OR_CLAVE_NUMERIC", "El número y clave de tu Gift Card deben tener sólo caracteres numéricos.");
+
+	MessageHelper.setMessage("MISSING_GIFT_CARD_CLAVE", "Ingresa tu clave");
+
+	MessageHelper.setMessage("INVALID_GIFT_CARD_CLAVE", "La clave de tu Gift Card no puede tener más de 4 caracteres.");
+
+	MessageHelper.setMessage("GIFTCARD_OR_CLAVE_NUMERIC", "El número y clave de tu Gift Card deben tener sólo caracteres numéricos.");
+
+	MessageHelper.setMessage("MISSING_GIFT_CARD_TRUT", "Por favor, compruebe todos los campos. RUT es un campo obligatorio");
+
+	MessageHelper.setMessage("ERROR_INVALID_RUT", "El RUT ingresado no es válido.");
+
+	MessageHelper.setMessage("GC_NO_AGREEMENT", "Tu Gift Card no es válida.");
+
+	MessageHelper.setMessage("GC_NOT_AVAILABLE", "El saldo de tu Gift Card es insuficiente para realizar esta compra.");
+
+	MessageHelper.setMessage("GC_CONV_DATE_RANGE", "Tu Gift Card expiró.");
+
+	MessageHelper.setMessage("GC_HOURS_RANGE_ERROR", "En estos momentos no es posible realizar pagos con Gift Card.");
+
+	MessageHelper.setMessage("GC_STORE_RESTRICTED", "Tu Gift Card no es válida para realizar compras en www.johnson.cl");
+
+	MessageHelper.setMessage("GC_DISCOUNT_CARD_ERROR", "Tu Gift Card no es válida para realizar compras en www.johnson.cl");
+
+	MessageHelper.setMessage("GC_DISCOUNT_COUPON_ERROR", "Tu Gift Card no es válida para realizar compras en www.johnson.cl");
+
+	MessageHelper.setMessage("GC_EXCEEDS_LIMIT", "Tu Gift Card sobrepasó el límite de uso.");
+
+	MessageHelper.setMessage("GC_KEY_ERROR", "La clave de tu Gift Card está incorrecta.");
+
+	MessageHelper.setMessage("GC_INVALID_ID", "El RUT que acabas de ingresar no coincide con el que está asociado a tu Gift Card");
+
+	MessageHelper.setMessage("GC_INVALID_RUT", "El rut no coincide con el rut asociado a la giftcard, por favor inténtalo nuevamente.");
+
+	MessageHelper.setMessage("GC_SERVICE_NOT_AVAILABLE", "Ha ocurrido un error, inténtelo nuevamente");
+
+
+	// Novios Error Message
+
+	MessageHelper.setMessage("ERROR_codigoModelEmpty", "Ingresa un Código de Novios");
+
+	// Factura Form Error Messages
+
+	MessageHelper.setMessage("BILLING_FACTURA_EMPTY_EMPRESA", "Debes ingresar tu Empresa field.");
+
+	MessageHelper.setMessage("ERROR_INVALID_EMPRESA", "Has ingresado un carácter no válido");
+
+	MessageHelper.setMessage("BILLING_FACTURA_EMPTY_RUT", "Debes ingresar tu RUT");
+
+	MessageHelper.setMessage("BILLING_FACTURA_INVALID_RUT", "El RUT ingresado no es válido");
+
+	MessageHelper.setMessage("BILLING_FACTURA_EMPTY_RAZON_SOCIAL", "Debes ingresar tu Razón Social");
+
+	MessageHelper.setMessage("ERROR_INVALID_RAZON_SOCIAL", "Has ingresado un carácter no válido");
+
+	MessageHelper.setMessage("BILLING_FACTURA_EMPTY_GIRO", "Debes ingresar tu Giro");
+
+	MessageHelper.setMessage("ERROR_INVALID_GIRO", "Has ingresado un carácter no válido");
+
+	MessageHelper.setMessage("BILLING_FACTURA_EMPTY_DIRECCION", "Debes ingresar tu calle");
+
+	MessageHelper.setMessage("ERROR_INVALID_DIRECCION", "Has ingresado un carácter no válido");
+
+	MessageHelper.setMessage("BILLING_FACTURA_EMPTY_NUMERO", "Ingresa la numeración");
+
+	MessageHelper.setMessage("ERROR_HouseNumNumeric", "Debes ingresar sólo números en esta opción.");
+
+	MessageHelper.setMessage("ERROR_ComunaEmpty", "Selecciona una comuna");
+
+	MessageHelper.setMessage("BILLING_FACTURA_EMPTY_TELEFONO", "Debes ingresar un número de teléfono");
+
+	MessageHelper.setMessage("ERROR_INVALIDPHONE", "Ingresa correctamente tu número de teléfono.");
+
+	MessageHelper.setMessage("BILLING_FACTURA_EMPTY_CONTACTO", "Debes ingresar tu Contacto");
+
+	MessageHelper.setMessage("ERROR_INVALID_CONTACTO", "Has ingresado un carácter no válido");
+
+	// MAPCITY ERROR Messages
+
+	MessageHelper.setMessage("CHECKOUT_STEP2_MAP_NO_ADDRESS", "No encontramos tu dirección en el mapa. Aún así, quedará registrada y no afectará el despacho.");
+
+	// CBS ERROR Messages
+
+	MessageHelper.setMessage("ERROR_EMPTY_NAME", "Ingresa tu nombre");
+
+	MessageHelper.setMessage("ERROR_EMPTY_LASTNAME", "Ingresa tu Apellido");
+
+	MessageHelper.setMessage("ERROR_EMPTY_NUMBERCARD", "Ingresa tu Numero de Tarjeta");
+
+	MessageHelper.setMessage("ERROR_EMPTY_DATEEXPIRATION", "Ingresa tu Fecha de Vencimiento");
+
+	MessageHelper.setMessage("ERROR_EMPTY_CODE", "Ingresa tu Codigo de Seguridad");
+
+	MessageHelper.setMessage("ERROR_CBS_NUMBER", "Ingresa solo numeros");
+
+	MessageHelper.setMessage("ERROR_CBS_TEXT", "Ingresa solo letras");
+
+	MessageHelper.setMessage("CYBER_SOURCE_CC_NUMBER_INVALID", "Tarjeta no válida.");
+
+	MessageHelper.setMessage("CYBER_SOURCE_EXP_DATE_INVALID", "Fecha de caducidad no válida.");
+
+
+	// CENOrderValidateBeforeCmd Error message
+
+
+	// Punchout Call Back Error Message
+
+	MessageHelper.setMessage("PAYMENT_REJECTED", "No fue posible realizar tu pago. Por favor revisa que los datos sean correctos y vuelve a intentarlo.");
+
+	MessageHelper.setMessage("CYBER_SOURCE_INVALID_TOKEN", "No hemos podido procesar el pago, favor verifica los datos ingresados de tu tarjeta.");
+
+	MessageHelper.setMessage("CYBER_SOURCE_FRAUD_FAILED", "¡Lo sentimos! Su transacción no ha podido ser procesada. Por favor intenta nuevamente.");
+
+	MessageHelper.setMessage("CYBER_SOURCE_FIELD_FAILED", "No hemos podido procesar el pago, favor intenta con otra tarjeta.");
+	if ('' != '') {
+		MessageHelper.displayErrorMessage(MessageHelper.messages['']);
+	}
+
+	// Step 2 Title Section : When user navigate to step3
+
+	MessageHelper.setMessage("CHECKOUT_STEP2_DAD_OFFLINE_DELIVERY", "Despacho programado: Fecha por confirmar");
+
+	MessageHelper.setMessage("CHECKOUT_STEP2_DAD_SINGLE_DELIVERY", "Despacho programado: ");
+
+	MessageHelper.setMessage("CHECKOUT_STEP2_DAD_MULTIPLE_DELIVERY", "Despacho Programado: Múltiples envíos");
+
+	MessageHelper.setMessage("CHECKOUT_STEP2_RET_OFFLINE_DELIVERY", "Fecha por confirmar");
+
+	MessageHelper.setMessage("CHECKOUT_STEP2_NOVIOS_DELIVERY", "Despacho Programado: Código Novios ");
+	});
+</script>
+<!-- END CENSingleCheckoutErrorMessages.jspf --><!-- BEGIN CommonJSToIncludeforIO.jspf --><!-- END CommonJSToIncludeforIO.jspf --><!-- End CENSingleCheckoutJSToInclude.jspf -->
+
+<style>.yass-wrapper { overflow: hidden; height: 100%; position: relative; z-index: 1; }.yass-content { height: 100%; width: 100%; padding: 0 40px 0 0; position: relative; overflow-x: hidden; overflow-y: scroll; -moz-box-sizing: content-box; box-sizing: content-box; }.yass-sensor { width: 100%; display: block; position: relative; }.yass-scrollbar { position: absolute; background: rgba(127, 127, 127, 0.1); top: 0; right: 0; z-index: 2; width: 8px; height: 100%; cursor: pointer; opacity: 0; transition: opacity 0.1s linear; }.yass-scrollbar-button { position: absolute; left: 0; width: 8px; border-radius: 4px; background: rgba(127, 127, 127, 0.2); }.yass-wrapper:hover .yass-scrollbar, .yass-scrollbar.yass-scrollbar-drag { opacity: 1; }.yass-resize-sensor, .yass-resize-sensor-expand, .yass-resize-sensor-shrink { position: absolute; top: 0; bottom: 0; left: 0; right: 0; overflow: hidden; z-index: -1; visibility: hidden; }.yass-resize-sensor-child { position: absolute; top: 0; left: 0; transition: 0s; }</style><meta name="theme-color" content="#003f6d"><meta name="msapplication-navbutton-color" content="#003f6d"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="blue"><link rel="icon" href="https://www.paris.cl/guias/header-paris/images/ParisTiendaLogo_03.png" type="image/x-icon"><script type="text/javascript" src="./1identificacion-comprador_files/sessioncam.recorder.js.descarga"></script><script type="text/javascript" src="./1identificacion-comprador_files/config.aspx"></script><script type="text/javascript" charset="UTF-8" src="./1identificacion-comprador_files/common.js.descarga"></script><script type="text/javascript" charset="UTF-8" src="./1identificacion-comprador_files/util.js.descarga"></script><script type="text/javascript" charset="UTF-8" src="./1identificacion-comprador_files/stats.js.descarga"></script></head>
+
+<body class="  ext-chrome">
+
+    <!-- BEGIN CENGoogleTagManagerContainer.jspf -->
+		<noscript>&lt;iframe src="//www.googletagmanager.com/ns.html?id=GTM-5ZFHKL"
+		height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;</noscript>
+
+	<!-- END CENGoogleTagManagerContainer.jspf -->
+	<input type="hidden" id="currentOrderId" value="12500571">
+	<input type="hidden" id="regUserType" value="G">
+	<!-- BEGIN CENSingleCheckoutCommonJSPFToInclude.jspf --><!-- BEGIN ProgressBar.jspf -->
+
+
+
+
+
+
+
+<script type="text/javascript">
+	dojo.addOnLoad(function() {
+		parseWidget("progress_bar_dialog");
+		// TO DO : Remove this after implementing new progressbar in checkout
+		parseWidget("ext_progress_bar_dialog");
+	});
+</script>
+<!-- End ProgressBar.jspf --><!-- BEGIN MessageDisplay.jspf -->
+<input id="imageDir" type="hidden" value="/wcsstore/CencosudStorefrontAssetStore/images/">
+<div id="MessageArea" class="msgpopup1">
+	<div id="msgpopup_content_wrapper" class="msgpopup_content_wrapper">
+		<div id="msgpopup1_content" class="content">
+			<div id="msgpopup1_txt" class="message_text">
+				<span id="ErrorIcon"></span>
+				<span id="ErrorMessageText" class="error_msg" tabindex="1" style="text-align: left;">
+
+				</span>
+			</div>
+			<div id="msgpopup1_close" class="close">
+				<div id="msgpopup1_x" class="msgpopup1_x">
+					<a id="clickableErrorMessageImg" href="https://ssl.paris.cl/webapp/wcs/stores/servlet/SingleCheckoutDetailsView?catalogId=40000000629&amp;langId=-5&amp;storeId=10801#" onclick="JavaScript:MessageHelper.hideMessageArea();return false;" onkeypress="JavaScript:MessageHelper.hideMessageArea();return false;" tabindex="2">
+
+					<span class="inline_blck popup_close"></span>
+
+				</a>
+				</div>
+			</div>
+		</div>
+		<div id="msgpopup1_shadow" class="shadow"></div>
+	</div>
+</div>
+<script type="text/javascript">
+	dojo.addOnLoad(function(){
+		dojo.connect(window, 'onresize', function(){
+			MessageHelper.adjustCoordinates();
+		});
+	});
+</script>
+<!-- END MessageDisplay.jspf --><!-- END CENSingleCheckoutCommonJSPFToInclude.jspf -->
+
+	<div id="page">
+
+		<div id="headerWrapper">
+			<!-- BEGIN CheckoutHeaderDisplay.jspf --><!-- Begin CachedCENSingleCheckoutHeaderDisplay.jsp -->
+
+<div id="checkoutHeader">
+
+
+	<div id="mainHeader">
+
+		<div id="header">
+			<div id="logoArea">
+				<!-- BEGIN CachedContentAreaESpotConsumed.jsp --><!-- BEGIN ESpotInfoPopupDisplay.jspf-->
+	<script type="text/Javascript">
+		function toggleActivityTable(tableId) {
+			var arrowElement = document.getElementById("activityArrowId_" + tableId);
+			var rowElement = document.getElementById("activityTableExpandId_" + tableId);
+			if(arrowElement.className == "opened") {
+				arrowElement.className = "unopened";
+				rowElement.style.display = "none";
+			}
+			else {
+				arrowElement.className = "opened";
+				rowElement.style.display = "block";
+			}
+		}
+	</script>
+
+	<div id="ESpotInfo_popup_main_div_storeLogoESpot_Checkout" class="ESpotInfo_popup_main_div">
+		<div id="ESpotInfo_popup_storeLogoESpot_Checkout__" class="ESpotInfo_popup" dojotype="dijit.Dialog">
+			<div class="top_left" id="WC_ESpotInfo_div_1_storeLogoESpot_Checkout"><img alt="" src="./1identificacion-comprador_files/trasparent.gif" height="1" width="1"></div>
+			<div class="top_right" id="WC_ESpotInfo_div_2_storeLogoESpot_Checkout"><img alt="" src="./1identificacion-comprador_files/trasparent.gif" height="1" width="1"></div>
+			<div class="header" id="ESpotInfo_popupHeader_storeLogoESpot_Checkout">
+				<div class="close" id="WC_ESpotInfo_div_3_storeLogoESpot_Checkout">
+					<span class="title">
+						storeLogoESpot_Checkout
+					</span>
+					<a id="ESpotInfo_closeLink2_storeLogoESpot_Checkout" href="javascript:hideESpotInfoPopup(&#39;ESpotInfo_popup_storeLogoESpot_Checkout&#39;);" onkeydown="javaScript:setbackFocus(event);" onmousedown="javaScript:setbackFocus(event);">
+						<span class="icon "></span>
+					</a>
+				</div>
+			</div>
+			<div id="WC_ESpotInfo_div_5_storeLogoESpot_Checkout" class="whitespace_background">
+				<div class="content_container scrollbar" id="WC_ESpotInfo_div_6_storeLogoESpot_Checkout">
+
+ 				</div>
+				<div class="pagination_container">
+					<div class="pagination">
+					</div>
+				</div>
+			</div>
+			<div class="footer" id="WC_ESpotInfo_div_7_storeLogoESpot_Checkout">
+				<div class="bot_right" id="WC_ESpotInfo_div_9_storeLogoESpot_Checkout"></div>
+				<div class="bot_left" id="WC_ESpotInfo_div_8_storeLogoESpot_Checkout"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript"> dojo.addOnLoad(function() {  parseWidget("ESpotInfo_popup_storeLogoESpot_Checkout"); } );</script>
+<!-- END ESpotInfoPopupDisplay.jspf-->
+<div class="genericESpot" id="WC_ContentAreaESpot_div_1_592507">
+    <div class="caption" style="display:none" id="WC_ContentAreaESpot_div_2_592507">[storeLogoESpot_Checkout]</div>
+    <div class="ESpotInfo" id="WC_ContentAreaESpotInfo_592507"><a href="https://ssl.paris.cl/webapp/wcs/stores/servlet/SingleCheckoutDetailsView?catalogId=40000000629&amp;langId=-5&amp;storeId=10801#" onclick="showESpotInfoPopup(&#39;ESpotInfo_popup_storeLogoESpot_Checkout&#39;); return false;"><div class="ESpotInfoIcon"></div></a></div>
+
+            <div class="ad" id="ad_592507">
+        <style type="text/css">
+.logoHeader img{
+    height: 65px !important;
+    width: 65px !important;
+    margin-left: 120px;
+}
+.logoHeader {
+    margin-top: 16px;
+}
+</style>
+<a class="logoHeader" href="https://ssl.johnson.cl/"><img src="./images/new_logo.png" alt="Johnson"></a>
+            </div>
+
+</div>
+<!-- END CachedContentAreaESpotConsumed.jsp -->
+			</div>
+			<div id="checkout_header_right">
+				<!-- BEGIN ContentAreaESpot.jsp --><!-- BEGIN ESpotInfoPopupDisplay.jspf-->
+	<div id="ESpotInfo_popup_main_div_SingleCheckoutHeaderZone" class="ESpotInfo_popup_main_div">
+		<div id="ESpotInfo_popup_SingleCheckoutHeaderZone__" class="ESpotInfo_popup" dojotype="dijit.Dialog">
+			<div class="top_left" id="WC_ESpotInfo_div_1_SingleCheckoutHeaderZone"><img alt="" src="./1identificacion-comprador_files/trasparent.gif" height="1" width="1"></div>
+			<div class="top_right" id="WC_ESpotInfo_div_2_SingleCheckoutHeaderZone"><img alt="" src="./1identificacion-comprador_files/trasparent.gif" height="1" width="1"></div>
+			<div class="header" id="ESpotInfo_popupHeader_SingleCheckoutHeaderZone">
+				<div class="close" id="WC_ESpotInfo_div_3_SingleCheckoutHeaderZone">
+					<span class="title">
+						SingleCheckoutHeaderZone
+					</span>
+					<a id="ESpotInfo_closeLink2_SingleCheckoutHeaderZone" href="javascript:hideESpotInfoPopup(&#39;ESpotInfo_popup_SingleCheckoutHeaderZone&#39;);" onkeydown="javaScript:setbackFocus(event);" onmousedown="javaScript:setbackFocus(event);">
+						<span class="icon "></span>
+					</a>
+				</div>
+			</div>
+			<div id="WC_ESpotInfo_div_5_SingleCheckoutHeaderZone" class="whitespace_background">
+				<div class="content_container scrollbar" id="WC_ESpotInfo_div_6_SingleCheckoutHeaderZone">
+
+ 				</div>
+				<div class="pagination_container">
+					<div class="pagination">
+					</div>
+				</div>
+			</div>
+			<div class="footer" id="WC_ESpotInfo_div_7_SingleCheckoutHeaderZone">
+				<div class="bot_right" id="WC_ESpotInfo_div_9_SingleCheckoutHeaderZone"></div>
+				<div class="bot_left" id="WC_ESpotInfo_div_8_SingleCheckoutHeaderZone"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript"> dojo.addOnLoad(function() {  parseWidget("ESpotInfo_popup_SingleCheckoutHeaderZone"); } );</script>
+<!-- END ESpotInfoPopupDisplay.jspf-->
+<div class="genericESpot" id="WC_ContentAreaESpot_div_1_592506">
+    <div class="caption" style="display:none" id="WC_ContentAreaESpot_div_2_592506">[SingleCheckoutHeaderZone]</div>
+    <div class="ESpotInfo" id="WC_ContentAreaESpotInfo_592506"><a href="https://ssl.paris.cl/webapp/wcs/stores/servlet/SingleCheckoutDetailsView?catalogId=40000000629&amp;langId=-5&amp;storeId=10801#" onclick="showESpotInfoPopup(&#39;ESpotInfo_popup_SingleCheckoutHeaderZone&#39;); return false;"><div class="ESpotInfoIcon"></div></a></div>
+
+            <div class="ad" id="ad_592506">
+        <style type="text/css">
+
+.boxCall{
+	float: right;
+	margin-top: 29px;
+}
+.iconoCall img{
+	height: 31px;
+  width: auto;
+}
+.textCall{
+	bottom: 16px;
+  font-family: Tahoma;
+  font-size: 12px;
+  position: relative;
+  color: #4a4a4a !important;
+}
+.Number{
+	font-family: Open Sans;
+	font-size:16px;
+	position: relative;
+  right: 237px;
+  color: #666;
+}
+#headerWrapper{
+    border-bottom: 2px solid #fc8f44;
+}
+</style>
+
+<div class="boxCall">
+	<!--<div class="textCall">¿Necesitas asistencia durante esta compra?</div>-->
+  	<div class="iconoCall">
+  		<img src="./images/callicono.png" alt="Johnson">
+  		<span class="textCall">¿Necesitas asistencia durante esta compra?</span>
+  		<span class="Number">600 400 8000</span>
+  	</div>
+</div>
+            </div>
+
+</div>
+<!-- END ContentAreaESpot.jsp -->
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+
+<!-- End CachedCENSingleCheckoutHeaderDisplay.jsp --><!-- END CheckoutHeaderDisplay.jspf -->
+		</div>
+
+
+
+		<div id="contentWrapper">
+
+			<div id="content" role="main">
+				<div id="backtocart" class="link">
+					<a href="https://ssl.paris.cl/webapp/wcs/stores/servlet/OrderCalculate?calculationUsageId=-1&amp;updatePrices=1&amp;catalogId=40000000629&amp;errorViewName=AjaxOrderItemDisplayView&amp;orderId=.&amp;langId=-5&amp;storeId=10801&amp;URL=AjaxOrderItemDisplayView" class="" id="backtocart_link">
+						<img class="BacktoCarroIcon" src="./images/arrow_new_checkout.png">
+	       				Volver al carro de compras
+	       			</a>
+				</div>
+
+
+				<div id="checkout_userdetails" class="">
+					<div id="box_header" class="">
+						<p class="box_number">
+							<span class="show">1</span>
+							<span class="hide"><img src="./1identificacion-comprador_files/iconConfirmation.png"></span>
+						</p>
+						<p class="box_text"><span>IDENTIFICACIÓN DEL COMPRADOR</span></p>
+
+							<span class="EditSection hide" onclick="javascript:SinglePageCheckoutJS.editUserDetails();">
+								<img src="./1identificacion-comprador_files/edit.png">
+								<span class="TextEdit">Editar</span>
+							</span>
+
+					</div>
+					<div id="box_content" class="">
+						<div dojotype="wc.widget.RefreshArea" id="guestCheckoutLogonArea" widgetid="guestCheckoutLogonArea" controllerid="guestCheckoutLogonAreaController" role="wairole:region" waistate:live="polite" waistate:atomic="true" waistate:relevant="all" title="" class="dijitContentPane">
+							<!-- BEGIN CENSingleCheckoutGuestLogonDisplay.jsp -->
+
+<div id="checkout_guest">
+
+	<div id="checkout_guest_logon" class="left">
+		<div id="title">
+			<p><span>USUARIO REGISTRADO EN JOHNSON.CL</span></p>
+		</div>
+
+		<div id="logonErrorMessage">
+            <p>
+    			<strong><span class="error_message" id="logon_errormsg"></span></strong>
+    		</p>
+		</div>
+
+		<div id="checkout_logon_form">
+			<form method="post" name="AjaxCheckoutLogon" id="AjaxCheckoutLogon" action="https://ssl.paris.cl/webapp/wcs/stores/servlet/CheckoutLogonCmd">
+				<input type="hidden" name="storeId" value="10801" id="checkout_logon_storeId">
+				<input type="hidden" name="catalogId" value="40000000629" id="checkout_logon_catalogId">
+				<input type="hidden" name="langId" value="-5" id="checkout_logon_langId">
+				<input type="hidden" name="URL" value="https://ssl.paris.cl/webapp/wcs/stores/servlet/OrderCalculate?calculationUsageId=-1&amp;calculationUsageId=-2&amp;updatePrices=1&amp;shipmentType=single&amp;catalogId=40000000629&amp;errorViewName=AjaxOrderItemDisplayView&amp;orderId=.&amp;langId=-5&amp;storeId=10801&amp;URL=SingleCheckoutDetailsView" id="checkout_logon_url">
+				<input type="hidden" name="reLogonURL" value="SingleCheckoutDetailsView" id="checkout_logon_relogon_url">
+				<input type="hidden" name="errorViewName" value="SingleCheckoutDetailsView" id="checkout_logon_errorview_name">
+				<input type="hidden" name="fromOrderId" value="*" id="checkout_logon_from_orderId">
+		        <input type="hidden" name="toOrderId" value="." id="checkout_logon_to_orderId">
+		        <input type="hidden" name="deleteIfEmpty" value="*" id="checkout_logon_deleteIfEmpty">
+		        <input type="hidden" name="createIfEmpty" value="1" id="checkout_logon_createIfEmpty">
+
+	        	<div class="form_input" id="checkout_logon_div_1">
+
+	         		<label for="checkout_logon_logonId">RUT</label><br>
+	         		<input class="input" tabindex="1" id="checkout_logon_logonId" name="logonId" type="text" size="12" maxlength="12" onkeypress="return soloRut(event)" onblur="formatoRut(this)">
+
+	       		</div>
+	       		<div class="form_input" id="checkout_logon_div_2">
+
+	         		<label for="checkout_logon_password">Clave</label><br>
+	         		<input class="input" tabindex="2" id="checkout_logon_password" name="logonPassword" type="password" size="20" maxlength="12" onkeypress="if(event.keyCode==13){javascript:hideAndClearMessage(&#39;logon_errormsg&#39;);SinglePageCheckoutJS.submitGuestCheckoutLogon(document.AjaxCheckoutLogon);}">
+	       		</div>
+	       		<div class="form_submit button" id="checkout_logon_div_3">
+	       			<a id="checkout_logon_submit" tabindex="3" onclick="javascript:hideAndClearMessage(&#39;logon_errormsg&#39;);SinglePageCheckoutJS.submitGuestCheckoutLogon(document.AjaxCheckoutLogon); return false;">
+	       				<span>
+	            			INGRESAR
+	       				</span>
+					</a>
+	       		</div>
+	       		<div id="checkout_logon_div_4" class="link">
+	       			<a href="https://ssl.paris.cl/webapp/wcs/stores/servlet/ResetPasswordGuestErrorView?state=forgetpassword&amp;catalogId=40000000629&amp;langId=-5&amp;storeId=10801" tabindex="4" class="form_reset_password" id="checkout_reset_password">
+	       				Recuperar clave
+	       			</a>
+	       		</div>
+
+			</form>
+		</div>
+	</div>
+
+	<div class="divide_bar"></div>
+
+	<div id="checkout_guest_user">
+
+		<div id="title">
+			<p><span>USUARIO INVITADO</span></p>
+		</div>
+		<div id="info">
+			<p class="text1"><span>Opción disponible para:</span></p>
+
+			<p class="text2">
+			<span>
+				Usuarios no registrados en <b>johnson.cl</b>
+			</span>
+			</p>
+
+			<p class="text3">
+			<span>
+				Usuario extranjero sin <b>RUT</b>
+			</span>
+			</p>
+		</div>
+		<div id="checkout_guest_continue" class="button">
+			<a tabindex="5" onclick="javascript:SinglePageCheckoutJS.continueAsGuest(); return false;">
+				<span>
+	    			COMPRAR SIN REGISTRO
+				</span>
+			</a>
+		</div>
+
+	</div>
+
+
+</div>
+
+
+<script type="text/javascript">
+dojo.ready(function() {
+	dataLayer.push({
+		'event' :'fireRemarketingLoginCheckout'
+	});
+});
+</script>
+<!-- End CENSingleCheckoutGuestLogonDisplay.jsp -->
+               			</div>
+               			<div dojotype="wc.widget.RefreshArea" id="userDetailsArea" widgetid="userDetailsArea" controllerid="userDetailsAreaController" role="wairole:region" waistate:live="polite" waistate:atomic="true" waistate:relevant="all" title="" class="dijitContentPane">
+
+	                    </div>
+					</div>
+				</div>
+
+
+				<div id="checkout_orderdetails" class="">
+					<div id="box_header" class="DisableHeader">
+						<p class="box_number">
+							<span class="show">2</span>
+							<span class="hide"><img src="./1identificacion-comprador_files/iconConfirmation.png"></span>
+						</p>
+						<p class="box_text"><span>TIPO DE ENTREGA</span></p>
+						<span class="EditSection hide">
+							<div class="shipping_textContent">
+								<span class="shipping_text hide"></span>
+							</div>
+							<div class="TextEdit_textContent" onclick="javascript:editShippingOptions();">
+								<img src="./1identificacion-comprador_files/edit.png">
+								<span class="TextEdit">Editar</span>
+							</div>
+						</span>
+					</div>
+					<div id="box_content" class="hide">
+						<p class="textTitleD"><span class="tileStep2">Selecciona y configura el tipo de entrega de tu compra</span></p>
+						<div dojotype="wc.widget.RefreshArea" id="shippingDetailsArea" widgetid="shippingDetailsArea" controllerid="shippingDetailsAreaController" role="wairole:region" waistate:live="polite" waistate:atomic="true" waistate:relevant="all" title="" class="dijitContentPane">
+
+               			</div>
+					</div>
+				</div>
+
+
+				<div id="checkout_billingdetails" class="">
+					<div id="box_header" class="DisableHeader">
+						<p class="box_number">
+							<span class="show">3</span>
+							<span class="hide"><img src="./1identificacion-comprador_files/iconConfirmation.png"></span>
+						</p>
+						<p class="box_text"><span>CONFIGURAR EL PAGO</span></p>
+					</div>
+					<div id="box_content" class="hide">
+						<div dojotype="wc.widget.RefreshArea" id="paymentDetailsArea" widgetid="paymentDetailsArea" controllerid="paymentDetailsAreaController" role="wairole:region" waistate:live="polite" waistate:atomic="true" waistate:relevant="all" title="" class="dijitContentPane">
+
+               			</div>
+					</div>
+				</div>
+
+                <script type="text/javascript">
+					dojo.addOnLoad(function() {
+						// set the domain name in javascript which will be used by PaymentInstructions
+						SinglePageCheckoutJS.cookieDomainName = '.johnson.cl';
+						SinglePageCheckoutJS.setCommonParameters('-5','10801','40000000629','12500571');
+						SinglePageCheckoutJS.setControllerURL('guestCheckoutLogonAreaController','https://ssl.paris.cl/webapp/wcs/stores/servlet/AjaxSingleCheckoutGuestLogonView?catalogId=40000000629&orderId=12500571&langId=-5&storeId=10801');
+						SinglePageCheckoutJS.setControllerURL('userDetailsAreaController','https://ssl.paris.cl/webapp/wcs/stores/servlet/AjaxSingleCheckoutUserInfoView?catalogId=40000000629&orderId=12500571&langId=-5&storeId=10801');
+						SinglePageCheckoutJS.setControllerURL('shippingDetailsAreaController','https://ssl.paris.cl/webapp/wcs/stores/servlet/AjaxSingleCheckoutShippingDetailsView?catalogId=40000000629&orderId=12500571&langId=-5&storeId=10801');
+						SinglePageCheckoutJS.setControllerURL('paymentDetailsAreaController','https://ssl.paris.cl/webapp/wcs/stores/servlet/AjaxSingleCheckoutBillingDetails?catalogId=40000000629&orderId=12500571&langId=-5&storeId=10801');
+
+						//  Initialize the refresh area as widget
+						parseWidget("guestCheckoutLogonArea");
+						parseWidget("userDetailsArea");
+						parseWidget("shippingDetailsArea");
+						parseWidget("paymentDetailsArea");
+
+						//Set requestedSubmitted to false
+						requestSubmitted = false;
+						// set the currentId variable for progress bar.
+						setCurrentId("checkout_orderdetails");
+
+						// For refresh area
+						var updatedProperties = [];
+						updatedProperties.orderId = '12500571';
+
+
+								// If novios code associated to order, update the shipping details context property
+								// Once user decide to go as guest and after filling the billing address
+								// using this context property, we will refresh the novios details and order item details.
+
+					});
+                </script>
+			</div>
+		</div>
+
+		<div id="footerWrapper">
+			<!-- Begin CENSingleCheckoutFooterDisplay.jspf --><!-- Begin CachedCENSingleCheckoutFooterDisplay.jsp -->
+
+<div id="checkoutFooter">
+	<!-- BEGIN CachedContentAreaESpotConsumed.jsp --><!-- BEGIN ESpotInfoPopupDisplay.jspf-->
+	<script type="text/Javascript">
+		function toggleActivityTable(tableId) {
+			var arrowElement = document.getElementById("activityArrowId_" + tableId);
+			var rowElement = document.getElementById("activityTableExpandId_" + tableId);
+			if(arrowElement.className == "opened") {
+				arrowElement.className = "unopened";
+				rowElement.style.display = "none";
+			}
+			else {
+				arrowElement.className = "opened";
+				rowElement.style.display = "block";
+			}
+		}
+	</script>
+
+	<div id="ESpotInfo_popup_main_div_SingleCheckoutFooterZone" class="ESpotInfo_popup_main_div">
+		<div id="ESpotInfo_popup_SingleCheckoutFooterZone__" class="ESpotInfo_popup" dojotype="dijit.Dialog">
+			<div class="top_left" id="WC_ESpotInfo_div_1_SingleCheckoutFooterZone"><img alt="" src="./1identificacion-comprador_files/trasparent.gif" height="1" width="1"></div>
+			<div class="top_right" id="WC_ESpotInfo_div_2_SingleCheckoutFooterZone"><img alt="" src="./1identificacion-comprador_files/trasparent.gif" height="1" width="1"></div>
+			<div class="header" id="ESpotInfo_popupHeader_SingleCheckoutFooterZone">
+				<div class="close" id="WC_ESpotInfo_div_3_SingleCheckoutFooterZone">
+					<span class="title">
+						SingleCheckoutFooterZone
+					</span>
+					<a id="ESpotInfo_closeLink2_SingleCheckoutFooterZone" href="javascript:hideESpotInfoPopup(&#39;ESpotInfo_popup_SingleCheckoutFooterZone&#39;);" onkeydown="javaScript:setbackFocus(event);" onmousedown="javaScript:setbackFocus(event);">
+						<span class="icon "></span>
+					</a>
+				</div>
+			</div>
+			<div id="WC_ESpotInfo_div_5_SingleCheckoutFooterZone" class="whitespace_background">
+				<div class="content_container scrollbar" id="WC_ESpotInfo_div_6_SingleCheckoutFooterZone">
+
+ 				</div>
+				<div class="pagination_container">
+					<div class="pagination">
+					</div>
+				</div>
+			</div>
+			<div class="footer" id="WC_ESpotInfo_div_7_SingleCheckoutFooterZone">
+				<div class="bot_right" id="WC_ESpotInfo_div_9_SingleCheckoutFooterZone"></div>
+				<div class="bot_left" id="WC_ESpotInfo_div_8_SingleCheckoutFooterZone"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript"> dojo.addOnLoad(function() {  parseWidget("ESpotInfo_popup_SingleCheckoutFooterZone"); } );</script>
+<!-- END ESpotInfoPopupDisplay.jspf-->
+<div class="genericESpot" id="WC_ContentAreaESpot_div_1_592504">
+    <div class="caption" style="display:none" id="WC_ContentAreaESpot_div_2_592504">[SingleCheckoutFooterZone]</div>
+    <div class="ESpotInfo" id="WC_ContentAreaESpotInfo_592504"><a href="https://ssl.paris.cl/webapp/wcs/stores/servlet/SingleCheckoutDetailsView?catalogId=40000000629&amp;langId=-5&amp;storeId=10801#" onclick="showESpotInfoPopup(&#39;ESpotInfo_popup_SingleCheckoutFooterZone&#39;); return false;"><div class="ESpotInfoIcon"></div></a></div>
+
+            <div class="ad" id="ad_592504">
+        <style type="text/css">
+#footer{
+  background-color: #f1f1f1 !important;
+}
+#footer .footerWrapper {
+    padding: 56px 0 0;
+}
+#Boxfooter{
+  width: 100%;
+  background-color: #ffffff;
+  height: 114px;
+}
+#DivLeft,#DivRight{
+  display: inline-table;
+}
+.DivLeft{
+  width: 50%;
+  text-align:center;
+}
+.DivLeft span{
+  position: relative;
+  top: 69px;
+  color: #4a4a4a;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1.44;
+}
+.DivRight{
+  border-left: 1px solid #d6d6d6;
+  padding: 0 0 0 5%;
+  position: relative;
+  top: 32px;
+  font-family: Verdana;
+}
+.DivRight img{
+  height:21px;
+}
+.NumberFooter{
+  font-family: Verdana;
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 1;
+  color: #4a4a4a;
+}
+.textCallFooter{
+  font-family: Verdana;
+  font-size: 14px;
+  color: #fc8f44;
+  text-decoration: underline;
+}
+.ImgCBSSSL{
+  height: 55px;
+  width: 55px;
+  position: relative;
+  bottom: 32px;
+  margin-right: 19px;
+  margin-left: 19px;
+}
+.ImgCBSGlobalSign{
+  bottom: 37px;
+  height: 47px;
+  position: relative;
+  width: 126px;
+}
+.ImgCBSCyberSource{
+  bottom: 28px;
+  height: 60px;
+  position: relative;
+  width: 103px;
+}
+.DivTextCompra{
+  top: 35px !important;
+}
+.DivlefText{
+  text-align: center;
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .DivLeft {
+    text-align: center;
+    width: 100%;
+  }
+  .DivLeft span {
+    margin-right: 0px;
+    top: 25px;
+  }
+  .DivRight {
+    border-left: 0px;
+    text-align: center;
+    width: 91%;
+    margin-bottom: 23px;
+    top: 0;
+  }
+  #Boxfooter {
+    height: 150px;
+  }
+  .DivlefText{
+    bottom: 27px;
+    margin-bottom: 10px;
+    position: relative;
+    width: 100%;
+  }
+  .ImgCBSGlobalSign {
+    height: 37px;
+    width: 103px;
+    bottom: 35px;
+  }
+  .ImgCBSSSL {
+    height: 42px;
+    width: 42px;
+  }
+  .ImgCBSCyberSource {
+    height: 52px;
+    width: 99px;
+    bottom: 26px;
+  }
+  .instal-selct-box {
+   top: 74px !important;
+   padding-top: 0 !important;
+   padding-bottom: 60px;
+}
+.cbs-card-save{
+   padding-top: 5px;
+   top:10px;
+}
+.cbs-card-oneclick{
+   position: relative;
+   top: 10px;
+
+}
+
+}
+</style>
+<script type="text/javascript">
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+
+<div id="Boxfooter" class="Boxfooter">
+  <div id="DivLeft" class="DivLeft">
+      <div class="DivlefText">
+        <span class="DivTextCompra">Compra 100% segura</span>
+      </div>
+      <div class="DivlefImg">
+        <span><img class="ImgCBSGlobalSign" src="./1identificacion-comprador_files/GlobalSign" alt="GlobalSign"></span>
+        <span><img class="ImgCBSSSL" src="./1identificacion-comprador_files/SSL" alt="SSL"></span>
+        <span><img class="ImgCBSCyberSource" src="./1identificacion-comprador_files/Cybersource" alt="CyberSource"></span>
+       </div>
+  </div>
+
+  <div id="DivRight" class="DivRight">
+      <div><span>¿Necesitas asistencia durante esta compra?</span></div>
+      <div><span>Llámanos al:</span></div>
+      <div><img src="./images/callicono.png" alt="Johnson">
+            <span class="NumberFooter">600 400 8000</span>
+      </div>
+      <div><a onclick="MM_openBrWindow(&#39;http://clicktocall.holdtech.cl/?c=VUEYU&amp;utm_source=Inicio_sesion_paris_cl&amp;utm_medium=%20ingresa_tu_numero_aqui&amp;utm_term=clicktocall%2Cclick2call&amp;utm_content=Inicio_Sesion&amp;utm_campaign=clicktocall&#39;,&#39;&#39;,&#39;width=450,height=360&#39;);"><span class="textCallFooter">Ingresa tu número aquí para contactarte</span></a></div>
+  </div>
+</div>
+            </div>
+
+</div>
+<!-- END CachedContentAreaESpotConsumed.jsp -->
+</div>
+
+
+
+<div id="mhtn_widget" class="overlay" style="display: none; height: auto;min-height: 300px">
+ 	<div id="mhtn_background" style="display: none"></div>
+ 	<div id="mhtn_modal" class="lightBorder" style="height: auto;min-height: 300px">
+               <div class="lightbox">
+                  <div class="box">
+                     <div class="lightboxContent">
+
+ 					 <h1 id="monoproduct_stock" style="display: none;">El producto que quieres llevar se encuentra sin stock por el momento</h1>
+ 					 <h1 id="oneproduct_stock" style="display: none;">Uno de los productos de tu carro se encuentra sin stock en este momento</h1>
+ 					 <h1 id="manyproduct_stock" style="display: none;">Los siguientes productos que quieres llevar se encuentran sin stock en este momento</h1>
+ 					 <h1 id="allproduct_stock" style="display: none;">Los productos que quieres llevar se encuentran sin stock por el momento</h1>
+
+ 					 <h1 id="monoproduct_qty" style="display: none;">El producto que quieres llevar no dispone de la cantidad solicitada en este momento</h1>
+ 					 <h1 id="oneproduct_qty" style="display: none;">Uno de los productos de tu carro no dispone de la cantidad solicitada en este momento</h1>
+ 					 <h1 id="manyproduct_qty" style="display: none;">Los siguientes productos que quieres llevar no disponen de la cantidad solicitada en este momento</h1>
+ 					 <h1 id="allproduct_qty" style="display: none;">Los productos que quieres llevar no disponen de la cantidad solicitada en este momento</h1>
+
+ 					 <h1 id="monoproduct_date" style="display: none;">La fecha de entrega elegida no está disponible</h1>
+ 					 <h1 id="oneproduct_date" style="display: none;">La fecha de entrega elegida para uno de los productos de tu carro no está disponible</h1>
+ 					 <h1 id="manyproduct_date" style="display: none;">Las fechas de entrega elegidas para los siguientes productos que quieres llevar no están disponibles</h1>
+ 					 <h1 id="allproduct_date" style="display: none;">Las fechas de entrega elegidas para los productos que quieres llevar no están disponibles</h1>
+
+ 					 <h1 id="monoproduct_qty_date" style="display: none;">Tu producto no dispone de la cantidad solicitada y la fecha de entrega elegida no está disponible</h1>
+ 					 <h1 id="oneproduct_qty_date" style="display: none;">Uno de los productos de tu carro no dispone de la cantidad solicitada y la fecha de entrega elegida no está disponible</h1>
+ 					 <h1 id="manyproduct_qty_date" style="display: none;">Los siguientes productos no disponen de la cantidad solicitada y/o la fecha de entrega elegida no está disponible</h1>
+ 					 <h1 id="allproduct_qty_date" style="display: none;">Los siguientes productos no disponen de la cantidad solicitada y/o la fecha de entrega elegida no está disponible</h1>
+
+
+
+		<input type="hidden" id="template_mhtn_producto_delete" value="&lt;li&gt;
+ 						&lt;div class=&#39;itemHeader&#39;&gt;
+ 							&lt;b&gt;Producto ${number}:&lt;/b&gt;
+ 							Se eliminará este producto por falta de stock
+ 						&lt;/div&gt;
+ 						&lt;div class=&#39;item&#39;&gt;
+ 							&lt;img src=&#39;https://imagenes.paris.cl/is/image/Cencosud/${skuImage}?$thumbnail$&#39; /&gt;
+ 							&lt;span&gt;${name}&lt;br /&gt;SKU:${sku}&lt;/span&gt;
+ 							&lt;p class=&#39;status&#39;&gt;Sin Stock&lt;/p&gt;
+ 						&lt;/div&gt;
+ 					&lt;/li&gt;">
+
+ 		<input type="hidden" id="template_mhtn_producto_qty" value="&lt;li&gt;
+ 					       &lt;div class=&#39;itemHeader&#39;&gt;
+                                 &lt;b&gt;Producto ${number}:&lt;/b&gt;
+                                 Elige una nueva cantidad
+                              &lt;/div&gt;
+                              &lt;div class=&#39;item&#39;&gt;
+                                 &lt;img src=&#39;https://imagenes.paris.cl/is/image/Cencosud/${skuImage}?$thumbnail$&#39; /&gt;
+                                 &lt;span&gt;${name}&lt;br /&gt;SKU:${sku}&lt;/span&gt;
+                                 &lt;div class=&#39;qty&#39;&gt;
+                                    &lt;span class=&#39;maxamnt&#39;&gt;Máximo ${maxQty} unidades&lt;/span&gt;
+                                    &lt;input type=&#39;text&#39; value=&#39;${maxQty}&#39; id=&#39;qty_item_${numberItem}&#39; onkeypress=&#39;return CheckoutModalJS.justNumbers(event)&#39; onchange=&#39;CheckoutModalJS.validateQty(this, ${maxQty},${numberItem} )&#39; &gt;
+                                    &lt;span class=&#39;question&#39; onclick=&#39;CheckoutModalJS.showQuestion(this);&#39;&gt;?
+                                       &lt;span class=&#39;minitooltip&#39;&gt;
+                                          Puedes aceptar la cantidad disponible, ingresar una inferior o eliminar el producto
+                                          &lt;span class=&#39;miniarrow&#39;&gt;&lt;/span&gt;
+                                       &lt;/span&gt;
+                                    &lt;/span&gt;
+                                    &lt;span id=&#39;error${numberItem}&#39; class=&#39;error&#39; style=&#39;display:none&#39;&gt;&lt;/span&gt;
+                                 &lt;/div&gt;
+                                 &lt;div class=&#39;delete&#39;&gt;
+                                    	&lt;label&gt;Eliminar&lt;/label&gt;
+                                       &lt;input type=&#39;checkbox&#39; id=&#39;del_item_${numberItem}&#39; onchange=&#39;CheckoutModalJS.checkDelete(this, ${numberItem})&#39; &gt;
+                                 &lt;/div&gt;
+                              &lt;/div&gt;
+                           &lt;/li&gt;">
+
+
+
+       <input type="hidden" id="template_mhtn_producto_qty_date" value="&lt;li id=&#39;GenericModal&#39;&gt;
+ 					       &lt;div class=&#39;itemHeader&#39;&gt;
+                                 &lt;b&gt;Producto ${number}:&lt;/b&gt;
+                                 Elige una nueva cantidad y modifica la fecha de entrega
+                              &lt;/div&gt;
+                              &lt;div class=&#39;item&#39;&gt;
+                                 &lt;img src=&#39;https://imagenes.paris.cl/is/image/Cencosud/${skuImage}?$thumbnail$&#39; /&gt;
+                                 &lt;span&gt;${name}&lt;br /&gt;SKU:${sku}&lt;/span&gt;
+                                 &lt;div class=&#39;qty&#39;&gt;
+                                    &lt;span class=&#39;maxamnt&#39;&gt;Máximo ${maxQty} unidades&lt;/span&gt;
+                                    &lt;input value=&#39;${maxQty}&#39; id=&#39;qty_item_${numberItem}&#39; onchange=&#39;CheckoutModalJS.validateQty(this, ${maxQty},${numberItem} )&#39; &gt;
+                                    &lt;span class=&#39;question&#39; onclick=&#39;CheckoutModalJS.showQuestion(this);&#39;&gt;?
+                                       &lt;span class=&#39;minitooltip&#39;&gt;
+                                          Puedes aceptar la cantidad disponible, ingresar una inferior o eliminar el producto
+                                          &lt;span class=&#39;miniarrow&#39;&gt;&lt;/span&gt;
+                                       &lt;/span&gt;
+                                    &lt;/span&gt;
+                                    &lt;span id=&#39;error${numberItem}&#39; class=&#39;error&#39; style=&#39;display:none&#39;&gt;&lt;/span&gt;
+                                 &lt;/div&gt;
+                                 &lt;div class=&#39;dateselect&#39;&gt;
+                                    &lt;p&gt;
+                                      &lt;b&gt;Próxima fecha disponible:&lt;/b&gt;&lt;br&gt;
+                                      &lt;span class=&#39;dateSelectedText${productWareHouse}&#39;&gt;
+                                       	${productMinDate}
+                                       &lt;/span&gt;
+                                       &lt;span class=&#39;jornada&#39;&gt;
+                                       	${productJornada}
+                                       &lt;/span&gt;
+                                    &lt;/p&gt;
+                                    &lt;span class=&#39;note&#39;&gt;${noteDate}&lt;/span&gt;
+                                    &lt;a style=&#39;display:${showCalendar}&#39; href=&#39;javascript:CheckoutModalJS.prepareCalendar(${numberItem});CheckoutModalJS.showDateSelectionPopup(true,${orderItemId},${productShippingMode},&quot;${productWareHouse}&quot;, ${currentDate}, true, &quot;calendar_${numberItem}&quot;, true );&#39;&gt;Seleccionar otra fecha&lt;/a&gt;
+                                 &lt;/div&gt;
+                                 &lt;div class=&#39;delete&#39;&gt;
+                                    	&lt;label&gt;Eliminar&lt;/label&gt;
+                                       &lt;input type=&#39;checkbox&#39; id=&#39;del_item_${numberItem}&#39; onchange=&#39;CheckoutModalJS.checkDelete(this, ${numberItem})&#39; &gt;
+                                 &lt;/div&gt;
+                              &lt;/div&gt;
+
+
+                              &lt;div id=&#39;error_calendar_${numberItem}&#39; class=&#39;error-calendar-mhtn&#39;&gt;&lt;/div&gt;
+
+                              &lt;div id=&#39;calendar_${numberItem}&#39; class=&#39;calendar&#39;&gt;
+
+							  		&lt;div id=&#39;BodyModal&#39;&gt;
+							  			&lt;div class=&#39;LinkNext&#39;&gt;
+							  				&lt;div class=&#39;pastDate inactive&#39; id=&#39;dateSelectionBackBtnWrapper&#39;&gt;
+							  					&lt;img class=&#39;inactive&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-inactive-left.png&#39;/&gt;
+							  					&lt;img class=&#39;active&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-active-left.png&#39;/&gt;
+							  					&lt;span class=&#39;dateSelectionBackBtn &#39;&gt;Semana anterior&lt;/span&gt;
+							  				&lt;/div&gt;
+							  				&lt;span class=&#39;MidleLine&#39;&gt;|&lt;/span&gt;
+							  				&lt;div class=&#39;futureDate inactive&#39; id=&#39;dateSelectionFwdBtnWrapper&#39;&gt;
+							  					&lt;span class=&#39;dateSelectionFwdBtn&#39;&gt;Semana siguiente&lt;/span&gt;
+							  					&lt;img class=&#39;active&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-active-right.png&#39;/&gt;
+							  					&lt;img class=&#39;inactive&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-inactive-right.png&#39;/&gt;
+							  				&lt;/div&gt;
+							  			&lt;/div&gt;
+							  			&lt;br&gt;
+							 			&lt;div class=&#39;divTable&#39; &gt;
+											&lt;div class=&#39;divTableBody&#39;&gt;
+												&lt;div class=&#39;divTableRow jornadaRowHeader&#39;&gt;
+													&lt;div class=&#39;divTableCell WeekTitle&#39;&gt;
+														&lt;div class=&#39;ContenedorDia TitleContenedorDia&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;&lt;strong&gt;HORARIOS / DIAS&lt;/strong&gt;&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class=&#39;divTableCell week&#39;&gt;
+														&lt;div class=&#39;ContenedorDia Day&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;
+																&lt;strong&gt;&lt;span class=&#39;day_1&#39;&gt;&lt;/span&gt;&lt;/strong&gt; &lt;br&gt; &lt;span class=&#39;date_1&#39;&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_1&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+															&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class=&#39;divTableCell week&#39;&gt;
+														&lt;div class=&#39;ContenedorDia Day&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;
+																&lt;strong&gt;&lt;span class=&#39;day_2&#39;&gt;&lt;/span&gt;&lt;/strong&gt; &lt;br&gt; &lt;span class=&#39;date_2&#39;&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_2&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+															&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class=&#39;divTableCell week&#39;&gt;
+														&lt;div class=&#39;ContenedorDia Day&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;
+																&lt;strong&gt;&lt;span class=&#39;day_3&#39;&gt;&lt;/span&gt;&lt;/strong&gt; &lt;br&gt; &lt;span class=&#39;date_3&#39;&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_3&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+															&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class=&#39;divTableCell week&#39;&gt;
+														&lt;div class=&#39;ContenedorDia Day&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;
+																&lt;strong&gt;&lt;span class=&#39;day_4&#39;&gt;&lt;/span&gt;&lt;/strong&gt; &lt;br&gt; &lt;span class=&#39;date_4&#39;&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_4&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+															&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class=&#39;divTableCell week&#39;&gt;
+														&lt;div class=&#39;ContenedorDia Day&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;
+																&lt;strong&gt;&lt;span class=&#39;day_5&#39;&gt;&lt;/span&gt;&lt;/strong&gt; &lt;br&gt; &lt;span class=&#39;date_5&#39;&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_5&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+															&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class=&#39;divTableCell week&#39;&gt;
+														&lt;div class=&#39;ContenedorDia Day&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;
+																&lt;strong&gt;&lt;span class=&#39;day_6&#39;&gt;&lt;/span&gt;&lt;/strong&gt; &lt;br&gt; &lt;span class=&#39;date_6&#39;&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_6&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+															&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class=&#39;divTableCell week lastDay&#39;&gt;
+														&lt;div class=&#39;ContenedorDia Day&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;
+																&lt;strong&gt;&lt;span class=&#39;day_7&#39;&gt;&lt;/span&gt;&lt;/strong&gt; &lt;br&gt; &lt;span class=&#39;date_7&#39;&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_7&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+															&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+						  			&lt;/div&gt;
+						  			&lt;div id=&#39;BodyModalMobile&#39;&gt;
+							  			&lt;div id=&#39;BotonDias&#39;&gt;
+							  				&lt;div class=&#39;DiaAnteriror inactive&#39;&gt;
+							  					&lt;img class=&#39;inactive&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-inactive-left.png&#39;/&gt;
+							  					&lt;img class=&#39;active&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-active-left.png&#39;/&gt;
+							  					&lt;span&gt;Dia Anterior&lt;/span&gt;
+							  				&lt;/div&gt;
+							  				&lt;div class=&#39;DiaSiguiente inactive&#39;&gt;
+							  					&lt;span&gt;Dia Siguente&lt;/span&gt;
+							  					&lt;img class=&#39;active&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-active-right.png&#39;/&gt;
+							  					&lt;img class=&#39;inactive&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-inactive-right.png&#39;/&gt;
+							  				&lt;/div&gt;
+							  			&lt;/div&gt;
+
+							  			&lt;div id=&#39;calendar_mobile&#39;&gt;
+							  				&lt;div class=&#39;jornadaRowHeaderMobile&#39;&gt;
+							   					&lt;div class=&#39;DiaBoxMobile DiaBoxMobile_1&#39; id=&#39;DiaBoxMobile_1&#39;&gt;
+							   						&lt;span&gt;&lt;strong class=&#39;day_1&#39;&gt;&lt;/strong&gt;&lt;span class=&#39;date_mobile_1&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_1&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+							   					&lt;/div&gt;
+							   					&lt;div class=&#39;DiaBoxMobile DiaBoxMobile_2 hide&#39; id=&#39;DiaBoxMobile_2&#39;&gt;
+							   						&lt;span&gt;&lt;strong class=&#39;day_2&#39;&gt;&lt;/strong&gt;&lt;span class=&#39;date_mobile_2&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_2&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+							   					&lt;/div&gt;
+							   					&lt;div class=&#39;DiaBoxMobile DiaBoxMobile_3 hide&#39; id=&#39;DiaBoxMobile_3&#39;&gt;
+							   						&lt;span&gt;&lt;strong class=&#39;day_3&#39;&gt;&lt;/strong&gt;&lt;span class=&#39;date_mobile_3&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_3&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+							   					&lt;/div&gt;
+							   					&lt;div class=&#39;DiaBoxMobile DiaBoxMobile_4 hide&#39; id=&#39;DiaBoxMobile_4&#39;&gt;
+							   						&lt;span&gt;&lt;strong class=&#39;day_4&#39;&gt;&lt;/strong&gt;&lt;span class=&#39;date_mobile_4&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_4&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+							   					&lt;/div&gt;
+							   					&lt;div class=&#39;DiaBoxMobile DiaBoxMobile_5 hide&#39; id=&#39;DiaBoxMobile_5&#39;&gt;
+							   						&lt;span&gt;&lt;strong class=&#39;day_5&#39;&gt;&lt;/strong&gt;&lt;span class=&#39;date_mobile_5&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_5&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+							   					&lt;/div&gt;
+							   					&lt;div class=&#39;DiaBoxMobile DiaBoxMobile_6 hide&#39; id=&#39;DiaBoxMobile_6&#39;&gt;
+							   						&lt;span&gt;&lt;strong class=&#39;day_6&#39;&gt;&lt;/strong&gt;&lt;span class=&#39;date_mobile_6&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_6&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+							   					&lt;/div&gt;
+							   					&lt;div class=&#39;DiaBoxMobile DiaBoxMobile_7 hide&#39; id=&#39;DiaBoxMobile_7&#39;&gt;
+							   						&lt;span&gt;&lt;strong class=&#39;day_7&#39;&gt;&lt;/strong&gt;&lt;span class=&#39;date_mobile_7&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_7&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+							   					&lt;/div&gt;
+							  				&lt;/div&gt;
+							  			&lt;/div&gt;
+						     			&lt;div id=&#39;BotonSemanas&#39;&gt;
+						  					&lt;div class=&#39;SemanaAnteriror inactive&#39;&gt;
+						  						&lt;img class=&#39;inactive&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-inactive-left.png&#39;/&gt;
+						  						&lt;img class=&#39;active&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-active-left.png&#39;/&gt;
+						  						&lt;span&gt;Semana anterior&lt;/span&gt;
+						  					&lt;/div&gt;
+						  					&lt;div class=&#39;SemanaSiguiente inactive&#39;&gt;
+						  						&lt;span&gt;Semana siguiente&lt;/span&gt;
+						  						&lt;img class=&#39;active&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-active-right.png&#39;/&gt;
+						  						&lt;img class=&#39;inactive&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-inactive-right.png&#39;/&gt;
+						  					&lt;/div&gt;
+						  				&lt;/div&gt;
+						  	  		&lt;/div&gt;
+							  		&lt;input class=&#39;dateSelect AcceptDateButton&#39; type=&#39;hidden&#39; value=&#39;Seleccionar Fecha&#39;&gt;
+                              &lt;/div&gt;
+
+                           &lt;/li&gt;">
+
+
+                        <input type="hidden" id="template_mhtn_producto_date" value="&lt;li id=&#39;GenericModal&#39;&gt;
+ 					       &lt;div class=&#39;itemHeader&#39;&gt;
+                                 &lt;b&gt;Producto ${number}:&lt;/b&gt;
+                                 Modifica la fecha de entrega
+                              &lt;/div&gt;
+                              &lt;div class=&#39;item&#39;&gt;
+                                 &lt;img src=&#39;https://imagenes.paris.cl/is/image/Cencosud/${skuImage}?$thumbnail$&#39; /&gt;
+                                 &lt;span&gt;${name}&lt;br /&gt;SKU:${sku}&lt;/span&gt;
+
+                                 &lt;div class=&#39;dateselect&#39;&gt;
+                                    &lt;p&gt;
+                                       &lt;b&gt;Próxima fecha disponible:&lt;/b&gt;&lt;br&gt;
+                                       &lt;span class=&#39;dateSelectedText${productWareHouse}&#39;&gt;
+                                       	${productMinDate}
+                                       &lt;/span&gt;
+                                       &lt;span class=&#39;jornada&#39;&gt;
+                                       	${productJornada}
+                                       &lt;/span&gt;
+                                    &lt;/p&gt;
+                                    &lt;span class=&#39;note&#39;&gt;${noteDate}&lt;/span&gt;
+                                    &lt;a style=&#39;display:${showCalendar}&#39; href=&#39;javascript:CheckoutModalJS.prepareCalendar(${numberItem});CheckoutModalJS.showDateSelectionPopup(true,${orderItemId},${productShippingMode},&quot;${productWareHouse}&quot;, ${currentDate}, true, &quot;calendar_${numberItem}&quot;, true );&#39;&gt;Seleccionar otra fecha&lt;/a&gt;
+                                 &lt;/div&gt;
+                                 &lt;div class=&#39;delete&#39;&gt;
+                                    	&lt;label&gt;Eliminar&lt;/label&gt;
+                                       	&lt;input type=&#39;checkbox&#39; id=&#39;del_item_${numberItem}&#39; onchange=&#39;CheckoutModalJS.checkDelete(this, ${numberItem})&#39; &gt;
+                                 &lt;/div&gt;
+                              &lt;/div&gt;
+
+
+                               &lt;div id=&#39;error_calendar_${numberItem}&#39; class=&#39;error-calendar-mhtn&#39; &gt;&lt;/div&gt;
+
+                               &lt;div id=&#39;calendar_${numberItem}&#39; class=&#39;calendar&#39;&gt;
+							   		&lt;div id=&#39;BodyModal&#39;&gt;
+							  			&lt;div class=&#39;LinkNext&#39;&gt;
+							  				&lt;div class=&#39;pastDate inactive&#39; id=&#39;dateSelectionBackBtnWrapper&#39;&gt;
+							  					&lt;img class=&#39;inactive&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-inactive-left.png&#39;/&gt;
+							  					&lt;img class=&#39;active&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-active-left.png&#39;/&gt;
+							  					&lt;span class=&#39;dateSelectionBackBtn &#39;&gt;Semana anterior&lt;/span&gt;
+							  				&lt;/div&gt;
+							  				&lt;span class=&#39;MidleLine&#39;&gt;|&lt;/span&gt;
+							  				&lt;div class=&#39;futureDate inactive&#39; id=&#39;dateSelectionFwdBtnWrapper&#39;&gt;
+							  					&lt;span class=&#39;dateSelectionFwdBtn&#39;&gt;Semana siguiente&lt;/span&gt;
+							  					&lt;img class=&#39;active&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-active-right.png&#39;/&gt;
+							  					&lt;img class=&#39;inactive&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-inactive-right.png&#39;/&gt;
+							  				&lt;/div&gt;
+							  			&lt;/div&gt;
+							  			&lt;br&gt;
+							 			&lt;div class=&#39;divTable&#39; &gt;
+											&lt;div class=&#39;divTableBody&#39;&gt;
+												&lt;div class=&#39;divTableRow jornadaRowHeader&#39;&gt;
+													&lt;div class=&#39;divTableCell WeekTitle&#39;&gt;
+														&lt;div class=&#39;ContenedorDia TitleContenedorDia&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;&lt;strong&gt;HORARIOS / DIAS&lt;/strong&gt;&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class=&#39;divTableCell week&#39;&gt;
+														&lt;div class=&#39;ContenedorDia Day&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;
+																&lt;strong&gt;&lt;span class=&#39;day_1&#39;&gt;&lt;/span&gt;&lt;/strong&gt; &lt;br&gt; &lt;span class=&#39;date_1&#39;&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_1&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+															&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class=&#39;divTableCell week&#39;&gt;
+														&lt;div class=&#39;ContenedorDia Day&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;
+																&lt;strong&gt;&lt;span class=&#39;day_2&#39;&gt;&lt;/span&gt;&lt;/strong&gt; &lt;br&gt; &lt;span class=&#39;date_2&#39;&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_2&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+															&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class=&#39;divTableCell week&#39;&gt;
+														&lt;div class=&#39;ContenedorDia Day&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;
+																&lt;strong&gt;&lt;span class=&#39;day_3&#39;&gt;&lt;/span&gt;&lt;/strong&gt; &lt;br&gt; &lt;span class=&#39;date_3&#39;&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_3&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+															&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class=&#39;divTableCell week&#39;&gt;
+														&lt;div class=&#39;ContenedorDia Day&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;
+																&lt;strong&gt;&lt;span class=&#39;day_4&#39;&gt;&lt;/span&gt;&lt;/strong&gt; &lt;br&gt; &lt;span class=&#39;date_4&#39;&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_4&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+															&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class=&#39;divTableCell week&#39;&gt;
+														&lt;div class=&#39;ContenedorDia Day&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;
+																&lt;strong&gt;&lt;span class=&#39;day_5&#39;&gt;&lt;/span&gt;&lt;/strong&gt; &lt;br&gt; &lt;span class=&#39;date_5&#39;&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_5&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+															&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class=&#39;divTableCell week&#39;&gt;
+														&lt;div class=&#39;ContenedorDia Day&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;
+																&lt;strong&gt;&lt;span class=&#39;day_6&#39;&gt;&lt;/span&gt;&lt;/strong&gt; &lt;br&gt; &lt;span class=&#39;date_6&#39;&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_6&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+															&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+													&lt;div class=&#39;divTableCell week lastDay&#39;&gt;
+														&lt;div class=&#39;ContenedorDia Day&#39;&gt;
+															&lt;span class=&#39;TextContenedorDia&#39;&gt;
+																&lt;strong&gt;&lt;span class=&#39;day_7&#39;&gt;&lt;/span&gt;&lt;/strong&gt; &lt;br&gt; &lt;span class=&#39;date_7&#39;&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_7&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+															&lt;/span&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+												&lt;/div&gt;
+											&lt;/div&gt;
+										&lt;/div&gt;
+						  			&lt;/div&gt;
+						  			&lt;div id=&#39;BodyModalMobile&#39;&gt;
+
+							  			&lt;div id=&#39;BotonDias&#39;&gt;
+							  				&lt;div class=&#39;DiaAnteriror inactive&#39;&gt;
+							  					&lt;img class=&#39;inactive&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-inactive-left.png&#39;/&gt;
+							  					&lt;img class=&#39;active&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-active-left.png&#39;/&gt;
+							  					&lt;span&gt;Dia Anterior&lt;/span&gt;
+							  				&lt;/div&gt;
+							  				&lt;div class=&#39;DiaSiguiente inactive&#39;&gt;
+							  					&lt;span&gt;Dia Siguente&lt;/span&gt;
+							  					&lt;img class=&#39;active&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-active-right.png&#39;/&gt;
+							  					&lt;img class=&#39;inactive&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-inactive-right.png&#39;/&gt;
+							  				&lt;/div&gt;
+							  			&lt;/div&gt;
+
+							  			&lt;div id=&#39;calendar_mobile&#39;&gt;
+							  				&lt;div class=&#39;jornadaRowHeaderMobile&#39;&gt;
+							   					&lt;div class=&#39;DiaBoxMobile DiaBoxMobile_1&#39; id=&#39;DiaBoxMobile_1&#39;&gt;
+							   						&lt;span&gt;&lt;strong class=&#39;day_1&#39;&gt;&lt;/strong&gt;&lt;span class=&#39;date_mobile_1&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_1&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+							   					&lt;/div&gt;
+							   					&lt;div class=&#39;DiaBoxMobile DiaBoxMobile_2 hide&#39; id=&#39;DiaBoxMobile_2&#39;&gt;
+							   						&lt;span&gt;&lt;strong class=&#39;day_2&#39;&gt;&lt;/strong&gt;&lt;span class=&#39;date_mobile_2&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_2&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+							   					&lt;/div&gt;
+							   					&lt;div class=&#39;DiaBoxMobile DiaBoxMobile_3 hide&#39; id=&#39;DiaBoxMobile_3&#39;&gt;
+							   						&lt;span&gt;&lt;strong class=&#39;day_3&#39;&gt;&lt;/strong&gt;&lt;span class=&#39;date_mobile_3&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_3&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+							   					&lt;/div&gt;
+							   					&lt;div class=&#39;DiaBoxMobile DiaBoxMobile_4 hide&#39; id=&#39;DiaBoxMobile_4&#39;&gt;
+							   						&lt;span&gt;&lt;strong class=&#39;day_4&#39;&gt;&lt;/strong&gt;&lt;span class=&#39;date_mobile_4&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_4&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+							   					&lt;/div&gt;
+							   					&lt;div class=&#39;DiaBoxMobile DiaBoxMobile_5 hide&#39; id=&#39;DiaBoxMobile_5&#39;&gt;
+							   						&lt;span&gt;&lt;strong class=&#39;day_5&#39;&gt;&lt;/strong&gt;&lt;span class=&#39;date_mobile_5&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_5&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+							   					&lt;/div&gt;
+							   					&lt;div class=&#39;DiaBoxMobile DiaBoxMobile_6 hide&#39; id=&#39;DiaBoxMobile_6&#39;&gt;
+							   						&lt;span&gt;&lt;strong class=&#39;day_6&#39;&gt;&lt;/strong&gt;&lt;span class=&#39;date_mobile_6&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_6&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+							   					&lt;/div&gt;
+							   					&lt;div class=&#39;DiaBoxMobile DiaBoxMobile_7 hide&#39; id=&#39;DiaBoxMobile_7&#39;&gt;
+							   						&lt;span&gt;&lt;strong class=&#39;day_7&#39;&gt;&lt;/strong&gt;&lt;span class=&#39;date_mobile_7&#39;&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#39;dateForBackend_7&#39; style=&#39;display:none;&#39;&gt;&lt;/span&gt;
+							   					&lt;/div&gt;
+							  				&lt;/div&gt;
+							  			&lt;/div&gt;
+						     			&lt;div id=&#39;BotonSemanas&#39;&gt;
+						  					&lt;div class=&#39;SemanaAnteriror inactive&#39;&gt;
+						  						&lt;img class=&#39;inactive&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-inactive-left.png&#39;/&gt;
+						  						&lt;img class=&#39;active&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-active-left.png&#39;/&gt;
+						  						&lt;span&gt;Semana anterior&lt;/span&gt;
+						  					&lt;/div&gt;
+						  					&lt;div class=&#39;SemanaSiguiente inactive&#39;&gt;
+						  						&lt;span&gt;Semana siguiente&lt;/span&gt;
+						  						&lt;img class=&#39;active&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-active-right.png&#39;/&gt;
+						  						&lt;img class=&#39;inactive&#39; src=&#39;/wcsstore/CencosudStorefrontAssetStore/images/checkout/arrow-inactive-right.png&#39;/&gt;
+						  					&lt;/div&gt;
+						  				&lt;/div&gt;
+						  	  		&lt;/div&gt;
+
+                                 &lt;input class=&#39;dateSelect AcceptDateButton&#39; type=&#39;hidden&#39; value=&#39;Seleccionar Fecha&#39;&gt;
+                              &lt;/div&gt;
+
+                           &lt;/li&gt;">
+
+
+
+ 		<ul id="mhtn_lista_productos"></ul>
+
+ 			<p class="finalText" id="finalText_stock" style="display: none;">Te invitamos a buscar un producto alternativo.</p>
+ 			<p class="finalText" id="finalText_many_stock" style="display: none;">Te invitamos a buscar productos alternativos.</p>
+ 			<p class="finalText" id="finalText" style="display: none;">Tu programa de entrega se actualizará para que puedas continuar tu compra.</p>
+
+
+ 			<a id="mhtn_modal_button" class="dismiss" href="https://ssl.paris.cl/webapp/wcs/stores/servlet/SingleCheckoutDetailsView?catalogId=40000000629&amp;langId=-5&amp;storeId=10801#">Continuar</a>
+
+ 		</div>
+ 		</div>
+ 		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	dojo.addOnLoad(function() {
+		//Make sure page is loaded at this point
+		//Set requestedSubmitted to false
+		requestSubmitted = false;
+	});
+</script>
+
+	<script type="text/javascript">
+		 dojo.ready(function (){
+			//_gaq.push(['_trackPageview']);
+		 });
+	</script>
+
+	<script type="text/javascript">
+	dojo.addOnLoad(function() {
+	     var dms = document.createElement('script'); dms.type = 'text/javascript';
+	     dms.src = '/wcsstore/CencosudStorefrontAssetStore/javascript/borders.js';
+		 document.body.appendChild(dms);
+	});
+	</script>
+<!-- End CachedCENSingleCheckoutFooterDisplay.jsp --><!-- End CENSingleCheckoutFooterDisplay.jspf -->
+		</div>
+
+	</div>
+
+
+
+	<img src="./1identificacion-comprador_files/clear.png" alt="">
+
+
+
+<!-- End CENSingleCheckoutDetailsDisplay.jsp --><div class="dijitDialog" tabindex="-1" wairole="dialog" waistate="labelledby-progress_bar_dialog_title" role="dialog" aria-labelledby="progress_bar_dialog_title" id="progress_bar_dialog" widgetid="progress_bar_dialog" title="" style="display: none; position: absolute;">
+	<div dojoattachpoint="titleBar" class="dijitDialogTitleBar">
+	<span dojoattachpoint="titleNode" class="dijitDialogTitle" id="progress_bar_dialog_title"></span>
+	<span dojoattachpoint="closeButtonNode" class="dijitDialogCloseIcon" dojoattachevent="onclick: onCancel" title="Cancelar">
+		<span dojoattachpoint="closeText" class="closeText" title="Cancelar">x</span>
+	</span>
+	</div>
+		<div dojoattachpoint="containerNode" class="dijitDialogPaneContent">
+	<div id="progress_bar">
+		<div id="loading_popup">
+			<div class="top_left" id="WC_StoreCommonUtilities_div_1"><img src="./1identificacion-comprador_files/transparent.gif" height="20" width="25" alt="No hay ninguna imagen disponible"></div>
+		        <div class="top_right" id="WC_StoreCommonUtilities_div_2"><img src="./1identificacion-comprador_files/transparent.gif" height="20" width="25" alt="No hay ninguna imagen disponible"></div>
+		        <div class="header" id="WC_StoreCommonUtilities_div_3"></div>
+		        <div class="bodyarea" id="WC_StoreCommonUtilities_div_4">
+				<div class="bodycontent" id="WC_StoreCommonUtilities_div_5">
+					<img src="./1identificacion-comprador_files/loading.gif" width="44" height="44" border="0" alt="Su petición se está procesando.">
+			    </div>
+			</div>
+			<div class="footer" id="WC_StoreCommonUtilities_div_6">
+				 <div class="bot_left" id="WC_StoreCommonUtilities_div_7"></div>
+				 <div class="bot_right" id="WC_StoreCommonUtilities_div_8"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div><div class="dijitDialog" tabindex="-1" wairole="dialog" waistate="labelledby-ext_progress_bar_dialog_title" role="dialog" aria-labelledby="ext_progress_bar_dialog_title" id="ext_progress_bar_dialog" widgetid="ext_progress_bar_dialog" title="" style="display: none; position: absolute;">
+	<div dojoattachpoint="titleBar" class="dijitDialogTitleBar">
+	<span dojoattachpoint="titleNode" class="dijitDialogTitle" id="ext_progress_bar_dialog_title"></span>
+	<span dojoattachpoint="closeButtonNode" class="dijitDialogCloseIcon" dojoattachevent="onclick: onCancel" title="Cancelar">
+		<span dojoattachpoint="closeText" class="closeText" title="Cancelar">x</span>
+	</span>
+	</div>
+		<div dojoattachpoint="containerNode" class="dijitDialogPaneContent">
+	<div id="ext_progress_bar">
+		<div id="ext_loading_popup">
+			<div class="top_left" id="WC_StoreCommonUtilities_div_1"><img src="./1identificacion-comprador_files/transparent.gif" height="20" width="25" alt="No hay ninguna imagen disponible"></div>
+		        <div class="top_right" id="WC_StoreCommonUtilities_div_2"><img src="./1identificacion-comprador_files/transparent.gif" height="20" width="25" alt="No hay ninguna imagen disponible"></div>
+		        <div class="header" id="WC_StoreCommonUtilities_div_3"></div>
+		        <div class="bodyarea" id="WC_StoreCommonUtilities_div_4">
+				<div class="bodycontent" id="WC_StoreCommonUtilities_div_5">
+					<img src="./1identificacion-comprador_files/loading.gif" width="44" height="44" border="0" alt="Su petición se está procesando.">
+			    </div>
+			</div>
+			<div class="footer" id="WC_StoreCommonUtilities_div_6">
+				 <div class="bot_left" id="WC_StoreCommonUtilities_div_7"></div>
+				 <div class="bot_right" id="WC_StoreCommonUtilities_div_8"></div>
+			</div>
+		</div>
+	</div>
+</div>
+</div><script type="text/javascript" src="./1identificacion-comprador_files/borders.js.descarga"></script><script type="text/javascript" id="">meta=document.createElement("meta");meta.name="theme-color";meta.content="#003f6d";document.getElementsByTagName("head")[0].appendChild(meta);</script>
+<script type="text/javascript" id="">meta=document.createElement("meta");meta.name="msapplication-navbutton-color";meta.content="#003f6d";document.getElementsByTagName("head")[0].appendChild(meta);</script>
+<script type="text/javascript" id="">meta=document.createElement("meta");meta.name="apple-mobile-web-app-capable";meta.content="yes";document.getElementsByTagName("head")[0].appendChild(meta);</script>
+<script type="text/javascript" id="">meta=document.createElement("meta");meta.name="apple-mobile-web-app-status-bar-style";meta.content="blue";document.getElementsByTagName("head")[0].appendChild(meta);</script>
+<script type="text/javascript" id="">link=document.createElement("link");link.rel="icon";link.href="https://www.paris.cl/guias/header-paris/images/ParisTiendaLogo_03.png";link.type="image/x-icon";document.getElementsByTagName("head")[0].appendChild(link);</script><script type="text/javascript" id="">var scRec=document.createElement("SCRIPT");scRec.type="text/javascript";scRec.src="//d2oh4tlt9mrke9.cloudfront.net/Record/js/sessioncam.recorder.js";document.getElementsByTagName("head")[0].appendChild(scRec);</script><script type="text/javascript" id="">dataLayer.push({ecommerce:{checkout:{actionField:{step:2,option:"Login Checkout"}}}});</script><div style="display: none; visibility: hidden;">
+
+<script type="text/javascript" data-keepinline="true">var google_conversion_id=852200054,google_custom_params=window.google_tag_params,google_remarketing_only=!0;</script>
+<script type="text/javascript" src="./1identificacion-comprador_files/conversion.js.descarga"></script><iframe name="google_conversion_frame" title="Google conversion frame" width="300" height="13" src="./1identificacion-comprador_files/saved_resource.html" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no"></iframe>
+<noscript></noscript></div></body></html>

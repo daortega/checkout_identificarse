@@ -1,0 +1,293 @@
+@charset "utf-8";
+@media screen and (min-width: 640px) {
+  .no-desktop {
+    display: none !important; } }
+@media screen and (max-width: 640px) {
+  html body #Contenedor {
+    overflow-x: hidden; }
+  html body .no-mobile {
+    display: none; }
+  html body .formulario, html body .formulario2, html body #customers_new_or_returning, html body .titulo-input, html body #content_wrapper_border, html body .sign_in_registration, html body .sign_in_registration .forgot_password_container, html body .btn-ingresa {
+    width: 100%;
+    min-height: 0;
+    height: auto; }
+  
+  html body .sign_in_registration .forgot_password_container {
+    padding: 10% !important;
+    font-size: 12px !important;
+  }  	
+  html body .cliente-nuevo {
+  	float: none !important;
+    /*margin-top: 30px;*/
+    padding-left: 10px;
+    width: auto;   
+  }
+  html body .cliente-nuevo2 {
+    margin-left:-10px;
+    width: auto; 
+    
+  }
+  
+  html body .sign_in_registration .forgot_password_container .header {
+    display: block;
+  } 
+  html body #content_wrapper_border, html body #customers_new_or_returning {
+    margin-top: 40px;
+  }
+  html body #responsive-form  {
+    padding: 3%;   
+    margin: 22px 0; 
+  }
+  html body .formulario2 {
+  	margin-top: -24px;
+  }
+  html body #content_wrapper_chkOut {
+  	width: 100%;
+  }
+  html body .centro {
+  	margin-top: 10px !important;
+  	padding: 0 !important;
+  }
+  
+
+    
+  html body #customers_new_or_returning {
+    padding: 0; }
+  html body form input {
+    width: 100%;
+    height: auto	;
+    padding: 3% 3%;
+    border: 1px solid #666; }
+  html body .button-wrapper-radius.medium_smaller, html body .button-wrapper-radius, html body .btn-ingresa {
+    padding: 9px 20px;
+    font-size: 15px;
+    display: block; }
+  html body .button-wrapper-radius, html body span.primary_button {
+    width: 100%; }
+  html body .btn-ingresa-account, html body .standard_button {
+    padding: 0;
+    margin: 0 auto;
+    width: 60%;
+    display: block; }
+  html body .btn-ingresa-account {
+    float: none; }
+  html body .input_label {
+    width: 100%;
+    float: left; }
+  html body .forgot_password_container {
+    text-align: center;
+    color: #000; }
+  html body .sign_in_registration .password_sent_content {    
+    padding: 5%;/* Radar */
+    width: 100%;
+    text-align: center; 
+  }
+  /* Agrega Radar */
+   html body .sign_in_registration {
+    padding: 0 0 5%;
+   }
+
+    html body .sign_in_registration .password_sent_content .strong {
+      font-weight: normal;
+      color: #000; }
+  html body .cliente-nuevo-btn, html body .btn-ingresa  {
+  	text-align: center;
+    width: 100%;
+    margin-top: 24px;
+    margin-bottom: 20px; }
+    html body .cliente-nuevo-btn .primary_button, html body .btn-ingresa  {
+      width: 100%;
+      display: block;
+      margin: 12px auto; }
+    html body .cliente-nuevo-btn .button-wrapper-radius, html body .btn-ingresa {
+      background-color: transparent;
+      color: #09C;
+      font-size: 12px;
+      display: inline;
+      padding: 0; }
+  html body .myaccount_login_link {
+    margin-bottom: 0; }
+  html body .text-boton {
+    color: #333;
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-style: normal; }
+  html body .olvido a {
+    width: 100%;
+    text-align: center; 
+    padding: 10px 0;
+    
+  }
+  html body .sir h1 {
+    padding: 0 5%;
+    text-align: center; 
+  }
+  html body .olvide-contrasena {
+    width: 100%;
+    float: left;
+    text-align: right; }
+    html body .olvide-contrasena span {
+      color: #09C; }
+  html body .strongtext {
+    text-align: left;
+    width: 100%;
+    float: left; }
+  html body .button_align {
+    width: 100%; }
+    html body .button_align .button-wrapper-radius {
+      margin: 0 auto;
+      width: 70%; }
+  html body .titulo-Rut {
+    color: #09C;
+    font-size: 13px;
+    width: 100%;
+    padding: 5% 0;
+    text-align: left; }
+  html body #box .footer {
+    height: auto;
+    font-size: 12px; }
+  html body .sign_in_registration .forgot_password_header_return {
+    width: 100%;
+    height: auto; }
+  html body .sign_in_registration .registration_header {
+    text-align: left;
+    font-size: 13px;
+    margin-bottom: 15px; }
+  html body .heading {
+  	text-align: center !important;
+  }
+  html body h2 .registration_header_grey {
+  	text-align: center !important;
+  	color: #999 !important;
+  	}    
+  html body .forgot_password_content .update_password_align form label {
+    text-align: left;
+    float: left; }
+  html body .button_bottom a {
+    width: 100%;	
+    display: block;
+    margin: 0 auto;
+    font-size: 13px;
+    padding: 3% 0; }
+  html body span.button_container {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    border-radius: 0;
+    width: 70%;
+    background-color: #09c; } 
+  
+  /* Agrega Radar */
+  .gray_div{
+    background-color: #ebebeb;
+  }
+  .footer-phone{
+    color: #3399cc !important;
+  }  
+  .footer_resp_contacto li {
+     padding-bottom: 10px;
+     padding-top: 10px;
+  }  
+  .error {
+      color: red;
+      font-weight: bold;
+      font-size: 12px;
+  }
+    
+  /*TEXT GLOBE RADAR*/
+  html body .text-globe {
+    background-color: #666;
+    margin-top:7px;
+    padding: 5px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    border-radius: 8px;
+    float: left;
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    transition: all 0.3s ease; 
+  }
+  html body .text-globe.showglobe {
+      display: block; 
+  }
+  html body .text-globe:after {
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(102, 102, 102, 0);
+    border-bottom-color: #666;
+    border-width: 10px;
+    margin-left: -10px; 
+  }
+  
+  #WC_AccountDisplay_div_24.cliente-nuevo-btn span{
+  	margin: -22px auto;
+  }
+  
+  /*
+  html body .menu-login {
+    width: 100%;
+    background-color: #efefef;
+    position: relative;
+    bottom: 0px;
+    display: block;
+    padding-bottom: 1px;
+    z-index: 3;
+    display: none;
+    float: left; 
+   }
+    html body .menu-login.activate {
+      display: block; }
+    html body .menu-login.nolog {
+      bottom: 0px; }
+    html body .menu-login h4 {
+      text-align: center;
+      padding: 2% 0;
+      background-color: #666;
+      color: #fff;
+      margin: 1px 0; }
+    
+    html body .menu-login a {
+      background-color: #ccc;
+      color: #666;
+      width: 49.5%;
+      display: inline-block;
+      text-align: center;
+      font-weight: bold;
+      padding: 2% 0; 
+      float: left;
+      margin-left: 1px;
+    }
+    */
+	
+
+@media screen and (min-width: 320px) {
+	#login-box.desplegado {
+		top: 0px;
+	}
+}	
+	
+	
+	
+}
+
+/* Fix for samsung landscape - checkout login - Olvidaste tu clave*/
+@media screen and (min-width: 321px) and (max-width: 640px) {
+	.no-desktop {
+		display: block !important; 
+	}		
+}
+
+

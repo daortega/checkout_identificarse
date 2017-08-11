@@ -1,0 +1,4790 @@
+@charset "utf-8";
+/***
+** CSS for the checkout flow. This contains the css properties for responive and desktop.
+**
+***/
+/** Start - Desktop & Common**/
+
+/** CMC info popup -- Bad practice, not include a file css inside other css**/
+
+/*Version Mobile*/
+@media screen and (max-width: 700px) {
+  #group_shipdate, #group_shipdate span, .TextCalendar, .EditCalendar{
+    display: inline-block !important;
+  }
+  .TextCalendar{
+    bottom: 18px !important;
+    margin-left: 27px !important;
+    position: relative !important;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+
+  
+  #checkout_logon_submit, #checkout_billing_continue a {
+    padding: 7px 35% !important;
+  }
+  #checkout_guest_user a{
+    padding: 7px 20% !important;
+  }
+  #header_logo{
+    display: block !important;
+  }
+  #checkout_logon_password,
+  textarea,
+  input.text,
+  input[type="text"]{
+  -webkit-appearance: none;
+  border-radius: 0;
+  }
+  .EditSection {
+    margin-right: 4px !important;
+  }
+  .shipping_textContent, .TextEdit_textContent {
+    bottom: 8px;
+    margin-left: 42px;
+    margin-right: 0;
+    position: relative;
+  }
+  .IconTitleModal{
+    display: none !important;
+  }
+  #novios .noviosHeaderInfo, #novios .noviosCodeValue {
+    font-size: 15px !important;
+  }
+
+  #novios {
+    line-height: 2.2  !important;
+    width: 100% !important;
+  }
+
+  #heading_closeNovios {
+    bottom: 9px !important;
+    height: 75px !important;
+    margin-bottom: 18px !important;
+  }
+  #logoArea {
+    float: left !important;
+    /*margin: 0 auto;*/
+    width: 110px !important;
+  }
+  html body #logoArea .ad {
+    margin: 0 !important;
+  }
+  .logoHeader img{
+    margin-left: 0px !important;
+  }
+  html body #logoArea a img {
+    left: 10px;
+    position: relative;
+    top: 14px;
+  }
+  .ccv-numbr {
+    width: 43% !important ;
+}
+#contenedor{
+	width: 100%;
+}
+#contenedor .expiry-card flt_lft, #contenedor .ccv-numbr flt_lft{  
+	display: inline-block;
+}
+.expiry-card {
+    width: 40% !important;
+}
+.card-numbr {
+    height: 75px !important;
+}
+.button_bottom{
+    margin-left:21px !important; 
+}
+
+#webpayTarjeta .TextoVisa {
+    bottom: 12px !important;
+}
+
+.price_line {
+    width: 55% !important;
+   /* margin-left: 69px !important;*/
+    right: 5% !important;
+    text-align: right !important;
+}
+
+#TextoVisa{
+	bottom: 14px !important;
+}
+#checkout_promo_promoCode input {
+    margin-left: 3% !important;
+}
+
+.section {
+    margin-left: 10px !important;
+}
+
+.ccv-numbr input, .expiry-card input {
+    width: 88% !important;
+}
+.price-detls {
+    margin-left: 11px;
+    padding-top: 20px !important;
+    position: relative !important;
+    /*top: 30px !important;*/
+}
+
+#fieldsAreaSection {
+    margin-top: 0px !important;
+}
+
+.instal-selct-box {
+    position: relative !important;
+    /*top: 127px !important;*/
+    padding-top: 90px !important;
+    
+}
+.cbs-card-save{
+    position: relative !important;
+    /*top: 12px !important;*/
+    padding-top: 10px;
+}
+/*#payment_details .BottonPagar{
+    margin-left: 22px !important;
+    width: 51% !important;
+}*/
+#fieldsAreaSection .BottonPagar{
+    margin-left: 0 !important;
+    position: relative !important;
+    padding: 7px 44%;
+    /*right: 17px !important;
+    width: 66% !important;*/
+}
+div[id^="paymentMedium_"] .BottonPagar {
+    margin-left: 5% !important;
+    padding: 7px 42% !important;
+}
+.instal-selct-box select {
+    width: 101% !important;
+}
+  .logoHeader {
+    margin-top: 0px !important;
+  }
+#checkout_shipping_continue .align-rght {
+    text-align: center !important;
+}
+
+#paymentMedium_5 .ContenedorPrice, #paymentMedium_11 .ContenedorPrice{
+ right: 0 !important;
+ width: 89% !important;
+}
+.fieldsAreaSectionBox {
+    width: 100% !important;
+}
+
+#checkout_shipping_continue{
+  text-align: center;
+}
+  .boxCall {
+    /*float: unset !important;*/
+    margin-top: 0 !important;
+    position: relative !important;
+    top: 27px !important;
+    margin-right: 7%;
+  }
+  .textCall{
+    display: none;
+  }
+  .Number {
+    right: 0 !important;
+    font-family: Tahoma,Verdana !important;
+    font-size: 16px !important;
+    color: #0099cc !important;
+    top: -8px;
+  }
+	.box_text span{
+  		font-size: 11px !important;
+  		left: 0 !important;
+	}
+	.box_number {
+    	height: 35px !important;
+    	width: 35px !important;
+	}	
+	.box_number span {
+    	font-size: 12px !important;
+    	/*top: 10px !important;*/
+	}
+  #group_shipdate .textoError{
+      top: 54px;
+  }
+	/*DivTable*/
+	.OcultarColum{
+		display: none !important;
+	}
+  /*Form guest mobile*/
+  #content {
+    margin-top: 51px !important;
+    margin-left: 3% !important;
+    margin-right: 5% !important;
+  }
+  #box_header{
+    bottom: 4px;
+    position: relative;
+    /*display: table;
+    width: 100%*/
+  }
+  #checkout_guest {
+    height: auto !important;
+  }
+  #checkoutShippingAddressForm{
+    overflow-x:hidden !important; 
+  }
+  #checkout_guest_logon, #checkout_guest_user {
+    width: 100% !important;
+  }
+  .AddressCreated img {
+    left: 10px !important;
+    top: 6px !important;
+  }
+  .TextEditaddres{
+    margin-left: 10px !important;
+    top: -9px !important;
+  }
+  #checkout_guest_logon{
+    border-bottom: solid 1px #dddddd;
+  }
+  #AjaxCheckoutLogon .link{
+    margin-bottom: 23px;    
+  }
+  #checkout_guest .left{
+    border-right: solid 0px !important;
+  }
+  #AjaxCheckoutLogon .form_input label {
+    left: 5% !important;
+  }
+  #AjaxCheckoutLogon .form_input input {
+    width: 88% !important;
+  }
+  #info {
+    margin-left: 5% !important;
+    width: 86% !important;
+  }
+  #checkout_guest_user .button {
+    margin-left: 0px !important;
+  }
+  #checkout_billing_header span{
+    display: none;
+  }
+  #checkoutBillingAddressForm .form_input{
+    text-align:  left !important;
+    width: 100% !important;
+    float: unset !important;
+  }
+  #checkoutBillingAddressForm .form_input input {
+    width: 88% !important;
+  }
+  #checkoutBillingAddressForm .left p {
+    margin-left: 3% !important;
+  }
+  #checkoutBillingAddressForm label, #checkoutBillingAddressForm label{
+    text-align: left !important;
+  }
+  #checkout_billing_address {
+    height: 589px !important;
+  }
+  #checkoutBillingAddressForm .form_input input,#checkoutBillingAddressForm .right label{
+    margin-left: 3% !important;
+  }
+  #checkoutBillingAddressForm .left {
+    text-align: left !important;
+    width: 100% !important;
+  }
+  .form_input_option .firstP, .form_input_option .secondP {
+    margin-right: 0px !important;
+  }
+  #checkout_billing_guestIdentity{
+    margin-left: 3% !important;
+    width: 88% !important;
+  }
+  .ExampleMobile{
+    margin-left: 3% !important;
+  }
+  #checkout_billing_links .link, #checkout_billing_links .button {
+    margin-top: 10px !important;
+    width: 100% !important;
+    display: inline-block !important;
+  }
+  #checkout_billing_back {
+    position: initial !important;
+  }
+  #checkout_billing_continue {
+    margin-left: 0px !important;
+  }
+  #checkout_billing_continue{
+    bottom: 61px !important;
+    position: relative !important;
+  }
+  .DisableHeader .box_number{
+    bottom: 4px !important;
+    position: relative !important;
+  }
+  .DisableHeader{
+    height: 35px !important;
+    bottom: 0px !important;
+  }
+  /*.Completed .box_number span {
+    top: 5px !important;
+  }*/
+  .Completed .box_number img {
+    height: 35px !important;
+    width: 35px !important;
+  }
+  .mobile{
+    display: block !important;
+  }
+  .desktop{
+    display: none !important;
+  }
+  .tabcontent, #shipping_order_details .ListProduct {
+    margin-left: 7px !important;
+    margin-right: 7px !important;
+  }
+  #add_edit_address {   
+    width: 100% !important;
+  }
+  #shipAddress_desc {
+    font-size: 12px !important;
+    text-align: left !important;
+  }
+  .DireccionInput {
+    width: 98% !important;
+  }
+  #shippingAddressFormContainer .left,#shippingAddressFormContainer .right, #checkout_shipping_address3, #shippingAddressFormContainer .form_input {
+    width: 100% !important;
+  }
+  #checkout_shipping_back{
+    display: none !important;
+  }
+  #checkout_shipping_links .button {
+    margin-left: 0 !important;
+    width: 49% !important;
+  }
+  /*Step2 Mobile*/
+
+  .tileStep2 {
+    margin-left: 0px !important;
+  }
+  #box_content p{
+    /*margin-left: 5px !important;*/
+  }
+  #GiftCardForm .error{
+    position: absolute !important;
+    top: 270px !important;
+    width: 90% !important;
+  }
+  
+  .tablinks{
+    background-color: #ffffff;
+    border: 2px solid #0099cc;
+    height: 45px;
+    margin-left: 7px;
+    margin-right: 7px;
+    position: relative;
+    top: 2px;
+  }
+  #giftCard_Target .section {
+    margin-bottom: 57px !important;
+  }
+  #giftCard_Target .bottonPay {
+    top: 44px !important;
+  }
+  .tablinksUnselected{
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    height: 45px;
+    margin-left: 7px;
+    margin-right: 7px;
+    position: relative;
+    top: 2px;
+    margin-bottom: 22px;
+  }
+  .OcultarTab{
+    float: right;
+    position: relative;
+    right: 10px;
+    top: 20px;
+  }
+  .tablinksUnselected .OcultarTab {
+    top: 16px;
+  }
+  .MobileTab{
+    left: 10px;
+    position: relative;
+    top: 14px;
+  }
+  .AddressCreated .right {
+    width: 100% !important;
+    margin-top: 0px;
+    top: 37px;
+    position: relative;
+  }
+  .AddressCreated {
+    height: 125px !important;
+  }
+  #checkout_novios_input_head {
+    bottom: 26px !important;
+    margin-top: 10px !important;
+    position: relative !important;
+    margin-bottom: 0px !important;
+  }
+  .TabTitleNovios {
+    font-size: 12px !important;
+    margin-left: 1px !important;
+  }
+  .registry_input {
+    margin-bottom: 26px !important;
+    margin-left: 1% !important;
+    width: 98% !important;
+  }
+  #checkout_novios_search{
+    bottom: 10px !important;
+    position: relative !important;
+  }
+  .ButtonSearch a {
+    padding: 7px 40% !important;
+  }
+  .BoxResult {
+    margin: 0px !important;
+  }
+  .TitleTableNovios div {
+    padding: 11px 13px !important;
+  }
+  #Titleresult_column2{
+    display: none !important;
+  }
+  #Titleresult_column1 {
+    width: 100% !important;
+  }
+  .yass-sensor #result_column2 {
+    width: 97% !important;
+  }
+  .TextoNoviosCode {
+    bottom: 63px !important;
+    float: left !important;
+    left: 88px !important;
+    position: relative !important;
+  }
+  .TextoNoviosCode p {
+    font-size: 10px;
+  }
+  #result_column2 {
+    text-align: left !important;
+  }
+  .TitleTableNovios div {
+    padding: 0 13px !important;
+  }
+  #novios_results img {
+    border: 1px solid #e7e7e7 !important;
+    height: 80px !important;
+    width: 80px !important;
+  }
+  #results_heading .divTableRow{
+    display: list-item !important;
+    list-style:none;
+  }
+  #results_heading .divTableCell{
+    padding: 0px !important;
+    display: table !important;
+    width: 100%;
+  }
+  .TextoNovios {
+    width: 63% !important; 
+    bottom: 66px !important;
+    margin-left: 91px !important;
+    position: relative;
+    margin-left:4px;
+  }
+  #novios_names{
+    text-align:left !important;
+  }
+  .TitleTableNovios #result_column2{
+    display: none !important;
+  }  
+  .TitleTableNovios .divTableCell {
+    height: 37px !important;
+    left: 10px !important;
+    position: relative !important;
+    top: 10px !important;
+  }
+  #select_novios a {
+    margin-left: 4px !important;
+    width: 100%;
+    padding: 8px 32% !important;
+  }
+  #select_novios{
+    bottom: 35px !important;
+    position: relative !important;
+    width: 100%;
+  }
+  #checkout_userdetails .DisableHeader .box_number {
+    bottom: 0px !important;
+  }
+  /*#checkout_userdetails .Completed .box_number span {
+    top: -1px !important;
+  }*/
+  .TitleRatiro {
+    font-size: 12px !important;
+    margin-left: 0px !important;
+  }
+  #checkoutReTForm{
+    bottom: 28px;
+    position: relative;
+  }
+  .AdressForm {
+    width: 98% !important;
+  }
+  .DireccionInput {
+    height: 39px !important;
+  }
+  .AlertRetiro {
+    height: 80px !important;
+    text-align: left !important;
+  }
+  #checkoutReTDetails .AlertRetiro{
+    text-align: center !important;
+  }
+  .AlertRetiro span {
+    left: 4px;
+  }
+  .TitleEntrega {
+    font-size: 14px !important;
+  }
+  .BoxStoreAddress {
+    height: 193px !important;
+    padding: 11px 0 0 14px !important;
+    bottom: 8px !important;
+    display: table;
+  }
+  .BoxCheckboxText {
+    font-size: 12px !important;
+    padding: 0 !important;
+    position: relative !important;
+    top: 7px !important;
+    width: 94% !important;
+    margin-bottom: 17px !important;
+
+  }
+  .ProxyPickupBox{
+    border-right:0px !important;
+    border-left:0px !important;
+  }
+  #maintitleP{
+    font-size: 12px;
+    font-family: Verdana;
+    font-weight: 500;
+    left: 27px;
+    margin-left: -29px;
+    position: relative;
+  }  
+  #ret_address_ship_date {
+    width: 100% !important;
+  }
+  .BoxCondition {
+    margin: 18px 4% !important;
+    padding: 6px 0 8px 15px !important;
+  }
+  #proxy_input {
+    margin-left: 4% !important;
+  }
+  #proxy_input .proxy_input{
+    width: 96%;
+  }  
+  #proxy_input .lastName {
+    margin-left: 0px !important;
+  }
+  #ret_change_store {
+    margin-bottom: 16px !important;
+  }
+  #ret_storename, #ret_address_ship_date {
+    display: contents !important;
+  }
+  #checkout_ship_address_continue .button{
+    padding: 7px 24% !important;
+  }
+  .DateDespacho {
+    height: 144px !important;
+  }
+  .DateDespacho.jornadaNoche {
+    height: 150px !important;
+  }
+  .group_shipcost {
+    margin-left: 27px !important;
+  }
+  .textTitleD{
+    margin-left: 9px !important;
+  }
+  .EditCalendar {
+    margin-left: 28px !important;
+  }
+  .DateP {
+    width: 94% !important;
+  }
+  .DateP, .group_shipcost {
+    display: inline-grid !important;
+    left: 10px;
+    position: relative;
+  }
+  .DateP .SpanCalendar {
+    margin-left: 1px !important;
+  }
+  .group_shipcost {
+    left: 11px !important;
+    position: relative !important;
+    top: 16px !important;
+    float: none !important;
+  }
+  .jornadaNoche .group_shipcost {
+  	top: 20px !important;
+  }
+  .AddressCreated span {
+    font-size: 11px !important;
+  }
+  
+  .AddressCreated .right span {
+   /* top: 34px !important;*/
+    position: relative !important;
+  }
+
+  .left15 {
+    left: 3px !important;
+  }
+  .AddressCreated span {
+    left: 26px !important;
+    /*top: 12px !important;*/
+    display: block;
+    width: 88%;
+    word-wrap: break-word;
+    }
+    
+  .AddressCreated input[type="radio"] {
+    margin-left: 8px !important;
+   }
+  .product_image {
+    margin-right: 9px !important;
+    margin-top: 10px !important;
+    vertical-align: top !important;
+    width: 96px !important;
+  }
+  .product_name {
+    width: 55% !important;
+    margin-left: 0px !important;
+  }
+  #orderItem_details .divTableCell {
+    padding: 3px 0 !important;
+  }  
+  #product_name strong{
+    font-size: 14px;
+  }
+  #shipping_order_details .divTableRow{
+    height: 167px;
+  }
+  #shipping_order_details .TilteTable{
+    height: 40px;
+  }
+  #checkout_shipping_continue .button{
+    padding: 7px 35% !important;
+  }
+  #factura {
+    bottom: 27px !important;
+    right: 14px !important;
+    left: 12px !important;
+    width: 100% !important;
+    text-align: left !important;
+    bottom: 10px !important;
+  }
+  /*Modal Calendar */
+  #GenericModal .IconTitleModal,#GenericModal #BodyModal, #mhtn_widget #BodyModal{
+    display: none;
+  }
+  #GenericModal  #HeaderModal{
+    height: 44px !important;
+  }
+  #GenericModal .TitleModal {
+    font-size: 16px !important;
+  }
+  #GenericModal .TextBody{
+    font-size: 14px !important;
+  }
+  #GenericModal .Genericmodal-contenido {
+    width: 86% !important;
+    padding: 10px 13px !important;
+  }
+  #GenericModal .DiaSiguiente, #GenericModal .DiaAnteriror, #GenericModal .SemanaAnteriror, #GenericModal .SemanaSiguiente{
+    display: inline-block;
+  }
+  #GenericModal .BodyModalMobile{
+    margin-top: 15px;
+  }
+  #GenericModal #BotonDias, #GenericModal #BotonSemanas, #mhtn_widget #BotonDias, #mhtn_widget #BotonSemanas{
+    margin-top: 14px;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  #GenericModal .TextHorario, #GenericModal .TextTime, #GenericModal .TextPrice{
+    display: inline-block;
+  }
+  #GenericModal .DiaBoxMobile{
+    height: 44px;
+    background-color: rgba(0, 153, 204, 0.1);
+    border: solid 1px #dddddd;
+    text-align:center;
+  }
+  .DiaBoxMobile span{
+    position: relative;
+    top: 10px;
+  }
+  .DiaBoxMobile span span{
+    position: static;
+    margin-left: 10px;    
+  }
+  #calendar_mobile{
+  	font-size: 14px;
+  }
+  #calendar_mobile .TextHorario{
+  	margin-left: 5px;
+  }
+  #calendar_mobile .TextTime,#calendar_mobile .TextPrice{
+  	margin-left: 10px;
+  }
+  .HorarioBoxMobile{
+    height: 65px;
+    /*background-color: #efefef;*/
+    border: solid 1px #dddddd;
+    text-align:center;
+  }
+  .HorarioContentBox,.HorarioContentBox img{
+    position: relative;
+    top: 10px;
+  }
+  #BodyModalMobile{
+    margin-bottom: 48px;
+  }
+  .Genericmodal.calendarModal #BodyModalMobile, #mhtn_widget #BodyModalMobile{
+    display: block !important;
+  }
+  #GenericModal .DiaAnteriror,#GenericModal .SemanaAnteriror{
+    border-right: 1px solid #dddddd;
+    color: #909090;
+    font-family: Verdana;
+    font-size: 12px;
+    width: 49%;
+  }
+  #GenericModal .DiaSiguiente, #GenericModal .SemanaSiguiente{
+    font-family: Verdana;
+    font-size: 12px;
+    color: #0099cc;
+    float: right;
+  }
+  #GenericModal .DiaSiguiente span, #GenericModal .DiaAnteriror span, #GenericModal .SemanaSiguiente span, #GenericModal .SemanaAnteriror span{
+    bottom: 5px;
+    position: relative;
+  }
+
+  #GenericModal .ButtonModal {
+    padding: 7px 40% !important;
+  }
+
+  .IconoTarjeta, .TextoVisa {
+    display: list-item !important;
+    list-style:none !important;
+  }
+  .PrecioTajeta {
+    float: none !important;
+  }  
+  .ccv-numbr, .expiry-card {
+    clear: none !important;
+    display: inline-block !important;
+  }
+  .flt_lft {
+    float: none !important;
+  }
+  .IconoTarjeta img {
+    padding-left: 0 !important;
+  }
+
+  /*step 3 mobile*/
+  #checkout_payment h2 {
+    font-size: 14px !important;
+  }
+  #checkout_payment{
+    position: relative !important;
+    top: 17px !important;
+  } 
+  #payment_details .accordion-title{
+    height: 103px !important;
+    text-align: center;
+  }
+  #payment_content .heading span {
+    width: 100% !important;
+  }
+  .inputleft {
+    width: 100% !important;
+  }
+  .inputleft input{
+    width: 95% !important;
+  }
+
+  #GiftCardForm, #giftCard_Target input, #NoviosCodeFormBillingPage{
+    width: 95% !important;
+  } 
+  .bottonPay{
+    width: 93% !important;
+  }
+  .MargenTexto{
+    margin-top: 24px !important;
+  }
+  .modal-contenido {
+    width: 78% !important;
+  }
+  #shipAddress_content .DireccionInput {
+    width: 40% !important;
+  }
+  #ShipAddressForm {
+    width: 95% !important;
+  }
+  #ShipAddressForm textarea{
+    width: 95% !important;
+  }
+  #ShipAddressForm .DireccionInput {
+    width: 97% !important;
+  }
+  .warrantyExtendedMsg {
+    left: 24px !important;
+    margin-left: -22px !important;
+    margin-right: 25px !important;
+    position: relative !important;
+  }
+  .product_warranty {
+    margin-top: 35px !important;
+  }
+  #GiftcardAccordion {
+    margin-right: 2%;
+    margin-left: 1% !important;
+  }
+  #GiftcardAccordion p {
+    margin-left: 10px !important;
+    position: relative !important;
+    top: 6px !important;
+  }
+  #GiftcardAccordion .inputleft {
+    margin-bottom: 25px;
+  }
+  #checkout_promo_promoCode{
+    width: 100%;
+  }
+  #checkout_promo_promoCode #promoCode{
+    width: 92%;
+  }
+  #checkout_promo_apply{
+    margin-top: 44px;
+    padding: 5px 12%;
+    position: relative;
+    right: 13px;
+    width: 69%;
+  }
+  #applyPromotionCode #error_msg_promo , #novios_input_billing_error_message{
+    bottom: 80px !important;
+    position: relative !important;
+  }
+  #promo_content .example {
+    left: 0% !important;
+  }
+  .button_bottom {
+    bottom: 7px;
+    margin-left: 3px !important;
+    padding: 5px 5% !important;
+    position: relative;
+    width: 85% !important;
+  }
+
+  .ContentLink {
+    left: 14px;
+    margin-left: -1% !important;
+    position: relative;
+    top: 24px !important;
+    font-size: 8px !important;
+  }
+
+  #NoviosCodeFormBillingPage {
+    height: auto;
+  }
+  #checkout_orderdetails .DisableHeader .box_number {
+    position: relative !important;
+  }
+  #checkout_orderdetails .Completed .box_number {
+    top: 0 !important;
+  }
+  /*#checkout_orderdetails .Completed .box_number span {
+    top: 0 !important;
+  }
+  #checkout_billing_form.left p {
+    margin-left: 1% !important;
+  }*/
+  .accordion-title {
+    margin-left: 8px !important;
+    width: 94% !important;
+  }
+  .accordion-content {
+    margin-left: 8px !important;
+    width: 94% !important;
+  }
+  #checkout_payment h2 {
+    margin-left: 8px !important;
+  }
+  /*.heading {
+    margin-left: 8px !important;
+  }*/
+  .BoxTarjeta .TextoVisa{
+    bottom: 14px !important;
+  }  
+
+/* Start: Mobile-  Warranty Modal - Checkout page */
+  #WarrantyModalSize .divTableRow {
+    height: auto !important;
+  }
+  #WarrantyModalSize .divTableCellHeading{
+    display: none !important;
+  }
+  #WarrantyModalSize .titleWarranty{
+    height: 35px;
+    background-color: #efefef;
+  }
+  #WarrantyModalSize  .warrantyTypeDescription, #WarrantyModalSize  .BorraBorde{
+    border: 0px !important;
+  }
+  div[id^="ModalWarranty_"] .divTableCellHeading {
+    display: table !important;
+  }
+	#WarrantyModalSize.Genericmodal-contenido  {
+    width: 75% !important;
+    margin-top: 50px !important;
+  	overflow: auto ;   /*scroll purpose*/
+    height: 80% !important;
+	}  
+  div[id^="ModalWarranty_"] .WarrantyNewModalMessage{
+    padding-bottom: 100px !important;
+  }
+  div[id^="ModalWarranty_"] .divTableCell {
+    display: block !important;
+  }
+  #ModalWarranty .divTableCellHeading {
+    display: block !important;
+  }
+  div[id^="ModalWarranty_"] .divTableCell input[type="radio"] {
+    width: 20% !important;
+    margin-left: 0% !important;
+  }
+  div[id^="ModalWarranty_"] .typePlus {
+    padding-left: 10px !important; 
+    padding-right: 8px !important; 
+  }
+  div[id^="ModalWarranty_"] .mas_protection {
+    margin: 0px 30px 15px 30px !important;
+  }
+  div[id^="ModalWarranty_"] .desktopPlusHeading{
+    display:none;
+  } 
+  div[id^="ModalWarranty_"] .mobilePlusHeading {
+   	display:block !important;
+  }
+  div[id^="ModalWarranty_"] input[type="radio"]:checked:before {    
+    top: 2px !important;
+    left: 1.5px !important;
+    width: 10px !important;
+    height: 10px !important;    
+	}
+	.product_warranty input[type=checkbox]:before{
+	  top:-2px !important;
+	  left: -2px !important;
+	}
+	.product_warranty input[type=checkbox]:checked:before{
+	  top:-2px !important;
+ 	  left: -2px !important;
+	}
+	div[id^="ModalWarranty_"] .boton_Warranty{
+     width: 99% !important;
+   /* width: 55% !important;
+    height: 18px !important;
+    margin-left: 0px !important;
+    margin-top: 20% !important;*/
+  }	
+/*End: Warranty Modal - Checkout page */
+  
+  /*Payment Mobile*/
+  #payment_methods .PrecioTajeta{
+    /*display: none;*/
+  }
+  #payment_methods  .IconoTarjeta, #payment_methods  .TextoVisa {
+    display: list-item !important;
+    list-style:none !important;
+    width: 100%;
+    padding-left: 0 !important;
+  }
+  #payment_methods .TextoVisa {
+    bottom: 15px !important;
+  }
+  #payment_methods .heading {
+    top: 15px !important;
+    margin-left: 0 !important;
+  }
+  /*modal factura*/
+  #ModalFactura .Genericmodal-contenido {
+    bottom: 3px !important;
+    width: 84% !important;
+    padding: 10px 12px !important;
+   } 
+  #ModalFactura .IconTitleModal{
+    display: none;
+  }
+  #ModalFactura .TitleModal{
+    font-size: 16px !important;
+  }
+  #ModalFactura #HeaderModal {
+    height: 47px !important;
+  }
+  #ModalFactura .TextBody {
+    margin-left: 1% !important;
+  }
+  #ModalFactura .form_input {
+    width: 100% !important;
+  }
+  #ModalFactura  .ButtonModal {
+    padding: 7px 34% !important;
+  }
+  #ModalFactura .FacturaNote {
+    text-align: justify !important;
+  }
+  #checkoutShippingAddressForm .modal-contenido {
+    height: auto !important;
+  }
+  #ret_contingencyDate, #ret_firstAvailableDate {
+    bottom: 1px !important;
+    font-size: 14px;
+    width: 90% !important;
+    float: left !important;
+  }
+  #appliedPromotionCode .Code {
+    width: 76% !important;
+  }
+  #appliedPromotionCode .remove {
+    width: 15% !important;
+  }
+  .nameon-card, .lastnameon-card {
+    width: 100% !important;
+  }
+  .nameon-card .error{
+      /*top: 53px !important;*/
+  }
+  .lastnameon-card .error{
+    /* top: 120px !important;*/
+  }
+  .TarjetadeCredito .TextoVisa{
+    bottom: 4px !important;
+   }
+   
+   /*Calendar Widget Error Modal*/
+   #AlertWidgetContent p:first-child{
+	width: 100% !important;    
+    padding-left: 0px !important;
+   }
+   #result_column2{
+  text-align: center !important;
+  }
+  #select_novios a {
+    margin-left: 0px !important;
+  }
+  .SavedCard,.AddNewCard {
+    height: 106px !important;
+    width: 112px !important;
+    margin-right: 3px !important;
+    display: inline-block !important;
+  }
+  #tokenWalletTable .divTableCell {
+    padding: 3px 11% !important;
+    text-align: left !important;
+  }  
+  .noche_select{  	
+    width: 68% !important;
+    display: inherit !important;
+    margin-left: 27px !important;
+    position: inherit !important;
+    height: 20px !important;
+    top: 0px !important;
+  }
+  .noche_selected {
+    padding: 0 !important;
+    display: block !important;
+    margin-left: 27px !important;
+    position: inherit !important;
+    top: 4px !important;
+  }
+ 
+}
+/*Iphone problems*/
+/* iPhone 5 Retina regardless of IOS version */
+@media (device-height : 568px) 
+   and (device-width : 320px) 
+   and (-webkit-min-device-pixel-ratio: 2){
+
+    #tokenWalletTable .divTableCell {
+      padding: 3px 6% !important;
+      text-align: left !important;
+    }  
+    #box_header .box_text span{
+      font-size: 9px !important;
+    }
+}
+
+/*Desktop*/ 
+#PricesOrder p {
+    margin-bottom: 5px !important;
+    /*margin-top: 0px !important;*/
+
+}
+.AddresClick{
+  cursor: pointer;
+}
+.AddresClick, .editAdress{
+  display: inline;
+}
+/** Regression issues fix **/
+
+.accordion-title .PrecioTajeta{ display: block;  -webkit-transition-duration: 3s; /* Safari */
+    -webkit-transition-delay: 2s; /* Safari */   
+    transition-duration: 3s;
+    transition-delay: 2s;  }
+.accordion-title.active .PrecioTajeta{display: none;  -webkit-transition-duration: 3s; /* Safari */
+    -webkit-transition-delay: 2s; /* Safari */   
+    transition-duration: 3s;
+    transition-delay: 2s; }
+.mobile{
+  display: none;
+}
+.desktop{
+  display: block;
+}
+body{ 
+	margin: 0; 
+	padding:0; 
+	font-family: Tahoma,Verdana; 
+	position: relative; 
+	line-height: 1.4; 
+}
+a{ 
+	color: inherit; 
+	cursor:pointer; 
+	text-decoration: none; 
+}
+#page {
+	background-color: #f1f1f1; 
+	width: 100%; 
+	height: 100%;
+}
+#content h1, #content h2{
+ 	font-family: Verdana;
+  	font-size: 16px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+}
+#contentWrapper{
+	margin-bottom:36px; 
+}
+#header {
+    background-color: white !important;
+    height: 92px;
+    width: 100%;
+}
+#logoArea a {
+    display: inline-block;
+}
+#logoArea {
+    float: left;
+    width: 110px;
+}
+#content{
+ 	/*background-color: #ffffff;*/
+ 	margin-left: 9%;
+    margin-right: 9%;
+    margin-top: 75px;
+}
+#EmpresaWidgetHidden {
+	display: none;
+}
+/*#footerWrapper{
+	background-color: #ffffff;
+	border: solid 1px #ffffff;
+	border-top: solid 2px #0099cc;
+}*/
+/* 1. Message Display*/
+#MessageArea { display:none; position:fixed; _position: absolute; z-index:9999; padding: 0; margin-left: 9%; margin-right: 9%; width:83% !important;}
+#msgpopup_close_text { vertical-align:top }
+div#MessageArea div#msgpopup_content_wrapper div#msgpopup1_content div#msgpopup1_txt span#ErrorMessageText {color: #000000; font-size: 12px; position: relative; top: -9px;}
+div#MessageArea div#msgpopup_content_wrapper div#msgpopup2_content div#msgpopup2_txt span#ErrorMessageText {color: #000000; font-size: 12px; position: relative; top: -9px;}
+ 
+div.msgpopup1 { display:none; min-height:55px; left:0; position:absolute; top:0; width:100% }
+div.msgpopup1 .msgpopup_content_wrapper, div.msgpopup2 .msgpopup_content_wrapper { background-color: #FFFFFF; border: 5px solid #EBF4FB; border-top: 0; margin: 0; position: relative;-moz-box-shadow: 2px 2px 7px #666; -webkit-box-shadow: 2px 2px 7px #666; box-shadow: 2px 2px 7px #666;}
+div.msgpopup1 .msgpopup_content_wrapper .content, div.msgpopup2 .msgpopup_content_wrapper .content { background:#FFF;  min-height: 50px; width: 100% }
+div.msgpopup1 .msgpopup_content_wrapper .content .icon { max-height: 50px; width: 30px; display: inline; position: absolute; left: -2px; top: 0 }
+
+div.msgpopup1 .msgpopup_content_wrapper .content .message_text, div.msgpopup2 .msgpopup_content_wrapper .content .message_text {height: 100%; max-width: 100%; padding: 10px 0 5px; text-align: center;}
+div.msgpopup1 .msgpopup_content_wrapper .content .close, div.msgpopup2 .msgpopup_content_wrapper .content .close { max-height: 50px; position: absolute; right: 0; top: 0 }
+div.msgpopup1 .msgpopup_content_wrapper .content .close .msgpopup1_x, div.msgpopup2 .msgpopup_content_wrapper .content .close .msgpopup1_x { margin-right:10px; margin-top:10px }
+
+
+/* Start Step 1 */
+
+/** Login section **/
+#backtocart{
+  	font-family: Tahoma,Verdana;
+  	font-size: 14px;
+  	color: #0099cc;
+  	position: relative;
+  	bottom: 40px;
+  	text-decoration: underline;
+}
+.BacktoCarroIcon{
+  	width: 4.7px;
+  	height: 9px;
+  	object-fit: contain;  	
+}
+.box_number{
+	width: 42px;
+  	height: 42px;
+  	background-color: #0099cc;
+  	text-align: center;
+  	display: inline-table;
+}
+.box_number span{
+    position: relative;
+    top: 10px;
+	font-family: Verdana;
+  	font-size: 18px;
+  	font-weight: 600;
+   	color: #ffffff   	
+}
+#checkout_userdetails{
+	bottom: 21px;
+    position: relative;
+}
+.box_text{
+	display: inline;
+}
+.box_text span{
+	font-family: Tahoma,Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  color: #003e6f;
+  position: relative;  
+  left: 15px;
+  top: 8px;
+}
+.DisableHeader .box_text span{
+  top: 5px;
+}
+.Completed .box_text span{
+  top: 8px;
+}
+.bo
+#title{
+	text-align: center;
+	font-family: Tahoma,Verdana;
+  	font-size: 16px;
+  	color: #000000;
+  	margin-bottom: 26px;
+}
+.left{
+	width: 49%;
+	float: left;
+	border-right: 1px solid #d6d6d6;
+}
+.right{
+	width: 50%;
+	float: right;
+}
+#checkout_guest_logon,#checkout_guest_user{
+	text-align: center;
+  display: inline-block;  
+}
+#checkout_guest_user{
+  width: 50%;
+}
+#AjaxCheckoutLogon .form_input label{
+	position: relative;
+    right: 95px;
+ 	font-family: Verdana;
+  	font-size: 14px;
+  	color: #999999;
+  	float: left;
+    left: 21%;
+}
+#AjaxCheckoutLogon .form_input input{
+	height: 25px;
+    width: 58%;
+    margin-bottom: 21px;
+}
+#AjaxCheckoutLogon .button{
+  	margin-top: 8px;
+  	margin-bottom: 11px;
+}
+#checkout_guest_user .button {
+    margin-bottom: 11px;
+  /*margin-left:  182px;*/
+    margin-left:  20px;
+    margin-top: 18px;
+    text-align: center;
+  /*width: 209px;*/
+}
+#AjaxCheckoutLogon .button a, #checkout_guest_user .button a{
+	background-color: #0099cc;
+    border: 1px solid #0099cc;
+    color: #0099cc;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    padding: 7px 16%;
+    text-align: center;
+    text-decoration: none;
+}
+#checkout_guest_user .button a{
+    padding: 7px 8%;
+}
+#AjaxCheckoutLogon .button span,  #checkout_guest_user .button span{
+	color: #ffffff;
+	font-family: Tahoma,Verdana;
+  	font-size: 12px;
+}
+.form_reset_password{
+  	font-family: Tahoma,Verdana;
+  	font-size: 12px;
+  	color: #0099cc;
+  	text-decoration: underline;
+}
+#info{
+  height: 99px;
+ 	background-color: #e1f2f9;
+ 	width: 60%;
+  margin-left: 20%;
+  padding: 6px;
+}
+#info .text1{
+	font-family: Verdana;
+  	font-size: 13px;
+  	text-align: center;
+  	color: #4a4a4a;
+  	text-transform: uppercase;
+}
+#info .text2{
+	font-family: Verdana;
+  	font-size: 13px;
+  	text-align: center;
+  	color: #4a4a4a;
+}
+
+#info .text3{
+	font-family: Verdana;
+  	font-size: 13px;
+  	text-align: center;
+  	color: #4a4a4a;
+}
+#checkout_guest{
+ 	height: 304px;
+ 	/*display: none;*/ /*Descomentar para mostrar */
+}
+#logonErrorMessage .error_message{
+  font-family: Verdana;
+  font-size: 12px;
+  text-align: center;
+  color: #d0021b;
+  height: 0px;
+}
+
+/** Form Guest **/
+#logonErrorMessage p{
+  margin-bottom: 5px !important;
+}
+#checkout_guest_logon #title{
+  margin-bottom: 16px !important;
+}
+#checkout_billing_address{
+	text-align: center;
+	height: 417px;
+}
+#checkout_billing_header span{
+	font-family: Verdana;
+  	font-size: 12px;
+  	text-align: center;
+  	color: #4a4a4a;
+  	position: relative;
+  	bottom: 16px;
+}
+#checkoutBillingAddressForm .left{
+	border-right: 1px solid #ffffff;	
+	text-align: right;
+	width: 48%;
+}
+#checkoutBillingAddressForm .right{
+	text-align: left;
+	width: 48%;	
+}
+#checkoutBillingAddressForm .form_input{
+	height: 68px;
+}
+#checkoutBillingAddressForm .form_input label{
+	position: relative;
+    /*right: 95px;*/
+ 	font-family: Verdana;
+  	font-size: 14px;
+  	color: #999999;
+  	/*float: left;
+    left: 21%;*/
+}
+#checkoutBillingAddressForm .form_input input{
+	height: 25px;
+    width: 58%;
+    margin-bottom: 21px;    
+}
+
+#checkoutBillingAddressForm .form_input p{
+	 margin-bottom: 0;
+}
+#checkoutBillingAddressForm .left p{
+	margin-left: 41%;
+    text-align: left;
+}
+#example_rut, #example_dni {
+display: none;
+}
+.example{
+	font-family: Verdana;
+  	font-size: 12px;
+  	font-style: italic;
+  	text-align: center;
+  	color: #999999;
+	position: relative;
+  	bottom: 34px;
+  	padding-top: 6px;
+}
+.form_input_option{
+	margin-top: 36px;
+}
+#checkoutBillingAddressForm .form_input_option label{
+    color: #999999;
+    font-family: Verdana;
+    font-size: 14px;
+    position: relative;
+} 
+.form_input_option .firstP, .form_input_option .secondP{
+	margin-left: 41%;
+    text-align: left;
+    margin-right: 140px;
+    display: inline;
+}
+#checkout_billing_option_dni {
+	margin-left: 20px;
+}
+.form_input_option .secondP{
+    display: inline;
+    margin-left: 10px !important;
+    margin-right: 143px;
+}   
+#checkout_billing_zipCode, #checkout_billing_guestIdentity{
+    height: 25px;
+    margin-bottom: 21px;
+    width: 58%;
+}
+.form_input_option .error{
+	bottom: 47px;
+    position: relative;
+}
+#checkout_billing_links{
+	float: left;
+	position: relative;
+  width: 100%;
+}
+#checkout_billing_links .link, #checkout_billing_links .button{
+	display: inline;
+}
+#checkout_billing_back #backtocart_link{
+  	font-family: Tahoma,Verdana;
+  	font-size: 14px;
+  	color: #0099cc;
+}
+#checkout_billing_continue{
+	margin-left: 26px;
+}
+#checkout_billing_back{
+	position: relative;
+    right: 72px;
+}
+#checkout_billing_continue a{
+	background-color: #0099cc;
+    border: 1px solid #0099cc;
+    color: #0099cc;
+    cursor: pointer;
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    /*padding: 5px 57px;*/
+    padding: 5px 57px;   
+}
+#checkout_billing_continue span{
+	color: #ffffff;
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+}
+.Separated{
+	background-color: #f1f1f1;
+	height: 142px;
+	padding: 25px 0;
+}
+.DisableHeader{
+ 	height: 41px;
+ 	background-color: #f9f9f9;
+  	border: solid 1px #d6d6d6;
+  	/*margin-bottom: 10px;*/
+}
+.Completed.DisableHeader{
+	background-color: #e1e8ee;
+  border: 1px solid #0099cc;
+}
+.DisableHeader p, #box_header p{
+	margin: 0px;
+}
+.DisableHeader .box_number {
+  	background-color: #999999;
+}
+.DisableHeader .box_text{
+  	color: #999999;
+}
+.Completed.DisableHeader .box_text{
+  	bottom: 22px;
+  	position: relative;
+}
+.Completed.DisableHeader .box_number span {
+	top:0px;
+}
+#checkoutBillingAddressForm .error{
+    bottom: 31px;
+    position: relative;
+    /*text-align: center;*/
+    font-family: Verdana;
+    font-size: 12px;
+    color: #d0021b;
+}
+#ShipAddressForm .error, #ModalFactura .error span, #giftCard_Target .error span,#error_msg_promo,#promo_content .error span{    
+    position: relative;    
+    font-family: Verdana;
+    font-size: 12px;
+    color: #d0021b !important;
+    height: 10px;
+}
+#error_msg_promo,#novios_input_billing_error_message{
+  margin-left: 25px;
+}
+#novios_input_billing_error_message{
+  bottom: 36px;
+  position: relative;
+}
+#ShipAddressForm #checkout_shipping_address3 {
+	width: 100%;
+  resize: none;
+}
+.AddressCreated input[type="radio"] {
+	height: 16px;
+    width: 16px;
+    background-color: #ffffff !important;
+    border: solid 1px #d6d6d6;    
+    margin-top: 15px;       
+    position: absolute;    
+    margin-left: 10px;
+}
+.AddressCreated input[type="radio"]:checked:before {
+	content: "";
+    display: block;
+    position: relative;
+    top: 3px;
+    left: 3px;
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    background: #00b0eb;
+}
+.left15 {
+	left: 15px;
+}
+.ErrorWithExample{
+    bottom: 13px;
+    /*display: none;
+    left: 24px;*/
+    position: relative;
+}
+#checkout_userdetails{
+	/*display: none; Quitar para mostrar*/
+	background-color: #ffffff;
+}
+/* End Step 1 */
+
+/* Start Step 2*/
+#checkout_orderdetails{
+	position: relative;
+	bottom: 27px;
+	margin-top: 15px;
+	background-color: #ffffff;	
+}
+.tileStep2{
+	font-family: Verdana;
+  	font-size: 14px;
+  	text-align: center;
+  	color: #000000;
+  	margin-left: 21px; 
+}
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    /*border-right: 1px solid #ccc;*/
+    margin-left:21px; 
+    margin-right:21px; 
+    position: relative;
+    top: 2px;
+    /*height: 46px;*/
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 11px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+.TitleTab{
+  	bottom: 7px;
+    color: #4a4a4a;
+    font-family: Tahoma,Verdana;
+    font-size: 14px;
+    position: relative;
+    margin-left: 10px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ccc;
+}
+.activo{
+	display: block;
+}
+.oculto{
+	display: none;
+}
+/* Create an active/current tablink class */
+div.tab .tablinks{
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 2px solid #0099cc;
+    margin-right: 7px;
+    height: 40px;
+    width: 198px;
+}
+.ImgDespacho{
+	bottom: 3px;
+    height: 20px;
+    position: relative;
+    width: 30px;
+}
+.ImgRetiro{
+	bottom: 4px;
+    height: 20px;
+    position: relative;
+    width: 20px;
+}
+.ImgChExpress{
+    bottom: 4px;
+    height: 20px;
+    position: relative;
+}
+.ImgNovios{
+   	bottom: 4px;
+    height: 20px;
+    position: relative;
+}
+.yass-sensor #result_column2{
+  width: 45%;
+}
+.tabcontent {    
+    padding: 6px 12px;
+    /*-webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s;*/
+    margin-left:21px; 
+    margin-right:21px; 
+    border-top: 2px solid #0099cc;  
+    border-left: 2px solid #0099cc; 
+    border-right:  2px solid #0099cc; 
+
+}
+.RetiroEnTienda{
+	/*height: 47px;
+    position: relative;
+    top: 1px;*/
+}
+
+div.tab button.active {
+    border-top: solid 2px #0099cc;
+    border-right: solid 2px #0099cc;
+    border-left: 2px solid #0099cc;
+    border-bottom:white; 
+    position: relative;
+    top: 2px;
+}
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/*Start Despacho style*/
+#shipAddress_desc{
+  font-family: Verdana;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  color: #4a4a4a;
+  position: relative;
+  height: 40px;
+  top: 12px;
+}
+#add_edit_address{
+	margin: auto;
+	width: 100%;
+}
+#ShipAddressForm{
+  margin: auto;
+  width: 100%;
+}
+#ShipAddressForm .right{
+  width: 48%;
+}
+.DireccionLables{
+  font-family: Verdana;
+  font-size: 14px;
+  color: #999999;
+}
+.DireccionInput{
+  width: 249px;
+  height: 36px;
+  background-color: #ffffff;
+  border: solid 1px #d6d6d6;
+}
+.BigInput{
+  width: 97%;  
+}
+/*.form_input{
+	height: 81px;
+}
+.form_area{
+  height: 133px;
+}*/
+#checkoutShippingAddressForm .form_input p{
+  margin-top: 0px;
+}
+.StyleForm{
+    width: 55%;
+}    
+.Izquierdo{
+	display: inline-block;
+  width: 48%;
+}
+#checkout_shipping_links{
+	width: 100%;
+	text-align: center;
+}
+#checkout_shipping_links .button, #checkout_shipping_links .link{
+	display: inline-block;
+}
+#checkout_shipping_links .button{
+	background-color: #0099cc;
+    border: 1px solid #0099cc;
+    color: #0099cc;
+    cursor: pointer;
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    padding: 7px 68px;
+    text-align: center;
+    text-decoration: none;
+    margin-left: 30px;
+}
+#checkout_shipping_links .link a{
+    color: #0099cc;
+    font-family: Tahoma,Verdana;
+    font-size: 14px;
+    position: relative;
+    text-decoration: underline;
+}
+#checkout_shipping_links .button span{
+	color:  #ffffff; 
+}
+#checkoutShippingAddressForm{
+	/*display: none; Delete for show form address*/
+}
+.TiteDireccionDespacho{
+	font-family: Verdana;
+  	font-size: 16px;
+  	font-weight: 600;
+  	text-align: left;
+  	color: #4a4a4a;
+  	margin-bottom: 16px;
+}
+.AddressCreated{
+  	background-color: #f9f9f9;
+  	height: 45px;
+  	margin-bottom: 14px;
+  	width: 100%;
+}
+.AddressCreated span{
+	  font-family: Verdana;
+  	font-size: 12px;
+  	font-weight: 600;
+  	color: #999999;
+  	left: 4%;
+    position: relative;
+}
+.AddresClick span{
+       top: 14px;
+}
+.AddressCreated img{
+    position: relative;
+    top: 3px;
+}
+.AddressCreated .right{
+	width: 18%;	
+    font-family: Tahoma,Verdana;
+    color: #0099cc;
+    font-size: 12px;
+
+    cursor: pointer;
+    font-weight: normal;
+}
+.AddressCreated .right span{
+	color: #0099cc;
+}
+
+.AddressCreated a {
+	margin-top: 10px;
+}
+#checkout_addressList{
+	margin-top:	14px;
+}
+.AddNewAddress{
+	margin-bottom: 24px;	
+	margin-left: 10px;
+}
+.AddNewAddress span{
+	bottom: 2px;
+    color: #0099cc;
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    position: relative;
+}
+/*Style for Modal Address*/
+.ModalDesktop{
+  opacity:1;
+  pointer-events:auto;
+  z-index: 9;
+  display: block !important;
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+}
+.modal-contenido{
+  background-color:#ffffff;
+  padding: 10px 20px;
+  margin: 1% auto;
+  position: relative;
+  width: 48%;
+  height: 588px;
+}
+.OcultaHeader{
+  display:none; 
+}
+.IconoPosition{
+  border-radius: 100px;
+  background-color: rgba(214, 214, 214, 0.1);
+  margin-right: 33px;
+}
+#shipAddress_heading .IconoPosition {
+   margin-right: 3px;
+}
+.TitleModal{
+  font-family: Tahoma,Verdana;
+  font-size: 21px;
+  color: #000000;
+}
+.CerrarIcono{
+  text-align: right;
+}
+.CerrarIcono img{
+  cursor: pointer;
+}
+#heading_close{
+  border-bottom: 1px solid #dddddd;
+  bottom: 7px;
+  height: 73px;
+  position: relative;
+}
+/*Fin Modal*/
+/*End Despahco style*/
+
+/*Start Retiro en tienda Style*/
+.TitleRatiro{
+  	font-family: Verdana;
+  	font-size: 16px;
+  	font-weight: 600;
+  	text-align: center;
+  	color: #4a4a4a;
+  	margin-left: 64px;
+}
+.AddressCreated .right span {
+   /* top: 9px;*/
+    font-weight: normal;
+    text-decoration: underline;
+}
+#ret_address_details{
+	margin-top: 37px;
+	width: 100%;
+}
+.AdressForm{
+	margin: auto;
+	width: 24%;	
+	margin-top: 29px;
+}
+.LeftText{
+	font-family: Verdana;
+ 	font-size: 14px;
+  	color: #999999;
+}
+.selector{
+	margin-top:7px ; 
+	margin-bottom: 17px;
+}
+.AdressForm .button{
+  	background-color: #0099cc;
+    border: 1px solid #0099cc;
+    color: #0099cc;
+    cursor: pointer;
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    padding: 7px 16%;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 18px;
+}
+.AdressForm .button span{
+	color: #ffffff;
+}
+.AlertRetiro{
+  	height: 48px;
+  	background-color: #fcf8e3;
+  	width: 100%;
+  	text-align: center;
+}
+.AlertRetiro span{
+	position: relative;
+  top: 12px;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  color: #4a4a4a;
+}
+.TitleEntrega{
+	font-family: Verdana;
+  	font-size: 16px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	margin-top:	21px; 
+  	margin-bottom: 14px;
+}
+.BoxStoreAddress{
+	background-color: #e1f2f9;
+	height: 84px;
+  	padding: 14px 13px 19px 13px;
+}
+#ce_address_details_box{
+    font-family: Verdana;
+    font-size: 12px;
+    color: #4a4a4a;
+    margin-top: 7px;
+    margin-bottom: 14px;
+}
+#ce_change_office span {
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    color: #0099cc;
+    cursor: pointer;
+}
+#ret_storename, #ret_address_ship_date{
+	display: inline-block;
+}
+#ret_address_ship_date{
+    float: right;
+    /*width: 29%;*/
+}
+#ret_contingencyDate{
+	width: 60%;
+	float: right;
+}
+.ret_address_details_box{
+	font-family: Verdana;
+  	font-size: 12px;
+  	color: #4a4a4a;
+  	margin-top: 7px; 
+  	margin-bottom: 14px;
+}
+#ret_change_store{
+  	font-family: Tahoma,Verdana;
+  	font-size: 12px;
+  	color: #0099cc;
+  	cursor: pointer;
+}
+#ret_change_store a{
+      text-decoration: underline;
+}
+.ProxyPickupBox{
+	height: 100%;
+  	border: solid 1px #d6d6d6;
+  	margin-top: 14px; 
+}
+.BoxCheckboxText{
+	padding: 17px 0 16px 31px;
+  font-size: 12px;
+}
+.BoxCondition{
+	background-color: #fcf8e3;
+    margin: 18px 6%;
+    padding: 6px 0 8px 23px;
+}
+.BoxCondition span{
+	font-family: Verdana;
+  	font-size: 12px;
+  	color: #4a4a4a;
+}
+#proxy_input{
+	margin-left: 6%;
+	margin-bottom: 30px;
+}
+.proxy_input{
+	display: inline-block;
+}
+#proxy_input .lastName{
+  margin-left: 27px;
+}
+/*End Retiro en tienda Style*/
+
+/*Start Novios Style*/
+#IdTitleNovios{  /*padre*/
+  width: 100%;
+  height: 34px
+}
+#IdTitleNovios .TitleNovios, #IdTitleNovios .TitleCode{  
+  display: inline-block;
+  position: relative;
+  top: 10px;
+  text-align: left;
+}
+#ContentResultNovios{
+  width: 100%; 
+  height: 300px; 
+  overflow: hidden; 
+}
+#Titleresult_column1{
+  /*padding: 0 0 0 21px;*/
+  text-align: left;
+  width: 39%;
+}
+.NoviosBox{
+	margin-top: 37px;
+  width: 100%;
+}
+.TabTitleNovios{
+    color: #4a4a4a;
+    font-family: Verdana;
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 30px;
+    position: relative;
+    text-align: left;
+}
+.registry_input{
+	display: inline-block;
+	margin-left: 5%;
+	margin-bottom: 50px;
+  	width: 27%;
+  	margin-right: -14px;
+  
+}
+.registry_input .DireccionInput{
+  width: 100%;
+  margin-bottom: 7px;
+}
+#checkout_novios_input_head{
+	margin-bottom: 24px;
+}
+.LabelNovios{
+   	color: #999999;
+    font-family: Verdana;
+    font-size: 14px;
+    position: relative;
+    bottom: 7px;
+    
+}
+.ExampleNovios{
+    color: #999999;
+    display: table-row-group;
+    font-family: Verdana;
+    font-size: 12px;
+    font-style: italic;
+    position: relative;
+    text-align: left;
+}
+.ButtonSearch{
+	text-align: center;
+	padding-bottom: 20px;
+}
+.ButtonSearch a{
+	background-color: #0099cc;
+    border: 1px solid #0099cc;
+    color: #0099cc;
+    cursor: pointer;
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    margin-bottom: 18px;
+    padding: 7px 8%;
+    text-align: center;
+    text-decoration: none;
+}
+#checkout_novios_search_submit span{
+	color: #ffffff;
+}
+
+#novios_results .divTableRow:nth-child(odd){background-color: #ffffff}
+#novios_results .divTableRow:nth-child(even){background-color: #f9f9f9;}
+
+.BoxResult{
+	margin-left: 5%;
+    margin-right: 5%;
+}
+.result_label{
+	font-family: Verdana;
+  	font-size: 14px;
+  	line-height: 1.2;
+  	color: #4a4a4a;
+  	text-transform: uppercase;
+  	margin-left: -18px;
+}
+.TitleTableNovios{
+	font-family: Tahoma,Verdana;
+  	font-size: 12px;
+  	color: #000000;
+  	background-color: #edeced;  
+  	text-transform: uppercase;	
+}
+#novios_results .element {
+	display: inline-block;
+}
+#novios_results img{
+    background-color: #ffffff;
+    height: 40px;
+    position: relative;
+    top: 7px;
+    width: 40px;
+}
+#select_novios a{
+    background-color: #ffffff;
+    border: 1px solid #0099cc;
+    color: #0099cc;
+    cursor: pointer;
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    margin-left: 21px;
+    padding: 5px 52px;
+    text-align: center;
+    text-transform: uppercase;	
+    /*margin-left: 11%;
+    margin-right: 36px;*/
+}
+#novios_results .divTableCell{
+    padding: 3px 17px;
+}
+.BoxNoResults{
+	height: 166px;
+  	background-color: #f7f7f7;
+  	width: 100%;
+  	text-align: center;
+  	margin-bottom: 21px;
+}
+.BoxNoResults span{
+  	position: relative;
+    top: 51px;
+}
+.LupaNovios{
+	height: 40px;
+    margin-right: 12px;
+    position: relative;
+    top: 13px;
+    width: 40px;
+}
+.TextoNovios{
+	font-family: Tahoma,Verdana;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #4a4a4a;
+  width: 85%;
+  text-transform: uppercase;
+}
+div[id^="novios_names_"]{
+  bottom: 9px;
+  position: relative;
+  vertical-align: middle;
+}
+.TextoNoviosCode{
+  font-family: Tahoma,Verdana;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #4a4a4a;
+  position: relative;
+  bottom: 7px;
+}
+#select_novios{
+  bottom: 7px;
+  position: relative;
+}
+/*#novios_results .ContentResult{
+	text-align: left;
+}*/
+
+#result_column1{
+  text-align: left;
+}
+#result_column2{
+  text-align: right;
+}
+.TitleTableNovios #result_column2{
+  text-align: left;
+}
+
+#novios_address_heading .TitleDelivery{
+	font-family: Verdana;
+  	font-size: 16px;
+  	font-weight: 600;
+  	text-align: center;
+  	color: #4a4a4a;  	
+}
+#checkout_novios_address_detail{
+	margin-top:40px; 
+}
+.BoxAddressNovios{
+	height: auto;
+  	background-color: #e1f2f9;
+  	margin-top: 18px;
+}
+.NameNovio, .NumberNovio,.EditNovios{
+	display: inline-block;
+}
+.NameNovio{
+	font-family: Verdana;
+  	font-size: 12px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	margin-left: 13px;
+}
+.NumberNovio{
+	font-family: Verdana;
+  	font-size: 12px;
+  	color: #4a4a4a;   
+  	margin-left: 13px; 
+}
+.EditNovios{
+    color: #0099cc;
+    float: right;
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    position: relative;
+    right: 15px;
+    top: 8px;
+}
+/*End Novios Style*/
+
+.shipping_text{
+    font-family: Verdana;
+    font-size: 12px;
+    color: #4a4a4a;
+    margin-right: 10px;
+}
+.shipping_textContent,.TextEdit_textContent{
+  display: inline-block;
+}
+
+/*Start List Of Product Style*/
+#shipping_order_details .divTableRow:nth-child(odd){background-color:  #f9f9f9;}
+#shipping_order_details .divTableRow:nth-child(even){background-color:  #ffffff;}
+
+#shipping_order_details .ListProduct{
+	border-left: 2px solid #0099cc;
+	border-right: 2px solid #0099cc;
+	border-bottom: 2px solid #0099cc;
+	padding: 6px 12px;
+    margin-left: 21px;
+    margin-right: 21px;
+}
+.OrderItmTitle{
+ 	font-family: Verdana;
+  	font-size: 12px;
+  	font-weight: 500;
+  	/*color: #4a4a4a;*/
+    font-weight: bold;
+}
+.DateDespacho{
+  	height: 52px;
+  	background-color: rgba(0, 153, 204, 0.1);
+  	margin-bottom: 15px;
+}
+.DateP{
+	color: #4a4a4a;
+    font-family: Verdana;
+    font-size: 12px;
+    margin-left: 1%;
+    position: relative;
+    top: 12px;
+    width: 70%;
+}
+.DateP .calendar{
+	width: 23px;
+  	height: 19px;
+}
+.DateP .SpanCalendar{
+	bottom: 4px;
+    margin-left: 9px;
+    position: relative;
+}
+.TextCalendar,.EditCalendar{
+	display: inline;
+}
+.DateP,.group_shipcost{
+	display: inline-block;
+}
+.group_shipcost{
+    color: #4a4a4a;
+    float: right;
+    font-family: Verdana;
+    font-size: 12px;
+    margin-right: 11px;
+    position: relative;
+    top: 15px;
+}
+.calendarEdit{
+	width: 16px;
+  	height: 16px;
+}
+.EditCalendar{
+    bottom: 3px;
+    margin-left: 21px;
+    position: relative;
+}
+.EditCalendar a{
+	font-family: Tahoma,Verdana;
+  	font-size: 12px;
+  	color: #0099cc;
+  	cursor: pointer;
+  	text-decoration: underline;
+}
+/* DivTable */
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell{
+	/*border: 1px solid;*/
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHead {
+	display: table-cell;
+	padding: 9px 10px;
+	font-family: Tahoma,Verdana;
+  	font-size: 12px;
+  	color: #000000;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+.TilteTable{
+	background-color: #efefef;
+}
+.SubTotal{
+  	height: auto;
+  	background-color: rgba(0, 153, 204, 0.1);
+  	margin-bottom: 21px;
+    margin-top: 21px;
+}
+.DivSubtotal{
+    color: #4a4a4a;
+    font-family: Verdana;
+    font-size: 14px;
+    margin-right: 7px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+    text-align: right;
+}
+#checkout_shipping_continue, #checkout_ship_address_continue{
+	text-align: center;
+	margin-bottom: 21px;
+}
+#checkout_shipping_continue .button, #checkout_ship_address_continue .button{
+	background-color: #0099cc;
+    border: 1px solid #0099cc;
+    color: #0099cc;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    padding: 7px 58px;
+    text-align: center;
+    text-decoration: none;
+}
+#checkout_shipping_continue .button span, #checkout_ship_address_continue .button span{
+	color: #ffffff;
+}
+.RowRight{
+	text-align:right;
+}
+.RowCenter{
+	text-align:center;	
+}
+#product_image{
+    position: relative;
+    top: 12px;
+}
+.product_name{
+	width: 48%;
+	position: relative;
+  top: 12px;
+  margin-left: 26px
+}
+#orderitem_detail_column1{
+  width: 54%;
+}
+#orderitem_detail_column2{
+  text-align:center; 
+  width: 10%;
+}
+.prodcuct_qty,.product_prices,.product_total{
+  bottom: 38px;
+  position: relative;
+}
+#orderitem_detail_column3,#orderitem_detail_column4{
+  text-align:right; 
+}
+.product_image,.product_name{
+	display: inline-block;
+}
+#checkout_orderitem_groups .product_name{
+  font-size: 12px;
+  font-family: Tahoma,Verdana;
+  font-weight: bold;
+}
+#product_image span{
+    width: 80px;  
+  height: 80px;
+}
+.product_warranty{
+	font-family: Tahoma,Verdana;
+  	font-size: 12px;
+  	color: #000000;
+  	margin-top: 9%;
+}
+.product_warranty a{
+  	font-family: Tahoma,Verdana;
+  	font-size: 12px;
+  	color: #0099cc;
+  	cursor: pointer;
+  	text-decoration: underline;
+}
+.tarjeta_mas_price {
+    color: #0099cc !important;
+}
+.product_prices,.prodcuct_qty,.product_total{
+	font-family: Tahoma,Verdana;
+  	font-size: 12px;
+  	color: #4a4a4a;
+}
+.sku{
+	font-family: Tahoma,Verdana;
+  	font-size: 10px;
+  	color: #999999;
+}
+/*End List Of Product Style*/
+/*Modal Generico*/
+.Genericmodal-contenido{
+  background-color:#ffffff;
+  padding: 10px 20px;
+  margin: 7% auto;
+  position: relative;
+  width: 72%;
+}
+.Genericmodal{
+  background-color: rgba(0,0,0,.8);
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  opacity:0;
+  pointer-events:none;
+}
+#GenericModal:target{
+  opacity:1;
+  pointer-events:auto;
+  z-index: 9;
+}
+#GenericModal:target{
+  display: block !important;
+}
+
+/*Modal Calendar*/
+.RadioBottonCalendar{
+  height: 21px;
+  position: relative;
+  top: 5px;
+  width: 21px; 
+  cursor: pointer;
+}
+.Next, .After, .pastDate, .futureDate{
+  display: inline-block;
+   cursor: pointer;
+}
+.NextCalendar, .dateSelectionFwdBtn{
+  font-family: Tahoma,Verdana;
+  font-size: 12px;
+  /*color: #0099cc;*/ 
+  text-decoration: underline;
+  bottom: 5px;
+  position: relative;
+}
+.AfterCalendar, .dateSelectionBackBtn {
+  font-family: Tahoma,Verdana;
+  font-size: 12px;
+ /* color: #0099cc;*/
+  text-decoration: underline;
+  bottom: 5px;
+  position: relative;
+}
+.MidleLine{
+  bottom: 5px;
+  position: relative;
+}
+#HeaderModal{
+  border-bottom: solid 1px #d6d6d6;
+  height: 96px;
+}
+#HeaderModal a{
+  bottom: 21px;
+  float: right;
+  position: relative;
+  bottom: 4px;
+  left: 10px;
+}
+.IconTitleModal{
+  border-radius: 100px;
+  background-color: rgba(214, 214, 214, 0.1);
+  width: 80px;
+  height: 80px;
+}
+.IconTitleModal img{
+   padding: 24px 0 0 28px;
+}
+.TitleModal{
+  font-family: Tahoma,Verdana;
+  font-size: 21px;
+  color: #000000;
+}
+.IconTitleModal, .IconTitleModal{
+  display: inline-block;
+}
+.TextBody,.LinkNext{
+  display: inline-block;
+}
+#BodyModal{
+  margin-top: 10px;
+}
+.LinkNext{
+  float: right;
+}
+#BodyModal .divTable{
+  margin-bottom: 14px;
+  margin-top: 14px;
+  text-align: center;
+}
+.TodoHorario{
+  border: 1px solid #dddddd;
+  height: 61px;
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  color: #4a4a4a;
+}
+.TextTodoHorario, .jornadaDesc{
+  position: relative;
+  top: 13px;
+  font-family: Verdana;
+  font-size: 14px;
+  text-align: center;
+  color: #4a4a4a;
+}
+#ret_contingencyDate, #ret_firstAvailableDate{
+  bottom: 78px;
+  position: relative;
+  font-family: Verdana;
+  font-size: 12px;
+}
+.week{
+  /*width: 210px;*/
+  height: 55px;
+  border: 0px;
+  margin-top: 11px;
+  position: relative;
+  right: 22px;
+  padding: 0 0 3px 10px;
+}
+.Day{
+  height: 55px;
+  background-color: #e5f7fd;
+  border: solid 1px #dddddd;
+}
+.Time{
+  width: 100px;
+}
+.ContenedorDia{
+  border-top: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-bottom: 0px;
+  padding: 0 0 16px;
+  position: relative;
+  top: 3px;
+  height: 39px;
+  width: 100%;
+}
+.TextContenedorDia{
+  position: relative;
+  top: 8px;
+  font-family: Verdana;
+  font-size: 14px;
+  color: #4a4a4a;
+}
+.WeekTitle{
+  width: 30%;
+}
+.TitleContenedorDia {
+    position: relative;
+    right: 10px;
+    /*width: 210px;*/
+}
+.LineContent{
+  position: relative;
+  right: 16px;
+}
+.LineTime{
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+  height: 52px;
+}
+.ButtonModal{
+  background-color: #0099cc;
+  border: 1px solid #0099cc;
+  color: #0099cc;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Tahoma,Verdana;
+  font-size: 12px;
+  padding: 7px 10%;
+  text-align: center;
+  text-decoration: none;
+}
+.ButtonModal span{
+  color: #ffffff;
+}
+.CenterButton{
+  text-align:center;
+}
+.FirstBorder{
+  border-left: 1px solid #dddddd;
+}
+.LastBorder{
+  border-right: 1px solid #dddddd;
+}
+.lastDay{
+  right: 18px;
+  padding: 0 0 0 5px;
+}
+
+.button.disabled{
+	background: #999 !important;
+    border: none !important;
+}
+
+/*Modal Factura*/
+#ModalFactura:target{
+  opacity:1;
+  pointer-events:auto;
+  z-index: 9;
+}
+#ModalFactura:target{
+  display: block !important;
+}
+/*#ModalFactura{
+  position: absolute !important;
+}*/
+#ModalFactura, #checkoutShippingAddressForm, #GenericModal {
+  overflow-y: auto;
+}
+#ModalFactura .Genericmodal-contenido {
+  width: 57%;
+  bottom: 79px;  
+  text-align: left;
+}
+#ModalFactura .TextBody{
+  margin-left: 5%;
+}
+#ModalFactura .right{
+  display: inline-block;
+  width: 50%; 
+}
+#ModalFactura .form_input{
+  /*margin-bottom: 22px;*/
+   height: 85px;
+}
+.FacturaForm{
+  margin-top: 18px;
+}
+.FacturaNote{
+  font-family: Verdana;
+  font-size: 12px;
+  font-style: italic;
+  text-align: center;
+  color: #999999;
+}
+#novios_search_message{
+	display: inline;
+}
+.alert{
+	width: 25px;
+	height: 25px;
+}
+.greeting_label{
+	width: 212px;
+    height: 19px;
+    font-family: OpenSans;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    color: #4a4a4a;
+    margin-bottom: 0;
+    left: 25px;
+    position: absolute;
+}
+#gift_greeting_text{
+	top: 18px;
+    position: relative;
+    margin-bottom: 40px;
+    width: 99%;
+    height: 60px;
+    padding-left: 5px;
+}
+.inactive {
+    color: #999999 !important;
+}
+.Genericmodal.calendarModal{
+	display: block!important;
+	opacity: 1;
+	z-index: 9;
+	pointer-events: auto;
+}
+#checkout_shipping_continue{
+	margin-top: 25px;
+}
+#shippingAddressFormContainer #checkout_shipping_continue{
+  margin-top: 3px;
+}
+/*Modal Calendar */
+.Genericmodal.calendarModal #BodyModalMobile, #mhtn_widget #BodyModalMobile{
+  display: none;
+}
+.Genericmodal.calendarModal #HeaderModal {
+    text-transform: uppercase;
+}
+.Genericmodal.calendarModal #BodyModalMobile{
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+#BodyModalMobile .DiaAnteriror.inactive img.inactive, #BodyModalMobile .DiaSiguiente.inactive img.inactive,
+#BodyModalMobile .SemanaAnteriror.inactive img.inactive, #BodyModalMobile .SemanaSiguiente.inactive img.inactive,
+#BodyModal .pastDate.inactive img.inactive, #BodyModal .futureDate.inactive img.inactive{
+	display: inline;
+}
+#BodyModalMobile .DiaAnteriror.inactive img.active, #BodyModalMobile .DiaSiguiente.inactive img.active,
+#BodyModalMobile .SemanaAnteriror.inactive img.active, #BodyModalMobile .SemanaSiguiente.inactive img.active,
+#BodyModal .pastDate.inactive img.active, #BodyModal .futureDate.inactive img.active{
+	display: none;
+}
+#BodyModalMobile .DiaAnteriror.active img.inactive, #BodyModalMobile .DiaSiguiente.active img.inactive,
+#BodyModalMobile .SemanaAnteriror.active img.inactive, #BodyModalMobile .SemanaSiguiente.active img.inactive,
+#BodyModal .pastDate.active img.inactive, #BodyModal .futureDate.active img.inactive{
+	display: none;
+}
+#BodyModalMobile .DiaAnteriror.active img.active, #BodyModalMobile .DiaSiguiente.active img.active,
+#BodyModalMobile .SemanaAnteriror.active img.active, #BodyModalMobile .SemanaSiguiente.active img.active,
+#BodyModal .pastDate.active img.active, #BodyModal .futureDate.active img.active{
+	display: inline;
+}
+.DiaAnteriror.active, .DiaSiguiente.active, .SemanaAnteriror.active, .SemanaSiguiente.active,
+.pastDate.active, .futureDate.active{
+	color: #0099cc !important;
+}
+.pastDate.inactive, .futureDate.inactive{
+	color: #999999 !important;
+}
+#mhtn_widget span.jornadaDesc, #mhtn_widget span.TextContenedorDia {
+	font-size: 12px;
+}
+#mhtn_widget span.jornadaDesc img{
+	top: -5px;
+}
+
+#ret_firstAvailableDate {
+	float: right;
+}
+
+/*Calendar Widget Error Modal*/
+#AlertWidgetContent.modal-contenido{
+	height: auto;    
+    font-family: Verdana;     
+    width: 35%;
+    position: relative;
+    top: 25px;
+}
+#AlertWidgetContent .button_close{
+	float: right;
+    width: 29px;
+    height: 29px;
+}
+#AlertWidgetContent .content {
+	margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+#AlertWidgetContent p{
+	margin: 0px;
+}
+#AlertWidgetContent p:first-child{
+	width: 65%;
+    position: relative;
+    padding-left: 85px;
+}
+/*Calendar Widget Error Modal*/
+
+.noche_select {
+	padding: 10px 15px;
+    border-radius: 5px;
+    color: rgba(255,255,255,1);
+    background-color: #0099ff;
+    font-weight: bold;
+    font-size: 12px;
+    width: 26%;
+    display: inline;
+    margin-left: 10px;
+    position: absolute;
+    height: 25px;
+    top: -9px;
+}
+.noche_select_txt {
+	width: 94%;
+    padding-left: 26px;
+    position: relative;
+    bottom: 21px;
+}
+.noche_select:hover{
+	background-color : #003366;
+	text-decoration :none !important;
+}
+.noche_selected{
+	padding: 10px 15px;
+    font-weight: bold;
+    font-size: 12px;
+    display: inline;
+    margin-left: 10px;
+    position: absolute;
+    top: -7px;
+    color: #192d75;
+}
+.noche_selected_txt{
+    width: 94%;
+    padding-left: 20px;
+    position: relative;
+    bottom: 15px;
+}
+
+/* End Step 2*/
+
+/* Start Step 3*/
+
+.Separated {
+    height: 86px;
+}
+.box_number img{
+	height: 42px;
+	width: 42px;
+}
+.Step3 .box_number span{
+    bottom: 16px;
+    top: 0px;
+}
+.Step3 .box_text {
+    bottom: 22px;
+    position: relative;
+}
+
+#checkout_billingdetails{
+	bottom: 19px;
+	position: relative;	 	
+}
+#checkout_billingdetails.open{
+	background-color: #f9f9f9;
+    border: solid 1px #d6d6d6;
+}
+#checkout_billingdetails #box_header{
+   /*bottom: 16px;
+   position: relative;*/
+}
+
+.show {
+	display: block;
+}
+.hide{
+	display: none;
+}
+
+#promo_gc_details h2{
+	font-family: Verdana;
+  	font-size: 16px;
+  	font-weight: 600;
+  	color: #4a4a4a;
+  	margin-left: 9%;
+    text-align: left;
+}
+
+#factura{
+	bottom: 25px;
+    text-align: right;
+    position: relative;
+    right: 5%;
+}
+#factura span{
+	font-family: Tahoma,Verdana;
+  	font-size: 14px;
+  	color: #0099cc;
+  	cursor: pointer;
+  	text-decoration: underline;
+}
+#factura h3, #factura p,#factura a{
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+#factura p{
+  font-size: 12px;
+}
+#factura a{
+  color: #0099cc;
+  cursor: pointer;
+  font-family: Tahoma,Verdana;
+  font-size: 12px;
+  text-decoration: underline;
+}
+#giftcard_details{
+  	margin-bottom: 14px;
+}
+.plus{
+	float: right;
+    margin-right: 10px;
+}
+.plus img {
+  height: 12px;
+  position: relative;
+  top: 3px;
+  width: 14px;
+}
+.minus{
+	float: right;
+  margin-right: 10px;
+  display: none;
+}
+.minus img{
+  height: 13px;
+  width: 16px;
+}
+.heading{
+	position: relative;
+  top: 14px;
+  /*margin-left: 26px;*/
+}
+
+/*acordeon*/
+.accordion-title {
+	font-family: Verdana;
+  font-size: 14px;
+  font-weight: 600;
+  color: #003e6f;
+  background-color: #ffffff;
+  border: solid 1px #0099cc;
+  height: 47px;
+  width: 90%;
+  margin-left: 62px;
+  cursor: pointer;
+}
+.accordion-content {
+    border: solid 1px #0099cc;
+    border-top: unset;
+    display: none;
+    width: 90%;
+  	margin-left: 62px;
+  	background-color: #ffffff;
+  	/*height: 97px;*/
+  	height: auto;
+}
+.accordion-title.active span.plus, .accordion-title span.minus{
+	display: none;
+}
+.accordion-title.active span.minus, .accordion-title span.plus{
+	display: block;
+}
+.RemoveLine{
+	 border-bottom: unset;
+}
+.Margen{
+	margin-bottom: 45px;
+}
+#box_content, #payment_details .MargenPago{
+	margin-bottom:28px; 
+}
+
+#Tarjeta Cencosud .TextoVisa{
+	bottom: 12px !important;
+}
+.ContenedorPrice{
+  position: relative;
+  /*right: 5%;*/
+  text-align: right;
+  margin-bottom: 14px;
+  width: 95%;
+}
+.ContenedorPrice p{
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+#desc{
+  margin-left: 11px;
+  margin-top: 10px;
+}
+#desc span{
+  font-family: Tahoma,Verdana;
+  font-size: 12px;
+  color: #999999;
+}
+#appliedPromotionCode .Code{
+    height: 37px;
+    background-color: #f3f9fb;
+    width: 19%;
+  }
+.Code,.remove{
+  display: inline-block;
+}  
+#appliedPromotionCode .Code {
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    color: #000000;
+    left: 10px;
+    position: relative;
+}
+#appliedPromotionCode .remove{
+    background-color: #efefef;
+    height: 37px;
+    position: relative;
+    top: 5px;
+    width: 4%;
+    text-align: center;
+  }
+#appliedPromotionCode img{
+    text-align: center;
+}
+#appliedPromotionCode a{
+  position: relative;
+  top: 10px;
+}
+#appliedPromotionCode .TextoCode{
+    left: 10px;
+    position: relative;
+    top: 10px;
+}
+
+hr {
+  background-color: black;
+  height: 1px;
+}
+.TotalPrice{
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: bold;
+  color: #0099cc;
+}
+.BottonPagar{
+  background-color: #0099cc;
+  border: 1px solid #0099cc;
+  color: #0099cc;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Tahoma,Verdana;
+  font-size: 12px;
+  padding: 7px 58px;
+  text-align: center;
+  text-decoration: none;
+}
+.BottonPagar span{
+  color: #ffffff;
+}
+.IconoTarjeta img{
+	bottom: 10px;
+  position: relative;
+  height: 40px;
+  padding-right: 4px;
+  padding-left: 26px;
+}
+.heading span{
+  padding-left: 26px;
+}
+#payment_content .heading span{
+  padding-left: 0px;
+}
+#GiftcardPayment .TextoPayment span{
+  padding-left: 26px;
+}
+.TextoVisa{
+	bottom: 25px;
+  position: relative;
+}
+ .TextoPayment{
+	position: relative;
+	display: inline-block;
+}
+.TextoCencosud{
+	bottom: 15px;
+  position: relative;
+}
+.TextoCredito{
+	bottom: 19px;
+  position: relative;
+}
+.TextoWebpay{
+	bottom: 22px;
+  position: relative;
+}
+#payment_methods .heading{
+  width: 100%;
+}
+.IconoTarjeta,.TextoVisa{
+  display: inline-block;
+}
+.PrecioTajeta{
+	float: right;
+	margin-right: 5%;
+}
+#checkout_payment h2{
+	margin-left: 62px;
+}
+.inputleft{
+	width: 15%;
+	/*display: table-cell;*/
+	display: inline-table;
+}
+.section{
+	margin-left: 25px;
+}
+#GiftcardAccordion{
+  	font-family: Verdana;
+  	font-size: 12px;
+  	font-style: italic;
+  	color: #999999;
+    margin-left: 25px;
+}
+.bottonPay{
+	background-color: #ffffff;
+    border: 1px solid #0099cc;
+    color: #0099cc;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    padding: 5px 5px;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    top: 22px;
+}
+.titleFrom{
+	font-family: Verdana;
+  	font-size: 14px;
+  	text-align: center;
+  	color: #999999;
+}
+#giftCardNumber{
+   	height: 23px;
+    width: 186px;
+    margin-right: 10px;
+}
+#password{
+	height: 23px;
+	margin-right: 10px;
+}
+#TRUT{
+	height: 23px;
+    width: 172px;
+    margin-right: 10px;
+}
+.saldoGift{
+	position: relative;
+    top: 8px;
+}
+#saldoGiftResponsive{
+    font-family: Verdana;
+  	font-size: 14px;
+  	font-weight: 600;
+  	color: #0099cc;
+}
+.TitleSaldoGift{
+	font-family: Verdana;
+  	font-size: 14px;
+  	color: #4a4a4a;
+}
+#checkout_promo_promoCode input{
+	background-color: #ffffff;
+  	border: solid 1px #d6d6d6;
+  	height: 24px;
+    margin-left: 11%;
+    width: 189px;
+}
+
+div[id^="payment_form_20"]{
+	position: relative;
+	margin-bottom: 16px;
+}
+
+.payment_form_data{
+	text-align: left;
+}
+.promotion_button_apply{
+	background-color: #ffffff;
+    border: 1px solid #0099cc;
+    color: #0099cc;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    padding: 5px 52px;
+    text-align: center;
+    text-decoration: none;
+    margin-left:21px; 
+}
+#promotion_details{
+	height: auto;
+}
+#applyPromotionCode{
+	width: 100%;
+	margin-bottom: 9px;
+}
+.promotion_input,.promotion_button_apply{
+	display: inline-block;
+}
+#NoviosCodeFormBillingPage{
+	height: auto;
+}
+.TitleNovios{
+    color: #999999;
+    font-family: Verdana;
+    font-size: 14px;
+    margin-bottom: 2px;
+    margin-top: 0;
+}
+.NumberTextBox{
+	height: 23px;
+    width: 270px;
+}
+.button_bottom{
+	background-color: #ffffff;
+    border: 1px solid #0099cc;
+    color: #0099cc;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Tahoma,Verdana;
+    font-size: 12px;
+    padding: 5px 52px;
+    text-align: center;
+    text-decoration: none;
+    margin-left:3px; 
+}
+#promo_content .inputleft{
+	width:32%;
+}
+#promo_content .example{
+	bottom:	0px;
+	left: 0%;
+}
+.notaNovios{
+	font-family: Tahoma,Verdana;
+  	font-size: 12px;
+  	text-align: center;
+  	color: #4a4a4a;
+}
+.LinkNovios{
+	font-family: Tahoma,Verdana;
+  	font-size: 12px;
+  	color: #0099cc;
+}
+.ContentLink{
+	margin-left: 22px;
+    position: relative;
+    top: 14px;
+}
+.button_fit{
+	position: relative;
+    top: 24px;
+}
+#GiftCardFormDisplay{
+	margin-left: 21px;
+}
+#NoviosFormDisplay .section{
+	margin-left: 30px;
+}
+.EditSection{
+	float: right;
+  margin-right: 14px;
+  position: relative;
+  top: 9px;
+}
+.EditSection img{
+	height: 13px;
+    width: 13px;
+}
+.TextEdit{
+ 	font-family: Tahoma,Verdana;
+  	font-size: 12px;
+  	color: #0099cc;
+  	cursor: pointer;
+  	text-decoration: underline;
+}
+/*Novios Modal*/
+.IconoNovios{
+  position: relative;
+  right: 23px;
+}
+#heading_closeNovios .TitleModal{
+  margin-left: 14px;
+}
+#heading_closeNovios{
+  border-bottom: 1px solid #dddddd;
+  bottom: 9px;
+  height: 113px;
+  position: relative;
+}
+#checkoutNoviosddressForm .modal-contenido{
+  width: 75%;
+}
+
+#checkoutNoviosddressForm .modal-contenido .registry_input{
+  margin-left: 2%;
+}
+/* vertical or horizontal 
+.scroll_container {
+    background-color:#000000;
+    width:421px;
+    height:420px;
+    color:#999999;
+    border:2px solid #000000;
+    border-radius:10px;
+    overflow:hidden;
+    text-align:justify;
+}
+
+.scroll_content {
+    position:relative;
+    width:400px;
+    height:414px;
+    top:-17px;
+    padding:20px 10px 20px 10px;
+    overflow-y:auto;
+}
+
+a {
+    color:#C800C8;
+    font-size:1.2em;
+    float:right;
+}
+
+.top_bottom_mask {
+  position:absolute;
+  overflow:hidden;
+  width:17px;
+  height:10px;
+}
+
+.left_right_mask {
+  position:absolute;
+  width:0px;
+  border:1px solid #000000;
+}
+
+.corner_top_mask, .corner_bottom_mask {
+  position:relative;
+  left:-2px;
+  border:6px solid #000000;
+  height:20px;
+  width:13px;
+  border-radius:16px;
+}
+
+.corner_top_mask {
+  top:-3px;
+    left:-4px;
+}
+
+.corner_bottom_mask {
+  top:-18px;
+    left:-4px;
+}*/
+/**/
+
+/*Start: by Rahul*/
+
+ #ClientLoginWidgetHidden {
+    position: absolute;
+    zoom: 1;
+    z-index: 10;
+    display: none;
+  }
+
+#checkoutHeader {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 6;
+}
+#ClientLoginContainer { position: relative; width:600px; z-index: 35; height: 270px; top: 0; left: 0; border: 1px solid #BABABA; margin: 0 auto; padding: 20px 20px 40px; background-color: #FFFFFF; color: #000000; zoom: 1 }
+#ClientLoginContainer input#userId { width: 175px; border: 1px solid #E0E0E0 }
+#ClientLoginContainer label { color: #000000 }
+#ClientLoginContainer .button-innerbox > span.button-container { background: url("../images/right-arrow.png") no-repeat scroll 100px center #3BAAD3 }
+#ClientLoginContainer .medium_smaller.button-wrapper-radius {width: 110px;}
+#ClientLoginContainer table {margin: 0 auto; margin-top: 10px; margin-bottom: 20px; text-align: center; border: 2px solid #EBF4FB; padding: 10px 20px;}
+#ClientLoginContainer table#ClientLoginSubmit {border: 0 !important; margin: 0; padding: 0;}
+
+#ClientLoginBackground { position: fixed; z-index: 6; top: 0; left: 0; float: left; background-color:#000; opacity: .7; zoom:1; width: 100%; height:100%; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: alpha(opacity=70);}
+
+.callCenterTable 
+     {width: 65%; height: 0px; display: block; 
+	  line-height: 1.4; font-size: 13px;
+	  margin-left: 26%;
+	  }
+
+.callCenterTable.callCenterTableWithUser { width: 72%; line-height: 1.3; margin-left: 19%;}   /* 26 april -user header alongwith CSR header*/
+
+.CallCenter {border: 2px solid #EBF4FB; text-align: center; border-top: 0; margin-bottom: 10px;}
+.CallCenter .csr_header_td {padding: 0 10px; color: #999;}
+.CallCenter .csr_td {
+	border-right: 2px solid #EBF4FB; 
+	padding: 0 10px 0 0;
+	}
+
+.CallCenter .h_link {
+		padding: 0 10px;
+		font-family: Tahoma,Verdana, Geneva, sans-serif;
+    	color: #0099cc;
+    	text-decoration: none;
+    	}
+
+#callCenterTableHideBorder { border: 0;}
+
+.CallCenter .h_link_title { /*width: 140px; padding-right: 5px; */
+		padding: 0 10px;
+		font-family: Tahoma, Geneva, sans-serif; /* 26 april -user header alongwith CSR header*/
+	}
+.CallCenter .h_link_name {text-transform: capitalize;}
+.CallCenter .csr_spacer {width: 150px !important; float: left; text-align: right;}
+
+#ClientLoginSubmit span.primary_button {
+    cursor: pointer;
+    margin: 1px;
+    margin-right: 5px;
+    font-family: Tahoma,Verdana, Geneva, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    padding-bottom: 2px;
+    display: -moz-stack;
+    display: inline-block;
+    overflow: hidden;
+}
+
+#ClientLoginContainer .button-wrapper-radius {
+    padding: 9px 15px;
+    background: #09C;
+    color: #fff;
+    display: -moz-stack;
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+#ClientLoginContainer .txtInput {
+    width: 90%;
+    height: 30px;
+    margin-bottom: 10%;
+}
+
+#ClientLoginHeader {
+    color: #404040;
+    font-size: 24px;
+    padding-bottom: 5px;
+    font-weight: bold;
+}
+
+.CallCenter.rightWithUser {float: right;}
+/**End: By rahul ****/
+
+.price_line {	
+	width: 19%;
+}
+
+/** Start: Warranty modal -New checkout:shipping page **/
+div[id^="ModalWarranty_"] .WarrantyNewModalMessage{
+ 
+  height: 44px;
+  font-family: Tahoma,Verdana;
+  font-size: 14px;
+  line-height: 1.57;
+  color: #999999;
+  text-align: justify;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  
+}
+  
+div[id^="ModalWarranty_"]:target{
+  opacity:1;
+  pointer-events:auto;
+  z-index: 9;
+}
+div[id^="ModalWarranty_"]:target{
+  display: block !important;
+  overflow: auto;
+  background-color: rgba(0,0,0,.8);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.checkoutWarrantyModal {
+	display: block !important;
+	overflow: auto;
+	background-color: rgba(0,0,0,.8);
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	opacity:1;
+  	pointer-events:auto;
+  	z-index: 9;
+}
+
+#WarrantyModalSize.Genericmodal-contenido {
+width: 54%; 
+}
+
+#WarrantyNewModalHeader.TitleModal {
+  font-family: Tahoma,Verdana;
+  font-size: 24px;
+  letter-spacing: 0.9px;
+  text-align: center;
+  color: #000000;
+  padding-bottom: 20px;
+}
+#closeIcon{
+float: right;
+}
+    
+div[id^="ModalWarranty_"]  .solid_line {
+	border-top: 1px solid #c9d3de;
+	margin-top: 10px;
+} 
+
+div[id^="ModalWarranty_"] .divTable{
+  display: table;
+  width: 100%;
+  border-collapse:collapse;
+}
+div[id^="ModalWarranty_"] .divTableBody {
+  display: table-row-group;
+}
+div[id^="ModalWarranty_"] .divTableRow {
+  /*display: table-row; */
+  line-height: 30px;
+  border: 1px solid #d6d6d6;
+  display: table-row;
+}
+
+div[id^="ModalWarranty_"] .divTableCell {
+  display: table-cell; 
+  padding: 11px 10px 5px 10px;
+  color: #333333;
+  text-align: justify;
+  border: 1px solid #d6d6d6; 
+}
+
+#warrantyDataCell.divTableCellOnlyOne {
+	padding: 5px 10px 5px 10px;
+  	color: #333333;
+  	text-align: justify;
+}
+
+div[id^="ModalWarranty_"] .divTableHeading {
+  background-color: #EEE;   
+  font-weight: bold;
+  text-align: center;
+  
+}
+
+div[id^="ModalWarranty_"] .divTableCellHeading{
+	border: 1px solid #EEE;
+  
+  background-color: #EEE;
+  text-align: center;
+  color: #4a4a4a;
+  font-family: Tahoma,Verdana;
+  font-size: 14px;
+  display: table-cell;
+}
+
+div[id^="ModalWarranty_"] .divTableCell input[type="radio"] , div[id^="ModalWarranty_"] .divTableCellOnlyOne input[type="radio"] {   
+    height: 16px;
+    width: 10%;
+    background-color: #ffffff !important;
+    border: solid 1px #d6d6d6;
+    top: 1px;
+}
+
+div[id^="ModalWarranty_"] .divTableCell input[type="radio"]:checked:before {
+    content: "";
+    display: block;
+    position: relative;
+    top: 3px;
+    left: 12px;
+    width: 9px;
+    height: 9px;
+    border-radius: 100%;
+    /*background: #00b0eb;*/ 
+}
+
+div[id^="ModalWarranty_"] .radio {
+    vertical-align: text-top;
+    margin-bottom: 2px;
+    margin-top: 0px;
+    margin-right: 12px;
+}
+
+div[id^="ModalWarranty_"] .warrantyTypeDescription {
+  
+  font-family: Tahoma,Verdana;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #999999;
+  padding-bottom: 14px;
+  /*padding-right: 10px;*/
+}
+
+div[id^="ModalWarranty_"] .divTableCellOnlyOne.warrantyTypeDescription {
+ margin-left:2%;
+ }
+div[id^="ModalWarranty_"] .warrantyTypeDescription .text-style-1 {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+div[id^="ModalWarranty_"] .typeNormal{
+padding-right: 30px;
+}
+
+div[id^="ModalWarranty_"] .typePlus{
+padding-left: 20px;
+padding-right: 30px;
+}
+
+div[id^="ModalWarranty_"] .boton_Warranty {
+    background: #0099cc none repeat scroll 0 0;
+    border: 0 none;
+    border-radius: 0;
+    color: #fff;
+    cursor: pointer;
+    font-family: Tahoma,Verdana;
+    font-size: 14px;
+    font-weight: bold;
+    height: 31px;
+    text-align: center;
+    width: 54%;
+    margin: 0 auto;
+}
+div[id^="ModalWarranty_"] .boton_Warranty span{
+    position: relative;
+    top: 7px;
+}
+.ContenedorBox{
+  width: 100%;
+}
+div[id^="ModalWarranty_"] .mas_protection {
+text-align: center;
+margin: 10px 150px 10px 160px; 
+font-family: Tahoma,Verdana;
+  font-size: 12px;
+  color: #0099cc;
+  text-decoration: underline;
+}
+
+/*Checkbox: style background */
+
+.product_warranty input[type="checkbox"]:checked:before{
+  
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #666666;
+  font-weight: bold;
+  content: "\2713";
+  color: #0099cc;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 2px;
+  top:-1px;
+}
+
+.product_warranty input[type="checkbox"]:before{
+  
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  position: relative;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #666666;
+  font-weight: bold;
+  content: "";
+  color: #666666;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 2px;
+  top:-1px;
+}
+
+.warrantyExtendedMsg {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+/** End: Warranty modal -New checkout:shipping page **/
+
+#NoviosSearchFormModal #noviosAddressFormContainer {
+	height: auto;
+}
+#NoviosSearchFormModal #checkout_novios_search_submit {
+	padding-bottom: 20px;
+}
+
+#ModalFactura {
+	display: none;
+}
+#ModalFactura.Genericmodal{
+	opacity: 1;
+    pointer-events: auto;
+    z-index: 9;
+    display: block;
+}
+#ModalFactura #HeaderModal span, #ModalFactura .TextBody span{
+	font-family: Tahoma,Verdana;
+    font-size: 21px;
+    color: #000000;
+    text-decoration: none;
+    cursor: default;
+}
+#ModalFactura .TextBody span{
+	font-size: 14px;
+}
+#ModalFactura .ButtonModal span{
+	color: #ffffff;
+	font-size: 12px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.TarjetadeCredito .TextoVisa{
+    bottom: 18px;
+}
+.TarjetadeCredito img{
+    bottom: 7px;
+    height: 33px;
+    width: 158px;
+}
+
+/* End Step 3*/
+
+
+
+
+
+/* CHECKOUT EOM EXCEPTION MODAL CHANGES*/
+
+#mhtn_background { position: fixed; z-index: 6; top: 0; left: 0; float: left; background-color:#000; opacity: .7; zoom:1; width: 100%; height:100%; -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)"; filter: alpha(opacity=70);}
+
+
+#mhtn_widget .overlay{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9990;
+  top: 0;
+  left: 0;
+}
+
+#mhtn_widget .finalText{
+    float: left;
+    width: 100%;
+    padding: 3% 0%;
+    margin: 0;
+    color: #000;
+    font-weight: bold;
+  }
+
+#mhtn_widget .lightbox, .lightBorder {
+    background: none repeat scroll 0 0 #fff;
+    margin: auto;
+    padding: 0 1%;
+    position: relative;
+    width: 100%;
+}
+#mhtn_widget .lightBorder {
+    /*background: none repeat scroll 0 0 #ccc;*/
+    margin: 10% auto;
+    padding-left: 11px;
+    padding-right: 0;
+    width: 55%;
+    z-index: 6;
+	position: fixed;
+    top:18%;
+    /*left: 25%;*/
+}
+#mhtn_widget .lightbox {
+    height: 297px;
+    left: -15px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    top: 3px;
+}
+.lightboxContent{
+   height: 289px;
+}
+#mhtn_widget .lightbox h1 {
+    margin-top: 5px;
+}
+#mhtn_widget .lightbox p {
+    margin: 15px 0;
+}
+#mhtn_widget .lightbox h3 {
+    font-size: 16px;
+    font-weight: bold;
+}
+#mhtn_widget .lightbox .box {
+    text-align: center;
+}
+#mhtn_widget .lightboxContent,#modal_error .lightboxContent {
+    color: #000;
+    margin: 0 auto;
+    /*MHTN DEFECT : 296*/
+    width: 95%;
+}
+#mhtn_widget .lightboxContent h1,#modal_error .lightboxContent h1{
+    font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    width: 100%;
+}
+#mhtn_widget .lightboxContent ul,#modal_error .lightboxContent ul {
+    border-top: 3px solid #f4f9fc;
+    clear: both;
+    float: left;
+    text-align: left;
+    font-size: 12px;
+    list-style: none;
+    padding-left: 0px;
+    width: 100%;
+}
+#mhtn_widget .lightboxContent ul li,#modal_error .lightboxContent ul li {
+    border-bottom: 3px solid #f4f9fc;
+    float: left;
+    padding-bottom: 10px;
+    width: 100%;
+}
+#mhtn_widget .itemHeader,#modal_error .itemHeader {
+    padding: 5px 0;
+    margin-bottom: 10px;
+}
+#mhtn_widget .item,#modal_error .item {
+    float: left;
+    width: 100%;
+}
+#mhtn_widget .item img, #modal_error .item img{
+    float: left;
+    margin-right: 10px;
+    width: 10%;
+}
+#mhtn_widget .item > span,#modal_error .item > span {
+    float: left;
+    width: 33%;
+}
+#mhtn_widget .item .status,#modal_error .item .status {
+    color: #000;
+    font-weight: bold;
+}
+#mhtn_widget .finalText,#modal_error .finalText {
+    float: left;
+    margin: 30px 0;
+    width: 100%;
+    font-size: 12px;
+}
+#mhtn_widget .dismiss,#modal_error .dismiss {
+    background: none repeat scroll 0 0 #09c;
+    color: #fff;
+    margin-bottom: 13px;
+    padding: 7px 35px;
+    font-size: 14px;
+}
+#mhtn_widget .dismiss:hover,#modal_error .dismiss:hover {
+    color: #fff !important;
+}
+#mhtn_widget .delete,#modal_error .delete {
+    border-left: 1px solid #ccc;
+    float: right;
+    padding-left: 2%;
+    text-align: center;
+    width: 10%;
+}
+#mhtn_widget .delete label,#modal_error .delete label {
+    display: block;
+    /*MHTN DEFECT - 243*/
+    margin-bottom: 5px;
+    width: 100%;
+}
+#mhtn_widget .dateselect {
+    float: left;
+    width: 25%;
+}
+#mhtn_widget .dateselect p {
+    margin: 0;
+}
+#mhtn_widget .dateselect > a {
+    text-decoration: underline;
+    color: #0099CC;
+}
+#mhtn_modal .calendar {
+    display: none;
+    float: left;
+    margin: 20px 0;
+    width: 100%;
+}
+#mhtn_widget .calendar.active {
+    display: block;
+}
+#mhtn_widget .calendar table, .calendar tr, .calendar td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+
+#mhtn_widget .calendar td {
+    font-size: 11px;
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+}
+
+#mhtn_widget #dateSelectionFwdBtnWrapper .dateSelectionFwdBtn,
+#mhtn_widget #dateSelectionBackBtnWrapper .dateSelectionBackBtn {
+  /*color: #0099cc*/
+}
+
+#mhtn_widget .calendar table {
+    width: 100%;
+}
+#mhtn_widget .calendar th {
+    background: none repeat scroll 0 0 #edf5f8;
+    font-weight: normal;
+    padding: 0 5px;
+    text-align: center;
+}
+
+#mhtn_widget .calendar td:first-child {    
+    text-align: left !important;    
+}
+
+
+#mhtn_widget .calendar td {
+    padding: 0 5px;
+    text-align: center;
+    
+}
+#mhtn_widget .calendar td.selectedJornada {
+    background: none repeat scroll 0 0 #6cc3df;
+}
+#mhtn_widget  .calendar .jornadaCell  span {
+    border-radius: 15px;
+    display: inline-block;    
+    margin: 5px 0;
+    text-align: center;    
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+#mhtn_widget .calendar .ok {    
+    background: none repeat scroll 0 0 #C6E2ED;
+}
+#mhtn_widget .calendar .no {
+    background: none repeat scroll 0 0 #c7c6c2;
+}
+#mhtn_widget .calendar .no > img, .calendar .ok > img {
+    padding-top: 3px;    
+    width: 25px;
+}
+#mhtn_widget .calendar .left, .calendar .right {
+    margin-top: 10px;
+}
+#mhtn_widget .dateSelect {
+    background: none repeat scroll 0 0 #ccc !important;
+    border: medium none;
+    color: #333;
+    display: inherit;
+    float: none;
+    font-weight: bold;
+    margin: 20px auto 0;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+#mhtn_widget .calendar td.selectedJornada span {
+    background: none repeat scroll 0 0 #248AB2 !important;
+}
+}
+
+#mhtn_widget .calendar th b, .calendar td b {
+    display: block;
+    font-weight: bold;
+    width: 100%;
+}
+#mhtn_widget .qty {
+    float: left;
+    width: 30%;
+    margin-left: 30px;
+}
+#mhtn_widget .qty .error {
+    color: #ff0000;
+    display: inline-block;
+    width: 290px;
+}
+#mhtn_widget .qty input {
+    margin-right: 5px;
+    padding: 0 0 0 20px;
+    width: 15%;
+}
+#mhtn_widget .question {
+    background: none repeat scroll 0 0 #09c;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    height: 20px;
+    line-height: 20px;
+    position: relative;
+    text-align: center;
+    width: 20px;
+}
+#mhtn_widget .question .minitooltip {
+    background: none repeat scroll 0 0 #09c;
+    border-radius: 5px;
+    display: none;
+    font-size: 12px;
+    left: -96px;
+    line-height: 15px;
+    padding: 10px;
+    position: absolute;
+    top: -90px;
+    width: 200px;
+}
+#mhtn_widget .active .minitooltip {
+    display: block !important;
+}
+#mhtn_widget .miniarrow {
+    background: none repeat scroll 0 0 #09c;
+    left: 48%;
+    position: absolute;
+    top: 100%;
+}
+#mhtn_widget .miniarrow:after, .miniarrow:before {
+    border: medium solid transparent;
+    content: " ";
+    height: 0;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    width: 0;
+}
+#mhtn_widget .miniarrow:after {
+    border-color: #09c rgba(0, 153, 204, 0) rgba(0, 153, 204, 0);
+    border-width: 19px;
+    margin-left: -19px;
+}
+#mhtn_widget .miniarrow:before {
+    border-color: #1ad rgba(17, 170, 221, 0) rgba(17, 170, 221, 0);
+    border-width: 19px;
+    margin-left: -19px;
+}
+#mhtn_widget .cerrarLightbox {
+    background: none repeat scroll 0 0 transparent;
+    border: 1px solid #ccc;
+    color: #ccc;
+    font-size: 21px;
+    font-weight: lighter;
+    line-height: 16px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 9991;
+}	
+#mhtn_widget .error-calendar-mhtn p {
+    color: red;
+    display: inline;
+}
+
+
+/* MTHN: End Req# INT1875 : Create Update order OEM */
+
+/* MHTN: CLICK AND COLLECT - desktop new style for modal error made by Miguel Penaloza*/
+#modal_error{
+	display: table;
+	height: auto;
+	width: 650px;
+	margin-top: 20px;
+	margin-right: auto;
+	margin-bottom: 20px;
+	margin-left: auto;
+	background-color:#FFF;
+	padding:15px 10px 10px;
+    }
+	
+#modal_error h1{
+	color: #666; /*#303F6A;*/
+	display: block;
+	float: left;
+	padding-bottom: 10px;
+	margin-top: 0px;
+	margin-bottom: 20px;
+}
+.button_modal_error a{
+	color: #0099CC;
+    font-size: 12px;
+}
+#modal_error .divisor{
+	border-top:solid 3px #e8f4fb;}
+	
+#modal_error .contenedor_pasos{
+	width:650px;
+	height:170px;
+	display:block;
+	margin:10px 0;}
+	
+#modal_error .contenedor_pasos_m{
+	display:none;
+	}
+	
+#modal_error .contenedor_pasos .responsive-image{ width: 100%; background-size: 100% 100%; } 
+
+	
+#modal_error .accion{
+	padding-top:15px;
+	display:block;}
+
+#modal_error .producto{
+	padding-top:5px;
+	display:block;}
+
+
+
+#modal_error .boton_calcular{
+	background: none repeat scroll 0px 0px #09C;
+	border: 0px none;
+	border-radius: 0px;
+	color: #FFF;
+	float: left;
+	margin:0 43%;
+	padding: 8px 20px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+
+.mfp-hide{
+	 display: none !important;
+}
+
+#modal_error .title_po{
+	width: 100%;	
+}
+
+#modal_error .title_POPup{
+	text-align: center;
+}
+
+#modal_error .Text_Black{
+	color: #000000 ;
+	font-size: 15px;
+	margin-left: -99px;
+}
+#modal_error .Text_normal{
+	font-size: 18px;
+	margin-right: 100px; 
+	margin-left: 50px;
+}
+#modal_error  .button_modal_error{
+	width: 100%;
+}
+#modal_error .note_text {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-align: center;
+    font-weight:bold;
+}
+#modal_error .lightboxContent ul {
+    margin-bottom: 27px;
+}
+#modal_error .item > span {
+    left: 13px;
+    position: relative;
+    top: -6px;
+}
+#modal_error  .button_modal_error {
+    left: 130px;
+    position: relative;
+    width: 100%;
+}
+#button_modal_error .dismiss{
+	margin-left: 46px;	
+}
+#button_modal_error .dismiss strong {
+    color: #fff;
+    font-size: 14px;
+}
+/* CHECKOUT EOM EXCEPTION MODAL CHANGES*/
+/*PROGRESS BAR
+/* For the element containing the actual progress bar */
+#progress_bar { 
+  left: 0px !important;
+  position: absolute; 
+  z-index: 9999; 
+  display: none;
+  text-align: center !important;
+  width: 100% !important;
+  height: 100%;
+  background-color: #fff; 
+  opacity: .7;
+  top: 0px !important;
+}
+#progress_bar .top_left,#progress_bar .footer,#progress_bar .header,#progress_bar .top_right{
+  display: none;
+}
+/* Progress bar dialog background */
+#loading_popup{ 
+  left: 50%;
+  position: fixed;
+  top: 50%;
+}
+
+#mhtn_widget{
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  /*overflow-y: hidden;*/
+}
+
+#mhtn_widget .lightBorder {
+   margin: 0 auto;
+   overflow-x: auto;
+   padding-left: 11px;
+   padding-right: 0;
+   position: relative;
+   width: 55%;
+   z-index: 6;
+   top: 34px;
+}
+.GiftCardSaldo{
+  font-family: Verdana;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0099cc;
+}
+/*Version Mobile: Only for Reservation Modal UI change*/
+@media screen and (max-width: 1024px) {
+  #checkout_orderdetails .Completed.shippingText{
+    height: 120px !important;
+  }
+
+   #mhtn_widget .lightBorder {
+    width: 92% !important;
+    padding-left: 0px !important; 
+    min-height: 366px !important; 
+  }
+
+  #mhtn_widget .delete {
+    float: left !important;
+	padding: 10px 0px 0px 17px !important;
+  }
+  .fieldsAreaSectionBox {
+    width: 100%;
+  }
+  #mhtn_widget .lightbox{
+    left: 0 !important;
+    top: 0 !important;
+    padding: 0px !important;
+    height: 366px;
+  }
+}
+
+/* Start : Applied despacho Novios - Pago page */ 
+#novios {
+  font-family: Verdana;
+  line-height: 1.7;
+  padding-left: 3%;
+  width: 40%;
+  font-size: 14px;
+}
+#novios .noviosHeaderInfo {
+    float: left;
+    font-size: 15px;
+    font-family: Verdana;
+ }
+#novios .noviosCodeValue {
+    float: left;
+    font-size: 15px;
+    margin-left: 1%;
+ }
+ 
+ .cbspay-dtls input:focus{
+	outline: none;
+	box-shadow: 0px 0px 5px #61C5FA;
+	border:1px solid #5AB0DB;
+}
+.appliedPromotionCodeBox{
+  margin-left: 16px;
+}
+.fieldsAreaSectionBox
+{
+  width: 30%;
+  border: 0px solid #000;
+  margin:0 auto;
+}
+
+/*#payment_methods .ContenedorPrice{
+  right: 0%;
+}*/
+
+textarea:focus { 
+  color: black;
+}
+textarea{
+   color: gray;
+}
+.nameon-card, .lastnameon-card{
+  display: inline-block;
+   width: 46%;
+}
+.nameon-card{
+  margin-right: 14px;
+}
+.nameon-card .error, .lastnameon-card .error{
+    position: absolute;
+    /*top: 61px;*/
+}
+/*#fieldsAreaSection .ContenedorPrice {
+    text-align: left !important;
+}*/
+.cbspayment{   }
+.flt_lft{ float: left; }
+.cbspay-dtls input{ width: 95%; padding: 4px 5px;width: 97%;}
+.cbspay-dtls label{ color:#999999;bottom: 6px;position: relative; font-size: 12px;}
+
+.card-numbr{ width:45%; }
+.expiry-card{ width: 24%; margin : 0 15px;}
+.ccv-numbr{ width: 21%;}
+.ccv-numbr input, .expiry-card input{ width: 88%;position: relative;bottom: 0px; }
+.nameon-card,.lastnameon-card,.cbs-card-dtls { 
+  /*padding-bottom: 10px;*/ 
+  height: 64px;
+}
+.cbspay-dtls{
+  margin-bottom: 20px;
+}
+#fieldsAreaSection .error{
+  font-family: Verdana;
+  font-size: 12px;
+  text-align: left;
+  color: #d0021b;
+  height: 0px;
+}
+#fieldsAreaSection{
+  margin-top: 16px;
+}
+.card-numbr label{   margin-top: 17px;    display: inline-block;    }
+.sample-msg{  	font-size: 9px;    font-style: italic;color: #999999;   }    
+.instal-selct-box { padding-top: 15px; clear:both; }
+.instal-selct-box label{ margin-bottom : 9px; display:inline-block;color: #999999;font-size:12px;}
+.instal-selct-box select{ padding: 5px 5px; height: auto ; width: 99%; color: #999999;}  
+.align-rght{ text-align : right; }
+.cbssub-total, .cbsdespcho-total, .cbsgdc-total, .cbsdiscnt-total, .cbsgrnd-total{    margin: 6px 5px;color: #000;
+    font-size: 14px;
+    letter-spacing: 0.5px;  }
+.price-detls{ padding-top:30px }
+    .fields-area-section{ width: 330px; margin : 0 auto; }
+ .cbsgrnd-total{ margin-bottom: 10px; }
+
+@media screen and (max-width: 767px) {
+	.cbspayment {   padding: 10px 15px;}
+	.nameon-card{ padding-bottom: 0; }
+	.fields-area-section{width: 95%; }
+	.card-numbr {	    width: 100%;	}
+	.ccv-numbr , .expiry-card{margin: 10px 15px 0 0;    clear: both;}  
+	 
+}
+/* End : Applied despacho Novios - Pago page */
+
+
+
+
+
+/* Mapcity  Start*/
+.autoSuggestBox {
+	position: relative;
+	margin: 0;
+}
+
+.autoSuggestBox .autoSuggest_content {
+
+	background-color:#ffffff;
+	float: left;
+	margin: 0 4px;
+	width: 295px;
+	padding: 0;
+	line-height: 0;
+}
+
+.autoSuggestBox .autoSuggest_content .heading {
+	color: #404040;
+	font-weight:bold;
+	font-size: 13px;
+	padding: 0px 10px;
+}
+
+.autoSuggestBox .autoSuggest_content .results {
+	width: 295px;
+	font-size: 10pt;
+	line-height: 16px;
+	padding-top: 8px;
+	line-height: 17px;
+	background-repeat: repeat-x;
+	margin-top: -1px;
+}
+
+.autoSuggestBox .autoSuggest_content a {
+	font-size: 11px;
+	color: #09C;
+	display: block;
+	text-decoration: none;
+	padding: 4px 10px;
+	margin: 0;
+}
+
+.autoSuggestBox .autoSuggest_content .view_all_results a{
+	text-decoration:underline;
+}
+
+.autoSuggestBox .autoSuggest_content ul {
+	line-height: normal;
+	padding: 0;
+}
+
+.autoSuggestBox .autoSuggest_content .line {
+	border-top: 1px solid black;
+}
+
+.autoSuggestBox .autoSuggest_content li {
+	list-style: none;
+	line-height: 14px;
+}
+
+.autoSuggestBox .autoSuggestSelected {
+	background-color: #F7F7F7;
+	color: #000000;
+}
+
+.autoSuggestBox .autoSuggestSelected:hover {
+	font-weight: bold !important;
+}
+
+.autoSuggestBox .autoSuggest_content .view_all_results {
+	border-top: 1px solid #CCCCCC;
+	padding: 6px 0 15px;
+	margin-top: -1px;
+}
+
+.autoSuggestBox .autoSuggest_wrapper {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: -1px;
+	top: -8px;
+	width: 302px;
+	border: 1px solid #CCCBCB;
+	background: #FFFFFF;
+	border-top: none;
+}
+.autoSuggestBox .autoSuggest_bottom {
+	width: 301px;
+	height: 12px;
+	position: absolute;
+	bottom: -12px;
+	left: -3px;
+	margin: 0;
+	padding: 0;
+}
+
+.autoSuggestBox .autoSuggest_bottom .bottom_left_shadow {
+	float: left;
+	height: 12px;
+	width: 10px;
+}
+
+.autoSuggestBox .autoSuggest_bottom .middle_shadow {
+	float: left;
+	height: 12px;
+	width: 281px;
+}
+
+.autoSuggestBox .autoSuggest_bottom .bottom_right_shadow {
+	float: left;
+	height: 12px;
+	width: 10px;
+}
+.autoSuggestBox .autoSuggest_wrapper {
+    /*left: 3px !important;*/
+    top: 1px !important;
+    width: 100%;
+    height: 222px !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index:10;
+    border-bottom-left-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+	-webkit-box-shadow: 0px 3px 12px 1px rgba(0,0,0,0.21) !important;
+	-moz-box-shadow: 0px 3px 12px 1px rgba(0,0,0,0.21) !important;
+	box-shadow: 0px 3px 12px 1px rgba(0,0,0,0.21) !important;
+	padding-top: 1px;
+}
+
+.autoSuggestBox .autoSuggest_content {
+    width: 100% !important;
+}
+
+.autoSuggestBox .autoSuggest_content .results {
+    width: 100% !important;
+	padding-top:0px !important;
+}
+
+.autoSuggestBox .autoSuggest_content a {
+    padding: 10px 20px !important;
+	font-size:13px !important;
+}
+
+.autoSuggestBox .autoSuggest_content .heading {
+    padding: 10px 20px !important;
+    background-color: #f0f0f0 !important;
+}
+
+.autoSuggestBox .autoSuggest_content .view_all_results {
+    padding: 15px 0px 25px !important;
+}
+
+/*Step3 Start Save Credit Card 1156*/
+.AddNewCard{
+  height: 110px;
+  width: 158px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: solid 1px #999999;
+}
+.SavedCard{
+  height: 110px;
+  width: 158px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  border: solid 1px #999999;
+}
+.TableCard{
+  width: 81%;
+  /*display: table !important;
+  margin: 0 auto;*/
+}
+.AddNewCard, .SavedCard{
+ display: inline-table;
+ cursor: pointer;
+ margin-bottom: 12px;
+}
+.AddNewCard:hover ,.SavedCard:hover {
+  background-color: #f7faff;
+  border: solid 1px #00b0eb;
+}
+.ImagenCard{
+  margin-top: 22px;
+  text-align: center;
+}
+.TextCard{
+  text-align: center;
+  font-family: Tahoma,Verdana;
+  font-size: 12px;
+  line-height: 1.33;
+  color: #4a4a4a;
+  margin-top: 11px;
+}
+.cbs-card-save,.cbs-card-oneclick{
+  color: #999999;
+  font-size: 12px;
+}
+#tokenWalletTable{
+  width: 105%;
+  text-align: center;
+}
+#tokenWalletTable .divTableCell{
+  padding: 3px 17%;
+  text-align: left;
+}
+/*Step3 End Save Credit Card 1156*/
+
+
+/* iPhone 6 - Galaxy s4 */
+@media screen and (max-width: 670px){
+	.autoSuggestBox .autoSuggest_wrapper {
+	    /*left: -6% !important;
+	    top: 15px !important;*/
+	    width: 97% !important;
+	    border-left: 2px solid #CCCBCB;
+	    border-bottom-left-radius: 0px !important;
+	    border-bottom-right-radius: 0px !important;
+	    max-height: 555px !important;
+	}
+	.long .autoSuggestBox .autoSuggest_wrapper { 
+		top: 80px !important; 
+	}
+}
+
+.autoSuggestBox strong, .autoSuggestBox b{
+	font-weight: bold;
+}
+
+
+
+/* -----------------------------------------------------------------------------*/
+/* TO DO : REMOVE AFTER IMPLEMENTING CHECKOUT PROGRESS BAR : CUSTOM - PROGRESS BAR
+/* -----------------------------------------------------------------------------*/
+/* For the element containing the actual progress bar */
+#ext_progress_bar { position: absolute; z-index: 9999; display: none }
+/* For the dialog containing the progress bar element */
+#ext_progress_bar_dialog { position: absolute; z-index: 9999; display:none }
+/* Progress bar dialog background */
+.dijitDialogUnderlay { background-color: #000; opacity: .7; }
+#ext_loading_popup { width:59px }
+#ext_loading_popup .top_left { background-image: url('../images/colors/color1/popup_topleft.png'); background-repeat:no-repeat; background-position:top; height:7px; width:8px; float:left }
+#ext_loading_popup .top_right { background-image: url('../images/colors/color1/popup_topright.png'); background-repeat:no-repeat; background-position:top right; height:7px; width:51px; float:left }
+#ext_loading_popup .header { background-image: url('../images/colors/color1/popup_center_tile_mini.png'); background-repeat:repeat-y; text-align: right; clear:left }
+#ext_loading_popup .close { padding: 5px 15px 2px 0; color: #666666 }
+#ext_loading_popup .close .icon { padding-top:2px; padding-left:4px; float:right }
+#ext_loading_popup .bodycontent { background-color: transparent; background-image: url('../images/colors/color1/popup_center_tile_mini.png'); background-repeat:repeat-y; background-position: right; padding:0 5px 0 5px; margin:0 }
+#ext_loading_popup .bodycontent h2 { font-size: 14px; font-weight: bold }
+#ext_loading_popup .bodycontent p { margin: 3px 0 10px 2px }
+#ext_loading_popup .bodycontent div.form_2column { padding: 0 }
+#ext_loading_popup .bodycontent_short { padding:12px 17px 12px 15px; margin: 0 1px 0 1px }
+#ext_loading_popup .footer { text-align:right; height:20px; width:59px }
+#ext_loading_popup .footer .bot_left { background-image: url('../images/colors/color1/popup_botleft.png'); background-repeat:no-repeat; background-position: bottom; height:11px; width:8px; float:left }
+#ext_loading_popup .footer .bot_right { background-image: url('../images/colors/color1/popup_botright.png'); background-repeat:no-repeat; background-position: bottom right; height:11px; width:51px; float:left }
+
+/* Mapcity End*/

@@ -1,0 +1,24 @@
+@charset "utf-8";
+/*This file  used only when click and collect is disabled - Home Page*/
+.home_espot_slider .imgContainer, .home_espot_slider .thumbScroller {
+    height: 250px;
+}
+
+html body .thumbScroller .bx-wrapper .bx-controls .bx-prev,
+html body .thumbScroller .bx-wrapper .bx-controls .bx-next {
+    height: 262px;
+}
+
+@media screen and (max-width: 640px) {
+	#HomePage6ProductosNuevo, #HomePage4ProductosDestacados {
+	      height: 300px !important;
+	}
+	#HomePage5Ads{padding-bottom: 10px;}
+	#homepage_slider6 {padding-top: 20px;}
+}
+
+@media only screen and (max-width: 360px){
+	.home_espot_slider {
+	  padding-top: 19px;
+	}
+}

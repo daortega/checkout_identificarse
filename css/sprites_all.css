@@ -1,0 +1,701 @@
+.accessories_images_arrow_right,  .ayuda_arrow, .ayuda_uparrow, .cerrar_buscar, .cierra_sesion,   .lupa_ico, .popup_close, .accessories_images_arrow_left, 
+.icon-chat, .llama_ico, .menu_responsive_05, .order_truck, .pin_ico, .user, .carro_desk_ico, .cart, .anterior, .siguiente, 
+ .check, .contact_ico, .dev_ico, .facs_ico, .icon_dd, .icon_rt, .empty, .footer_resp_facebook-2014, .footer_resp_twitter-2014, .footer-facebook-oct14, .footer-logo-instagram, .footer-logo-instagram-mobile, .footer-twitter-oct14, .flecha_login, .hover_arrow, .transparent,   .tertiary_button_tile_gray, .data-image-jpeg, .footer_resp_descubre-2014, .footer_resp_novios-2014, .novios2013, .tarjeta_carrusel, .tarjeta_cencosud, .ayuda_flecha, .BazaarVoice_StarRating, .controls, .huincha_fondo_electrotecno_18mar17, .logo-responsive, .ParisTiendaLogo_07, .arrows-up-icon, .button_dropshadow, .button_dropshadow1, .subcat_arrow, .subcat_arrow_closed , .siguiente, .lupa_ico_responsive,
+ .bx-start,  .bx-stop, html body .bx-wrapper  .bx-next, html body .bx-wrapper   .bx-prev, .open_login, .mob_track, .mob_cart,
+   html body .thumbScroller .bx-wrapper .bx-controls .bx-prev, html body .thumbScroller .bx-wrapper .bx-controls .bx-next  ,
+  .home_espot_slider .navNext, .home_espot_slider .navPrev, html body #star_rating, .RecordmeCheck:checked + label , #login_modal_tooltip .dijitTooltipConnector
+ , .left_sidebar_header_closed .subcat_arrow, .left_sidebar_header .subcat_arrow
+ ,#contenedor-alternativas .caja-alternativa .caja-alternativa-arriba .logo_novios , .rsz_order_truck
+ {	
+	background-image: url("../images/sprites_all.png") !important;
+	background-repeat: no-repeat;
+} 
+.rsz_order_truck{
+	background-position: -290px -10px ;
+	width: 30px;
+	height: 21px;
+}
+.v-alin-midle{ vertical-align:middle; }
+.accessories_images_arrow_right{
+	background-position: -24px -5px ;
+	width: 16px;
+	height: 24px;
+}
+
+.ayuda_arrow{
+	background-position: -65px -18px ;
+	width: 8px;
+	height: 8px;
+}
+
+.ayuda_uparrow{
+	background-position: -65px -3px ;
+	width: 8px;
+	height: 8px;
+}
+
+.cerrar_buscar{
+	background-position: -84px -4px ;
+	width: 30px;
+	height: 30px;
+}
+
+.cierra_sesion{
+	background-position:  -45px 6px;
+	width: 11px;
+	height: 11px;
+}
+
+#login_modal_tooltip .dijitTooltipConnector{
+	background-position: -121px -17px ;
+	width: 30px;
+	height: 19px;
+	background-size : initial !important;
+}
+
+.lupa_ico{
+	background-position: -157px -11px ;
+	width: 20px;
+	height: 20px;
+	margin: 9px 12px;
+}
+
+.popup_close{
+	background-position: -45px -16px ;
+	width: 13px;
+	height: 13px;
+}
+
+#tooltip_popup .close a span.popup_close{ float: right; }
+#invoice_modal  a span.popup_close{ float: right; margin-top: 25px;   margin-right: 25px; }
+.accessories_images_arrow_left{
+	background-position: -6px -5px ;
+	width: 16px;
+	height: 24px;
+}
+/*
+.blank{
+	background-position: -183px -6px ;
+	width: 1px;
+	height: 1px;
+}
+*/
+.icon-chat{
+	background-position: -342px -45px ;
+	width: 64px;
+	height: 72px;
+}
+
+.llama_ico{
+	background-position: -274px -46px ;
+	width: 64px;
+	height: 72px;
+}
+
+.menu_responsive_05{
+	background-position: -1px -139px ;
+	width: 60px;
+	height: 60px;
+}
+
+.order_truck{
+	background-position: -284px -3px ;
+	width: 43px;
+	height: 31px;
+}
+
+.pin_ico{
+	background-position: -206px -43px ;
+	width: 64px;
+	height: 72px;
+}
+
+.user{
+	background-position: -65px -139px ;
+	width: 51px;
+	height: 51px;
+}
+
+.carro_desk_ico{
+	background-position: -333px 0;
+	width: 40px;
+	height: 40px;
+}
+
+.cart{
+	background-position: -120px -140px ;
+	width: 51px;
+	height: 51px;
+}
+.RecordmeCheck +  label{
+	margin-right: 10px;
+	margin-bottom: 0px;
+    vertical-align: middle;
+    background-size : initial;
+    width: 16px;
+	height: 16px;
+}
+
+.RecordmeCheck:checked + label{
+	background-position: -260px -11px ;
+	width: 16px;
+	height: 16px;
+	margin-bottom: 0px;
+	background-size : initial;
+	 
+}
+
+
+
+.contact_ico{
+	background-position: -138px -42px ;
+	width: 64px;
+	height: 72px;
+}
+
+.dev_ico{
+	background-position: -70px -41px ;
+	width: 64px;
+	height: 72px;
+}
+
+.facs_ico{
+	background-position: -2px -41px ;
+	width: 64px;
+	height: 72px;
+}
+
+.icon_dd{
+	background-position: -224px -5px ;
+	width: 32px;
+	height: 32px;
+}
+
+.icon_rt{
+	background-position: -190px -5px ;
+	width: 32px;
+	height: 32px;
+}
+
+.empty{
+	background-position: -79px -4px ;
+	width: 2px;
+	height: 2px;
+}
+
+.footer_resp_facebook-2014{
+	background-position: -235px -141px ;
+	width: 56px;
+	height: 53px;
+}
+
+.footer_resp_twitter-2014{
+	background-position: -175px -141px ;
+	width: 56px;
+	height: 53px;
+}
+
+.footer-facebook-oct14{
+	background-position: -63px -204px ;
+	width: 26px;
+	height: 26px;
+}
+
+.footer-logo-instagram{
+	background-position: -2px -204px ;
+	width: 26px;
+	height: 26px;
+}
+
+.footer-logo-instagram-mobile{
+	background-position: -296px -142px ;
+	width: 56px;
+	height: 53px;
+}
+
+.footer-twitter-oct14{
+	background-position: -32px -204px ;
+	width: 26px;
+	height: 26px;
+}
+
+.flecha_login{
+	background-position: -126px -1px ;
+	width: 18px;
+	height: 10px;
+}
+
+.hover_arrow{
+	background-position: -379px -4px ;
+	width: 17px;
+	height: 10px;
+}
+
+.transparent{
+	background-position: -376px -19px ;
+	width: 25px;
+	height: 20px;
+}
+/*
+.trasparent{
+	background-position: -75px -195px ;
+	width: 1px;
+	height: 1px;
+}
+*/
+.tertiary_button_tile_gray{
+	background-position: -419px -74px ;
+	width: 1px;
+	height: 49px;
+}
+
+.data-image-jpeg{
+	background-position: -418px -5px ;
+	width: 3px;
+	height: 59px;
+}
+
+.footer_resp_descubre-2014{
+	background-position: -4px -240px ;
+	width: 150px;
+	height: 56px;
+}
+
+.footer_resp_novios-2014{
+	background-position: -252px -203px ;
+	width: 95px;
+	height: 30px;
+}
+
+.novios2013{
+	background-position: -187px -204px ;
+	width: 59px;
+	height: 25px;
+	display:inline-block;
+	margin-right : 10px;
+}
+
+.tarjeta_carrusel{
+	background-position: -353px -153px ;
+	width: 53px;
+	height: 14px;
+}
+
+.tarjeta_cencosud{
+	background-position: -94px -206px ;
+	width: 86px;
+	height: 24px;
+}
+
+.ayuda_flecha{
+	background-position: 0 -311px ;
+	width: 301px;
+	height: 15px;
+}
+
+.BazaarVoice_StarRating{
+	background-position: -641px -4px ;
+	width: 75px;
+	height: 177px;
+	
+}
+
+
+.controls{
+	background-position: -216px -241px ;
+	width: 96px;
+	height: 63px;
+}
+
+.huincha_fondo_electrotecno_18mar17{
+	background-position: -159px -252px ;
+	width: 49px;
+	height: 35px;
+}
+
+.logo-responsive{
+	background-position: -434px -2px ;
+	width: 200px;
+	height: 154px;
+}
+
+.ParisTiendaLogo_07{
+	background-position: -352px -197px ;
+	width: 104px;
+	height: 107px;
+}
+
+.arrows-up-icon{
+	background-position: -465px -162px ;
+	width: 150px;
+	height: 150px;
+}
+
+.button_dropshadow{
+	background-position: -620px -162px ;
+	width: 1px;
+	height: 2px;
+}
+
+.button_dropshadow1{
+	background-position: -631px -164px ;
+	width: 2px;
+	height: 1px;
+}
+
+/*.subcat_arrow*/
+.left_sidebar_header .subcat_arrow{
+	background-position: -635px -218px;
+	width: 14px;
+	height: 14px;
+	 float: left; 
+	 
+ }
+/*.subcat_arrow_closed*/
+.left_sidebar_header_closed .subcat_arrow {
+	background-position: -622px -218px;
+	width: 14px;
+	 height: 15px;
+    float: left;
+  
+}
+ span.left_sidebar_header_closed{background:none; }
+  
+ 
+.button_dropshadow{
+	background-position: -620px -162px ;
+	width: 1px;
+	height: 2px;
+}
+.anterior{
+	background-position: -684px -187px ;
+	width: 30px;
+	height: 30px;
+}
+
+ .drop-down-arrow 
+ {
+	background-position: -651px -190px ;
+	width: 29px;
+	height: 24px;
+}
+
+.siguiente{
+	background-position: -618px -185px ;
+	width: 30px;
+	height: 30px; 
+}
+
+.lupa_ico_responsive{
+	background-position: -155px -250px ;
+	width: 39px;
+	height: 39px;
+}
+
+/** Added css For css sprites **/
+.styled_select, #box  .sorting_controls .styled_select, #sort_options .styled_select{ z-index: 5;    position: relative; }
+.styled_select::before, #box  .sorting_controls .styled_select::before, #sort_options .styled_select::before {
+   content: "";
+    display: block;
+    width: 31px;
+    height: 58px;
+    top: 5px;
+    position: absolute;
+    right: -2px;
+    background: url(../images/sprites_all.png) -652px -193px;
+    z-index: -1;
+ }
+ 
+ 
+#linkCloseModal span.popup_close, #NoviosContainer span.popup_close{ float: right;  margin-top: 20px;    margin-right: 20px; } 
+
+#contenedor-alternativas .caja-alternativa .caja-alternativa-arriba .logo_novios{
+	background-position: -252px -203px !important;
+	width: 95px;
+	height: 30px;
+ }
+ #ayuda_modal_dropdown_label a .ayuda_arrow{ margin : 0; display: inline-block;    background-position: -65px -18px;  }
+ .inline_blck{ display: inline-block;   }
+ .flt_lft{ float:left; }
+ 
+ .bx-wrapper .bx-controls-auto .bx-start:hover, .bx-wrapper .bx-controls-auto .bx-start.active{  background-position: -302px -241px !important; }
+ 
+ .bx-wrapper .bx-controls-auto .bx-stop:hover, .bx-wrapper .bx-controls-auto .bx-stop.active{
+ 	 background-position: -302px -274px !important;
+	}
+ 
+ .bx-wrapper .bx-controls-auto .bx-start{ background-position: -302px -252px !important;  }
+ .bx-wrapper .bx-controls-auto .bx-stop{  background-position: -302px -285px !important; } 
+ 
+ html body .bx-wrapper .bx-next{background-position: -24px -5px;}
+ html body .bx-wrapper .bx-prev{background-position: -6px -5px ;}
+ 
+ 
+ .slide .bx-wrapper .bx-next:hover{ background-position: -259px -241px ;  }
+ .slide .bx-wrapper .bx-prev:hover{ background-position: -216px -241px;  }
+ 
+ html body .slide .bx-wrapper .bx-next{background-position: -259px -273px ;}
+ html body  .slide .bx-wrapper .bx-prev{background-position: -216px -273px ;} 
+ 
+ .bx-wrapper .bx-next,  .bx-wrapper .bx-prev{ width: 32px;    height: 32px;}
+ 
+ /** Mobile sprite css for carousel arrow **/ 
+ 
+ html body .thumbScroller .bx-wrapper .bx-controls .bx-prev{top: 50%; display: inline-block; background-position: 7px 13px; width: 26px;  height: 50px;}
+ html body .thumbScroller .bx-wrapper .bx-controls .bx-next{
+  top: 50%;
+    display: inline-block;
+    background-position: -20px 13px;
+    width: 22px !important;
+    height: 50px;
+   right: 95% !important;
+ } 
+ 
+   .home_espot_slider .navNext{background-position: -20px 13px;
+	width: 25px;
+	height: 50px;     position: absolute;
+    top: 50%;right: 0%; }
+    .home_espot_slider .navPrev{background-position: -2px 13px ;
+	width: 22px;
+	height: 50px;
+	    position: absolute;
+    top: 50%; left: 0%;
+	}
+
+
+.open_login{
+	background-position: -63px -135px ;
+	width: 60px;
+	height: 50px;
+}
+.mob_track{
+	background-position: -1px -138px;
+	width: 60px;
+	height: 50px;
+}
+.mob_cart{
+	background-position: -115px -138px;
+	width: 50px;
+	height: 50px;
+}
+
+.BazaarVoice_0 {background-position: -641px -165px !important;}
+.BazaarVoice_0-0 {background-position: -641px -165px !important;}
+.BazaarVoice_0-5 {background-position: -641px -149px !important;}
+
+.BazaarVoice_1 {background-position: -641px -133px !important;}
+.BazaarVoice_1-0 {background-position: -641px -133px !important;}
+.BazaarVoice_1-5 {background-position: -641px -117px !important;}
+
+.BazaarVoice_2 {background-position: -641px -101px !important;}
+.BazaarVoice_2-0 {background-position: -641px -101px !important;}
+.BazaarVoice_2-5 {background-position: -641px -85px !important;}
+
+.BazaarVoice_3 {background-position: -641px -69px !important;}
+.BazaarVoice_3-0 {background-position: -641px -69px !important;}
+.BazaarVoice_3-5 {background-position: -641px -52px !important;}
+
+.BazaarVoice_4 {background-position: -641px -37px !important;}
+.BazaarVoice_4-0 {background-position: -641px -37px !important;}
+.BazaarVoice_4-5 {background-position: -641px -20px  !important;}
+
+.BazaarVoice_5 {background-position: -641px -4px !important;}
+.BazaarVoice_5-0 {background-position: -641px -4px !important;}
+
+
+
+
+/** PDP css sprite styles **/
+ 
+ #DespachoContainer  h1 { padding-top : 0; }
+ #DespachoContainer  h1 .icon_despacho_title { vertical-align: middle;  margin-right: 13px;  }
+ .inline_blck.icon_pdp_dd{   margin-right: 10px;}
+ #modal_calc_retiro  .icon_title h1{   padding-top : 0; padding-bottom: 20px; }
+   .inline_blck.icon_retiro_title{vertical-align: middle; margin-right: 13px;} 
+   
+.pdp_close{float: right;
+    margin: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+ 
+ 
+
+
+
+
+.pdp_popup_close, .VideoScrubberKnob, .VolumeKnob, .IconEffect_play_up, .IconEffect_zoom, .VideoScrubberTime, .icon_retiro_title, .bolsa_blanca, .bolsa_gris, .camion_blanco, .camion-gris, .ClosedCaptionButton_disabled, .icon_despacho_title, .icon_pdp_dd, .icon_pdp_rt, .FullScreenButton_light_up, .FullScreenButton_up, .PauseButton_up, .SpinLeftButton_light_up, .SpinRightButton_light_up, .VolumeFull_up, .ZoomInButton_light_up, .ZoomOutButton_light_disabled, .ZoomOutButton_light_up, .ZoomResetButton_light_disabled, .ZoomResetButton_light_up
+ 
+{
+	background-image: url("../images/sprites_PDP.png") !important;
+	background-repeat: no-repeat ;
+}
+
+
+.pdp_popup_close{
+	background-position: -18px 0;
+	width: 16px;
+	height: 16px;
+}
+
+.VideoScrubberKnob{
+	background-position: 0 -1px ;
+	width: 14px;
+	height: 24px;
+}
+
+.VolumeKnob{
+	background-position: -19px -19px ;
+	width: 14px;
+	height: 8px;
+}
+
+.IconEffect_play_up{
+	background-position: -2px -184px ;
+	width: 80px;
+	height: 80px;
+}
+
+.IconEffect_zoom{
+	background-position: -88px -165px ;
+	width: 100px;
+	height: 100px;
+}
+
+.VideoScrubberTime{
+	background-position: -1px -147px ;
+	width: 58px;
+	height: 29px;
+}
+
+.icon_retiro_title{
+	background-position: -140px -35px ;
+	width: 42px;
+	height: 42px;
+}
+
+.bolsa_blanca{
+	background-position: -339px -171px ;
+	width: 30px;
+	height: 25px;
+}
+
+.bolsa_gris{
+	background-position: -152px -1px ;
+	width: 30px;
+	height: 25px;
+}
+
+.camion_blanco{
+	background-position: -118px -1px ;
+	width: 30px;
+	height: 25px;
+}
+
+.camion-gris{
+	background-position: -82px 0;
+	width: 30px;
+	height: 25px;
+}
+
+.ClosedCaptionButton_disabled{
+	background-position: -48px 0;
+	width: 28px;
+	height: 28px;
+}
+
+.icon_despacho_title{
+	background-position: -94px -33px ;
+	width: 42px;
+	height: 42px;
+}
+
+.icon_pdp_dd{
+	background-position: -48px -33px ;
+	width: 42px;
+	height: 42px;
+}
+
+.icon_pdp_rt{
+	background-position: -2px -34px ;
+	width: 42px;
+	height: 42px;
+}
+
+.FullScreenButton_light_up{
+	background-position: -132px -114px ;
+	width: 28px;
+	height: 28px;
+}
+
+.FullScreenButton_up{
+	background-position: -98px -113px ;
+	width: 28px;
+	height: 28px;
+}
+
+.PauseButton_up{
+	background-position: -66px -114px ;
+	width: 28px;
+	height: 28px;
+}
+
+.SpinLeftButton_light_up{
+	background-position: -33px -115px ;
+	width: 28px;
+	height: 28px;
+}
+
+.SpinRightButton_light_up{
+	background-position: -1px -115px ;
+	width: 28px;
+	height: 28px;
+}
+
+.VolumeFull_up{
+	background-position: -158px -86px ;
+	width: 30px;
+	height: 28px;
+}
+
+.ZoomInButton_light_up
+ {
+	background-position: -127px -86px !important ;
+	width: 28px !important;
+	height: 28px !important;
+}
+
+.ZoomOutButton_light_disabled{
+	background-position: -96px -85px ;
+	width: 28px;
+	height: 28px;
+}
+
+.ZoomOutButton_light_up{
+	background-position: -64px -84px ;
+	width: 28px;
+	height: 28px;
+}
+
+.ZoomResetButton_light_disabled{
+	background-position: -32px -83px ;
+	width: 28px;
+	height: 28px;
+}
+
+.ZoomResetButton_light_up{
+	background-position: 0 -83px ;
+	width: 28px;
+	height: 28px;
+}
+
+
+
+
+
+
+
+
+
+ 

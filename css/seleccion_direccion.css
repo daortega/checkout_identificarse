@@ -1,0 +1,20 @@
+	/*FORMULARIO DESPACHO PROVISORIO*/
+
+@media screen and (max-width: 640px) {	
+	#content_wrapper {
+	    float: left !important;
+	    width: 100% !important;
+	}
+	.content_footer .unregistered {
+		margin:0;
+	}	
+	#unregistered_form .field {
+	    float: left;
+	    height: 65px;
+	    margin-right: 70px;
+	    width: 70%;
+	}
+	#unregistered_form .long input, #unregistered_form input, #unregistered_form textarea {
+    	width: 100%;
+	}
+}

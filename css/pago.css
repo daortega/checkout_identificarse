@@ -1,0 +1,547 @@
+@charset "utf-8";
+/* SMALL */
+  @media screen and (max-width: 640px) {
+    html body .mainHeader {
+      display: none; 
+    }
+    html body #mainHeader {
+      height: auto; 
+
+    }
+            
+    html body #WC_ShipmentDisplay_div_4 > img {
+      display: none; }
+    html body .logo_responsive {
+      display: block;
+      width: 100%; }
+    html body #header, html body #mainHeader, html body #logoArea, html body #checkout_crumb, html body #checkout_crumb .crumb, html body #page, html body #main_content_wrapper {
+      width: 100%; }
+     /* Radar */
+    html body #logoArea {
+      float: none;
+      display: block;
+      margin: 0 auto;
+      width: 176px; }
+    html body #Contenedor {
+      overflow-x: hidden; }
+      html body #Contenedor #page .dijitContentPane {
+        width: 100%; }
+	
+/* se quito la clase .dijitContentPane para que funcionara .pad-10*/
+	
+      html body #Contenedor #page .pad-10 {
+        position:relative;
+        height:350px; 
+      }
+
+      html body #Contenedor #page .pad-10 {
+        position:relative;
+        height:350px; 
+      }
+      html body #Contenedor #page .pad-10 .credito{
+        position: absolute;
+        top: 228px;
+      }
+      html body #Contenedor #page .pad-10 .cencosud{
+        position: absolute;
+        top: 0px;
+      }
+      html body #Contenedor #page .pad-10 .visa{
+         position: absolute;
+         top: 120px;
+      }
+
+        html body #Contenedor #page .dijitContentPane #content_wrapper {
+          width: 100%; }
+      html body #Contenedor #promodescr_tooltip {
+        width: 100%; }
+      html body #Contenedor .body #total_breakdown {
+        width: 100%;
+        margin: 0; }
+    /* mht fix title by felipe ojeda */
+      html body #Contenedor #box .main_header_text,html body #Contenedor .content_header .main_header_text {
+        white-space: normal; 
+        padding: 10px 0 0 13px;
+        margin-top: -11px;
+      }
+      html body #Contenedor .body #total_breakdown .total-summary-line .muestra_subtotal{
+      	display:block !important;
+      }
+      html body #Contenedor .payment-method {
+        margin: 0;
+        padding: 0; }
+    html body #factura {
+      width: 100%;
+      display: block;
+      margin: 0 auto; }
+      /* Radar */
+    html body #EmpresaContainer {
+      left: 0 !important;
+      width: auto;
+      float: left;
+      z-index: 9999; 
+      top: -228px !important;
+    }
+      html body #EmpresaContainer #facturaForm {
+        width: 100%;
+        float: left; 
+      }
+     
+    html body #invoice_modal {
+      width: auto;
+      float: left;
+      background-color: #fff;
+      padding: 9px; 
+    
+    }
+      html body #invoice_modal h1 {
+        padding: 10px 15px;
+        margin: 0; }    
+    html body .dijitContentPane {
+      width: 100%;
+      float: left;
+    }
+    html body #invoice_modal .styled_select_long {
+      width: 100%; 
+      margin: 15px 0; 
+      background-position: 100% 3px; /* se agrego para flecha select TCS */
+    }
+   
+    html body #GiftCardWidgetHidden, html body #EmpresaWidgetHidden, html body #NoviosWidgetHidden, html body #NuevaDireccionWidgetHidden, html body #ClientLoginWidgetHidden {
+      width: 100%; }
+    /* Radar */
+    html body #invoice_modal .field {
+      width: 100%;
+      padding: 2% 0%;
+      float: left; 
+    }
+
+    html body #invoice_modal .field.w-50 {
+      width: 47% !important;
+    }
+    html body #factura .field.direccion {
+      width: 100%; }
+    html body #factura .field.direccion > input, html body #invoice_modal .field input {
+      width: 100%; }
+    html body #invoice_modal #stateDiv > select, html body #invoice_modal #communesDiv > select {
+      width: 100% !important; 
+      
+    }
+    html body #invoice_modal .styled_select {
+      width: 100%; 
+      background-position: 100% 3px; /* se agrego para flecha select TCS */
+    }
+    html body #invoice_modal .styled_select_long > select {
+      width: 100%; }
+    /* Radar cambio de font-size y agrega font-weight*/
+    html body .button-wrapper-radius {
+      width: 100%;
+      font-size: 16px;
+      font-weight: bold;
+      float: left;
+      padding: 18px 15px;
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1da0e0), color-stop(1, #1ca1e1)) !important;
+      background-image: -o-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -moz-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -webkit-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -ms-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: linear-gradient(to bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=0 ) !important; }
+    html body #GC_Balance_Apply .button-wrapper-radius, html body .button_container {
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #1da0e0), color-stop(1, #1ca1e1)) !important;
+      background-image: -o-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -moz-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -webkit-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: -ms-linear-gradient(bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      background-image: linear-gradient(to bottom, #1da0e0 0%, #1ca1e1 100%) !important;
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$color1', endColorstr='$color2',GradientType=0 ) !important; }
+    html body #novios_Target span.button_container {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      border-radius: 0;
+      float: left;
+      height: 35px;
+      padding-top: 7px;
+      width: 100%;
+      margin: 0; }
+    html body span.primary_button {
+      margin: 0 !important;
+      position: relative;
+      width: 48%; }
+      
+   
+      
+    html body #WC_ShipmentDisplay_div_30 span.primary_button {
+      margin: 0 !important;
+      position: relative;
+      width: 100%; }
+    html body #giftCard_Target, html body #novios_Target {
+      display: block !important;
+      height: 0 !important;
+      overflow: hidden;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease; 
+      padding: 0 0 9px 15px;
+      }
+    html body #giftCard_Target.openAcordion, html body #novios_Target.openAcordion {
+      display: block !important;
+      height: auto !important;
+      overflow: hidden;
+      min-height: 135px;
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      -ms-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+    html body #giftCard_Target .inputleft, html body #novios_Target .inputleft {
+      width: 100%; 
+    }
+    html body #giftCard_Target #GC_Balance_Apply {
+      float: left;
+      width: 48%; }
+    html body #giftCard_Target input, html body #novios_Target input {
+      width: 100%;
+      padding: 5px;
+      height: 35px; }
+    html body #novios_Target input {
+      width: 95%; }
+    html body #novios_inOut.activoboton, html body #giftCard_inOut.activoboton {
+      background-color: #EBF4FB; }
+    html body #NoviosContainer {
+      width: 100%;
+      height: auto;
+      padding-bottom: 20px; 
+      top: -567px !important}
+      html body #NoviosContainer #novios_modal {
+        width: 100%;
+        height: auto; }
+        html body #NoviosContainer #novios_modal .registry_input {
+          width: 100%;
+          margin: 10px 0; }
+          html body #NoviosContainer #novios_modal .registry_input input {
+            width: 100%;
+            margin: 0; }
+        html body #NoviosContainer #novios_modal .section {
+          width: 100%; }
+          html body #NoviosContainer #novios_modal .section #novios_results_area {
+            width: 100%; } 
+
+
+         /* Radar Agrega */
+          html body #Contenedor #box .checkout_subheading .main_header_text{
+            font-weight: normal;
+            color: #000;
+            font-size: 14px;
+          }
+          html body #Contenedor #box .checkout_subheading .main_header_text .w-botton{
+            float: left;
+            width: 90%;
+          }
+
+          #discounts_link{
+            font-weight: bold;
+          }
+
+          .payment-method .column > div {                      
+            width: 120%;
+          }
+
+          .btn-pagar{
+              padding-left: 5%;
+              width: 95%;
+          }
+          
+          #novios{
+          	text-align: left;
+          }
+/*
+          .footer_sc .celeste {
+             color: #2d9ee4;
+          } */
+
+          .icono-pregunta {
+              float: right;
+              margin-left: 3%;
+          }
+          .pad-10 {
+            padding-left: 10%;
+          }
+		
+		/* resultado novios */
+		 html body #NoviosContainer #novios_modal .section #novios_results_area .result_novios_responsive{
+		   		overflow:hidden;
+		   }
+		   
+		   	   html body #NoviosContainer #novios_modal .section #novios_results_area .result {
+		   		padding: 5px 10px 5px 5px;
+		   }
+		   
+		   .nombre-novios-responsive{
+		   		font-weight: bold;
+		    }
+		    
+		   
+		    #novios_results_area .seleccionar {
+		   		padding: 2px 4px;
+		   		font-weight: bold;
+		   		font-size: 12px;
+		   }
+		   
+		   .result_label{
+		   		margin: 10px 0 4px;
+		   		font-size: 12px;
+		   }
+		   
+		    #novios_results_area .result p {
+		   		font-size: 12px;
+		   }
+			
+		   .error-responsive{
+			    color: #FF0000;
+		    }	
+			
+          /*#GiftcardAccordion*/
+          #GiftcardAccordion{
+              overflow:hidden;
+              width:100%;
+              float:left;
+              height:0;
+              -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease; 
+          }
+
+          #GiftcardAccordion.displayMenu{
+              height:80px;
+              -webkit-transition: all 0.3s ease;
+              -moz-transition: all 0.3s ease;
+              -ms-transition: all 0.3s ease;
+              transition: all 0.3s ease; 
+          }
+          #errorGiftCard{
+            height:80px;
+            min-height:0;
+            border-bottom: 5px solid #EBF4FB;
+          }
+          #errorGiftCard h4{
+            font-size:15px;
+            font-style:normal;
+            float:left;
+            font-weight: normal;;
+          }
+          #errorGiftCard img{
+            float:left;
+            margin-right:10px;
+          }
+          html body #infoDescuentos.white-popup{
+            border-bottom:4px solid #D5EAF3;
+            border-right:4px solid #D5EAF3;
+            height:auto;
+            min-height:0;
+          }
+         
+          html body #infoDescuentos.white-popup #tooltip_popup{
+            width:100%;
+            height:auto;
+            position:static;
+            float:left;
+          }
+          
+                  
+          html body #infoDescuentos.white-popup #tooltip_popup .bodyarea{
+            font-size:15px;
+            border:0;
+            box-shadow:           0 0 0 transparent; 
+            -moz-box-shadow:      0 0 0 transparent;
+            -webkit-box-shadow:   0 0 0 transparent; 
+          }
+
+          /*texto-codigo-novios*/
+          .texto-codigo-novios{
+            display:none;
+          }
+
+          /*deja texto en negro para totales*/
+          .total-summary-line{
+               color: #000 !important;
+              font-size: 13px !important;
+          }
+
+
+          /*giftCard_inOut*/
+          #giftCard_inOut .minus, #giftCard_inOut .pluss, #novios_inOut .minus, #novios_inOut .pluss{
+            float:right;
+            font-size: 20px;
+          }
+          #giftCard_inOut .minus, #novios_inOut .minus{
+            display:none;
+          }
+
+          #novios_inOut.activoboton .minus, #giftCard_inOut.activoboton .minus{
+            display:block;
+          }
+
+           #novios_inOut.activoboton .pluss, #giftCard_inOut.activoboton .pluss{
+            display:none;
+          }
+
+          .radioDiv{
+            position:relative;
+          }
+          .RadioPayRemplazo{
+            width:20px;
+            height:20px;
+            top:4px;
+            left:-7px;
+            z-index:8;
+            float:left;
+            position:absolute;
+            background-image: url('../images/c1.png');
+            background-position:0 0;
+            background-repeat:no-repeat;
+          }
+          .RadioPayRemplazo.marcado{
+            background-image: url('../images/c1hover.png');
+            background-position:0 0;
+            background-repeat:no-repeat;
+          }
+
+          html body #checkout_crumb .crumb, html body #checkout_crumb .crumb a, html body #checkout_crumb .crumb span {
+              font-size:12px;
+          }
+          .btnErrorGiftCard {
+            display:inline-block;
+          }
+		  
+		  
+		  /* Popup Form Novios */
+		  
+		  #novios_modal > form {
+		    float: left;
+		  	transform: scale(-1);
+		  	-webkit-transform: scaleY(-1);
+		  }
+		  
+		  #novios_modal > form > div{
+		  	transform: scale(-1);
+		  	-webkit-transform: scaleY(-1);
+		  }
+		  
+		  #dijit__MasterTooltip_0{
+			    left: 0 !important;
+			  }
+  
+		#dijit__MasterTooltip_0 .dijitTooltipConnector{
+		    display: none !important;
+		  }
+		  
+
+		
+		
+		.dijitTooltipRight {
+    		padding-left: 0;
+		}
+		
+		.primary_button.button_fit {
+		    padding-top: 10px;
+		}  
+		  
+		  html body .white-popup.detalles-pedido{
+      height:auto;
+      min-height:138px;
+      border:3px solid #d5eaf3;
+      padding:12px 15px;
+   }
+
+   html body .white-popup.detalles-pedido h4{
+      color:#0083c2;
+      font-size:15px;
+   }
+   html body .white-popup.detalles-pedido p{
+      margin-top:10px;
+      font-size:12px;
+   }
+
+html body .white-popup.detalles-pedido dl{
+      float:left;
+      width:100%;
+      padding-bottom:10px;
+   }
+  html body .white-popup.detalles-pedido dt{
+      float:left;
+      width:50%;
+      margin:0;
+      padding:1px;
+   }
+   html body .white-popup.detalles-pedido dd{
+      float:left;
+      width:50%;
+      color:#63b0cc;
+      margin:0;
+      padding:0;
+      text-align:center;
+   }
+   html body .white-popup.detalles-pedido dl.total-decuentos{
+      border-top:1px solid #ccc;
+      padding-top:10px;
+   }
+    html body .white-popup.detalles-pedido dl.total-decuentos dt, html body .white-popup.detalles-pedido dl.total-decuentos dd{
+      font-weight:bold;
+      margin:0;
+      padding:0;
+   }
+   
+   .ico-pregunta {
+    	position: absolute;
+    	right: -1px !important;
+	}
+/* Agrego class para ajustar texto  ¿Quieres asociar tu compra a un código de Novios Paris? */
+  .TextoMovile{
+     position: absolute ;
+     width: 83% !important;
+  }
+
+}
+
+  /* MEDIUM - LARGE */ 
+  @media screen and (min-width: 641px) and (max-width: 970px) {
+      html body .logo_responsive {
+        display: none; }
+
+    /* Radar */
+    #mainHeader{
+        width: 100%;
+    }
+
+    #WC_SingleShipmentSummary_div_13 #total_breakdown{
+      margin-left: 0;
+      padding: 2% 5% !important;
+      width: 100%;
+    }
+
+    .dijitContentPane.pad-10 {        
+        width: 100%;
+    }
+
+    span.primary_button{
+     
+    }
+
+    #content_wrapper{
+      width: 100%;
+    }
+    .btn-asociar{
+      margin: 46px 0px 0px -215px !important;
+    }
+
+ 
+
+}
+
+span.primary_button {	
+	margin: 46px 0px 0px -215px !important;
+}
+

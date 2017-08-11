@@ -1,0 +1,869 @@
+﻿/** 
+ * This variable indicates whether or not the user is hovering over the autoSuggest results popup display.
+ * The value is initialized to false.
+ */
+var autoSuggestStreetHover = false;
+/** 
+ * This variable stores the index of the selected auto suggestion item when using up/down arrow keys.
+ * The value is initialized to -1.
+ */
+var autoStreetSelectOption = -1;
+/** 
+ * This variable stores the old search term used in the auto suggest search box
+ * The value is initialized to empty string.
+ */
+var autoSuggestStreetPreviousTerm = "";
+
+/** 
+ * This variable stores the URL of currently selected static autosuggest recommendation
+ * The value is initialized to empty string.
+ */
+var autoSuggestStreetURL = "";
+
+/** 
+ * This variable stores the index of the selected auto suggestion item when using up/down arrow keys.
+ * The value is initialized to -1.
+ */
+var autoStreetSelectOption = -1;
+
+/** 
+ * This variable stores the index offset of the first previous history term
+ * The value is initialized to -1.
+ */
+var historyStreetIndex = -1;
+/** 
+ * This variable controls the timer handler before triggering the autoSuggest.  If the user types fast, intermittent requests will be cancelled.
+ * The value is initialized to -1.
+ */
+var autoSuggestStreetTimer = -1;
+/** 
+ * This variable controls the delay of the timer in milliseconds between the keystrokes before firing the search request.
+ * The value is initialized to 250.
+ */
+var autoSuggestStreetKeystrokeDelay = 250;
+/** 
+ * This variable sets the total number of static autosuggest recommendations used for each static category/grouping.
+ * The value is initialized to 4.
+ */
+var TOTAL_STREETS_SUGGESTED = 8;
+
+/** 
+ * This variable sets the total number of previous search history terms.
+ * The value is initialized to 2.
+ */
+var TOTAL_STREETS_HISTORY = 2;
+
+
+CheckoutAddressHelper = {
+
+	checkEnterEvent: function(e, elementName) {
+	    if (e.keyCode == 13  && elementName) {
+	    	var currSearchTerm = dojo.trim(this.findElementsForMapCity(elementName).value);
+	    	if(currSearchTerm.length > 0){
+		        dojo.cookie('searchStreetValue', currSearchTerm, {path:'/'});
+		        return true;
+	        }else{
+	        	return false;
+	        }
+	    }else{	    	
+	    	return e.keyCode!=13;
+	    }
+	},
+	
+	findElementsForMapCity:function(_fieldName){
+		console.debug("mapCity > Start findElementsForMapCity()");
+		var formsName = ["ShipAddressForm"];
+		
+		var form = null;
+		for(var i = 0; i < formsName.length; i++){
+			form = document.forms[formsName[i]];
+			if(form != null && !(typeof form === 'undefined')){
+				if(_fieldName && trim(_fieldName) != ''){
+					var elem = form[_fieldName];
+					if(elem) return elem;
+					else continue;
+				}else{
+					var elementsName = ['address1', 'address2', 'addressField2'];				
+					var elements = new Array();
+					for(var j = 0; j < elementsName.length; j++){
+						var elem = form[elementsName[j]];
+						if(elem)
+							elements.push(elem);
+					}
+					return elements.length>0?elements:null;
+				}
+			}
+		}
+		return null;
+		console.debug("mapCity > End findElementsForMapCity()");
+	},
+	
+	fillSearchField: function (elementName, postFix) {
+		var element = this.findElementsForMapCity(elementName);
+		if(element){
+			if (element.value == "") {
+				element.value = document.getElementById("searchTextHolder"+(postFix?postFix:"")).innerHTML;
+				if (dojo.trim(element.value) == "") {
+					this.enableAddressFormElements(true, true, '');
+				}
+			}else if(dojo.trim(element.value).length >= 2){
+				this.enableAddressFormElements(true, null, 'T');
+			}
+			// hide the search box results
+			if(!autoSuggestStreetHover) {
+				this.showAutoSuggest(false, postFix);
+			}
+		}
+	},
+	
+	comunaSelectOnChange: function (_select){
+		console.debug("mapCity > Start comunaSelectOnChange('"+_select.value+"')");
+		if (!(typeof mapcityEnabled === 'undefined') && mapcityEnabled) {
+			if(_select.value.indexOf("selecciona") < 0){
+				CheckoutAddressHelper.enableAddressFormElements(true,true,'');
+				CheckoutAddressHelper.centerInMap(_select.value);				
+			}else{
+				CheckoutAddressHelper.enableAddressFormElements(false);
+				CheckoutAddressHelper.setAddressMapAttrs('0', '0', '3');
+			}			
+		}else{
+			if(!(typeof flagMapCity === 'undefined'))
+				this.setAddressMapAttrs('0', '0', flagMapCity);
+		}
+		console.debug("mapCity > End comunaSelectOnChange('"+_select.value+"')");
+	},
+	
+	enableAddressFormElements: function(isEnable, _cleanAll, _valueAddress1){
+		console.debug("mapCity > Start enableAddressFormElements("+isEnable+")");
+			if(mapcityEnabled){
+				var elements = this.findElementsForMapCity();//['address1', 'address2', 'addressField2'];
+				if(elements != null){
+					var tmp = null;
+					var index = 0;
+					if((isEnable != null && !(typeof isEnable === 'undefined') 
+							&& (isEnable === true || isEnable === 'true'))){
+						tmp = elements[0];
+						tmp.removeAttribute('disabled');
+						if(_cleanAll)
+							tmp.value = '';
+						if(_valueAddress1 != null && !(typeof _valueAddress1 === 'undefined')){
+							_valueAddress1 = trim(_valueAddress1);
+							if(_valueAddress1 != ''){							
+								for(index = 1; index < elements.length; index++){
+									tmp = elements[index];
+									tmp.value = '';
+									tmp.removeAttribute('disabled');
+								}
+							}else{							
+								for(index = 1; index < elements.length; index++){
+									tmp = elements[index];
+									tmp.value = '';
+									tmp.setAttribute('disabled', 'true');
+								}
+							}
+						}
+					}else{
+						for(index = 0; index < elements.length; index++){
+							tmp = elements[index];
+							if(_cleanAll)
+								tmp.value = '';
+							tmp.setAttribute('disabled', 'true');
+						}
+					}
+				}
+			}else{
+				CheckoutAddressHelper.setAddressMapAttrs('0', '0', flagMapCity);
+			}	
+			
+		console.debug("mapCity > End enableAddressFormElements("+isEnable+")");
+	},
+	
+	setAddressMapAttrs: function( _marker_lat, _marker_lon, flag, postal_code){
+		if(_marker_lat != null){
+			if(_marker_lat === '' || _marker_lat === '0'){
+				_marker_lat = '-00.0000000000000';
+			}else {
+				//_marker_lat = _marker_lat.replace('.','#');
+			} 
+			document.getElementById('checkout_shipping_addressLat').value = _marker_lat;
+		}
+		if(_marker_lon != null){
+			if(_marker_lon === '' || _marker_lon === '0'){
+				_marker_lon = '00.0000000000000';
+			}else {
+				//_marker_lon = _marker_lon.replace('.','#');
+			} 
+			document.getElementById('checkout_shipping_addressLon').value = _marker_lon;
+		}
+		if(flag != null)
+			document.getElementById('checkout_shipping_addressFlag').value = flag;//flag;// ADDRESS INVALID
+		
+		if(postal_code != null && postal_code != undefined)
+			document.getElementById('checkout_shipping_taxGeoCode').value = postal_code;
+	},
+	
+	centerInMap: function(currentComuna){
+		console.debug("mapCity > Start centerInMap('"+currentComuna+"')");
+		if (mapcityEnabled) {
+			var mc = this.findMatchOfSelectedComuna(currentComuna, true);
+			console.debug("mapCity > Comuna:'"+currentComuna+"' coordinates found.",mc);
+			if(mc && mc.Xcom && mc.Ycom){
+				var lonlat = new MapCity.Maps.LonLat(mc.Xcom, mc.Ycom);
+				map.setCenter(lonlat);
+				geo_point.move(lonlat);
+				if(map && map.olMap && map.olMap.zoomTo){
+					map.olMap.zoomTo(12);
+				}
+			}			
+
+		}else{
+			CheckoutAddressHelper.setAddressMapAttrs('0', '0', flagMapCity);
+		}
+		
+	},
+		
+	findMatchOfSelectedComuna: function(currentComuna, needGetXYCom){		
+		SinglePageCheckoutJS.getCommunesArray();
+		var currentRegionCode = this.getValueSelectedRegion();
+		var v_text = null;
+		if(currentRegionCode != null && !(typeof currentRegionCode === 'undefined') 
+				&& currentComuna != null && !(typeof currentComuna === 'undefined')){	
+			try{
+				if(currentComuna.indexOf("selecciona") < 0){
+					if(needGetXYCom){
+						v_text = {Xcom: regions[currentRegionCode].comunas[currentComuna].mapCityXcom,
+								Ycom: regions[currentRegionCode].comunas[currentComuna].mapCityYcom};
+					}else{
+						v_text = regions[currentRegionCode].comunas[currentComuna].mapCityComuna;
+					}					
+				}
+				else
+					currentComuna = '';
+			}catch(ex){
+				console.warn("for the '"+currentComuna+"' comuna with the property mapCityComuna, mapCityXcom, or mapCityYcom not found..");
+			}
+		}
+		return v_text?v_text:currentComuna;
+	},
+	
+	
+	getValueSelecter:function(_nameElement){
+		var currentCode = this.findElementsForMapCity(_nameElement+'1');
+		if(currentCode == null || typeof currentCode === 'undefined')
+			currentCode = this.findElementsForMapCity(_nameElement);
+		if(currentCode != null && !(typeof currentCode === 'undefined'))
+			currentCode = currentCode.value;
+		return currentCode;
+	},
+	
+	getValueSelectedRegion: function (){		
+		return this.getValueSelecter("state");
+	},
+	
+	getValueSelectedComuna: function (){
+		return this.getValueSelecter("city");
+	},
+	
+	showAutoSuggest: function (display, postFix) {
+		var temp = postFix? postFix : "";
+		var autoSuggest_Result_div = document.getElementById("autoSuggest_Result_div"+temp);
+		if (dojo.isIE < 7){
+			var autoSuggest_content_div = document.getElementById("autoSuggest_content_div"+temp);
+			var autoSuggestDropDownIFrame = document.getElementById("autoSuggestDropDownIFrame"+temp);
+		}
+		
+		if(autoSuggest_Result_div != null && autoSuggest_Result_div != 'undefined') {
+			if(display) {
+				autoSuggest_Result_div.style.display = "block";
+				if (dojo.isIE < 7) {
+					autoSuggestDropDownIFrame.style.height = autoSuggest_content_div.scrollHeight;
+					autoSuggestDropDownIFrame.style.display = "block";
+				}
+			}
+			else {
+				if (dojo.isIE < 7) {
+					autoSuggestDropDownIFrame.style.display = "none";
+					autoSuggestDropDownIFrame.style.height = 0;
+				}
+				autoSuggest_Result_div.style.display = "none";
+			}
+		}
+	},
+	
+	doAutoSuggest: function (event, url, elementBox, postFix) {
+		// Do only if mapcity flag enabled.
+		if (!(typeof mapcityEnabled === 'undefined') && mapcityEnabled) {
+		
+			if(dojo.trim(elementBox.value).length <= AUTOSUGGEST_THRESHOLD ) {
+				this.showAutoSuggest(false, postFix);
+			}
+	
+			if(event.keyCode == dojo.keys.ENTER) {
+				this.showAutoSuggest(false, postFix);
+				this.findElementsForMapCity('address2').focus();
+				return;
+			}
+	
+			if(event.keyCode == dojo.keys.TAB) {
+				autoSuggestStreetHover = true;
+				this.findElementsForMapCity('address2').focus();
+				return;
+			}
+	
+			if(event.keyCode == dojo.keys.ESCAPE) {
+				this.showAutoSuggest(false, postFix);
+				return;
+			}
+	
+			if(event.keyCode == dojo.keys.UP_ARROW) {
+				var totalDynamicResults = document.getElementById("dynamicAutoSuggestTotalResults"+postFix);
+				if(this.highLightSelection(true, autoStreetSelectOption-1, elementBox , postFix)) {
+					this.highLightSelection(false, autoStreetSelectOption, elementBox , postFix);
+					if(autoStreetSelectOption == historyStreetIndex) {
+						this.resetAutoSuggestKeyword(elementBox, postFix);
+					}
+					autoStreetSelectOption--;
+				}
+				else if(autoStreetSelectOption == CACHED_AUTOSUGGEST_OFFSET && totalDynamicResults != null && totalDynamicResults != 'undefined') {
+					this.highLightSelection(false, CACHED_AUTOSUGGEST_OFFSET, elementBox , postFix);		
+					autoStreetSelectOption = totalDynamicResults.value-1;
+					this.highLightSelection(true, autoStreetSelectOption, elementBox , postFix);
+				}
+				else {
+					// up arrow back to the very top
+					this.highLightSelection(false, autoStreetSelectOption, elementBox , postFix);
+					autoStreetSelectOption = -1;
+					var originalKeyedSearchTerm = document.getElementById("autoSuggestOriginalTerm"+(postFix?postFix:""));
+					this.resetAutoSuggestKeyword(elementBox, postFix);
+				}
+				return;
+			}
+	
+			if(event.keyCode == dojo.keys.DOWN_ARROW) {
+				if(this.highLightSelection(true, autoStreetSelectOption+1, elementBox , postFix)) {
+					this.highLightSelection(false, autoStreetSelectOption, elementBox , postFix);
+					autoStreetSelectOption++;
+				}
+				else if(autoStreetSelectOption < CACHED_AUTOSUGGEST_OFFSET && this.highLightSelection(true, CACHED_AUTOSUGGEST_OFFSET)) {
+					// down arrow into the cached autosuggest section
+					this.highLightSelection(false, autoStreetSelectOption, elementBox , postFix);
+					autoStreetSelectOption = CACHED_AUTOSUGGEST_OFFSET;
+					this.resetAutoSuggestKeyword(elementBox, postFix);
+				}
+				return;
+			}
+	
+			if(dojo.trim(elementBox.value).length > AUTOSUGGEST_THRESHOLD && dojo.trim(elementBox.value) == autoSuggestStreetPreviousTerm) {
+				return;
+			}
+			else {
+				autoSuggestStreetPreviousTerm = dojo.trim(elementBox.value);
+			}
+	
+			if(dojo.trim(elementBox.value).length <= AUTOSUGGEST_THRESHOLD) {
+				return;
+			};
+	
+			// cancel the dynamic search if one is pending
+			if(autoSuggestStreetTimer != -1) {
+				clearTimeout(autoSuggestStreetTimer);
+				autoSuggestStreetTimer = -1;
+			}
+	
+			if(dojo.trim(elementBox.value) != "") {
+				autoStreetSelectOption = -1;
+				//var hasResults = this.doStaticAutoSuggest(elementBox.value);
+				if(dojo.trim(elementBox.value).length > DYNAMIC_AUTOSUGGEST_THRESHOLD) {
+					var showHeader = true; // hasResults;
+					this.doDynamicAutoSuggest(url, elementBox.value, postFix);
+				}
+				else {
+					// clear the dynamic results
+					document.getElementById("autoSuggestDynamic_Result_div"+(postFix?postFix:"")).innerHTML = "";
+				}
+			}
+			else {
+				this.clearAutoSuggestResults(postFix);
+			}
+		}
+	},
+	
+	highLightSelection: function (state, index, elementBox, postFix) {
+		var temp = postFix? postFix : "";
+		var selection = document.getElementById("autoSelectOption_"+ temp + index);
+		if(selection != null && selection != 'undefined') {
+			if(state) {
+				selection.className = "autoSuggestSelected";
+				var searchBox = elementBox;
+				searchBox.setAttribute("aria-activedescendant", "suggestionItem_"+ temp + index);
+				var totalDynamicResults = document.getElementById("dynamicAutoSuggestTotalResults"+ temp);
+				if((totalDynamicResults != null && totalDynamicResults != 'undefined' && index < totalDynamicResults.value) || (index >= historyIndex)) {
+					searchBox.value = selection.title;
+					autoSuggestPreviousTerm = selection.title;
+					autoSuggestURL = "";
+				}
+				else {
+					autoSuggestURL = selection.href;
+				}
+			}
+			else {
+				selection.className = "";
+			}
+			return true;
+		}
+		else {
+			return false;
+		}
+	},
+	
+	resetAutoSuggestKeyword: function (elementBox, postFix) {
+		var originalKeyedSearchTerm = document.getElementById("autoSuggestOriginalTerm"+(postFix?postFix:""));
+		if(originalKeyedSearchTerm != null && originalKeyedSearchTerm != 'undefined') {
+			var searchBox = elementBox;
+			searchBox.value = originalKeyedSearchTerm.value;
+			autoSuggestStreetPreviousTerm = originalKeyedSearchTerm.value;
+		}
+	},
+	
+	doDynamicAutoSuggest: function (url, searchTerm, postFix) {		
+		// if pending autosuggest triggered, cancel it.
+		if(autoSuggestStreetTimer != -1) {
+			clearTimeout(autoSuggestStreetTimer);
+			autoSuggestStreetTimer = -1;
+		}
+		if(searchTerm){			
+			searchTerm = "&calle="+searchTerm;
+		}
+		// call the auto suggest
+		autoSuggestStreetTimer = setTimeout(function() {
+			var urlParams = {direccion: escape(searchTerm),param1: postFix, service: "GET_STREETS_LIST"};
+			CheckoutAddressHelper.autoSuggestStreetsSerializeView(url, urlParams, CheckoutAddressHelper);
+			autoSuggestStreetTimer = -1;
+		}, autoSuggestStreetKeystrokeDelay);
+	},	
+	
+	// Street Suggestion
+	/**
+	* This function retrieves all the required data for cart view event, and then publishes a  view event with the retrieved data
+	*			  
+	* @param {String} jsonViewName name of the view that will be called to get Coremetrics event data
+	* @param {String} urlParams  The URL parameters passed to the jsonViewName when it is be called.For example: {storeId: 0, shopperStoreId: 10001}
+	* @param {object} publisher  A function that takes a single parameter. The parameter will be the
+	*                            retrieved data. It is up to this function to decide if a Coremetrics view
+	*                            will be published. This function will be invoked under the context of this object. For example: function(data){this.publishTopic("/wc/analytics/cartview", data);}
+	**/
+	autoSuggestStreetsSerializeView: function(jsonViewName, urlParams, drawer){
+		
+		var scope = this;
+		setCurrentId(this.findElementsForMapCity('address1').id);
+		/* For Handling multiple clicks.*/
+		if(!submitRequest()){
+			return;
+		}			
+		ext_cursor_wait();
+		var kw = {
+			url:        jsonViewName, 
+			encoding:	'utf-8',
+			handleAs: 	'text',
+			content:    urlParams, 
+			error:      function(type, errObj){
+							// Hidden tags should not interrupt user interactions. Therefore, no error will be reported to user.
+							console.debug("MAPCITY type > ",type);
+							console.debug("MAPCITY errObj > ",errObj);
+							//requestSubmitted = false;
+							ext_cursor_clear();
+						},
+			load:		function(data, ioArgs){
+							drawer.suggestStreetsResult(data);
+							//requestSubmitted = false;
+							ext_cursor_clear();
+						}
+		};
+		dojo.xhrPost(kw);
+	},
+	
+	suggestStreetsResult: function(data, ioArgs){
+		console.debug("data > ",data);
+		data += "";
+		data = data.replace('/*',"");
+		data = data.replace('*/',"");
+		try{
+			data = JSON.parse(data, true);
+			data.jsonRespone = data.jsonRespone? JSON.parse(data.jsonRespone, true) : null;
+		}catch(ex){
+			//console.error("Error in the JSON parse", ex);
+		}
+		console.debug("data pre-processed > ",data);		
+		if(data instanceof Object && data.jsonRespone){			
+			var postFix = data.param1? data.param1 : "";
+			var term = data.direccion? data.direccion : "";
+			var elemParent = dojo.byId('autoSuggestRootContentResult'+postFix);
+			if(elemParent) 
+				elemParent.innerHTML = "";
+			if(term.length > 0){
+				var opciones = data.jsonRespone.opciones? data.jsonRespone.opciones : [];				
+				if (opciones != null && opciones instanceof Array && opciones.length > 0) {
+					var total = opciones.length;
+					total = total > TOTAL_STREETS_SUGGESTED ? TOTAL_STREETS_SUGGESTED : total;
+					//'autoSuggestRootContentResult'+postFix 
+					var rootElement = dojo.create("div", {id: "suggestedKeywordResults"+postFix 
+								,"class":"results" , }, elemParent);
+					var ul = dojo.create("ul", null, rootElement);
+					var selectionOffset = 0;
+					var lowerCaseTerm = term.toLowerCase();
+					var termLength = term.length;
+					// display keyword matches from the server
+					for (var index = 0; index < total; index++) {
+						var theTerm = opciones[index];
+						var lowerResponseTerm = theTerm.toLowerCase();
+						var termIndex = lowerResponseTerm.indexOf(lowerCaseTerm);
+						var li = dojo.create("li",{id:'suggestionItem_'+postFix+selectionOffset
+											,role:'listitem' ,tabindex:'-1'} ,ul);
+						
+						dojo.create("a", {role:'listitem' ,href:'#' ,onmouseout:'this.className=\"\"' 
+							,onmouseover:'javascript:CheckoutAddressHelper.enableAutoSelect('+selectionOffset+');'
+							,onclick:'javascript:CheckoutAddressHelper.selectAutoSuggest("address1",this.title,"'+postFix+'"); return false;'
+							,title: theTerm ,id: 'autoSelectOption_'+postFix+selectionOffset
+							,innerHTML: theTerm.substring(0, termIndex)+"<strong>"
+							+theTerm.substring(termIndex,termIndex+termLength)+"</strong>"
+							+theTerm.substring(termIndex + termLength,termIndex.length)
+						  }, li);
+						
+						
+						selectionOffset++;
+					}
+					// record the original keyed in search term
+					dojo.create("input",{type:'hidden' ,id:'autoSuggestOriginalTerm'+postFix
+										,value:term},ul);
+					dojo.create("input",{type:'hidden' ,id:'dynamicAutoSuggestTotalResults'+postFix
+										,value:selectionOffset},ul);
+					this.showAutoSuggestIfResults('address1', postFix);
+				}
+			}
+		}	
+	},
+	
+	showAutoSuggestIfResults: function (elementName, postFix) {
+		if(dojo.trim(this.findElementsForMapCity(elementName).value).length <= AUTOSUGGEST_THRESHOLD) {
+			this.showAutoSuggest(false, postFix);
+		}
+		else {
+			this.showAutoSuggest(true, postFix);
+		}
+	},
+	
+	enableAutoSelect: function (index, postFix) {
+		this.highLightSelection(false, autoStreetSelectOption, postFix);
+		//'autoSelectOption_'+postFix+selectionOffset
+		var item = dojo.byId('autoSelectOption_'+(postFix?postFix:"") + index);
+		if(item)
+			item.className = "autoSuggestSelected";
+		autoStreetSelectOption = index;
+	},
+	
+	selectAutoSuggest: function (elementName, term, postFix) {
+		var address1Box = this.findElementsForMapCity(elementName);
+		address1Box.value = term;
+		address1Box.focus();
+		autoSuggestStreetPreviousTerm = term;		
+		this.showAutoSuggest(false, postFix);
+	},
+	clearAutoSuggestResults: function (postFix) {	
+		autoSuggestStreetPreviousTerm = "";
+		autoSuggestStreetURL = "";
+		// clear the dynamic search results;
+		var elemParent = dojo.byId('autoSuggestRootContentResult'+postFix);
+		if(elemParent) 
+			elemParent.innerHTML = "";
+		this.showAutoSuggest(false, postFix);
+	},
+	
+	// For Normalization
+	searchAddress: function(centerAddressInMap,v_region,v_district,v_street,v_number, drawSpecial, _tuning){
+		console.debug("mapCity > Start searchAddress(centerAddressInMap = '"+
+			centerAddressInMap+"'+, v_region='"+v_region+"', v_district = '"+v_district+"', v_street = '"+
+			v_street+"', v_number = '"+v_number+"')");
+			
+			if(centerAddressInMap && v_district && v_street && v_number){
+				var direccion = v_street+' '+v_number+' '+v_district;
+				console.debug("mapCity > searchAddress > direccion >",direccion); 					
+				CheckoutAddressHelper.findLocalization(direccion, v_street, drawSpecial, _tuning);
+			}				
+				
+		console.debug("mapCity > End searchAddress()");
+	},
+	
+	findLocalization: function (_direccion, v_street, drawSpecial, _tuning){
+		if(mapcityEnabled){
+			console.debug("mapCity > Start findLocalization("+_direccion+")");
+			// dojo.io.script is an external dependency, so it must be required
+			var params = [];
+			
+			params.direccion = encodeURIComponent("&direccion="+_direccion);
+			params.v_street = v_street;
+			params.service = "normalizador";
+			var addressId = "";
+			if(_tuning){
+				// TO DO - Need to check this functionlaity
+				params.service = "get_coordinates";
+				var elem = dojo.byId("checkout_shipping_addressId");
+				if(elem){
+					addressId = elem.value;
+				}
+			}
+			params.successHandler = "CheckoutAddressHelper.findLocalizSuccess";
+			params.failureHandler = "CheckoutAddressHelper.findFailure";
+			params.param1 = _direccion+(drawSpecial?"##"+drawSpecial:"")+(_tuning?"_T_"+addressId:"");
+			//CheckoutAddressHelper.setPositionCursor();
+			requestSubmitted = true;			
+			//cursor_wait();
+			wc.service.invoke("AjaxCENCallRESTFulService", params);
+			console.debug("mapCity > End findLocalization("+_direccion+")");
+		}
+	},
+	
+	/**
+	 * [georeferencia]: El estado de la normalización:
+	    4: Encuentra el nombre de la calle y la altura en la comuna informada.
+		5: La dirección se normalizó a nivel de comuna.
+		A: El nombre de la calle está en la comuna pero la altura no está en un rango válido.
+		B: El nombre de la calle no ha sido encontrado en el diccionario de calles
+		O: En la dirección original no viene informada la altura.
+		M: La dirección incompleta.
+		E: No hay cobertura en la cartografía.
+	*/
+	findLocalizSuccess: function (serviceResponse){
+		console.debug("mapCity > Start findLocalizSuccess > ", serviceResponse);
+		var respObj = JSON.parse(serviceResponse.jsonRespone, true);
+		console.debug("mapCity > findLocalizSuccess > JSON parse > ",respObj);
+		try{					
+			if(respObj && respObj.results && respObj.results.length > 0){
+				var results = respObj.results[0];
+				var direccion = results.direccion;
+				var msjTmp = '';
+				if(direccion.estado && direccion.estado === '4')
+					msjTmp = 'Se encontr\u00F3 el nombre de la calle y la altura en la comuna informada.';
+				else if(direccion.estado === '5')
+					msjTmp = 'La direcci\u00F3n se normaliz\u00F3 a nivel de comuna.';
+				else if(direccion.estado === 'A')
+					msjTmp = 'El nombre de la calle est\u00E1 en la comuna pero la altura no est\u00E1 en un rango v\u00E1lido.';
+				else if(direccion.estado === 'B')
+					msjTmp = 'El nombre de la calle no ha sido encontrado en el diccionario de calles.';
+				else if(direccion.estado === 'O')
+					msjTmp = 'En la direcci\u00F3n original no viene informada la altura.';
+				else if(direccion.estado === 'M')
+					msjTmp = 'La direcci\u00F3n incompleta.';
+				else if(direccion.estado === 'E')
+					msjTmp = 'No hay cobertura en la cartograf\u00EDa.';
+				if(msjTmp != '')
+					console.debug("mapCity > findLocalizSuccess > result > "+msjTmp);		
+				
+				var caracterizacion = results.caracterizacion;
+				var location = results.location;
+				
+				if(true == caracterizacion.direccion_valida){
+					//ADDRESS FOUND
+					var lon = parseFloat(location.lng);
+					var lat = parseFloat(location.lat);
+					var postal_code = caracterizacion.codigo_postal;
+					console.debug("mapCity > findLocalizSuccess > result > lon = "+lon+", lat = "+lat);
+					CheckoutAddressHelper.setAddressMapAttrs(''+lat, ''+lon, '0', postal_code);	
+					if(undefined != map){
+						var lonlat = new MapCity.Maps.LonLat(lon, lat);
+						map.setCenter(lonlat);	
+						geo_point.move(lonlat);	
+						if(map && map.olMap && map.olMap.zoomTo){
+							map.olMap.zoomTo(16);
+						}
+					}
+					var address1 = CheckoutAddressHelper.findElementsForMapCity('address1');
+					if(address1 && direccion.nombre_via_largo){
+						if(serviceResponse.param1.substring(0,serviceResponse.param1.indexOf(' ')).toLowerCase() == direccion.nombre_via_largo.toLowerCase() ){
+							address1.value = direccion.nombre_via_largo;
+							if(direccion.anexo){
+								address1.value += " "+direccion.anexo;
+							}
+						}
+					}
+					//CheckoutAddressHelper.hideAlertMessageSpecial();
+				}else if(false == caracterizacion.direccion_valida){
+					// DIRECTION INVALID
+					var str = ""+serviceResponse.param1;	
+					CheckoutAddressHelper.setAddressMapAttrs('0', '0', '3','0');
+					var address1 = CheckoutAddressHelper.findElementsForMapCity('address1');
+					if(address1 && direccion.nombre_via_largo){
+						if(serviceResponse.param1.substring(0,serviceResponse.param1.indexOf(' ')).toLowerCase() == direccion.nombre_via_largo.toLowerCase() ){
+							address1.value = direccion.nombre_via_largo;
+							if(direccion.anexo){
+								address1.value += " "+direccion.anexo;
+							}	
+						}
+						
+					}
+					if(str && str.indexOf("##") > -1){
+						//DRAW SPECIAL POPUP div#alertMessageContainer
+						//CheckoutAddressHelper.showAlertMessageSpecial();
+						//MessageHelper.displayErrorMessage(MessageHelper.messages['CHECKOUT_STEP2_MAP_NO_ADDRESS']);
+					}else{
+						//ADDRESS NOT FOUND					
+						var message = "No hemos encontrado resultados para \"<b>"+str+"</b>\" en el mapa. "+
+							"A\u00FAn as\u00ED, puedes continuar tu compra y el despacho se enviar\u00E1 a la direcci\u00F3n ingresada.";
+						//MessageHelper.displayErrorMessage(message);
+						//alert(message);		
+						var elem = dojo.byId('caja-no-encontrado-texto');
+						if(elem){
+							elem.innerHTML = message;
+							CheckoutAddressHelper.showAlertModal();
+						}else MessageHelper.displayErrorMessage(message);
+					}				
+				}else{
+					//FLAG's VALUE UNDEFINED OR VALUE NOT EXPECTED
+					CheckoutAddressHelper.setAddressMapAttrs('0', '0', '1', '0');
+				}
+			}else{
+				CheckoutAddressHelper.setAddressMapAttrs('0', '0', '1', '0');
+			}
+		
+		}catch(err){
+			// If any error on above sctipt catch it and continue with address update/add			
+			CheckoutAddressHelper.setAddressMapAttrs('0', '0', '1', '0');
+			console.debug("mapCity Error in findLocalizSuccess > "+ err);
+		}
+		
+		// Finally save the address
+		dojo.publish('CustomSaveAddressHandler');
+		
+		/*AddressHelper.populateConfirmModal();
+		AddressHelper.disableConfirmOkButton(false);
+		AddressHelper.changeConfirmationTitlePopup(false);*/
+		console.debug("mapCity > End findLocalizSuccess");
+	},
+	
+	findFailure: function (serviceResponse){
+		if (serviceResponse.errorMessage) {
+			MessageHelper.displayErrorMessage(serviceResponse.errorMessage);
+		} else {
+			if (serviceResponse.errorMessageKey) {
+				MessageHelper.displayErrorMessage(serviceResponse.errorMessageKey);
+			}
+		}
+		CheckoutAddressHelper.setAddressMapAttrs('0', '0', '3');
+		// Finally save the address
+		dojo.publish('CustomSaveAddressHandler');
+	},
+	
+	drawMapCity:function(){
+		var elem = null;
+		if(mapcityEnabled){
+			
+			elem = dojo.byId("shippingAddress_Map");
+			if(elem)elem.style.display = 'block';
+			
+			console.debug("mapCity > Start drawMap into shippingaddress form");
+			/*var type = this.getRenderContextType();
+			if(type && type === 'add')
+				this.enableAddressFormElements(false,null,null);*/
+			var mapContainer = document.getElementById('mapContainer');				
+			while (mapContainer && mapContainer.firstChild) {
+				mapContainer.removeChild(mapContainer.firstChild);
+			}
+			if(map == undefined || map == null){				
+				divMap=document.createElement('DIV');
+				divMap.id='map';
+
+				mapContainer.appendChild(divMap);
+
+				try{
+					map = new MapCity.Maps.map('map');
+					layer_vector = new OpenLayers.Layer.Vector(
+						"marker",
+						{
+							styleMap: new OpenLayers.StyleMap({
+									externalGraphic: mapCityImageUrl,
+									graphicWidth:  30, 
+									graphicHeight: 30,
+									backgroundXOffset: -15,
+									backgroundYOffset: -30,
+									widthGraphic:73,
+									heightGraphic:80,
+									graphicZIndex: 10,
+									backgroundGraphicZIndex: 9,
+									pointRadius: 5
+								}),
+							rendererOptions: {yOrdering: true}
+						});
+						map.olMap.addLayer(layer_vector);
+						dragFeature = new OpenLayers.Control.DragFeature(layer_vector,{'onComplete': CheckoutAddressHelper.onCompleteMove});
+						map.olMap.addControl(dragFeature);
+//						var lon = -70.6000973252287;
+//						var lat = -33.4136766210333;
+						var lon = -70.54581175019983;
+						var lat = -33.389178429442026;
+						CheckoutAddressHelper.addMarkerVector(lon, lat);
+						var lonlat = new MapCity.Maps.LonLat(lon, lat);
+						map.setCenter(lonlat);
+				}catch(ex){
+					CheckoutAddressHelper.setAddressMapAttrs('0', '0', '1');
+					mapcityEnabled = false;
+				}
+			}else{
+				mapContainer.appendChild(map.olMap.div);
+
+			}
+			if(map && map.olMap && map.olMap.zoomTo){
+				map.olMap.zoomTo(16);
+			}
+		}else{
+			CheckoutAddressHelper.setAddressMapAttrs('0', '0', flagMapCity);
+		}
+		console.debug("mapCity > End drawMap into shipping address form()");
+	},
+
+	onCompleteMove: function(feature) {
+		console.debug("mapCity > Start onCompleteMove", feature);
+			if(mapcityEnabled){
+				feature.geometry.transform(map.olMap.getProjectionObject(), new OpenLayers.Projection("EPSG:4326"));
+				var pointX = feature.geometry.x;
+				var pointY = feature.geometry.y;
+				marker_lon = pointX;
+				marker_lat = pointY;
+				feature.geometry.transform(new OpenLayers.Projection("EPSG:4326"), map.olMap.getProjectionObject());
+				var lonLat = new MapCity.Maps.LonLat(marker_lon, marker_lat);
+				map.setCenter(lonlat);
+				CheckoutAddressHelper.setAddressMapAttrs(''+marker_lat,''+marker_lon,'0'); //ALL FINE
+		 	}else{
+		 		CheckoutAddressHelper.setAddressMapAttrs('0', '0', flagMapCity);
+			}
+		console.debug("mapCity > END onCompleteMove");
+	},
+
+	addMarkerVector: function(lon, lat) {
+		console.debug("mapCity > Start addMarkerVector("+lon+", "+lat+")");
+		if(mapcityEnabled){
+			dragFeature.activate();
+			  features = [];
+				var lonLat = new MapCity.Maps.LonLat(lon, lat);
+				geo_point=new OpenLayers.Feature.Vector(new OpenLayers.Geometry.Point(lonLat.lon, lonLat.lat));
+				features.push(geo_point);
+				layer_vector.addFeatures(features);
+		}else{
+			CheckoutAddressHelper.setAddressMapAttrs('0', '0', flagMapCity);
+		}
+		console.debug("mapCity > End addMarkerVector("+lon+", "+lat+")");
+	},
+	// Function to load the map with selected adddress details
+	modalOnLoadChecking: function(_contextType){
+		if(mapcityEnabled){			
+			console.debug("mapCity > Start modalOnLoadChecking(_contextType = '"+_contextType+"')");
+			//this.fixStyleForm();
+			
+			var comuna = this.getValueSelectedComuna();
+			var calle =  this.findElementsForMapCity('address1').value;
+			var numero = this.findElementsForMapCity('address2').value;	
+			this.searchAddress(true, null, comuna, calle, numero, null, true);
+			
+			console.debug("mapCity > END modalOnLoadChecking");
+		}
+	}
+	
+}
